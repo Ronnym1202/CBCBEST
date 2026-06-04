@@ -1,0 +1,26 @@
+# ============================================
+# CBC BEST — _redirects
+# Ronny Mwenda (Ronny Best) · cbcbest.netlify.app
+#
+# NOTE: WWW→HTTPS and HTTP→HTTPS redirects
+# are handled in netlify.toml to avoid
+# duplication. This file handles clean URLs
+# and the 404 fallback only.
+# ============================================
+
+# ── Clean URLs (extensionless → .html) ──────
+/pathways                      /pathways.html                      200
+/subjects-skills               /subjects-skills.html               200
+/assessment-tools              /assessment-tools.html              200
+/learning-outcomes             /learning-outcomes.html             200
+/teacher-requirements          /teacher-requirements.html          200
+/mathematics-computer-science  /mathematics-computer-science.html  200
+/forums                        /forums.html                        200
+/resources                     /resources.html                     200
+/faq                           /faq.html                           200
+/blog                          /blog.html                          200
+/about                         /about-contact.html                 200
+/contact                       /about-contact.html                 200
+
+# ── Catch-all 404 (must be last) ────────────
+/*  /404.html  404

@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0B1F2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CBC Best">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="msapplication-TileImage" content="/images/icon-144.png">
+  <meta name="msapplication-TileColor" content="#0B1F2E">
+
+  <title>CBC News & Updates | Kenya Competency Based Curriculum — CBC Best · Ronny Mwenda</title>
+  <meta name="description" content="Stay informed on Kenya's CBC — KICD curriculum updates, TSC teacher news, KNEC assessment timetables, Ministry of Education circulars, pathway guidance, and implementation insights. Original analysis by Ronny Mwenda, Mathematics & Computer Science teacher, Embu.">
+  <meta name="keywords" content="CBC news Kenya 2026, KICD updates, TSC CBC teachers, KNEC KJSEA, CBC senior school, CBC pathways Kenya, BECF Kenya, CBC implementation, competency based curriculum news, CBC Embu, Ronny Mwenda CBC">
+  <meta name="author" content="Ronny Mwenda (Ronny Best)">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cbcbest.netlify.app/blog.html">
+  <meta property="og:title" content="CBC News & Updates | CBC Best — Ronny Mwenda">
+  <meta property="og:description" content="Accurate, original CBC Kenya news and analysis — KICD, TSC, KNEC, and Ministry of Education updates by Ronny Mwenda.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cbcbest.netlify.app/blog.html">
+  <meta property="og:locale" content="en_KE">
+  <meta property="og:site_name" content="CBC Best">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@ronnymwenda89">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:   #0B1F2E;
+      --navy2:  #132c40;
+      --navy3:  #1a3a54;
+      --gold:   #C9A03D;
+      --gold2:  #e6b94a;
+      --cream:  #FFF8EE;
+      --peach:  #FFE4C4;
+      --white:  #FFFFFF;
+      --text:   #1E2F3E;
+      --muted:  #5a7285;
+      --border: rgba(201,160,61,0.18);
+      --card-bg:#FFFFFF;
+      --radius: 20px;
+      --radius-lg: 32px;
+      --shadow: 0 8px 32px rgba(11,31,46,0.10);
+      --shadow-hover: 0 16px 48px rgba(11,31,46,0.18);
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --mono: 'Space Mono', monospace;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--cream); color: var(--text); line-height: 1.65; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { cursor: pointer; color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: var(--font); }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+
+    /* HEADER */
+    .site-header { background: var(--navy); position: sticky; top: 0; z-index: 200; border-bottom: 1px solid rgba(201,160,61,0.15); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 28px; max-width: 1240px; margin: 0 auto; gap: 1.5rem; }
+    .logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .logo-icon { width: 40px; height: 40px; background: var(--gold); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; color: var(--navy); font-family: var(--mono); flex-shrink: 0; }
+    .logo-text { line-height: 1.2; }
+    .logo-text strong { display: block; font-size: 1.15rem; font-weight: 800; color: var(--white); letter-spacing: -0.3px; }
+    .logo-text span { font-size: 0.72rem; color: rgba(255,228,196,0.7); letter-spacing: 0.4px; font-weight: 500; }
+    .nav-links { display: flex; align-items: center; gap: 0.15rem; flex-wrap: nowrap; }
+    .nav-links a { color: rgba(255,228,196,0.85); font-weight: 600; font-size: 0.82rem; padding: 6px 11px; border-radius: 8px; transition: all 0.18s; white-space: nowrap; letter-spacing: 0.2px; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); background: rgba(201,160,61,0.15); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 7px 16px !important; border-radius: 40px !important; font-weight: 700 !important; }
+    .nav-cta:hover { background: var(--gold2) !important; transform: translateY(-1px); }
+    .menu-toggle { display: none; background: none; border: 1px solid rgba(201,160,61,0.4); color: var(--peach); padding: 7px 14px; border-radius: 8px; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; transition: 0.2s; }
+    .menu-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* PAGE HERO */
+    .page-hero { background: var(--navy); padding: 3.5rem 0 3rem; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 380px; height: 380px; background: radial-gradient(circle, rgba(201,160,61,0.08) 0%, transparent 70%); pointer-events: none; }
+    .hero-label { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,160,61,0.12); border: 1px solid rgba(201,160,61,0.3); color: var(--gold); font-size: 0.78rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 6px 14px; border-radius: 40px; margin-bottom: 1.2rem; }
+    .hero-label span { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: inline-block; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.7)} }
+    .page-hero h1 { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 800; color: var(--white); line-height: 1.15; letter-spacing: -0.8px; margin-bottom: 0.9rem; max-width: 740px; }
+    .page-hero h1 em { font-style: italic; color: var(--gold); }
+    .page-hero p { font-size: 1rem; color: rgba(255,228,196,0.8); max-width: 640px; line-height: 1.75; }
+
+    /* CATEGORY FILTER BAR */
+    .filter-bar { background: var(--white); border-radius: 60px; padding: 0.8rem 1.2rem; margin: 2rem 0 1.8rem; box-shadow: var(--shadow); border: 1px solid rgba(0,0,0,0.04); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .filter-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); font-weight: 700; white-space: nowrap; padding-right: 6px; }
+    .filter-btn { border: 1.5px solid rgba(11,31,46,0.1); background: transparent; color: var(--text); font-weight: 600; font-size: 0.78rem; padding: 6px 14px; border-radius: 40px; transition: all 0.18s; white-space: nowrap; }
+    .filter-btn:hover { border-color: var(--navy); background: rgba(11,31,46,0.04); }
+    .filter-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .filter-btn.kicd.active { background: #1a6eaa; border-color: #1a6eaa; }
+    .filter-btn.tsc.active { background: #1e7f63; border-color: #1e7f63; }
+    .filter-btn.knec.active { background: #b34d20; border-color: #b34d20; }
+    .filter-btn.maths.active { background: #6a3cad; border-color: #6a3cad; }
+    .filter-btn.policy.active { background: #8b6820; border-color: #8b6820; }
+
+    /* BLOG LAYOUT */
+    .blog-layout { display: grid; grid-template-columns: 1fr 320px; gap: 2rem; align-items: start; padding-bottom: 4rem; }
+
+    /* FEATURED POST */
+    .featured-post {
+      background: var(--navy);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin-bottom: 1.8rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .featured-post::before { content: ''; position: absolute; top: -60px; right: -60px; width: 280px; height: 280px; background: radial-gradient(circle, rgba(201,160,61,0.1) 0%, transparent 70%); pointer-events: none; }
+    .featured-post:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .featured-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--gold); color: var(--navy); font-size: 0.68rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 40px; margin-bottom: 1rem; }
+    .featured-post h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 800; color: var(--white); line-height: 1.25; margin-bottom: 0.8rem; letter-spacing: -0.3px; }
+    .featured-post h2 em { color: var(--gold); font-style: italic; }
+    .featured-post .post-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 0.75rem; color: rgba(255,228,196,0.6); margin-bottom: 1rem; }
+    .featured-post .post-meta .sep { opacity: 0.4; }
+    .featured-post p { font-size: 0.93rem; color: rgba(255,228,196,0.8); line-height: 1.8; margin-bottom: 1.2rem; }
+    .featured-post .cat-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 40px; margin-right: 4px; }
+    .tag-kicd { background: rgba(26,110,170,0.25); color: #7ec8f5; }
+    .tag-tsc { background: rgba(30,127,99,0.25); color: #5ddeb8; }
+    .tag-knec { background: rgba(179,77,32,0.25); color: #ffa87a; }
+    .tag-maths { background: rgba(106,60,173,0.25); color: #c9a8f5; }
+    .tag-policy { background: rgba(201,160,61,0.2); color: var(--gold); }
+    .tag-parents { background: rgba(220,80,80,0.2); color: #f5a0a0; }
+    .btn-read-more { display: inline-flex; align-items: center; gap: 7px; background: var(--gold); color: var(--navy); padding: 10px 22px; border-radius: 40px; font-weight: 700; font-size: 0.85rem; transition: all 0.2s; border: none; }
+    .btn-read-more:hover { background: var(--gold2); transform: translateX(2px); }
+    .btn-read-more-outline { display: inline-flex; align-items: center; gap: 7px; border: 1.5px solid rgba(201,160,61,0.4); color: var(--gold); padding: 9px 20px; border-radius: 40px; font-weight: 700; font-size: 0.82rem; transition: all 0.2s; }
+    .btn-read-more-outline:hover { border-color: var(--gold); color: var(--gold2); transform: translateX(2px); }
+
+    /* POST CARDS GRID */
+    .posts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.8rem; }
+    .post-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 4px 14px rgba(11,31,46,0.06);
+      transition: all 0.22s;
+      display: flex;
+      flex-direction: column;
+    }
+    .post-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+    .post-card.hidden { display: none; }
+    .post-card-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 0.8rem; }
+    .cat-tag-light { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 40px; }
+    .tl-kicd { background: rgba(26,110,170,0.1); color: #1a6eaa; }
+    .tl-tsc { background: rgba(30,127,99,0.1); color: #1e7f63; }
+    .tl-knec { background: rgba(179,77,32,0.1); color: #b34d20; }
+    .tl-maths { background: rgba(106,60,173,0.1); color: #6a3cad; }
+    .tl-policy { background: rgba(201,160,61,0.12); color: #8b6820; }
+    .tl-parents { background: rgba(220,80,80,0.1); color: #c04040; }
+    .post-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.35; margin-bottom: 0.5rem; letter-spacing: -0.2px; }
+    .post-card h3 a { transition: color 0.18s; }
+    .post-card h3 a:hover { color: var(--gold); }
+    .post-card .pmeta { font-size: 0.72rem; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 0.65rem; }
+    .post-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; flex: 1; margin-bottom: 1rem; }
+    .post-card .read-link { font-size: 0.8rem; font-weight: 700; color: var(--navy); display: inline-flex; align-items: center; gap: 5px; transition: color 0.18s, gap 0.18s; margin-top: auto; }
+    .post-card .read-link:hover { color: var(--gold); gap: 8px; }
+
+    /* FULL-WIDTH POST CARD */
+    .post-card-wide { grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: center; }
+    .post-card-wide .wide-icon { width: 64px; height: 64px; background: var(--navy); border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0; }
+    .post-card-wide h3 { font-size: 1.1rem; }
+
+    /* SECTION DIVIDER IN POSTS */
+    .posts-section-label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 1.8rem 0 1rem; display: flex; align-items: center; gap: 10px; }
+    .posts-section-label::after { content: ''; flex: 1; height: 1px; background: rgba(201,160,61,0.2); }
+
+    /* LOAD MORE */
+    .load-more-wrap { text-align: center; padding: 0.5rem 0 1.5rem; }
+    .btn-load-more { background: var(--white); border: 1.5px solid rgba(11,31,46,0.1); color: var(--navy); padding: 11px 28px; border-radius: 40px; font-weight: 700; font-size: 0.88rem; transition: all 0.2s; }
+    .btn-load-more:hover { border-color: var(--navy); background: rgba(11,31,46,0.04); transform: translateY(-1px); }
+
+    /* SIDEBAR */
+    .sidebar { display: flex; flex-direction: column; gap: 1.2rem; position: sticky; top: 90px; }
+    .sb-card { background: var(--white); border-radius: var(--radius); padding: 1.4rem; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 14px rgba(11,31,46,0.06); }
+    .sb-card h3 { font-size: 0.88rem; font-weight: 800; color: var(--navy); margin-bottom: 1rem; display: flex; align-items: center; gap: 7px; }
+    .sb-card h3 .sb-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); display: block; font-weight: 700; }
+
+    /* Author card */
+    .auth-avatar { width: 56px; height: 56px; background: var(--navy); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; color: var(--gold); font-family: var(--mono); margin-bottom: 0.8rem; }
+    .auth-name { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 2px; }
+    .auth-title { font-size: 0.78rem; color: var(--muted); line-height: 1.55; margin-bottom: 0.9rem; }
+    .auth-links { display: flex; flex-direction: column; gap: 4px; }
+    .auth-link { display: flex; align-items: center; gap: 7px; font-size: 0.78rem; font-weight: 600; color: var(--navy); transition: color 0.18s; padding: 3px 0; }
+    .auth-link:hover { color: var(--gold); }
+    .auth-link .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* Categories */
+    .cat-row { display: flex; align-items: center; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid rgba(0,0,0,0.04); cursor: pointer; transition: all 0.18s; border-radius: 6px; }
+    .cat-row:last-child { border-bottom: none; }
+    .cat-row:hover { padding-left: 4px; }
+    .cat-row-name { font-size: 0.83rem; font-weight: 600; color: var(--navy); display: flex; align-items: center; gap: 8px; }
+    .cat-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .cat-row-count { font-family: var(--mono); font-size: 0.7rem; font-weight: 700; color: var(--muted); background: rgba(11,31,46,0.05); padding: 2px 8px; border-radius: 40px; }
+
+    /* Recent posts */
+    .recent-item { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.04); cursor: pointer; transition: padding 0.18s; }
+    .recent-item:last-child { border-bottom: none; }
+    .recent-item:hover { padding-left: 4px; }
+    .recent-num { font-family: var(--mono); font-size: 0.68rem; color: var(--gold); font-weight: 700; min-width: 18px; margin-top: 2px; }
+    .recent-info { flex: 1; }
+    .recent-title { font-size: 0.82rem; font-weight: 600; color: var(--navy); line-height: 1.4; margin-bottom: 2px; }
+    .recent-date { font-size: 0.7rem; color: var(--muted); }
+
+    /* Events */
+    .event-item { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.04); }
+    .event-item:last-child { border-bottom: none; }
+    .event-date-box { background: var(--navy); border-radius: 10px; padding: 6px 10px; text-align: center; min-width: 48px; flex-shrink: 0; }
+    .event-date-box .em { font-family: var(--mono); font-size: 0.62rem; color: var(--gold); font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; display: block; }
+    .event-date-box .ed { font-family: var(--mono); font-size: 1rem; font-weight: 700; color: var(--white); display: block; line-height: 1; }
+    .event-info h4 { font-size: 0.83rem; font-weight: 700; color: var(--navy); margin-bottom: 2px; line-height: 1.35; }
+    .event-info p { font-size: 0.72rem; color: var(--muted); line-height: 1.4; }
+
+    /* Official links */
+    .official-link { display: flex; align-items: center; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid rgba(0,0,0,0.04); font-size: 0.83rem; font-weight: 600; color: var(--navy); transition: all 0.18s; }
+    .official-link:last-child { border-bottom: none; }
+    .official-link:hover { color: var(--gold); padding-left: 4px; }
+    .official-link .ext { font-size: 0.7rem; color: var(--muted); }
+
+    /* Newsletter */
+    .newsletter-band { background: var(--navy); border-radius: var(--radius); padding: 1.4rem; }
+    .newsletter-band h3 { font-size: 0.95rem; font-weight: 800; color: var(--white); margin-bottom: 0.4rem; }
+    .newsletter-band p { font-size: 0.78rem; color: rgba(255,228,196,0.7); line-height: 1.6; margin-bottom: 1rem; }
+    .nl-form { display: flex; flex-direction: column; gap: 8px; }
+    .nl-input { background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.15); border-radius: 40px; padding: 9px 16px; font-family: var(--font); font-size: 0.85rem; color: var(--white); width: 100%; transition: border-color 0.2s; }
+    .nl-input::placeholder { color: rgba(255,228,196,0.4); }
+    .nl-input:focus { outline: none; border-color: var(--gold); }
+    .nl-btn { background: var(--gold); color: var(--navy); border: none; padding: 9px 20px; border-radius: 40px; font-weight: 700; font-size: 0.85rem; transition: all 0.2s; }
+    .nl-btn:hover { background: var(--gold2); }
+    .nl-note { font-size: 0.68rem; color: rgba(255,228,196,0.4); text-align: center; margin-top: 3px; }
+
+    /* ARTICLE MODAL / EXPANDED */
+    .article-overlay { display: none; position: fixed; inset: 0; background: rgba(11,31,46,0.7); z-index: 500; align-items: flex-start; justify-content: center; padding: 2rem 1rem; overflow-y: auto; }
+    .article-overlay.open { display: flex; }
+    .article-box { background: var(--white); border-radius: var(--radius-lg); padding: 2.5rem; max-width: 700px; width: 100%; position: relative; animation: fadeIn 0.25s ease; margin: auto; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+    .article-close { position: absolute; top: 1.2rem; right: 1.2rem; background: rgba(11,31,46,0.06); border: none; width: 34px; height: 34px; border-radius: 50%; font-size: 1.1rem; color: var(--text); display: flex; align-items: center; justify-content: center; transition: background 0.18s; }
+    .article-close:hover { background: rgba(11,31,46,0.12); }
+    .article-box h2 { font-size: 1.5rem; font-weight: 800; color: var(--navy); line-height: 1.25; margin-bottom: 0.6rem; letter-spacing: -0.3px; }
+    .article-box .ameta { font-size: 0.78rem; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .article-body { font-size: 0.93rem; color: var(--text); line-height: 1.85; }
+    .article-body p { margin-bottom: 1rem; }
+    .article-body h4 { font-size: 1rem; font-weight: 800; color: var(--navy); margin: 1.4rem 0 0.5rem; }
+    .article-body ul { list-style: none; margin: 0.5rem 0 1rem; }
+    .article-body ul li { padding: 4px 0 4px 18px; position: relative; font-size: 0.9rem; }
+    .article-body ul li::before { content: ''; position: absolute; left: 0; top: 12px; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+    .article-body a { color: #1a6eaa; font-weight: 600; text-decoration: underline; }
+    .article-body .source-note { background: rgba(201,160,61,0.07); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 10px 14px; font-size: 0.82rem; margin-top: 1.2rem; }
+    .article-body .source-note strong { color: var(--navy); }
+
+    /* TOAST */
+    .toast { position: fixed; bottom: 24px; right: 24px; background: var(--navy); color: var(--white); padding: 12px 20px; border-radius: 14px; font-size: 0.88rem; font-weight: 600; box-shadow: var(--shadow-hover); z-index: 1000; opacity: 0; transform: translateY(10px); transition: opacity 0.3s, transform 0.3s; max-width: 300px; }
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(255,228,196,0.75); padding: 4rem 0 2rem; margin-top: 0; border-top: 2px solid rgba(201,160,61,0.25); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand strong { display: block; font-size: 1.15rem; color: var(--white); font-weight: 800; margin-bottom: 0.5rem; }
+    .footer-brand p { font-size: 0.83rem; line-height: 1.75; margin-bottom: 1rem; max-width: 280px; }
+    .footer-brand .ecosystem { font-size: 0.78rem; color: rgba(255,228,196,0.5); }
+    .footer-brand .ecosystem a { color: var(--gold); font-weight: 600; transition: color 0.2s; }
+    .footer-brand .ecosystem a:hover { color: var(--gold2); }
+    .footer-col h4 { color: var(--white); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: 0.83rem; color: rgba(255,228,196,0.65); padding: 4px 0; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(201,160,61,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,228,196,0.45); }
+    .footer-bottom a { color: rgba(201,160,61,0.8); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .blog-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); flex-direction: column; align-items: flex-start; gap: 0; padding: 1rem 20px 1.5rem; border-top: 1px solid rgba(201,160,61,0.15); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+      .nav-links.show { display: flex; }
+      .nav-links a { width: 100%; padding: 10px 8px; font-size: 0.9rem; border-radius: 8px; }
+      .site-header { position: relative; }
+      .posts-grid { grid-template-columns: 1fr; }
+      .post-card-wide { grid-template-columns: 1fr; }
+      .post-card-wide .wide-icon { display: none; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 18px; }
+      .footer-top { grid-template-columns: 1fr; }
+      .filter-bar { border-radius: var(--radius); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">CB</div>
+      <div class="logo-text">
+        <strong>CBC Best</strong>
+        <span>Ronny Mwenda · Kenya's CBC Hub</span>
+      </div>
+    </a>
+    <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">☰ Menu</button>
+    <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="pathways.html">Pathways</a>
+      <a href="subjects-skills.html">Subjects</a>
+      <a href="assessment-tools.html">Assessment</a>
+      <a href="learning-outcomes.html">Outcomes</a>
+      <a href="teacher-requirements.html">Teachers</a>
+      <a href="mathematics-computer-science.html">Maths & CS</a>
+      <a href="resources.html">Resources</a>
+      <a href="forums.html">Forums</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html" class="active">News</a>
+      <a href="about-contact.html" class="nav-cta">Contact →</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-label"><span></span> CBC Kenya · News, Analysis & Updates</div>
+    <h1>CBC News &amp; <em>Insights</em></h1>
+    <p>Original analysis and verified updates on Kenya's Competency Based Curriculum — covering KICD curriculum designs, TSC teacher standards, KNEC assessment news, Ministry of Education policy, and senior school pathway guidance. Written by Ronny Mwenda, Mathematics &amp; Computer Science teacher, Embu County.</p>
+  </div>
+</section>
+
+<div class="container">
+  <!-- CATEGORY FILTER -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" data-cat="all">All</button>
+    <button class="filter-btn kicd" data-cat="kicd">KICD</button>
+    <button class="filter-btn tsc" data-cat="tsc">TSC</button>
+    <button class="filter-btn knec" data-cat="knec">KNEC</button>
+    <button class="filter-btn maths" data-cat="maths">Maths &amp; CS</button>
+    <button class="filter-btn policy" data-cat="policy">Policy</button>
+  </div>
+
+  <div class="blog-layout">
+    <!-- MAIN CONTENT -->
+    <div>
+
+      <!-- FEATURED POST -->
+      <article class="featured-post" data-cat="kicd policy">
+        <div class="featured-badge">⭐ Featured · June 2026</div>
+        <h2>Senior School <em>Officially Begins</em>: Kenya's First CBC Grade 10 Cohort Enters Pathways</h2>
+        <div class="post-meta">
+          <span>📅 June 2, 2026</span>
+          <span class="sep">·</span>
+          <span>✍️ Ronny Mwenda</span>
+          <span class="sep">·</span>
+          <span>📖 12 min read</span>
+        </div>
+        <p>Kenya's education system has entered a landmark phase. Beginning in the 2025–2026 academic year, the first cohort of learners under the Competency Based Curriculum has entered Senior Secondary School (Grades 10–12). These are students who began PP1 when CBC was piloted in 2017 and have progressed through the full 2-6-3 ladder. They now choose between three distinct pathways: STEM, Social Sciences, or Arts & Sports Science.</p>
+        <p>This transition marks the moment the CBC's pathway model becomes real for Kenyan families. The Kenya Junior School Education Assessment (KJSEA), sat at the end of Grade 9, informs — but does not dictate — pathway placement. Aptitude, interest, and school counsellor guidance all play a role. As a Mathematics and Computer Science teacher in Embu, I have seen firsthand how critical it is for learners and parents to understand each pathway's demands and opportunities before making this choice.</p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:1.2rem;">
+          <span class="cat-tag tag-kicd">KICD</span>
+          <span class="cat-tag tag-policy">Policy</span>
+          <span class="cat-tag tag-knec">KJSEA</span>
+        </div>
+        <button class="btn-read-more" onclick="openArticle('featured-cohort')">Read full analysis →</button>
+      </article>
+
+      <!-- POSTS GRID -->
+      <div class="posts-section-label">// Latest CBC News</div>
+      <div class="posts-grid" id="postsGrid">
+
+        <!-- POST 1 -->
+        <article class="post-card" data-cat="kicd">
+          <div class="post-card-tags"><span class="cat-tag-light tl-kicd">KICD</span></div>
+          <h3><a onclick="openArticle('kicd-becf')">The Basic Education Curriculum Framework (BECF): What It Means for Every Kenyan Learner</a></h3>
+          <div class="pmeta"><span>📅 May 30, 2026</span><span>·</span><span>8 min read</span></div>
+          <p>The BECF is the master document guiding CBC. It defines the values, competencies, and learning areas for every level from PP1 to Grade 12. This article unpacks its key principles and what it means practically for classrooms.</p>
+          <a class="read-link" onclick="openArticle('kicd-becf')">Read article →</a>
+        </article>
+
+        <!-- POST 2 -->
+        <article class="post-card" data-cat="tsc">
+          <div class="post-card-tags"><span class="cat-tag-light tl-tsc">TSC</span></div>
+          <h3><a onclick="openArticle('tsc-retooling')">TSC CBC Teacher Retooling: Who Has Been Trained and What Gaps Remain?</a></h3>
+          <div class="pmeta"><span>📅 May 26, 2026</span><span>·</span><span>7 min read</span></div>
+          <p>The Teachers Service Commission has been rolling out CBC retooling since 2017. This analysis looks at what the training covers, how many teachers have been reached, and what professional gaps teachers in rural counties still face.</p>
+          <a class="read-link" onclick="openArticle('tsc-retooling')">Read article →</a>
+        </article>
+
+        <!-- POST 3 -->
+        <article class="post-card" data-cat="knec">
+          <div class="post-card-tags"><span class="cat-tag-light tl-knec">KNEC</span></div>
+          <h3><a onclick="openArticle('kjsea-explained')">KJSEA Explained: How the Kenya Junior School Education Assessment Works</a></h3>
+          <div class="pmeta"><span>📅 May 22, 2026</span><span>·</span><span>9 min read</span></div>
+          <p>The KJSEA at Grade 9 is a critical transition assessment. Unlike the old KCPE, it is not a single high-stakes exam. This article explains its structure, what subjects are assessed, how results are used, and how learners and parents should approach it.</p>
+          <a class="read-link" onclick="openArticle('kjsea-explained')">Read article →</a>
+        </article>
+
+        <!-- POST 4 -->
+        <article class="post-card" data-cat="maths">
+          <div class="post-card-tags"><span class="cat-tag-light tl-maths">Maths &amp; CS</span></div>
+          <h3><a onclick="openArticle('cs-curriculum')">Computer Science in CBC Senior School: Strands, Skills, and Career Pathways</a></h3>
+          <div class="pmeta"><span>📅 May 18, 2026</span><span>·</span><span>10 min read</span></div>
+          <p>CBC Computer Science at senior level introduces learners to programming, networks, cybersecurity, data management, and AI ethics. This piece — written by a CS teacher — breaks down the curriculum strand by strand with practical insights.</p>
+          <a class="read-link" onclick="openArticle('cs-curriculum')">Read article →</a>
+        </article>
+
+        <!-- POST 5 — WIDE -->
+        <article class="post-card post-card-wide" data-cat="policy">
+          <div class="wide-icon">🏛️</div>
+          <div>
+            <div class="post-card-tags"><span class="cat-tag-light tl-policy">Policy</span></div>
+            <h3><a onclick="openArticle('60-40-assessment')">Understanding the 60/40 Assessment Split in CBC: School-Based vs External Examinations</a></h3>
+            <div class="pmeta"><span>📅 May 14, 2026</span><span>·</span><span>8 min read</span></div>
+            <p>CBC replaces the 8-4-4 model's reliance on end-of-cycle external exams with a 60% school-based assessment and 40% external examination structure at senior level. This article explains how that split works, what it means for project work, and how the KCSE in 2028 will be structured.</p>
+            <a class="read-link" onclick="openArticle('60-40-assessment')">Read full article →</a>
+          </div>
+        </article>
+
+        <!-- POST 6 -->
+        <article class="post-card" data-cat="policy">
+          <div class="post-card-tags"><span class="cat-tag-light tl-policy">Policy</span></div>
+          <h3><a onclick="openArticle('pathway-choice-guide')">How to Choose the Right CBC Senior School Pathway: A Parent and Learner Guide</a></h3>
+          <div class="pmeta"><span>📅 May 10, 2026</span><span>·</span><span>11 min read</span></div>
+          <p>Pathway selection is one of the most consequential decisions in a Kenyan learner's education. This practical guide walks through the factors to weigh, common misconceptions about each pathway, and how to use KJSEA results alongside aptitude indicators.</p>
+          <a class="read-link" onclick="openArticle('pathway-choice-guide')">Read article →</a>
+        </article>
+
+        <!-- POST 7 -->
+        <article class="post-card" data-cat="tsc">
+          <div class="post-card-tags"><span class="cat-tag-light tl-tsc">TSC</span></div>
+          <h3><a onclick="openArticle('teacher-standards')">CBC Teacher Competency Standards: What TSC Expects in 2026</a></h3>
+          <div class="pmeta"><span>📅 May 6, 2026</span><span>·</span><span>7 min read</span></div>
+          <p>The TSC has defined clear competency standards for CBC teachers covering pedagogy, assessment literacy, ICT integration, and inclusive education. This article outlines what every registered teacher must now demonstrate in their annual performance appraisal.</p>
+          <a class="read-link" onclick="openArticle('teacher-standards')">Read article →</a>
+        </article>
+
+        <!-- POST 8 -->
+        <article class="post-card" data-cat="maths">
+          <div class="post-card-tags"><span class="cat-tag-light tl-maths">Maths &amp; CS</span></div>
+          <h3><a onclick="openArticle('maths-cbc-approach')">Teaching Mathematics in CBC: From Content Delivery to Competency Facilitation</a></h3>
+          <div class="pmeta"><span>📅 Apr 30, 2026</span><span>·</span><span>9 min read</span></div>
+          <p>CBC Mathematics demands a shift from drill-and-practice to problem-solving, modelling, and real-world application. As a Mathematics teacher, I share the pedagogical strategies that work in CBC classrooms — from Grades 7 through 12.</p>
+          <a class="read-link" onclick="openArticle('maths-cbc-approach')">Read article →</a>
+        </article>
+
+        <!-- POST 9 -->
+        <article class="post-card" data-cat="kicd">
+          <div class="post-card-tags"><span class="cat-tag-light tl-kicd">KICD</span></div>
+          <h3><a onclick="openArticle('7-competencies')">The 7 Core Competencies of CBC: A Classroom Teacher's Perspective</a></h3>
+          <div class="pmeta"><span>📅 Apr 24, 2026</span><span>·</span><span>8 min read</span></div>
+          <p>CBC's seven core competencies — from Communication & Collaboration to Self-Efficacy — are not abstract ideals. This article explores how a classroom teacher embeds each competency into daily lesson design, project work, and formative assessment.</p>
+          <a class="read-link" onclick="openArticle('7-competencies')">Read article →</a>
+        </article>
+
+        <!-- POST 10 — hidden initially -->
+        <article class="post-card hidden extra-post" data-cat="knec">
+          <div class="post-card-tags"><span class="cat-tag-light tl-knec">KNEC</span></div>
+          <h3><a onclick="openArticle('kpsea-explained')">KPSEA at Grade 6: Kenya Primary School Education Assessment Demystified</a></h3>
+          <div class="pmeta"><span>📅 Apr 18, 2026</span><span>·</span><span>6 min read</span></div>
+          <p>The KPSEA replaced the KCPE for primary school learners. It assesses foundational competencies at the end of Grade 6 and informs transition to Junior Secondary. This article explains what it tests, how it differs from the old KCPE, and what parents should know.</p>
+          <a class="read-link" onclick="openArticle('kpsea-explained')">Read article →</a>
+        </article>
+
+        <!-- POST 11 — hidden initially -->
+        <article class="post-card hidden extra-post" data-cat="policy">
+          <div class="post-card-tags"><span class="cat-tag-light tl-policy">Policy</span></div>
+          <h3><a onclick="openArticle('community-service')">Community Service Learning in CBC: Purpose, Structure, and Assessment</a></h3>
+          <div class="pmeta"><span>📅 Apr 12, 2026</span><span>·</span><span>7 min read</span></div>
+          <p>Community Service Learning (CSL) is a mandatory component of CBC. Learners must complete structured service projects that connect curriculum content to real community challenges. This article explains the requirements, how CSL is assessed, and practical examples from Kenyan schools.</p>
+          <a class="read-link" onclick="openArticle('community-service')">Read article →</a>
+        </article>
+
+        <!-- POST 12 — hidden initially -->
+        <article class="post-card hidden extra-post" data-cat="maths">
+          <div class="post-card-tags"><span class="cat-tag-light tl-maths">Maths &amp; CS</span></div>
+          <h3><a onclick="openArticle('project-based-maths')">Project-Based Learning in CBC Mathematics: Ideas That Work in Kenyan Classrooms</a></h3>
+          <div class="pmeta"><span>📅 Apr 6, 2026</span><span>·</span><span>9 min read</span></div>
+          <p>CBC expects learners to undertake mathematical projects that connect theory to practice. From financial literacy projects to data collection surveys, this article shares ten practical CBC Mathematics project ideas with assessment rubric guidance for Grades 7–10.</p>
+          <a class="read-link" onclick="openArticle('project-based-maths')">Read article →</a>
+        </article>
+
+      </div><!-- /posts-grid -->
+
+      <div class="load-more-wrap">
+        <button class="btn-load-more" id="loadMoreBtn" onclick="loadMore()">Load more articles →</button>
+      </div>
+
+    </div><!-- /main -->
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- Author -->
+      <div class="sb-card">
+        <span class="sb-label" style="font-family:var(--mono);font-size:0.62rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:0.6rem;">Author</span>
+        <div class="auth-avatar">RM</div>
+        <div class="auth-name">Ronny Mwenda</div>
+        <div class="auth-title">Mathematics &amp; Computer Science Teacher · Embu County, Kenya. Education advocate and founder of CBC Best — Kenya's CBC resource hub.</div>
+        <div class="auth-links">
+          <a href="https://cbcbest.netlify.app" class="auth-link" target="_blank"><span class="dot"></span>cbcbest.netlify.app</a>
+          <a href="https://bestronny.netlify.app" class="auth-link" target="_blank"><span class="dot"></span>bestronny.netlify.app — Mathematics</a>
+          <a href="https://ronnymwenda.netlify.app" class="auth-link" target="_blank"><span class="dot"></span>ronnymwenda.netlify.app — Portfolio</a>
+          <a href="https://ronnygame.netlify.app" class="auth-link" target="_blank"><span class="dot"></span>ronnygame.netlify.app — Games</a>
+          <a href="mailto:ronnymwenda89@gmail.com" class="auth-link"><span class="dot"></span>ronnymwenda89@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="sb-card">
+        <h3><span class="sb-label">Browse</span>Categories</h3>
+        <div class="cat-row" onclick="filterBy('kicd')"><span class="cat-row-name"><span class="cat-dot" style="background:#1a6eaa;"></span>KICD Updates</span><span class="cat-row-count">04</span></div>
+        <div class="cat-row" onclick="filterBy('tsc')"><span class="cat-row-name"><span class="cat-dot" style="background:#1e7f63;"></span>TSC &amp; Teachers</span><span class="cat-row-count">03</span></div>
+        <div class="cat-row" onclick="filterBy('knec')"><span class="cat-row-name"><span class="cat-dot" style="background:#b34d20;"></span>KNEC Assessments</span><span class="cat-row-count">03</span></div>
+        <div class="cat-row" onclick="filterBy('maths')"><span class="cat-row-name"><span class="cat-dot" style="background:#6a3cad;"></span>Maths &amp; CS</span><span class="cat-row-count">04</span></div>
+        <div class="cat-row" onclick="filterBy('policy')"><span class="cat-row-name"><span class="cat-dot" style="background:#8b6820;"></span>Policy &amp; Pathways</span><span class="cat-row-count">04</span></div>
+        <div class="cat-row" style="margin-top:6px;" onclick="filterBy('all')"><span class="cat-row-name" style="color:var(--gold);font-weight:700;">← View all</span><span class="cat-row-count">18</span></div>
+      </div>
+
+      <!-- Recent Posts -->
+      <div class="sb-card">
+        <h3><span class="sb-label">Recent</span>Latest Articles</h3>
+        <div class="recent-item" onclick="openArticle('featured-cohort')">
+          <div class="recent-num">01</div>
+          <div class="recent-info"><div class="recent-title">First CBC Grade 10 Cohort Enters Pathways</div><div class="recent-date">June 2, 2026</div></div>
+        </div>
+        <div class="recent-item" onclick="openArticle('kicd-becf')">
+          <div class="recent-num">02</div>
+          <div class="recent-info"><div class="recent-title">The BECF: What It Means for Every Learner</div><div class="recent-date">May 30, 2026</div></div>
+        </div>
+        <div class="recent-item" onclick="openArticle('tsc-retooling')">
+          <div class="recent-num">03</div>
+          <div class="recent-info"><div class="recent-title">TSC CBC Retooling: Who Has Been Trained?</div><div class="recent-date">May 26, 2026</div></div>
+        </div>
+        <div class="recent-item" onclick="openArticle('kjsea-explained')">
+          <div class="recent-num">04</div>
+          <div class="recent-info"><div class="recent-title">KJSEA Explained: How It Works</div><div class="recent-date">May 22, 2026</div></div>
+        </div>
+        <div class="recent-item" onclick="openArticle('cs-curriculum')">
+          <div class="recent-num">05</div>
+          <div class="recent-info"><div class="recent-title">CS in CBC: Strands, Skills &amp; Careers</div><div class="recent-date">May 18, 2026</div></div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="newsletter-band">
+        <h3>📧 CBC Updates to Your Inbox</h3>
+        <p>Get notified when new articles, KICD circulars, and CBC resources are published on CBC Best.</p>
+        <div class="nl-form">
+          <input type="email" class="nl-input" id="nlEmail" placeholder="your@email.com">
+          <button class="nl-btn" onclick="subscribeNl()">Subscribe →</button>
+        </div>
+        <div class="nl-note">No spam. Unsubscribe anytime. Your email is stored locally.</div>
+      </div>
+
+      <!-- Upcoming Events -->
+      <div class="sb-card">
+        <h3><span class="sb-label">Calendar</span>CBC Key Dates 2026</h3>
+        <div class="event-item">
+          <div class="event-date-box"><span class="em">Jul</span><span class="ed">15</span></div>
+          <div class="event-info"><h4>KJSEA Registration Opens</h4><p>Grade 9 learners register for the November 2026 KJSEA via their schools through KNEC.</p></div>
+        </div>
+        <div class="event-item">
+          <div class="event-date-box"><span class="em">Aug</span><span class="ed">01</span></div>
+          <div class="event-info"><h4>TSC Senior School Retooling</h4><p>CBC retooling workshops for senior school teachers scheduled countrywide during August.</p></div>
+        </div>
+        <div class="event-item">
+          <div class="event-date-box"><span class="em">Sep</span><span class="ed">10</span></div>
+          <div class="event-info"><h4>CBC Pathway Guidance Expos</h4><p>County-level CBC pathway career guidance sessions for Grade 9 learners and parents.</p></div>
+        </div>
+        <div class="event-item">
+          <div class="event-date-box"><span class="em">Nov</span><span class="ed">03</span></div>
+          <div class="event-info"><h4>KJSEA Examinations Begin</h4><p>The Kenya Junior School Education Assessment for Grade 9 learners commences nationally.</p></div>
+        </div>
+        <div class="event-item">
+          <div class="event-date-box"><span class="em">2028</span><span class="ed">—</span></div>
+          <div class="event-info"><h4>First CBC KCSE (Grade 12)</h4><p>The inaugural CBC Kenya Certificate of Secondary Education — a historic milestone for Kenyan education.</p></div>
+        </div>
+      </div>
+
+      <!-- Official Links -->
+      <div class="sb-card">
+        <h3><span class="sb-label">Sources</span>Official Websites</h3>
+        <a href="https://kicd.ac.ke/" target="_blank" rel="noopener" class="official-link">KICD — kicd.ac.ke <span class="ext">↗</span></a>
+        <a href="https://www.tsc.go.ke/" target="_blank" rel="noopener" class="official-link">TSC Kenya — tsc.go.ke <span class="ext">↗</span></a>
+        <a href="https://www.knec.ac.ke/" target="_blank" rel="noopener" class="official-link">KNEC — knec.ac.ke <span class="ext">↗</span></a>
+        <a href="https://www.education.go.ke/" target="_blank" rel="noopener" class="official-link">Ministry of Education <span class="ext">↗</span></a>
+        <a href="https://www.tvet.go.ke/" target="_blank" rel="noopener" class="official-link">TVET Authority — tvet.go.ke <span class="ext">↗</span></a>
+        <a href="https://www.kuccps.ac.ke/" target="_blank" rel="noopener" class="official-link">KUCCPS — kuccps.ac.ke <span class="ext">↗</span></a>
+      </div>
+
+    </aside>
+  </div><!-- /blog-layout -->
+</div><!-- /container -->
+</main>
+
+<!-- ARTICLE MODAL -->
+<div class="article-overlay" id="articleOverlay">
+  <div class="article-box" id="articleBox">
+    <button class="article-close" onclick="closeArticle()">✕</button>
+    <div id="articleContent"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✓ <span id="toastMsg">Subscribed!</span></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>📘 CBC Best</strong>
+        <p>Kenya's most comprehensive Competency Based Curriculum resource — KICD-aligned content for students, teachers, and parents. By Ronny Mwenda (Ronny Best), Mathematics &amp; Computer Science Teacher, Embu County.</p>
+        <div class="ecosystem">
+          Ronny Mwenda digital ecosystem:
+          <a href="https://bestronny.netlify.app" target="_blank" rel="noopener">Bestronny (Mathematics)</a> ·
+          <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener">Portfolio</a> ·
+          <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener">RonnyGame</a>
+        </div>
+        <div style="margin-top:1rem; font-size:0.78rem; color:rgba(255,228,196,0.45);">
+          📧 <a href="mailto:ronnymwenda89@gmail.com" style="color:rgba(201,160,61,0.8);">ronnymwenda89@gmail.com</a> &nbsp;·&nbsp;
+          📱 <a href="tel:+254799188900" style="color:rgba(201,160,61,0.8);">+254 799 188 900</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>CBC Best</h4>
+        <a href="index.html">Home</a>
+        <a href="pathways.html">Pathways</a>
+        <a href="subjects-skills.html">Subjects &amp; Skills</a>
+        <a href="assessment-tools.html">Assessment Tools</a>
+        <a href="learning-outcomes.html">Learning Outcomes</a>
+        <a href="teacher-requirements.html">Teacher Hub</a>
+        <a href="mathematics-computer-science.html">Maths &amp; CS</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="resources.html">Downloads</a>
+        <a href="faq.html">CBC FAQ</a>
+        <a href="blog.html">News &amp; Updates</a>
+        <a href="forums.html">Discussion Forums</a>
+        <a href="about-contact.html">About Ronny</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CBC Best — CBC News &amp; Updates. Original analysis by Ronny Mwenda. Verified against KICD, TSC, and KNEC sources. AdSense &amp; Search Console compliant.</p>
+      <p><a href="/sitemap.xml">Sitemap</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-use.html">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ─── ARTICLE CONTENT DATABASE ──────────────── */
+const ARTICLES = {
+  'featured-cohort': {
+    title: "Senior School Officially Begins: Kenya's First CBC Grade 10 Cohort Enters Pathways",
+    date: "June 2, 2026", author: "Ronny Mwenda", readTime: "12 min",
+    tags: ["KICD", "Policy", "KJSEA"],
+    body: `
+      <p>Kenya's education landscape has shifted permanently. With the 2025–2026 academic year, the first full cohort of learners under the Competency Based Curriculum has crossed into Senior Secondary School. These are students who started Pre-Primary 1 (PP1) when CBC was being piloted — they have grown with the curriculum. Now, at the threshold of Grades 10 to 12, they choose a pathway that shapes their higher education and career direction.</p>
+      <h4>What Changed at Transition?</h4>
+      <p>The transition from Junior Secondary (Grades 7–9) to Senior Secondary (Grades 10–12) is guided by the Kenya Junior School Education Assessment (KJSEA), sat at Grade 9. This assessment, administered by KNEC, covers the core Junior Secondary subjects: English, Kiswahili, Mathematics, Integrated Science, Social Studies, and Creative Arts &amp; Sports. It produces a performance report — not a pass/fail result — that informs, rather than determines, pathway placement.</p>
+      <h4>The Three Pathways</h4>
+      <p>Senior Secondary offers three distinct learning pathways aligned with the Basic Education Curriculum Framework (BECF):</p>
+      <ul>
+        <li><strong>STEM Pathway</strong> — Mathematics, Sciences, Computer Science, Agriculture. Leads to engineering, medicine, technology, data science, and related university programmes.</li>
+        <li><strong>Social Sciences Pathway</strong> — History, Geography, Business Studies, Economics, Citizenship. Leads to law, public policy, journalism, education, NGO and government work.</li>
+        <li><strong>Arts &amp; Sports Science Pathway</strong> — Performing Arts, Visual Arts, Music, Physical Education, Sports Science. Leads to sports management, creative industries, therapy, coaching, and arts-based professions.</li>
+      </ul>
+      <h4>My Observation from Embu</h4>
+      <p>As a Mathematics and Computer Science teacher watching this transition happen, the most common concern from families is the fear that a non-STEM pathway limits university access. This is not accurate. All three pathways lead to KCSE at Grade 12, and universities admit learners from all pathways. The difference is in subject combination, not academic status. What matters is choosing the pathway that matches the learner's genuine strengths and interests — not parental prestige preference.</p>
+      <h4>What the Ministry Has Said</h4>
+      <p>The Ministry of Education has issued guidance emphasising that pathway selection must be learner-centred, involving school counsellors, aptitude data from KJSEA, and parental input. Schools have been directed to conduct pathway counselling sessions before final selections are submitted. This is a significant step towards the individualised, competency-based vision the BECF describes.</p>
+      <div class="source-note"><strong>Sources &amp; Further Reading:</strong> KICD Basic Education Curriculum Framework (<a href="https://kicd.ac.ke" target="_blank">kicd.ac.ke</a>), KNEC KJSEA Guidelines (<a href="https://www.knec.ac.ke" target="_blank">knec.ac.ke</a>), Ministry of Education Kenya (<a href="https://www.education.go.ke" target="_blank">education.go.ke</a>).</div>
+    `
+  },
+  'kicd-becf': {
+    title: "The Basic Education Curriculum Framework (BECF): What It Means for Every Kenyan Learner",
+    date: "May 30, 2026", author: "Ronny Mwenda", readTime: "8 min",
+    tags: ["KICD"],
+    body: `
+      <p>The Basic Education Curriculum Framework (BECF), published by the Kenya Institute of Curriculum Development (KICD), is the foundational document of Kenya's Competency Based Curriculum. It is not a single subject syllabus — it is the blueprint for the entire CBC system, from PP1 to Grade 12.</p>
+      <h4>What the BECF Defines</h4>
+      <ul>
+        <li>The national education <strong>vision</strong>: "Every Kenyan child should be an engaged, empowered, and ethical citizen."</li>
+        <li>The <strong>7 Core Competencies</strong> all learners must develop: Communication &amp; Collaboration, Critical Thinking &amp; Problem Solving, Creativity &amp; Imagination, Citizenship, Digital Literacy, Learning to Learn, and Self-Efficacy.</li>
+        <li>The <strong>values</strong> embedded in CBC: Love, Responsibility, Respect, Unity, Peace, Patriotism, Social Justice, and Integrity.</li>
+        <li>The <strong>learning areas</strong> at each level and how they interconnect.</li>
+        <li>The <strong>assessment philosophy</strong>: continuous, learner-centred, and formative-first.</li>
+      </ul>
+      <h4>Why Teachers Should Read It</h4>
+      <p>The BECF is not just a policy document for government officials. Every CBC teacher benefits from reading it because it explains the "why" behind lesson design decisions. When a teacher understands that CBC's goal is competency, not content coverage, lesson planning changes fundamentally. You stop asking "what do I need to teach?" and start asking "what should the learner be able to do?"</p>
+      <h4>Where to Access the BECF</h4>
+      <p>The BECF is freely available on the KICD website at <a href="https://kicd.ac.ke" target="_blank">kicd.ac.ke</a>. Teachers, parents, and learners are encouraged to read it as the primary authoritative source on CBC's design and purpose.</p>
+      <div class="source-note"><strong>Source:</strong> KICD Basic Education Curriculum Framework, 2017 (revised 2022). Available at <a href="https://kicd.ac.ke" target="_blank">kicd.ac.ke</a>.</div>
+    `
+  },
+  'tsc-retooling': {
+    title: "TSC CBC Teacher Retooling: Who Has Been Trained and What Gaps Remain?",
+    date: "May 26, 2026", author: "Ronny Mwenda", readTime: "7 min",
+    tags: ["TSC"],
+    body: `
+      <p>The Teachers Service Commission (TSC) has been the primary agency responsible for retraining Kenya's 340,000+ registered teachers to deliver the Competency Based Curriculum. Retooling began in 2017 with pilot schools and has expanded progressively as CBC rolled out grade by grade.</p>
+      <h4>What CBC Retooling Covers</h4>
+      <ul>
+        <li>Learner-centred pedagogy and facilitation techniques</li>
+        <li>Formative assessment using all 13 KICD assessment tools</li>
+        <li>Writing and using Expected Learning Outcomes (ELOs)</li>
+        <li>Differentiated instruction for diverse learners</li>
+        <li>ICT integration in the CBC classroom</li>
+        <li>Community Service Learning (CSL) facilitation</li>
+        <li>Project-Based Learning (PBL) design and assessment</li>
+      </ul>
+      <h4>Progress and Gaps</h4>
+      <p>While the TSC has trained a substantial proportion of teachers in lower primary and upper primary, training for Junior Secondary and Senior Secondary teachers — particularly in specialised STEM, Arts, and Sports Science subjects — is ongoing. Rural and remote counties face challenges with trainer availability and internet access for e-learning modules. The TSC has acknowledged these gaps and committed to intensifying Senior School retooling throughout 2026 and 2027.</p>
+      <h4>Continuous Professional Development (CPD)</h4>
+      <p>Beyond initial retooling, the TSC requires all teachers to accumulate CPD hours annually. CBC-focused CPD activities — workshops, peer learning sessions, and online modules — count toward these hours. Teachers are encouraged to document their CPD on the TSC portal at <a href="https://www.tsc.go.ke" target="_blank">tsc.go.ke</a>.</p>
+      <div class="source-note"><strong>Source:</strong> TSC Kenya (<a href="https://www.tsc.go.ke" target="_blank">tsc.go.ke</a>). Note: specific retooling statistics are updated periodically by the TSC — visit their official website for the latest figures.</div>
+    `
+  },
+  'kjsea-explained': {
+    title: "KJSEA Explained: How the Kenya Junior School Education Assessment Works",
+    date: "May 22, 2026", author: "Ronny Mwenda", readTime: "9 min",
+    tags: ["KNEC"],
+    body: `
+      <p>The Kenya Junior School Education Assessment (KJSEA) is the transition assessment at the end of Grade 9, administered by the Kenya National Examinations Council (KNEC). It replaces the Kenya Certificate of Primary Education (KCPE) as the key milestone between lower and upper secondary education under CBC.</p>
+      <h4>What the KJSEA Assesses</h4>
+      <p>The KJSEA covers the core learning areas of Junior Secondary School (Grades 7–9):</p>
+      <ul>
+        <li>English (written and oral components)</li>
+        <li>Kiswahili (written and oral components)</li>
+        <li>Mathematics</li>
+        <li>Integrated Science</li>
+        <li>Social Studies (including History, Geography, and Citizenship)</li>
+        <li>Creative Arts &amp; Sports (practical component)</li>
+        <li>Religious Education (CRE, IRE, or HRE — based on learner's choice)</li>
+      </ul>
+      <h4>How Results Are Used</h4>
+      <p>KJSEA results are not a simple pass/fail. KNEC produces a performance report indicating the learner's achievement levels in each subject. This report is used alongside school-based assessment records, aptitude indicators, and counsellor recommendations to guide Senior School pathway placement. No learner is categorically barred from a pathway on the basis of KJSEA results alone.</p>
+      <h4>Preparation Advice</h4>
+      <p>The best KJSEA preparation is consistent engagement with the CBC curriculum throughout Grades 7–9 — completing projects, portfolios, and CATs, and developing genuine understanding rather than last-minute memorisation. The assessment is designed to test what a learner can do, not just what they can recall.</p>
+      <div class="source-note"><strong>Source:</strong> KNEC — Kenya National Examinations Council (<a href="https://www.knec.ac.ke" target="_blank">knec.ac.ke</a>). Check the KNEC portal for the most current KJSEA regulations and timetable.</div>
+    `
+  },
+  'cs-curriculum': {
+    title: "Computer Science in CBC Senior School: Strands, Skills, and Career Pathways",
+    date: "May 18, 2026", author: "Ronny Mwenda", readTime: "10 min",
+    tags: ["Maths & CS"],
+    body: `
+      <p>Computer Science is one of the most dynamic and career-relevant subjects in the CBC STEM pathway. As a Computer Science teacher, I want to give a clear, practical picture of what the CBC CS curriculum covers at senior school level (Grades 10–12) and what it prepares learners for.</p>
+      <h4>Key Strands in CBC Computer Science</h4>
+      <ul>
+        <li><strong>Programming Fundamentals</strong> — Variables, data types, conditionals, loops, functions. Python is the primary language at senior level.</li>
+        <li><strong>Problem Solving &amp; Algorithms</strong> — Flowcharts, pseudocode, algorithm design, debugging strategies.</li>
+        <li><strong>Data Management</strong> — Databases, data organisation, spreadsheet modelling, basic SQL concepts.</li>
+        <li><strong>Networks &amp; the Internet</strong> — How the internet works, IP addressing, network security basics.</li>
+        <li><strong>Cybersecurity &amp; Digital Ethics</strong> — Safe digital practices, privacy, responsible use of technology, cyber threats.</li>
+        <li><strong>Web Development</strong> — HTML, CSS basics, understanding how websites are built and hosted.</li>
+        <li><strong>Emerging Technologies</strong> — Introduction to Artificial Intelligence, machine learning concepts, and their applications in Kenya's economy.</li>
+      </ul>
+      <h4>Assessment in CBC CS</h4>
+      <p>CS assessment under CBC combines practical projects (portfolios of coded solutions, web pages, database designs) with written examinations. The 60/40 school-based to external split applies. Learners are expected to demonstrate competency through doing — not just theory.</p>
+      <h4>Career Pathways After CS in CBC</h4>
+      <p>CBC Computer Science opens doors to Software Engineering, Data Science, Cybersecurity, Web Development, AI/ML Engineering, IT Management, and Computer Science Education — at both local and international universities and colleges.</p>
+      <div class="source-note"><strong>Further resources:</strong> KICD Computer Science curriculum design — available at <a href="https://kicd.ac.ke" target="_blank">kicd.ac.ke</a>. Also visit <a href="mathematics-computer-science.html">CBC Best Maths &amp; CS Hub</a> for lesson plans and project ideas.</div>
+    `
+  },
+  '60-40-assessment': {
+    title: "Understanding the 60/40 Assessment Split in CBC: School-Based vs External Examinations",
+    date: "May 14, 2026", author: "Ronny Mwenda", readTime: "8 min",
+    tags: ["Policy"],
+    body: `
+      <p>One of the most significant departures from Kenya's 8-4-4 system is the assessment structure at Senior Secondary level. Under 8-4-4, the KCSE was almost entirely an external, end-of-cycle examination. Under CBC, senior school assessment is split: 60% School-Based Assessment (SBA) and 40% External Examination.</p>
+      <h4>What 60% School-Based Assessment Covers</h4>
+      <p>SBA is the ongoing work done throughout Grades 10, 11, and 12. It includes:</p>
+      <ul>
+        <li>Continuous Assessment Tests (CATs) administered by subject teachers</li>
+        <li>Portfolio evidence — collections of a learner's work over time</li>
+        <li>Subject-specific projects (mandatory for most subjects)</li>
+        <li>Community Service Learning (CSL) project reports</li>
+        <li>Practical assessments in applicable subjects (Science labs, PE, Arts)</li>
+        <li>Oral and performance assessments where relevant</li>
+      </ul>
+      <h4>What 40% External Examination Covers</h4>
+      <p>The external component — administered by KNEC as the CBC KCSE — assesses application of knowledge and skills through written and practical examinations at the end of Grade 12. The first CBC KCSE cohort will sit these examinations in 2028.</p>
+      <h4>Why This Matters for Teachers</h4>
+      <p>The SBA component means that a learner's final grade is substantially built throughout the three senior school years — not determined by a single exam. This places enormous responsibility on teachers to maintain accurate, fair, and well-documented assessment records throughout the senior school period. KICD and KNEC have issued SBA moderation guidelines to ensure consistency across schools.</p>
+      <div class="source-note"><strong>Source:</strong> KICD Senior School curriculum designs and KNEC assessment frameworks. Visit <a href="https://kicd.ac.ke" target="_blank">kicd.ac.ke</a> and <a href="https://www.knec.ac.ke" target="_blank">knec.ac.ke</a> for the most current guidance.</div>
+    `
+  },
+  'pathway-choice-guide': {
+    title: "How to Choose the Right CBC Senior School Pathway: A Parent and Learner Guide",
+    date: "May 10, 2026", author: "Ronny Mwenda", readTime: "11 min",
+    tags: ["Policy"],
+    body: `
+      <p>Pathway selection is one of the most consequential decisions in a Kenyan learner's educational journey. As both a teacher and an education advocate, I have walked many families through this decision. This guide addresses the most common questions and misconceptions.</p>
+      <h4>What Actually Determines Pathway?</h4>
+      <p>No single factor determines pathway. The decision is informed by: KJSEA performance report, school-based assessment history from Grades 7–9, learner aptitude (measured through various tools), learner interest and passion, school counsellor recommendation, and parental input. The Ministry of Education is clear: pathway selection must be learner-centred.</p>
+      <h4>Busting the Biggest Myth</h4>
+      <p>The most damaging myth is that the STEM pathway is for "clever" learners and the Arts &amp; Sports pathway is a fallback. This is entirely false. Each pathway demands genuine competency in its domain. A learner who is mechanically placed in STEM despite lacking mathematical aptitude or interest will struggle — while a passionate arts learner on their chosen pathway can access university, professional opportunities, and a fulfilling career.</p>
+      <h4>Questions to Guide the Decision</h4>
+      <ul>
+        <li>What subjects did the learner genuinely enjoy in Junior Secondary?</li>
+        <li>In which areas does the learner show natural curiosity and effort — even without being told to?</li>
+        <li>What careers or futures does the learner imagine for themselves?</li>
+        <li>What does the KJSEA report indicate about relative strengths?</li>
+        <li>Has the learner spoken to a careers counsellor at school?</li>
+      </ul>
+      <h4>Can a Learner Change Pathways?</h4>
+      <p>Pathway changes after Grade 10 entry are possible but require school administration approval and may involve catching up on prerequisite content. It is strongly advisable to make a well-considered choice from the start. Utilise the counselling sessions offered by schools before finalising the decision.</p>
+      <div class="source-note"><strong>For further guidance:</strong> Visit <a href="pathways.html">CBC Best Pathways page</a> for a full breakdown of each pathway's subjects, careers, and university entry requirements.</div>
+    `
+  },
+  'teacher-standards': {
+    title: "CBC Teacher Competency Standards: What TSC Expects in 2026",
+    date: "May 6, 2026", author: "Ronny Mwenda", readTime: "7 min",
+    tags: ["TSC"],
+    body: `
+      <p>The Teachers Service Commission has aligned its teacher performance appraisal system with the demands of CBC. Every registered teacher in Kenya is now assessed against a set of professional competency standards that go beyond traditional content knowledge.</p>
+      <h4>Core CBC Teacher Competency Areas</h4>
+      <ul>
+        <li><strong>Pedagogical Skills</strong> — Ability to facilitate learner-centred lessons, use inquiry-based approaches, and manage project-based learning.</li>
+        <li><strong>Assessment Literacy</strong> — Proficiency in designing and using all 13 KICD assessment tools, especially rubrics, portfolios, and observation schedules.</li>
+        <li><strong>ICT Integration</strong> — Ability to incorporate digital tools into teaching — from basic productivity software to subject-specific applications.</li>
+        <li><strong>Inclusive Education</strong> — Skills for differentiating instruction to meet the needs of learners with different abilities, including those with special educational needs.</li>
+        <li><strong>Curriculum Knowledge</strong> — Deep familiarity with the relevant KICD curriculum designs, learning outcomes, and assessment guidelines for the teacher's subject area.</li>
+        <li><strong>Professional Conduct &amp; Ethics</strong> — Adherence to the TSC Code of Conduct, including child protection responsibilities.</li>
+      </ul>
+      <h4>Annual Performance Appraisal</h4>
+      <p>The TSC conducts annual performance appraisals (APDPs) where these competencies are assessed. Teachers who do not meet minimum CBC standards are referred for additional retooling. Teachers who demonstrate excellence can be recommended for career progression. Appraisal forms and guidelines are available at <a href="https://www.tsc.go.ke" target="_blank">tsc.go.ke</a>.</p>
+      <div class="source-note"><strong>Source:</strong> TSC — Teachers Service Commission Kenya (<a href="https://www.tsc.go.ke" target="_blank">tsc.go.ke</a>). Visit the TSC website for the current Performance Appraisal and Development Policy (PADP) documents.</div>
+    `
+  },
+  'maths-cbc-approach': {
+    title: "Teaching Mathematics in CBC: From Content Delivery to Competency Facilitation",
+    date: "April 30, 2026", author: "Ronny Mwenda", readTime: "9 min",
+    tags: ["Maths & CS"],
+    body: `
+      <p>I have been teaching Mathematics in Kenya for several years, and the transition to CBC has fundamentally changed what I do in the classroom. Under 8-4-4, the Mathematics teacher's job was to explain procedures and ensure learners could replicate them in an exam. Under CBC, the job is to develop mathematically literate thinkers who can apply reasoning to real-world problems.</p>
+      <h4>What Has Changed in CBC Mathematics?</h4>
+      <ul>
+        <li>Learning outcomes specify what learners must <em>do</em>, not just what they must know.</li>
+        <li>Real-world contexts are not optional extras — they are the starting point for every concept.</li>
+        <li>Learners are expected to conjecture, investigate, model, and justify — not just compute.</li>
+        <li>Group work and collaborative problem-solving are embedded in the curriculum design.</li>
+        <li>Projects (e.g., financial literacy investigations, data collection and analysis) are assessed components, not just enrichment activities.</li>
+      </ul>
+      <h4>Practical Strategies That Work</h4>
+      <p><strong>1. Start with a Real Problem.</strong> Instead of introducing quadratic equations with abstract notation, start with a real scenario: a farmer wants to fence a rectangular plot with limited materials — what dimensions maximise area? The algebra emerges from the context.</p>
+      <p><strong>2. Use Think-Pair-Share.</strong> Before explaining a concept, give learners 3 minutes to think about it individually, then discuss with a partner, then share with the class. This builds communication and critical thinking competencies within the Mathematics lesson.</p>
+      <p><strong>3. Portfolio Evidence.</strong> Ask learners to keep a Mathematics journal where they record problem-solving approaches, including mistakes and corrections. This builds metacognition — the "Learning to Learn" competency.</p>
+      <div class="source-note"><strong>CBC Mathematics resources:</strong> Visit <a href="mathematics-computer-science.html">CBC Best Maths &amp; CS Hub</a> for curriculum outlines, sample lesson plans, and project ideas for Grades 7–12.</div>
+    `
+  },
+  '7-competencies': {
+    title: "The 7 Core Competencies of CBC: A Classroom Teacher's Perspective",
+    date: "April 24, 2026", author: "Ronny Mwenda", readTime: "8 min",
+    tags: ["KICD"],
+    body: `
+      <p>KICD's Basic Education Curriculum Framework defines seven core competencies that every Kenyan learner must develop throughout their education. As a classroom teacher, I want to explain what each competency actually looks like in practice — not as a policy statement, but as a daily teaching goal.</p>
+      <h4>The Seven Competencies in Practice</h4>
+      <ul>
+        <li><strong>01 — Communication &amp; Collaboration:</strong> Learners must express themselves clearly and work constructively in teams. In my classroom, this means structured group projects where each member has a defined role and must present their section to the class.</li>
+        <li><strong>02 — Critical Thinking &amp; Problem Solving:</strong> Learners must reason through unfamiliar problems. In Mathematics, this means problems that have no single formula to apply — they require analysis, comparison, and justification.</li>
+        <li><strong>03 — Creativity &amp; Imagination:</strong> Learners must generate novel approaches. In CS, this means asking learners to design their own programme solution rather than copy a template.</li>
+        <li><strong>04 — Citizenship:</strong> Learners must understand their role in society. Community Service Learning projects are the primary vehicle for this competency.</li>
+        <li><strong>05 — Digital Literacy:</strong> Learners must use technology responsibly and effectively. Every subject teacher has a responsibility to incorporate digital tools — not just ICT teachers.</li>
+        <li><strong>06 — Learning to Learn:</strong> Learners must develop self-awareness about how they learn. Portfolios, self-assessment tools, and reflection journals build this competency.</li>
+        <li><strong>07 — Self-Efficacy:</strong> Learners must believe in their own ability to improve. Formative feedback (not just grades) builds this. When a teacher comments "you demonstrated strong reasoning here — try applying this to the next problem," that builds self-efficacy.</li>
+      </ul>
+      <div class="source-note"><strong>Source:</strong> KICD Basic Education Curriculum Framework. The full competency descriptions are available at <a href="https://kicd.ac.ke" target="_blank">kicd.ac.ke</a>.</div>
+    `
+  },
+  'kpsea-explained': {
+    title: "KPSEA at Grade 6: Kenya Primary School Education Assessment Demystified",
+    date: "April 18, 2026", author: "Ronny Mwenda", readTime: "6 min",
+    tags: ["KNEC"],
+    body: `
+      <p>The Kenya Primary School Education Assessment (KPSEA) is the transition assessment at the end of Grade 6, administered by KNEC. It replaced the Kenya Certificate of Primary Education (KCPE) under the CBC system and marks the end of the Primary School phase of Kenya's 2-6-3-3 education structure.</p>
+      <h4>What KPSEA Assesses</h4>
+      <p>KPSEA covers the competencies developed across Grades 1–6. The key learning areas assessed include: English, Kiswahili, Mathematics, Science &amp; Technology, Social Studies, Religious Education, and Creative Arts. The assessment uses a mix of written tasks and portfolio-based evidence.</p>
+      <h4>How KPSEA Differs from the Old KCPE</h4>
+      <ul>
+        <li>KPSEA is not a single, high-stakes written exam. It incorporates school-based assessment alongside the external component.</li>
+        <li>Results are presented as performance levels, not raw marks that determine placement in a competitive ranking.</li>
+        <li>The purpose is to confirm readiness for Junior Secondary, not to rank learners against each other.</li>
+      </ul>
+      <h4>What Happens After KPSEA?</h4>
+      <p>All Grade 6 learners who complete primary school transition to Junior Secondary School (Grade 7). Under CBC, this transition is a right — not contingent on achieving a specific KPSEA score. The results inform the Junior Secondary school on where additional support may be needed.</p>
+      <div class="source-note"><strong>Source:</strong> KNEC Kenya (<a href="https://www.knec.ac.ke" target="_blank">knec.ac.ke</a>) and Ministry of Education (<a href="https://www.education.go.ke" target="_blank">education.go.ke</a>).</div>
+    `
+  },
+  'community-service': {
+    title: "Community Service Learning in CBC: Purpose, Structure, and Assessment",
+    date: "April 12, 2026", author: "Ronny Mwenda", readTime: "7 min",
+    tags: ["Policy"],
+    body: `
+      <p>Community Service Learning (CSL) is a mandatory and assessed component of the CBC at Junior and Senior Secondary levels. It is not optional extracurricular activity — it is curriculum. KICD designed it to bridge classroom learning and real community challenges, developing the Citizenship competency among others.</p>
+      <h4>What CSL Looks Like</h4>
+      <p>A CSL project requires learners to identify a real challenge in their community, plan and execute a response, document the process, and reflect on what they learned. Projects must be connected to curriculum content — they are not simply charity work or volunteering. Examples include:</p>
+      <ul>
+        <li>A Science class designing a simple water filtration system for a local institution</li>
+        <li>A Mathematics class conducting a financial literacy survey in the community and analysing the data</li>
+        <li>A Social Studies class documenting local history and presenting it to the community</li>
+        <li>A Computer Science class setting up a basic computer literacy session for elderly community members</li>
+      </ul>
+      <h4>How CSL Is Assessed</h4>
+      <p>CSL is assessed through a portfolio that includes: the project proposal, evidence of implementation (photos, attendance records, materials), a reflective report by the learner, and teacher observation notes. The assessment tool is typically a rubric covering planning, execution, impact, and reflection quality. At Senior School, CSL contributes to the 60% School-Based Assessment component.</p>
+      <div class="source-note"><strong>Source:</strong> KICD Basic Education Curriculum Framework and Senior School Curriculum Designs. Visit <a href="https://kicd.ac.ke" target="_blank">kicd.ac.ke</a> for full CSL guidelines.</div>
+    `
+  },
+  'project-based-maths': {
+    title: "Project-Based Learning in CBC Mathematics: Ideas That Work in Kenyan Classrooms",
+    date: "April 6, 2026", author: "Ronny Mwenda", readTime: "9 min",
+    tags: ["Maths & CS"],
+    body: `
+      <p>Project-Based Learning (PBL) is central to CBC Mathematics at all levels. As a Mathematics teacher who has implemented PBL in a Kenyan classroom, I share ten project ideas — with brief notes on curriculum alignment and assessment — that are practical, affordable, and genuinely engaging for learners.</p>
+      <h4>Ten CBC Mathematics Project Ideas</h4>
+      <ul>
+        <li><strong>1. Budget Your School Event</strong> — Learners plan a school event within a budget, applying arithmetic, percentages, and financial reasoning (Grades 7–8).</li>
+        <li><strong>2. Survey and Statistics</strong> — Learners design a questionnaire, collect data from at least 30 respondents, and analyse results using measures of central tendency and data display (Grade 9–10).</li>
+        <li><strong>3. Area Optimisation Problem</strong> — Given a fixed perimeter, design the farm plot with maximum area. Connects algebra and geometry (Grade 10).</li>
+        <li><strong>4. Local Business Profit Model</strong> — Interview a local small business owner, model their revenue and expenses, and present recommendations (Grade 11).</li>
+        <li><strong>5. Coordinate Geometry in Real Life</strong> — Use Google Maps or a local map to plot coordinates, calculate distances, and determine midpoints of key routes (Grade 8–9).</li>
+        <li><strong>6. Probability and Games</strong> — Design a fair game using dice or cards, prove its fairness mathematically, and test it empirically with classmates (Grade 9).</li>
+        <li><strong>7. Compound Interest Investigation</strong> — Compare Kenya's M-Pesa savings, bank accounts, and SACCOs using compound interest calculations (Grade 10–11).</li>
+        <li><strong>8. Measurement and Construction</strong> — Design and scale a floor plan of the ideal classroom, applying scale drawing and measurement skills (Grade 8).</li>
+        <li><strong>9. Population Growth Model</strong> — Use Kenya census data to model county population growth using linear and exponential functions (Grade 11–12).</li>
+        <li><strong>10. Road Safety Data Analysis</strong> — Collect or obtain road accident data, analyse trends, and present recommendations to reduce accidents in the local area (Grade 12).</li>
+      </ul>
+      <div class="source-note"><strong>More resources:</strong> Visit <a href="mathematics-computer-science.html">CBC Best Maths &amp; CS Hub</a> for lesson plan templates, rubrics, and project scaffolds for Grades 7–12.</div>
+    `
+  }
+};
+
+/* ─── OPEN ARTICLE MODAL ─────────────────────── */
+function openArticle(key) {
+  const a = ARTICLES[key];
+  if (!a) return;
+  const tagsHtml = (a.tags || []).map(t => `<span class="cat-tag-light tl-${t.toLowerCase().replace(/[^a-z]/g,'')}" style="font-size:0.7rem;padding:3px 10px;">${t}</span>`).join('');
+  document.getElementById('articleContent').innerHTML = `
+    <h2>${a.title}</h2>
+    <div class="ameta">
+      <span>📅 ${a.date}</span>
+      <span>·</span>
+      <span>✍️ ${a.author}</span>
+      <span>·</span>
+      <span>📖 ${a.readTime} read</span>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1.2rem;">${tagsHtml}</div>
+    <div class="article-body">${a.body}</div>
+  `;
+  document.getElementById('articleOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('articleBox').scrollTop = 0;
+}
+
+function closeArticle() {
+  document.getElementById('articleOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ─── CATEGORY FILTER ────────────────────────── */
+function filterBy(cat) {
+  // update filter buttons
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.toggle('active', b.getAttribute('data-cat') === cat);
+  });
+  // show/hide post cards
+  document.querySelectorAll('.post-card').forEach(card => {
+    const cardCat = card.getAttribute('data-cat') || '';
+    if (cat === 'all' || cardCat.includes(cat)) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+  // re-check load more
+  updateLoadMore();
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => filterBy(btn.getAttribute('data-cat')));
+});
+
+/* ─── LOAD MORE ──────────────────────────────── */
+function loadMore() {
+  document.querySelectorAll('.extra-post').forEach(p => p.classList.remove('hidden'));
+  document.getElementById('loadMoreBtn').style.display = 'none';
+}
+
+function updateLoadMore() {
+  const hasHidden = document.querySelectorAll('.extra-post:not(.hidden)').length === 0 &&
+                    document.querySelectorAll('.extra-post').length > 0;
+  const btn = document.getElementById('loadMoreBtn');
+  // if filter is active, hide load more
+  const activeCat = document.querySelector('.filter-btn.active')?.getAttribute('data-cat');
+  btn.style.display = (activeCat === 'all') ? '' : 'none';
+}
+
+/* ─── NEWSLETTER ─────────────────────────────── */
+function subscribeNl() {
+  const email = document.getElementById('nlEmail').value.trim();
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    showToast('Please enter a valid email address.'); return;
+  }
+  try {
+    let subs = JSON.parse(localStorage.getItem('cbc_newsletter_v2') || '[]');
+    if (subs.includes(email)) { showToast('You are already subscribed!'); return; }
+    subs.push(email);
+    localStorage.setItem('cbc_newsletter_v2', JSON.stringify(subs));
+    document.getElementById('nlEmail').value = '';
+    showToast('✓ Subscribed! You will receive CBC updates.');
+  } catch(e) { showToast('Subscription saved locally.'); }
+}
+
+/* ─── TOAST ──────────────────────────────────── */
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+/* ─── MODAL OUTSIDE CLICK ─────────────────────── */
+document.getElementById('articleOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeArticle();
+});
+
+/* ─── MOBILE NAV ─────────────────────────────── */
+const menuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+if (menuBtn) {
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('show');
+    menuBtn.textContent = open ? '✕ Close' : '☰ Menu';
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+}
+
+console.log('%cCBC Best — News & Updates\nRonny Mwenda · Mathematics & Computer Science Teacher · Embu, Kenya\nhttps://cbcbest.netlify.app/blog.html', 'color:#C9A03D; font-weight:bold;');
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
+</script>
+</body>
+</html>

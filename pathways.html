@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Theme / PWA -->
+  <meta name="theme-color" content="#0B1F2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CBC Best">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="msapplication-TileImage" content="images/icon-144.png">
+  <meta name="msapplication-TileColor" content="#0B1F2E">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- SEO -->
+  <title>CBC Senior School Pathways | STEM, Social Sciences, Arts & Sports — CBC Best</title>
+  <meta name="description" content="Complete guide to Kenya's CBC senior school pathways (Grades 10–12): STEM, Social Sciences, and Arts & Sports Science. KICD-aligned subjects, core competencies, career trajectories, and placement process by Ronny Mwenda.">
+  <meta name="keywords" content="CBC pathways Kenya, STEM pathway Kenya, Social Sciences pathway CBC, Arts and Sports Science pathway, CBC senior school grades 10 11 12, CBC subjects Kenya, KJSEA pathway placement, career pathways CBC Kenya, KICD senior school">
+  <meta name="author" content="Ronny Mwenda (Ronny Best)">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cbcbest.netlify.app/pathways.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CBC Senior School Pathways | STEM, Social Sciences, Arts & Sports">
+  <meta property="og:description" content="KICD-aligned guide to Kenya's three CBC senior school pathways — subjects, competencies, careers, and placement.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cbcbest.netlify.app/pathways.html">
+  <meta property="og:locale" content="en_KE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@ronnymwenda89">
+  <meta name="twitter:title" content="CBC Senior School Pathways — CBC Best">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:   #0B1F2E;
+      --navy2:  #132c40;
+      --navy3:  #1a3a54;
+      --gold:   #C9A03D;
+      --gold2:  #e6b94a;
+      --cream:  #FFF8EE;
+      --peach:  #FFE4C4;
+      --white:  #FFFFFF;
+      --text:   #1E2F3E;
+      --muted:  #5a7285;
+      --card:   #FFFFFF;
+      --radius: 20px;
+      --radius-lg: 32px;
+      --shadow: 0 8px 32px rgba(11,31,46,0.09);
+      --shadow-hover: 0 16px 48px rgba(11,31,46,0.16);
+      --font:   'Plus Jakarta Sans', system-ui, sans-serif;
+      --mono:   'Space Mono', monospace;
+
+      /* pathway accent colours */
+      --stem-color:   #1a7fc4;
+      --stem-light:   #e6f3fc;
+      --social-color: #2da882;
+      --social-light: #e3f7f1;
+      --arts-color:   #c4501a;
+      --arts-light:   #fceee8;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family:var(--font); background:var(--cream); color:var(--text); line-height:1.65; -webkit-font-smoothing:antialiased; }
+    a { cursor:pointer; color:inherit; text-decoration:none; }
+    button { cursor:pointer; font-family:var(--font); }
+
+    .container { max-width:1240px; margin:0 auto; padding:0 28px; }
+
+    /* ── HEADER (shared) ─────────────────────────────────── */
+    .site-header { background:var(--navy); position:sticky; top:0; z-index:200; border-bottom:1px solid rgba(201,160,61,0.15); }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; padding:0.9rem 28px; max-width:1240px; margin:0 auto; gap:1.5rem; }
+    .logo { display:flex; align-items:center; gap:12px; flex-shrink:0; }
+    .logo-icon { width:40px; height:40px; background:var(--gold); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:800; color:var(--navy); font-family:var(--mono); flex-shrink:0; }
+    .logo-text strong { display:block; font-size:1.15rem; font-weight:800; color:var(--white); letter-spacing:-0.3px; }
+    .logo-text span { font-size:0.72rem; color:rgba(255,228,196,0.7); letter-spacing:0.4px; font-weight:500; }
+    .nav-links { display:flex; align-items:center; gap:0.15rem; flex-wrap:nowrap; }
+    .nav-links a { color:rgba(255,228,196,0.85); font-weight:600; font-size:0.82rem; padding:6px 11px; border-radius:8px; transition:all 0.18s; white-space:nowrap; }
+    .nav-links a:hover, .nav-links a.active { color:var(--white); background:rgba(201,160,61,0.15); }
+    .nav-links a.active { color:var(--gold); }
+    .nav-cta { background:var(--gold) !important; color:var(--navy) !important; padding:7px 16px !important; border-radius:40px !important; font-weight:700 !important; }
+    .nav-cta:hover { background:var(--gold2) !important; }
+    .menu-toggle { display:none; background:none; border:1px solid rgba(201,160,61,0.4); color:var(--peach); padding:7px 14px; border-radius:8px; font-weight:700; font-size:0.85rem; flex-shrink:0; transition:0.2s; }
+    .menu-toggle:hover { border-color:var(--gold); color:var(--gold); }
+
+    /* ── PAGE HERO ──────────────────────────────────────── */
+    .page-hero {
+      background: var(--navy);
+      padding: 4rem 0 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content:'';
+      position:absolute; top:-100px; right:-100px;
+      width:460px; height:460px;
+      background:radial-gradient(circle, rgba(201,160,61,0.08) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .page-hero-label {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(201,160,61,0.12); border:1px solid rgba(201,160,61,0.3);
+      color:var(--gold); font-size:0.75rem; font-weight:700; letter-spacing:1.2px;
+      text-transform:uppercase; padding:5px 14px; border-radius:40px; margin-bottom:1.2rem;
+    }
+    .page-hero h1 { font-size:clamp(2rem,4.5vw,3rem); font-weight:800; color:var(--white); letter-spacing:-0.8px; line-height:1.15; margin-bottom:1rem; }
+    .page-hero h1 em { font-style:italic; color:var(--gold); }
+    .page-hero-sub { font-size:1rem; color:rgba(255,228,196,0.8); max-width:680px; line-height:1.8; margin-bottom:2rem; }
+
+    /* pathway mini cards in hero */
+    .hero-pathway-pills {
+      display:flex; gap:12px; flex-wrap:wrap;
+    }
+    .hero-pill {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);
+      color:var(--peach); font-size:0.82rem; font-weight:600;
+      padding:8px 18px; border-radius:40px; transition:all 0.2s; cursor:pointer;
+    }
+    .hero-pill:hover { background:rgba(201,160,61,0.12); border-color:rgba(201,160,61,0.3); color:var(--gold); }
+    .hero-pill.stem-pill:hover { border-color:var(--stem-color); color:#7ec8f0; }
+    .hero-pill.social-pill:hover { border-color:var(--social-color); color:#7de8cb; }
+    .hero-pill.arts-pill:hover { border-color:var(--arts-color); color:#f0a07e; }
+
+    /* ── PLACEMENT BANNER ──────────────────────────────── */
+    .placement-banner {
+      background:var(--card); border-radius:var(--radius-lg);
+      padding:2rem 2.5rem; margin:3rem 0 2rem;
+      border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow);
+      display:grid; grid-template-columns:1fr auto; gap:2rem; align-items:center;
+    }
+    .placement-banner h2 { font-size:1.2rem; font-weight:800; color:var(--navy); margin-bottom:0.5rem; }
+    .placement-banner p { font-size:0.9rem; color:var(--muted); line-height:1.75; }
+    .placement-steps {
+      display:flex; gap:1.5rem; margin-top:1.2rem; flex-wrap:wrap;
+    }
+    .pstep {
+      display:flex; align-items:flex-start; gap:10px;
+    }
+    .pstep-num {
+      width:28px; height:28px; border-radius:50%;
+      background:var(--navy); color:var(--gold);
+      font-family:var(--mono); font-size:0.72rem; font-weight:700;
+      display:flex; align-items:center; justify-content:center; flex-shrink:0;
+      margin-top:1px;
+    }
+    .pstep-text { font-size:0.83rem; color:var(--text); line-height:1.55; }
+    .pstep-text strong { display:block; color:var(--navy); font-size:0.85rem; margin-bottom:2px; }
+    .placement-aside {
+      background:var(--navy); border-radius:var(--radius);
+      padding:1.4rem 1.6rem; min-width:200px;
+    }
+    .placement-aside .label {
+      font-family:var(--mono); font-size:0.68rem; letter-spacing:1.5px;
+      text-transform:uppercase; color:rgba(201,160,61,0.7); margin-bottom:0.6rem;
+    }
+    .placement-aside p { font-size:0.82rem; color:rgba(255,228,196,0.75); line-height:1.65; }
+    .placement-aside strong { color:var(--gold); }
+
+    /* ── PATHWAY TABS ───────────────────────────────────── */
+    .section { padding:0 0 4rem; }
+    .section-label { font-family:var(--mono); font-size:0.72rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:0.5rem; }
+    .divider { width:48px; height:3px; background:var(--gold); border-radius:4px; margin-bottom:1.2rem; }
+
+    .tabs-row {
+      display:flex; gap:8px; flex-wrap:wrap;
+      padding:1.5rem 0 0;
+    }
+    .tab-btn {
+      background:var(--card); border:1.5px solid rgba(0,0,0,0.08);
+      color:var(--muted); font-family:var(--font); font-size:0.88rem;
+      font-weight:700; padding:10px 22px; border-radius:40px;
+      cursor:pointer; transition:all 0.2s;
+      display:flex; align-items:center; gap:8px;
+    }
+    .tab-btn:hover { border-color:var(--gold); color:var(--navy); }
+    .tab-btn.active.stem-tab  { background:var(--navy); color:var(--white); border-color:var(--stem-color); box-shadow:0 4px 16px rgba(26,127,196,0.2); }
+    .tab-btn.active.social-tab{ background:var(--navy); color:var(--white); border-color:var(--social-color); box-shadow:0 4px 16px rgba(45,168,130,0.2); }
+    .tab-btn.active.arts-tab  { background:var(--navy); color:var(--white); border-color:var(--arts-color); box-shadow:0 4px 16px rgba(196,80,26,0.2); }
+    .tab-accent {
+      width:8px; height:8px; border-radius:50%; display:inline-block; flex-shrink:0;
+    }
+    .stem-dot   { background:var(--stem-color); }
+    .social-dot { background:var(--social-color); }
+    .arts-dot   { background:var(--arts-color); }
+
+    /* ── PATHWAY PANELS ─────────────────────────────────── */
+    .pathway-panel { display:none; animation:fadeUp 0.3s ease; }
+    .pathway-panel.active { display:block; }
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(10px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    .panel-hero {
+      border-radius:var(--radius-lg); padding:2.5rem;
+      margin:1.5rem 0 2rem; position:relative; overflow:hidden;
+    }
+    .panel-hero.stem-bg   { background:linear-gradient(135deg, var(--navy) 0%, #0d2a42 100%); border-top:4px solid var(--stem-color); }
+    .panel-hero.social-bg { background:linear-gradient(135deg, var(--navy) 0%, #0a2a22 100%); border-top:4px solid var(--social-color); }
+    .panel-hero.arts-bg   { background:linear-gradient(135deg, var(--navy) 0%, #2a1008 100%); border-top:4px solid var(--arts-color); }
+    .panel-hero-label {
+      display:inline-block; font-family:var(--mono); font-size:0.7rem;
+      letter-spacing:1.5px; text-transform:uppercase; font-weight:700;
+      padding:4px 12px; border-radius:40px; margin-bottom:1rem;
+    }
+    .stem-label   { background:rgba(26,127,196,0.2); color:#7ec8f0; }
+    .social-label { background:rgba(45,168,130,0.2); color:#7de8cb; }
+    .arts-label   { background:rgba(196,80,26,0.2);  color:#f0a07e; }
+    .panel-hero h2 { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; color:var(--white); letter-spacing:-0.5px; margin-bottom:0.6rem; line-height:1.2; }
+    .panel-hero p  { font-size:0.95rem; color:rgba(255,228,196,0.75); max-width:680px; line-height:1.8; }
+
+    /* stats row inside hero */
+    .panel-stats {
+      display:flex; gap:2rem; flex-wrap:wrap;
+      margin-top:2rem; padding-top:1.5rem;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+    .pstat { display:flex; flex-direction:column; gap:2px; }
+    .pstat-num { font-family:var(--mono); font-size:1.6rem; font-weight:700; color:var(--white); line-height:1; }
+    .pstat-label { font-size:0.72rem; color:rgba(255,228,196,0.5); font-weight:500; letter-spacing:0.3px; }
+
+    /* panel body layout */
+    .panel-body { display:grid; grid-template-columns:3fr 2fr; gap:2rem; margin-bottom:2rem; }
+    .panel-main { display:flex; flex-direction:column; gap:1.8rem; }
+    .panel-sidebar { display:flex; flex-direction:column; gap:1.5rem; }
+
+    /* subject cards */
+    .sub-section-title {
+      font-family:var(--mono); font-size:0.72rem; letter-spacing:1.5px;
+      text-transform:uppercase; font-weight:700; margin-bottom:1rem;
+      display:flex; align-items:center; gap:8px;
+    }
+    .sub-section-title::before {
+      content:''; display:inline-block; width:20px; height:2px;
+      background:var(--gold); border-radius:2px;
+    }
+    .card {
+      background:var(--card); border-radius:var(--radius);
+      padding:1.5rem; border:1px solid rgba(0,0,0,0.05);
+      box-shadow:var(--shadow);
+    }
+    .card h3 { font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:0.8rem; }
+
+    .subjects-grid {
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); gap:8px;
+    }
+    .subject-item {
+      padding:10px 14px; border-radius:12px;
+      font-size:0.83rem; font-weight:600; color:var(--navy);
+      display:flex; align-items:flex-start; gap:8px; line-height:1.4;
+      border:1px solid rgba(0,0,0,0.06);
+    }
+    .subject-item.core   { background:rgba(11,31,46,0.05); }
+    .subject-item.elective { background:rgba(201,160,61,0.06); border-color:rgba(201,160,61,0.2); }
+    .subject-item .badge {
+      font-size:0.62rem; font-weight:700; text-transform:uppercase;
+      padding:2px 7px; border-radius:40px; white-space:nowrap; flex-shrink:0;
+      margin-top:1px;
+    }
+    .badge-core    { background:var(--navy); color:var(--gold); }
+    .badge-elective{ background:rgba(201,160,61,0.15); color:#8B6B2D; }
+
+    /* competencies */
+    .comp-chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:0.5rem; }
+    .comp-chip {
+      font-size:0.78rem; font-weight:600; padding:6px 14px;
+      border-radius:40px; display:flex; align-items:center; gap:6px;
+    }
+    .stem-chip   { background:var(--stem-light); color:#0d5a8e; }
+    .social-chip { background:var(--social-light); color:#0d6b53; }
+    .arts-chip   { background:var(--arts-light); color:#8b3210; }
+
+    /* careers */
+    .careers-list {
+      list-style:none; display:flex; flex-direction:column; gap:6px;
+    }
+    .careers-list li {
+      font-size:0.85rem; color:var(--text); padding:8px 12px;
+      border-radius:10px; background:rgba(11,31,46,0.03);
+      display:flex; align-items:flex-start; gap:8px; line-height:1.5;
+      border-left:3px solid var(--gold);
+    }
+
+    /* sidebar cards */
+    .sidebar-card {
+      background:var(--card); border-radius:var(--radius);
+      padding:1.4rem; border:1px solid rgba(0,0,0,0.05);
+      box-shadow:var(--shadow);
+    }
+    .sidebar-card h4 { font-size:0.88rem; font-weight:700; color:var(--navy); margin-bottom:0.8rem; }
+    .sidebar-card p  { font-size:0.82rem; color:var(--muted); line-height:1.7; }
+
+    .tvet-band {
+      background:var(--navy); border-radius:var(--radius);
+      padding:1.4rem;
+    }
+    .tvet-band h4 { font-size:0.85rem; font-weight:700; color:var(--gold); margin-bottom:0.5rem; }
+    .tvet-band p  { font-size:0.8rem; color:rgba(255,228,196,0.7); line-height:1.65; }
+
+    /* readiness checklist */
+    .checklist { list-style:none; display:flex; flex-direction:column; gap:6px; margin-top:0.5rem; }
+    .checklist li {
+      font-size:0.82rem; color:var(--text); display:flex;
+      align-items:flex-start; gap:8px; padding:5px 0;
+      border-bottom:1px solid rgba(0,0,0,0.04); line-height:1.55;
+    }
+    .checklist li:last-child { border-bottom:none; }
+    .check-icon { color:var(--gold); font-weight:700; flex-shrink:0; margin-top:1px; }
+
+    /* forum CTA */
+    .forum-row {
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:2rem;
+      padding:1.8rem; background:var(--navy);
+      border-radius:var(--radius-lg);
+    }
+    .forum-row p { font-size:0.88rem; color:rgba(255,228,196,0.7); margin-right:auto; max-width:480px; line-height:1.7; }
+    .forum-row p strong { color:var(--white); }
+    .btn-forum-s {
+      background:var(--gold); color:var(--navy);
+      padding:10px 22px; border-radius:40px;
+      font-weight:700; font-size:0.85rem; border:none;
+      transition:all 0.2s; display:inline-flex; align-items:center; gap:6px;
+      white-space:nowrap;
+    }
+    .btn-forum-s:hover { background:var(--gold2); transform:translateY(-1px); }
+    .btn-forum-t {
+      background:transparent; border:1.5px solid rgba(201,160,61,0.4);
+      color:var(--peach); padding:10px 22px; border-radius:40px;
+      font-weight:700; font-size:0.85rem;
+      transition:all 0.2s; display:inline-flex; align-items:center; gap:6px;
+      white-space:nowrap;
+    }
+    .btn-forum-t:hover { border-color:var(--gold); color:var(--gold); }
+
+    /* ── COMPARISON TABLE ──────────────────────────────── */
+    .compare-section {
+      background:var(--card); border-radius:var(--radius-lg);
+      padding:2.5rem; border:1px solid rgba(0,0,0,0.05);
+      box-shadow:var(--shadow); margin:2rem 0 4rem;
+    }
+    .compare-section h2 { font-size:1.3rem; font-weight:800; color:var(--navy); margin-bottom:0.3rem; }
+    .compare-section p  { font-size:0.88rem; color:var(--muted); margin-bottom:1.5rem; }
+    .compare-table {
+      width:100%; border-collapse:collapse; font-size:0.85rem;
+    }
+    .compare-table th {
+      background:var(--navy); color:var(--peach); padding:11px 16px;
+      text-align:left; font-weight:700; font-size:0.8rem;
+    }
+    .compare-table th:first-child { border-radius:12px 0 0 0; }
+    .compare-table th:last-child  { border-radius:0 12px 0 0; }
+    .compare-table td {
+      padding:10px 16px; border-bottom:1px solid rgba(0,0,0,0.05);
+      vertical-align:top; line-height:1.6;
+    }
+    .compare-table tr:nth-child(even) td { background:rgba(201,160,61,0.03); }
+    .compare-table td:first-child { font-weight:700; color:var(--navy); font-size:0.82rem; }
+    .stem-cell   { color:#0d5a8e; font-weight:600; }
+    .social-cell { color:#0d6b53; font-weight:600; }
+    .arts-cell   { color:#8b3210; font-weight:600; }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer { background:var(--navy); color:rgba(255,228,196,0.75); padding:4rem 0 2rem; margin-top:5rem; border-top:2px solid rgba(201,160,61,0.25); }
+    .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; margin-bottom:3rem; }
+    .footer-brand strong { display:block; font-size:1.1rem; color:var(--white); font-weight:800; margin-bottom:0.5rem; }
+    .footer-brand p { font-size:0.82rem; line-height:1.75; margin-bottom:1rem; max-width:280px; }
+    .footer-brand .eco { font-size:0.77rem; color:rgba(255,228,196,0.45); }
+    .footer-brand .eco a { color:var(--gold); font-weight:600; }
+    .footer-col h4 { color:var(--white); font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.9rem; }
+    .footer-col a  { display:block; font-size:0.82rem; color:rgba(255,228,196,0.6); padding:3px 0; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--gold); }
+    .footer-bottom { border-top:1px solid rgba(201,160,61,0.1); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .footer-bottom p { font-size:0.76rem; color:rgba(255,228,196,0.4); }
+    .footer-bottom a { color:rgba(201,160,61,0.7); }
+    .footer-bottom a:hover { color:var(--gold); }
+
+    /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1024px) { .footer-top { grid-template-columns:1fr 1fr; } }
+    @media (max-width: 900px)  { .panel-body { grid-template-columns:1fr; } }
+    @media (max-width: 768px) {
+      .menu-toggle { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:var(--navy); flex-direction:column; align-items:flex-start; gap:0; padding:1rem 20px 1.5rem; border-top:1px solid rgba(201,160,61,0.15); box-shadow:0 12px 40px rgba(0,0,0,0.2); }
+      .nav-links.show { display:flex; }
+      .nav-links a { width:100%; padding:10px 8px; font-size:0.9rem; border-radius:8px; }
+      .site-header { position:relative; }
+      .placement-banner { grid-template-columns:1fr; }
+      .footer-top { grid-template-columns:1fr 1fr; gap:2rem; }
+      .footer-brand { grid-column:1 / -1; }
+    }
+    @media (max-width: 480px) {
+      .container { padding:0 18px; }
+      .panel-hero { padding:1.8rem; }
+      .footer-top { grid-template-columns:1fr; }
+      .subjects-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ─────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">CB</div>
+      <div class="logo-text">
+        <strong>CBC Best</strong>
+        <span>Ronny Mwenda · Kenya's CBC Hub</span>
+      </div>
+    </a>
+    <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">☰ Menu</button>
+    <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="pathways.html" class="active">Pathways</a>
+      <a href="subjects-skills.html">Subjects</a>
+      <a href="assessment-tools.html">Assessment</a>
+      <a href="learning-outcomes.html">Outcomes</a>
+      <a href="teacher-requirements.html">Teachers</a>
+      <a href="mathematics-computer-science.html">Maths & CS</a>
+      <a href="resources.html">Resources</a>
+      <a href="forums.html">Forums</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">News</a>
+      <a href="about-contact.html" class="nav-cta">Contact →</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ── PAGE HERO ──────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-label">// CBC Senior School · Grades 10–12 · KICD-Aligned</div>
+    <h1>Kenya's CBC Senior<br>School <em>Pathways</em></h1>
+    <p class="page-hero-sub">After Junior Secondary School (Grade 9), every Kenyan learner selects one of three pathways aligned to their aptitude and interests. This guide covers the official KICD-approved subjects, core competencies, career trajectories, and readiness criteria for each pathway.</p>
+    <div class="hero-pathway-pills">
+      <span class="hero-pill stem-pill" onclick="activatePathway('stem')">🔬 STEM</span>
+      <span class="hero-pill social-pill" onclick="activatePathway('social')">⚖️ Social Sciences</span>
+      <span class="hero-pill arts-pill" onclick="activatePathway('arts')">🎨 Arts & Sports Science</span>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- ── PLACEMENT PROCESS ────────────────────────────────── -->
+  <div class="placement-banner">
+    <div>
+      <h2>✅ How are learners placed into pathways?</h2>
+      <p>Pathway placement is a structured, multi-input process guided by KICD and the Teachers Service Commission (TSC). No learner is permanently locked out — flexible transitions are permitted within the first term of Grade 10.</p>
+      <div class="placement-steps">
+        <div class="pstep">
+          <div class="pstep-num">01</div>
+          <div class="pstep-text"><strong>KJSEA Results</strong>Kenya Junior School Education Assessment (Grade 9) provides the primary academic placement indicator.</div>
+        </div>
+        <div class="pstep">
+          <div class="pstep-num">02</div>
+          <div class="pstep-text"><strong>Aptitude Profile</strong>Teacher evaluations, learner portfolios, and career aptitude assessments inform the recommendation.</div>
+        </div>
+        <div class="pstep">
+          <div class="pstep-num">03</div>
+          <div class="pstep-text"><strong>Learner Interests</strong>Self-selection within KJSEA parameters — learners indicate preferences through school career guidance sessions.</div>
+        </div>
+        <div class="pstep">
+          <div class="pstep-num">04</div>
+          <div class="pstep-text"><strong>Parent Input</strong>Schools consult parents/guardians, especially for learners at the boundary of two pathways.</div>
+        </div>
+      </div>
+    </div>
+    <div class="placement-aside">
+      <div class="label">Official source</div>
+      <p>KICD curriculum designs, <strong>2024–2026</strong> CBC implementation guidelines. TSC teacher deployment aligned to pathway staffing ratios.</p>
+    </div>
+  </div>
+
+  <!-- ── PATHWAY TABS ──────────────────────────────────────── -->
+  <section class="section">
+    <div class="section-label">// 01 · Senior School Pathways</div>
+    <div class="divider"></div>
+
+    <div class="tabs-row" role="tablist">
+      <button class="tab-btn stem-tab active" data-pathway="stem" role="tab" aria-selected="true" aria-controls="panel-stem">
+        <span class="tab-accent stem-dot"></span> 🔬 STEM Pathway
+      </button>
+      <button class="tab-btn social-tab" data-pathway="social" role="tab" aria-selected="false" aria-controls="panel-social">
+        <span class="tab-accent social-dot"></span> ⚖️ Social Sciences
+      </button>
+      <button class="tab-btn arts-tab" data-pathway="arts" role="tab" aria-selected="false" aria-controls="panel-arts">
+        <span class="tab-accent arts-dot"></span> 🎨 Arts & Sports Science
+      </button>
+    </div>
+
+    <!-- ══════════════ STEM PANEL ══════════════ -->
+    <div id="panel-stem" class="pathway-panel active" role="tabpanel">
+      <div class="panel-hero stem-bg">
+        <div class="panel-hero-label stem-label">STEM Pathway · Science, Technology, Engineering & Mathematics</div>
+        <h2>Innovation, Discovery<br>& Digital Kenya</h2>
+        <p>Designed for learners who thrive in logical reasoning, data analysis, experimentation, and problem-solving. Directly aligned with Kenya's Vision 2030 digital economy agenda and Africa's demand for STEM professionals. Mathematics and Computer Science are the flagship STEM subjects.</p>
+        <div class="panel-stats">
+          <div class="pstat"><span class="pstat-num">8+</span><span class="pstat-label">Core & elective subjects</span></div>
+          <div class="pstat"><span class="pstat-num">15+</span><span class="pstat-label">Career pathways</span></div>
+          <div class="pstat"><span class="pstat-num">60%</span><span class="pstat-label">Coursework weighting</span></div>
+          <div class="pstat"><span class="pstat-num">40%</span><span class="pstat-label">External exam weighting</span></div>
+        </div>
+      </div>
+
+      <div class="panel-body">
+        <div class="panel-main">
+
+          <!-- Subjects -->
+          <div class="card">
+            <div class="sub-section-title" style="color:var(--stem-color);">Subjects (KICD-approved)</div>
+            <div class="subjects-grid">
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Mathematics</div>
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Physics</div>
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Chemistry</div>
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Biology</div>
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Computer Science</div>
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Agriculture</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Electronics & Robotics</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Aviation Technology</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Marine Science</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Environmental Science</div>
+            </div>
+          </div>
+
+          <!-- Competencies -->
+          <div class="card">
+            <div class="sub-section-title" style="color:var(--stem-color);">Core competencies developed</div>
+            <div class="comp-chips">
+              <span class="comp-chip stem-chip">🔢 Mathematical modelling</span>
+              <span class="comp-chip stem-chip">💻 Coding & algorithm design</span>
+              <span class="comp-chip stem-chip">🧪 Scientific experimentation</span>
+              <span class="comp-chip stem-chip">📊 Data interpretation</span>
+              <span class="comp-chip stem-chip">⚙️ Engineering design process</span>
+              <span class="comp-chip stem-chip">🌍 Environmental literacy</span>
+              <span class="comp-chip stem-chip">🔬 Laboratory safety & protocols</span>
+              <span class="comp-chip stem-chip">🤖 Digital & AI literacy</span>
+              <span class="comp-chip stem-chip">🧩 Critical thinking</span>
+            </div>
+          </div>
+
+          <!-- Careers -->
+          <div class="card">
+            <div class="sub-section-title" style="color:var(--stem-color);">Career trajectories</div>
+            <ul class="careers-list">
+              <li>Medicine & Surgery, Pharmacy, Nursing, Biomedical Engineering</li>
+              <li>Civil, Mechanical, Electrical & Structural Engineering</li>
+              <li>Data Science, Artificial Intelligence & Machine Learning</li>
+              <li>Software Development, Cybersecurity & Systems Architecture</li>
+              <li>Aviation & Aerospace Engineering</li>
+              <li>Biotechnology, Genetics & Agricultural Science</li>
+              <li>Architecture, Quantity Surveying & Urban Planning</li>
+              <li>Environmental Management & Climate Science</li>
+              <li>Pure & Applied Mathematics Research</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel-sidebar">
+          <div class="sidebar-card">
+            <h4>📌 Readiness checklist</h4>
+            <ul class="checklist">
+              <li><span class="check-icon">✓</span> Strong Grade 6–9 Mathematics performance</li>
+              <li><span class="check-icon">✓</span> Integrated Science Grade 7–9 engagement</li>
+              <li><span class="check-icon">✓</span> Digital literacy skills (basic coding/ICT)</li>
+              <li><span class="check-icon">✓</span> Participation in science fairs or projects</li>
+              <li><span class="check-icon">✓</span> Ability to write lab reports & analyse data</li>
+              <li><span class="check-icon">✓</span> Interest in problem-solving & invention</li>
+            </ul>
+          </div>
+
+          <div class="tvet-band">
+            <h4>🏫 TVET alternative</h4>
+            <p>Learners who qualify through KJSEA may also enter STEM-aligned TVET programmes in Electrical Installation, ICT Technician, Agricultural Mechanisation, or Automotive Engineering.</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>📖 Key learning approaches</h4>
+            <p>Project-Based Learning (PBL), science laboratory sessions, STEM club activities, digital portfolios, Community Service Learning (CSL) in science, and integration of Bloom's higher-order thinking in all subjects.</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>🎓 University entry requirements</h4>
+            <p>Most Kenyan universities require a minimum grade in Mathematics and one science subject. Medical programmes additionally require Chemistry and Biology. Engineering typically requires Physics and Mathematics at credit level.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="forum-row">
+        <p><strong>Connect with STEM learners and teachers.</strong> Discuss projects, share resources, ask questions, and collaborate across Kenyan schools in the STEM pathway forums.</p>
+        <a href="forums.html?pathway=stem&role=student" class="btn-forum-s">👨‍🎓 Student Forum</a>
+        <a href="forums.html?pathway=stem&role=teacher" class="btn-forum-t">👩‍🏫 Teacher Forum</a>
+      </div>
+    </div>
+
+    <!-- ══════════════ SOCIAL SCIENCES PANEL ══════════════ -->
+    <div id="panel-social" class="pathway-panel" role="tabpanel">
+      <div class="panel-hero social-bg">
+        <div class="panel-hero-label social-label">Social Sciences Pathway · Humanity, Governance & Society</div>
+        <h2>Leaders, Advocates<br>& Change-Makers</h2>
+        <p>Designed for learners interested in human behaviour, governance, economics, history, and community development. This pathway cultivates thinkers who shape society through law, policy, education, journalism, and business — Kenya's future civic leaders.</p>
+        <div class="panel-stats">
+          <div class="pstat"><span class="pstat-num">7+</span><span class="pstat-label">Core & elective subjects</span></div>
+          <div class="pstat"><span class="pstat-num">12+</span><span class="pstat-label">Career pathways</span></div>
+          <div class="pstat"><span class="pstat-num">60%</span><span class="pstat-label">Coursework weighting</span></div>
+          <div class="pstat"><span class="pstat-num">40%</span><span class="pstat-label">External exam weighting</span></div>
+        </div>
+      </div>
+
+      <div class="panel-body">
+        <div class="panel-main">
+          <div class="card">
+            <div class="sub-section-title" style="color:var(--social-color);">Subjects (KICD-approved)</div>
+            <div class="subjects-grid">
+              <div class="subject-item core"><span class="badge badge-core">Core</span> History & Citizenship</div>
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Geography</div>
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Business Studies</div>
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Religious Studies (CRE/IRE/HRE)</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Economics</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Law & Ethics</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Psychology & Sociology</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Journalism & Media</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="sub-section-title" style="color:var(--social-color);">Core competencies developed</div>
+            <div class="comp-chips">
+              <span class="comp-chip social-chip">📝 Research & essay writing</span>
+              <span class="comp-chip social-chip">⚖️ Ethical & legal reasoning</span>
+              <span class="comp-chip social-chip">🤝 Conflict resolution</span>
+              <span class="comp-chip social-chip">💰 Financial literacy</span>
+              <span class="comp-chip social-chip">🗣️ Public speaking & debate</span>
+              <span class="comp-chip social-chip">🌍 Cross-cultural communication</span>
+              <span class="comp-chip social-chip">📊 Policy analysis</span>
+              <span class="comp-chip social-chip">🏛️ Governance & civic engagement</span>
+              <span class="comp-chip social-chip">🧠 Critical thinking</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="sub-section-title" style="color:var(--social-color);">Career trajectories</div>
+            <ul class="careers-list">
+              <li>Law — Advocate, State Counsel, Magistrate, Judicial Officer</li>
+              <li>Economics, Banking & Financial Services</li>
+              <li>Human Resource Management & Organisational Development</li>
+              <li>Public Administration & Government Service</li>
+              <li>International Relations & Diplomacy</li>
+              <li>Counselling, Psychology & Social Work</li>
+              <li>Journalism, Media & Communications</li>
+              <li>Teaching (Social Studies, Business, History)</li>
+              <li>NGO Leadership, Community Development & Policy</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel-sidebar">
+          <div class="sidebar-card">
+            <h4>📌 Readiness checklist</h4>
+            <ul class="checklist">
+              <li><span class="check-icon">✓</span> Strong reading comprehension & essay writing</li>
+              <li><span class="check-icon">✓</span> Interest in history, current affairs & society</li>
+              <li><span class="check-icon">✓</span> Participation in debates, Model UN, or CSL</li>
+              <li><span class="check-icon">✓</span> Good Kiswahili and English communication</li>
+              <li><span class="check-icon">✓</span> Ability to research and reference sources</li>
+              <li><span class="check-icon">✓</span> Empathy, leadership, and teamwork skills</li>
+            </ul>
+          </div>
+
+          <div class="tvet-band">
+            <h4>🏫 TVET alternative</h4>
+            <p>Learners may enter TVET pathways in Business Administration, Accounting, Records Management, or Community Development — all directly linked to Social Sciences competencies.</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>📖 Key learning approaches</h4>
+            <p>Community Service Learning (CSL), field trips, case studies, structured debates, Model UN participation, entrepreneurship projects, and oral history research form the backbone of this pathway's pedagogy.</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>🎓 University entry requirements</h4>
+            <p>Law programmes require strong History and English performance. Business degrees require Business Studies and Economics. Education programmes require strong language arts. Most social science degrees are accessible through a range of humanities subjects.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="forum-row">
+        <p><strong>Join the Social Sciences community.</strong> Discuss civic issues, share essay tips, collaborate on CSL projects, and explore career pathways with learners and teachers across Kenya.</p>
+        <a href="forums.html?pathway=social&role=student" class="btn-forum-s">👨‍🎓 Student Forum</a>
+        <a href="forums.html?pathway=social&role=teacher" class="btn-forum-t">👩‍🏫 Teacher Forum</a>
+      </div>
+    </div>
+
+    <!-- ══════════════ ARTS & SPORTS PANEL ══════════════ -->
+    <div id="panel-arts" class="pathway-panel" role="tabpanel">
+      <div class="panel-hero arts-bg">
+        <div class="panel-hero-label arts-label">Arts & Sports Science Pathway · Creativity & Physical Excellence</div>
+        <h2>Kenya's Creative<br>& Athletic Talent</h2>
+        <p>Designed to nurture learners with talent in creative arts, performing arts, and sports disciplines. This pathway celebrates Kenya's rich cultural heritage while preparing professionals for entertainment, athletics, coaching, design, and cultural industries — earning formal academic recognition for what was once informal talent.</p>
+        <div class="panel-stats">
+          <div class="pstat"><span class="pstat-num">6+</span><span class="pstat-label">Core & elective subjects</span></div>
+          <div class="pstat"><span class="pstat-num">10+</span><span class="pstat-label">Career pathways</span></div>
+          <div class="pstat"><span class="pstat-num">60%</span><span class="pstat-label">Coursework weighting</span></div>
+          <div class="pstat"><span class="pstat-num">40%</span><span class="pstat-label">External exam weighting</span></div>
+        </div>
+      </div>
+
+      <div class="panel-body">
+        <div class="panel-main">
+          <div class="card">
+            <div class="sub-section-title" style="color:var(--arts-color);">Subjects (KICD-approved)</div>
+            <div class="subjects-grid">
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Performing Arts (Music, Dance, Theatre)</div>
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Visual Arts & Design</div>
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Physical Education & Sports Science</div>
+              <div class="subject-item core"><span class="badge badge-core">Core</span> Sports Nutrition & Psychology</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Fashion & Textile Design</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Film & Animation</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Music Production & Technology</div>
+              <div class="subject-item elective"><span class="badge badge-elective">Elective</span> Sports Coaching & Officiating</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="sub-section-title" style="color:var(--arts-color);">Core competencies developed</div>
+            <div class="comp-chips">
+              <span class="comp-chip arts-chip">🎭 Creative expression</span>
+              <span class="comp-chip arts-chip">🤸 Sports coaching & officiating</span>
+              <span class="comp-chip arts-chip">🎵 Musical performance & composition</span>
+              <span class="comp-chip arts-chip">🎬 Digital art & multimedia</span>
+              <span class="comp-chip arts-chip">💪 Endurance & fitness training</span>
+              <span class="comp-chip arts-chip">🎨 Visual design & aesthetics</span>
+              <span class="comp-chip arts-chip">📅 Event management</span>
+              <span class="comp-chip arts-chip">🩺 Injury prevention & sports medicine</span>
+              <span class="comp-chip arts-chip">🌍 Cultural heritage & identity</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="sub-section-title" style="color:var(--arts-color);">Career trajectories</div>
+            <ul class="careers-list">
+              <li>Professional Athlete — Track & Field, Football, Rugby, Basketball</li>
+              <li>Sports Coach, Scout & Talent Development Officer</li>
+              <li>Music Producer, Recording Artist & Performing Artist</li>
+              <li>Choreographer, Dance Instructor & Theatre Director</li>
+              <li>Graphic Designer, Art Director & Brand Identity Specialist</li>
+              <li>Film Director, Animator & Video Producer</li>
+              <li>Physical Education Teacher & Sports Science Lecturer</li>
+              <li>Fashion Designer & Textile Entrepreneur</li>
+              <li>Sports Journalist & Media Analyst</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel-sidebar">
+          <div class="sidebar-card">
+            <h4>📌 Readiness checklist</h4>
+            <ul class="checklist">
+              <li><span class="check-icon">✓</span> Demonstrated talent in arts, music, or sports</li>
+              <li><span class="check-icon">✓</span> Practical portfolio or audition/trials performance</li>
+              <li><span class="check-icon">✓</span> Participation in school productions, teams, or clubs</li>
+              <li><span class="check-icon">✓</span> Discipline, consistency, and regular practice</li>
+              <li><span class="check-icon">✓</span> Understanding of sports nutrition and fitness basics</li>
+              <li><span class="check-icon">✓</span> Creativity, originality, and self-expression ability</li>
+            </ul>
+          </div>
+
+          <div class="tvet-band">
+            <h4>🏫 TVET alternative</h4>
+            <p>Learners may join TVET programmes in Fashion Design, Music Technology, Film & TV Production, Sports Management, or Visual Communication — providing technical skills with direct employment pathways.</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>📖 Key learning approaches</h4>
+            <p>Studio practice, portfolio assessment, live performance, sports trials, community arts projects, cultural festivals, and digital content creation all form part of the learning experience in this pathway.</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>🎓 University entry requirements</h4>
+            <p>Fine Arts and Performing Arts programmes require strong portfolio submissions. Sports Science requires Physical Education grades and fitness assessments. Film and Design programmes require creative portfolio plus academic minimums.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="forum-row">
+        <p><strong>Join the Arts & Sports Science community.</strong> Share performances, sports highlights, creative work, and connect with teachers and fellow artists and athletes across Kenya.</p>
+        <a href="forums.html?pathway=arts&role=student" class="btn-forum-s">👨‍🎓 Student Forum</a>
+        <a href="forums.html?pathway=arts&role=teacher" class="btn-forum-t">👩‍🏫 Teacher Forum</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COMPARISON TABLE ──────────────────────────────────── -->
+  <section>
+    <div class="compare-section">
+      <div class="section-label">// 02 · Pathways at a glance</div>
+      <div class="divider"></div>
+      <h2>Side-by-Side Pathway Comparison</h2>
+      <p>A quick reference to help learners, parents, and counsellors compare the three CBC senior school pathways.</p>
+      <table class="compare-table" role="table" aria-label="CBC pathway comparison">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>🔬 STEM</th>
+            <th>⚖️ Social Sciences</th>
+            <th>🎨 Arts & Sports Science</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary focus</td>
+            <td class="stem-cell">Science, technology & mathematics</td>
+            <td class="social-cell">Humanity, governance & society</td>
+            <td class="arts-cell">Creative arts & physical performance</td>
+          </tr>
+          <tr>
+            <td>Core subjects</td>
+            <td>Maths, Physics, Chemistry, Biology, CS</td>
+            <td>History, Geography, Business, RE</td>
+            <td>Performing Arts, Visual Arts, PE & Sports Science</td>
+          </tr>
+          <tr>
+            <td>Key skill</td>
+            <td class="stem-cell">Analytical & quantitative reasoning</td>
+            <td class="social-cell">Critical thinking & communication</td>
+            <td class="arts-cell">Creativity & physical expression</td>
+          </tr>
+          <tr>
+            <td>Assessment style</td>
+            <td>Lab reports, projects, written exams</td>
+            <td>Essays, research projects, debates</td>
+            <td>Portfolios, performances, practical exams</td>
+          </tr>
+          <tr>
+            <td>TVET alternative</td>
+            <td>ICT, Engineering, Agricultural Mech.</td>
+            <td>Business Admin, Accounting, Records</td>
+            <td>Fashion Design, Film, Sports Management</td>
+          </tr>
+          <tr>
+            <td>Top university degrees</td>
+            <td>Engineering, Medicine, CS, Data Science</td>
+            <td>Law, Economics, Education, Journalism</td>
+            <td>Fine Arts, Sports Science, Film, Design</td>
+          </tr>
+          <tr>
+            <td>Kenya Vision 2030 link</td>
+            <td class="stem-cell">Digital economy & industrialisation</td>
+            <td class="social-cell">Governance, justice & social equity</td>
+            <td class="arts-cell">Cultural industries & sports economy</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<!-- ── FOOTER ──────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>📘 CBC Best</strong>
+        <p>Kenya's most comprehensive Competency Based Curriculum resource. KICD-aligned content for students, teachers, and parents. By Ronny Mwenda, Mathematics & Computer Science Teacher, Embu County.</p>
+        <div class="eco">
+          Ecosystem: <a href="https://bestronny.netlify.app" target="_blank" rel="noopener">Bestronny</a> ·
+          <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener">RonnyMwenda</a> ·
+          <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener">RonnyGame</a>
+        </div>
+        <div style="margin-top:1rem; font-size:0.77rem; color:rgba(255,228,196,0.4);">
+          📧 <a href="mailto:ronnymwenda89@gmail.com" style="color:rgba(201,160,61,0.75);">ronnymwenda89@gmail.com</a> · 📱 <a href="tel:+254799188900" style="color:rgba(201,160,61,0.75);">+254 799 188 900</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>CBC Best</h4>
+        <a href="index.html">Home</a>
+        <a href="pathways.html">Pathways</a>
+        <a href="subjects-skills.html">Subjects & Skills</a>
+        <a href="assessment-tools.html">Assessment Tools</a>
+        <a href="learning-outcomes.html">Learning Outcomes</a>
+        <a href="teacher-requirements.html">Teacher Hub</a>
+      </div>
+      <div class="footer-col">
+        <h4>Forums</h4>
+        <a href="forums.html?pathway=stem">STEM Forums</a>
+        <a href="forums.html?pathway=social">Social Sciences Forums</a>
+        <a href="forums.html?pathway=arts">Arts & Sports Forums</a>
+        <a href="forums.html?role=teacher">Teacher Forums</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="resources.html">Downloads</a>
+        <a href="faq.html">CBC FAQ</a>
+        <a href="blog.html">News</a>
+        <a href="about-contact.html">Contact Ronny</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CBC Best — Accurate, verified CBC pathway information for Kenyan students and teachers. Google AdSense & Search Console compliant.</p>
+      <p><a href="/sitemap.xml">Sitemap</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-use.html">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── Tab switching ── */
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const panels  = document.querySelectorAll('.pathway-panel');
+
+  function activatePathway(id) {
+    panels.forEach(p => p.classList.remove('active'));
+    tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    const panel = document.getElementById('panel-' + id);
+    const btn   = document.querySelector('[data-pathway="' + id + '"]');
+    if (panel) panel.classList.add('active');
+    if (btn)   { btn.classList.add('active'); btn.setAttribute('aria-selected','true'); }
+    history.replaceState(null, '', '#' + id);
+  }
+
+  tabBtns.forEach(btn => btn.addEventListener('click', () => activatePathway(btn.dataset.pathway)));
+
+  /* load from hash */
+  const hash = window.location.hash.substring(1);
+  if (['stem','social','arts'].includes(hash)) activatePathway(hash);
+
+  /* ── Mobile nav ── */
+  const menuBtn  = document.getElementById('mobileMenuBtn');
+  const navLinks = document.getElementById('navLinks');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('show');
+      menuBtn.textContent = open ? '✕ Close' : '☰ Menu';
+    });
+  }
+
+  console.log('%cCBC Best — Pathways · Ronny Mwenda · cbcbest.netlify.app', 'color:#C9A03D;font-weight:bold');
+</script>
+
+<!-- PWA Service Worker -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(r => console.log('SW:', r.scope))
+        .catch(e => console.warn('SW failed:', e));
+    });
+  }
+</script>
+</body>
+</html>

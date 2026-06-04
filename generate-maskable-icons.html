@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBC Best — Maskable Icon Generator</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #FFF8EE; padding: 2rem; text-align: center; }
+    h1 { color: #0B1F2E; margin-bottom: 0.4rem; font-size: 1.6rem; }
+    .sub { color: #5a7285; font-size: 0.9rem; margin-bottom: 2rem; }
+    .cards { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0; }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(11,31,46,0.1);
+      min-width: 260px;
+    }
+    .card h2 { font-size: 1rem; color: #0B1F2E; margin-bottom: 0.3rem; }
+    .card p { font-size: 0.8rem; color: #5a7285; margin-bottom: 1.2rem; line-height: 1.5; }
+    canvas { display: block; margin: 0 auto 1rem; border-radius: 0; }
+    .preview-label {
+      font-size: 0.72rem;
+      color: #5a7285;
+      margin-bottom: 1.2rem;
+      font-style: italic;
+    }
+    button {
+      background: #0B1F2E;
+      color: #FFF8EE;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    button:hover { background: #C9A03D; color: #0B1F2E; }
+    .info {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: left;
+      box-shadow: 0 4px 20px rgba(11,31,46,0.08);
+    }
+    .info h3 { color: #0B1F2E; margin-bottom: 0.8rem; font-size: 1rem; }
+    .info p, .info li { font-size: 0.85rem; color: #5a7285; line-height: 1.75; }
+    .info ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+    code { background: #0B1F2E; color: #C9A03D; padding: 2px 7px; border-radius: 6px; font-family: monospace; font-size: 0.82rem; }
+    .safe-note {
+      background: rgba(201,160,61,0.1);
+      border-left: 3px solid #C9A03D;
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      margin: 1rem 0;
+      font-size: 0.83rem;
+      color: #0B1F2E;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📘 CBC Best — Maskable Icon Generator</h1>
+<p class="sub">Generates icon-maskable-192.png and icon-maskable-512.png for your PWA manifest</p>
+
+<div class="cards">
+  <div class="card">
+    <h2>icon-maskable-192.png</h2>
+    <p>192×192 · Full bleed background · "CB" logo inside 80% safe zone</p>
+    <canvas id="c192" width="192" height="192"></canvas>
+    <p class="preview-label">↑ Exact output (192×192 px)</p>
+    <button onclick="download(192)">⬇️ Download icon-maskable-192.png</button>
+  </div>
+
+  <div class="card">
+    <h2>icon-maskable-512.png</h2>
+    <p>512×512 · Full bleed background · "CB" logo inside 80% safe zone</p>
+    <canvas id="c512" width="512" height="512" style="width:192px;height:192px"></canvas>
+    <p class="preview-label">↑ Preview at 192px (actual file is 512×512)</p>
+    <button onclick="download(512)">⬇️ Download icon-maskable-512.png</button>
+  </div>
+</div>
+
+<div class="info">
+  <h3>📁 Where to put these files</h3>
+  <p>Save both files into your <code>/images/</code> folder alongside your existing icons:</p>
+  <pre style="background:#0B1F2E; color:#C9A03D; padding:1rem; border-radius:12px; font-size:0.8rem; margin:1rem 0; overflow-x:auto;">
+images/
+├── icon-72.png
+├── icon-96.png
+├── icon-128.png
+├── icon-144.png
+├── icon-152.png
+├── icon-192.png
+├── icon-256.png
+├── icon-384.png
+├── icon-512.png
+├── icon-maskable-192.png  ← new
+└── icon-maskable-512.png  ← new</pre>
+
+  <div class="safe-note">
+    ⚡ These icons have <strong>no rounded corners</strong> — that's intentional. The OS (Android/Chrome) applies its own mask shape (circle, squircle, teardrop etc.) at runtime. The full-bleed navy background ensures no white gaps appear at the edges of any mask shape.
+  </div>
+
+  <h3 style="margin-top:1.2rem;">✅ Your manifest already references these correctly</h3>
+  <p>The updated manifest.json includes these entries — no further changes needed:</p>
+  <pre style="background:#0B1F2E; color:#C9A03D; padding:1rem; border-radius:12px; font-size:0.8rem; margin:1rem 0; overflow-x:auto;">
+{
+  "src": "images/icon-maskable-192.png",
+  "sizes": "192x192",
+  "type": "image/png",
+  "purpose": "maskable"
+},
+{
+  "src": "images/icon-maskable-512.png",
+  "sizes": "512x512",
+  "type": "image/png",
+  "purpose": "maskable"
+}</pre>
+
+  <h3 style="margin-top:1.2rem;">🔍 Verify with maskable.app</h3>
+  <ul>
+    <li>Go to <strong>maskable.app/editor</strong></li>
+    <li>Upload <code>icon-maskable-512.png</code></li>
+    <li>Toggle through circle, squircle, rounded square — "CB" should be fully visible in all shapes</li>
+    <li>If any letter is clipped, the safe zone needs adjusting — come back and reduce the font size in this generator</li>
+  </ul>
+</div>
+
+<script>
+  function drawMaskableIcon(size) {
+    const canvas = document.createElement('canvas');
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext('2d');
+
+    // KEY DIFFERENCE from regular icons:
+    // 1. Full bleed background — fills every pixel, NO rounded corners
+    // 2. Logo scaled to ~55% of canvas (well inside the 80% safe zone)
+
+    // Full bleed navy background
+    ctx.fillStyle = '#0B1F2E';
+    ctx.fillRect(0, 0, size, size);
+
+    // Subtle gold accent — bottom-right quadrant glow (stays within safe zone)
+    const grd = ctx.createRadialGradient(size * 0.72, size * 0.72, 0, size * 0.72, size * 0.72, size * 0.45);
+    grd.addColorStop(0, 'rgba(201,160,61,0.18)');
+    grd.addColorStop(1, 'rgba(201,160,61,0)');
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, size, size);
+
+    const cx = size / 2;
+    const cy = size / 2;
+
+    // Safe zone = 80% of canvas. Logo must fit INSIDE this.
+    // We use 55% of canvas width for font size to give plenty of margin.
+    const fontSize = size * 0.38;
+
+    ctx.font = `800 ${fontSize}px "Segoe UI", "Arial Black", system-ui, sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    // Subtle text shadow for depth
+    ctx.shadowColor = 'rgba(0,0,0,0.35)';
+    ctx.shadowBlur = size * 0.03;
+    ctx.shadowOffsetX = size * 0.012;
+    ctx.shadowOffsetY = size * 0.012;
+
+    ctx.fillStyle = '#C9A03D';
+    ctx.fillText('CB', cx, cy - size * 0.04);
+
+    ctx.shadowColor = 'transparent';
+
+    // Small "Best" wordmark below (only at 512, too small at 192)
+    if (size >= 512) {
+      const subSize = size * 0.08;
+      ctx.font = `600 ${subSize}px "Segoe UI", Arial, system-ui, sans-serif`;
+      ctx.fillStyle = 'rgba(255,228,196,0.6)';
+      ctx.fillText('BEST', cx, cy + fontSize * 0.58);
+    }
+
+    // Safe zone guide (draw faintly so you can see it — will NOT affect output)
+    // Uncomment below to visualise the safe zone boundary during testing:
+    // const safeInset = size * 0.1;
+    // ctx.strokeStyle = 'rgba(201,160,61,0.3)';
+    // ctx.lineWidth = 1;
+    // ctx.strokeRect(safeInset, safeInset, size - safeInset*2, size - safeInset*2);
+
+    return canvas;
+  }
+
+  // Render previews on page load
+  function renderPreview(size) {
+    const id = 'c' + size;
+    const target = document.getElementById(id);
+    const source = drawMaskableIcon(size);
+    const ctx = target.getContext('2d');
+    ctx.drawImage(source, 0, 0, size, size, 0, 0, target.width, target.height);
+  }
+
+  function download(size) {
+    const canvas = drawMaskableIcon(size);
+    const link = document.createElement('a');
+    link.download = `icon-maskable-${size}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  }
+
+  renderPreview(192);
+  renderPreview(512);
+</script>
+</body>
+</html>

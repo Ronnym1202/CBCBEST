@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Theme / PWA -->
+  <meta name="theme-color" content="#0B1F2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CBC Best">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="msapplication-TileImage" content="images/icon-144.png">
+  <meta name="msapplication-TileColor" content="#0B1F2E">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- SEO -->
+  <title>Mathematics & Computer Science in CBC Kenya | STEM Pathway — CBC Best by Ronny Mwenda</title>
+  <meta name="description" content="Comprehensive guide to Mathematics and Computer Science in Kenya's CBC curriculum — KICD-aligned strands, learning outcomes, assessment, teacher qualifications (TSC), career pathways, and classroom projects. By Ronny Mwenda, Maths & CS teacher, Embu County.">
+  <meta name="keywords" content="Mathematics CBC Kenya, Computer Science CBC Kenya, STEM pathway Kenya, KICD Mathematics strands, CBC Computer Science syllabus, TSC teacher qualifications Mathematics, CBC Grade 7 8 9 Mathematics, Grade 10 11 12 STEM, CBC coding Kenya, digital literacy CBC, Ronny Mwenda Mathematics teacher, CBC learning outcomes Mathematics, CBC assessment Mathematics Kenya">
+  <meta name="author" content="Ronny Mwenda (Ronny Best)">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cbcbest.netlify.app/mathematics-computer-science.html">
+
+  <meta property="og:title" content="Mathematics & Computer Science in CBC Kenya | STEM Pathway">
+  <meta property="og:description" content="KICD-aligned guide to Maths & CS in Kenya's CBC — strands, outcomes, teacher standards, careers. By Ronny Mwenda.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cbcbest.netlify.app/mathematics-computer-science.html">
+  <meta property="og:locale" content="en_KE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@ronnymwenda89">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:   #0B1F2E;
+      --navy2:  #132c40;
+      --navy3:  #1a3a54;
+      --gold:   #C9A03D;
+      --gold2:  #e6b94a;
+      --cream:  #FFF8EE;
+      --peach:  #FFE4C4;
+      --white:  #FFFFFF;
+      --text:   #1E2F3E;
+      --muted:  #5a7285;
+      --border: rgba(201,160,61,0.18);
+      --card-bg:#FFFFFF;
+      --radius: 20px;
+      --radius-lg: 32px;
+      --shadow: 0 8px 32px rgba(11,31,46,0.10);
+      --shadow-hover: 0 16px 48px rgba(11,31,46,0.18);
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --mono: 'Space Mono', monospace;
+
+      /* Subject accent colours */
+      --math-blue: #1a6fb5;
+      --math-blue-light: rgba(26,111,181,0.08);
+      --cs-green: #1a8a5a;
+      --cs-green-light: rgba(26,138,90,0.08);
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { cursor:pointer; color:inherit; text-decoration:none; }
+    button { cursor:pointer; font-family:var(--font); }
+    img { max-width:100%; display:block; }
+
+    .container { max-width:1240px; margin:0 auto; padding:0 28px; }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: var(--navy);
+      position: sticky; top:0; z-index:200;
+      border-bottom: 1px solid rgba(201,160,61,0.15);
+    }
+    .header-inner {
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 0.9rem 28px; max-width:1240px; margin:0 auto; gap:1.5rem;
+    }
+    .logo { display:flex; align-items:center; gap:12px; flex-shrink:0; }
+    .logo-icon {
+      width:40px; height:40px; background:var(--gold); border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.2rem; font-weight:800; color:var(--navy); font-family:var(--mono); flex-shrink:0;
+    }
+    .logo-text { line-height:1.2; }
+    .logo-text strong { display:block; font-size:1.15rem; font-weight:800; color:var(--white); letter-spacing:-0.3px; }
+    .logo-text span { font-size:0.72rem; color:rgba(255,228,196,0.7); letter-spacing:0.4px; font-weight:500; }
+    .nav-links { display:flex; align-items:center; gap:0.15rem; flex-wrap:nowrap; }
+    .nav-links a {
+      color:rgba(255,228,196,0.85); font-weight:600; font-size:0.82rem;
+      padding:6px 11px; border-radius:8px; transition:all 0.18s; white-space:nowrap; letter-spacing:0.2px;
+    }
+    .nav-links a:hover, .nav-links a.active { color:var(--white); background:rgba(201,160,61,0.15); }
+    .nav-links a.active { color:var(--gold); }
+    .nav-cta { background:var(--gold)!important; color:var(--navy)!important; padding:7px 16px!important; border-radius:40px!important; font-weight:700!important; }
+    .nav-cta:hover { background:var(--gold2)!important; transform:translateY(-1px); }
+    .menu-toggle {
+      display:none; background:none; border:1px solid rgba(201,160,61,0.4);
+      color:var(--peach); padding:7px 14px; border-radius:8px; font-weight:700; font-size:0.85rem; flex-shrink:0; transition:0.2s;
+    }
+    .menu-toggle:hover { border-color:var(--gold); color:var(--gold); }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: var(--navy);
+      padding: 4rem 0 3.5rem;
+      position: relative; overflow:hidden;
+    }
+    .page-hero::before {
+      content:''; position:absolute; top:-80px; right:-100px;
+      width:500px; height:500px;
+      background:radial-gradient(circle, rgba(201,160,61,0.09) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .page-hero::after {
+      content:''; position:absolute; bottom:-60px; left:-60px;
+      width:340px; height:340px;
+      background:radial-gradient(circle, rgba(26,58,84,0.5) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .breadcrumb {
+      display:flex; align-items:center; gap:8px;
+      font-size:0.78rem; color:rgba(255,228,196,0.55); margin-bottom:1.2rem;
+      font-weight:500; font-family:var(--mono); letter-spacing:0.3px;
+    }
+    .breadcrumb a { color:rgba(255,228,196,0.55); transition:color 0.2s; }
+    .breadcrumb a:hover { color:var(--gold); }
+    .breadcrumb span { color:rgba(255,228,196,0.3); }
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(201,160,61,0.12); border:1px solid rgba(201,160,61,0.3);
+      color:var(--gold); font-size:0.78rem; font-weight:700;
+      letter-spacing:1.2px; text-transform:uppercase; padding:6px 14px; border-radius:40px; margin-bottom:1.2rem;
+    }
+    .hero-badge span { width:6px; height:6px; border-radius:50%; background:var(--gold); display:inline-block; animation:pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:0.5;transform:scale(0.7);} }
+    .page-hero h1 {
+      font-size: clamp(2rem,4.5vw,3.1rem); font-weight:800; color:var(--white);
+      line-height:1.12; letter-spacing:-0.8px; margin-bottom:1rem; max-width:820px;
+    }
+    .page-hero h1 em { font-style:normal; color:var(--gold); }
+    .hero-intro {
+      font-size:1.05rem; color:rgba(255,228,196,0.82); max-width:680px;
+      margin-bottom:2rem; line-height:1.8; font-weight:400;
+    }
+    .hero-chips { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:2rem; }
+    .hero-chip {
+      background:rgba(255,255,255,0.07); border:1px solid rgba(201,160,61,0.2);
+      color:rgba(255,228,196,0.8); font-size:0.78rem; font-weight:600;
+      padding:5px 14px; border-radius:40px; letter-spacing:0.3px;
+    }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; }
+    .btn-primary {
+      background:var(--gold); color:var(--navy); border:none;
+      padding:13px 28px; font-weight:700; border-radius:40px; font-size:0.95rem;
+      transition:all 0.2s; display:inline-flex; align-items:center; gap:8px;
+    }
+    .btn-primary:hover { background:var(--gold2); transform:translateY(-2px); box-shadow:0 8px 24px rgba(201,160,61,0.3); }
+    .btn-secondary {
+      background:transparent; border:1.5px solid rgba(201,160,61,0.5);
+      color:var(--peach); padding:12px 26px; border-radius:40px; font-weight:600; font-size:0.95rem;
+      transition:all 0.2s; display:inline-flex; align-items:center; gap:8px;
+    }
+    .btn-secondary:hover { border-color:var(--gold); color:var(--gold); transform:translateY(-2px); }
+
+    /* ── SECTIONS ── */
+    .section { padding:4rem 0; }
+    .section-label { font-family:var(--mono); font-size:0.72rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:0.6rem; }
+    .section-title { font-size:clamp(1.6rem,3vw,2.1rem); font-weight:800; color:var(--navy); letter-spacing:-0.5px; line-height:1.2; margin-bottom:0.75rem; }
+    .section-desc { font-size:1rem; color:var(--muted); max-width:660px; line-height:1.75; margin-bottom:2.5rem; }
+    .divider { width:48px; height:3px; background:var(--gold); border-radius:4px; margin-bottom:1.2rem; }
+
+    /* ── TEACHER CARD ── */
+    .teacher-band {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy3) 100%);
+      border-radius:var(--radius-lg); padding:2.5rem;
+      display:grid; grid-template-columns:auto 1fr; gap:2rem; align-items:center;
+      border:1px solid rgba(201,160,61,0.15);
+    }
+    .teacher-avatar {
+      width:88px; height:88px; background:rgba(201,160,61,0.12);
+      border:2px solid rgba(201,160,61,0.35); border-radius:50%;
+      display:flex; align-items:center; justify-content:center; font-size:2.4rem; flex-shrink:0;
+    }
+    .teacher-band h2 { font-size:1.3rem; font-weight:800; color:var(--white); margin-bottom:0.4rem; }
+    .teacher-band h2 span { color:var(--gold); }
+    .teacher-band p { font-size:0.9rem; color:rgba(255,228,196,0.75); line-height:1.75; margin-bottom:0.6rem; }
+    .teacher-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:1rem; }
+    .teacher-link {
+      background:rgba(201,160,61,0.12); border:1px solid rgba(201,160,61,0.3);
+      color:var(--gold); font-size:0.78rem; font-weight:700; padding:5px 14px;
+      border-radius:40px; transition:all 0.2s;
+    }
+    .teacher-link:hover { background:rgba(201,160,61,0.22); }
+
+    /* ── TWO-COL SUBJECT STRIP ── */
+    .subject-intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:2rem; }
+    .subject-intro-card {
+      border-radius:var(--radius-lg); padding:2rem;
+      border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow); transition:all 0.22s;
+    }
+    .subject-intro-card:hover { box-shadow:var(--shadow-hover); transform:translateY(-3px); }
+    .subject-intro-card.math { background:var(--white); border-top:4px solid var(--math-blue); }
+    .subject-intro-card.cs   { background:var(--white); border-top:4px solid var(--cs-green); }
+    .subject-intro-card h3 { font-size:1.25rem; font-weight:800; color:var(--navy); margin-bottom:0.6rem; }
+    .subject-intro-card p  { font-size:0.9rem; color:var(--muted); line-height:1.75; }
+    .subject-tag { display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:4px 12px; border-radius:40px; margin-bottom:0.8rem; }
+    .subject-tag.math { background:rgba(26,111,181,0.1); color:var(--math-blue); }
+    .subject-tag.cs   { background:rgba(26,138,90,0.1);  color:var(--cs-green);   }
+
+    /* ── CURRICULUM TABLES ── */
+    .cur-tabs { display:flex; gap:8px; margin-bottom:2rem; }
+    .cur-tab {
+      background:var(--white); border:1.5px solid rgba(0,0,0,0.08); color:var(--muted);
+      font-weight:700; font-size:0.82rem; padding:8px 20px; border-radius:40px;
+      cursor:pointer; transition:all 0.18s;
+    }
+    .cur-tab.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
+    .cur-panel { display:none; }
+    .cur-panel.active { display:block; }
+
+    .curriculum-block {
+      background:var(--white); border-radius:var(--radius-lg); padding:2rem;
+      border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow);
+    }
+    .cur-level-title {
+      display:flex; align-items:center; gap:12px;
+      font-size:1rem; font-weight:800; color:var(--navy); margin-bottom:1.2rem;
+      padding-bottom:0.8rem; border-bottom:2px solid rgba(201,160,61,0.15);
+    }
+    .cur-level-badge {
+      background:var(--navy); color:var(--gold);
+      font-family:var(--mono); font-size:0.65rem; font-weight:700;
+      padding:3px 10px; border-radius:40px; letter-spacing:1px; white-space:nowrap;
+    }
+    .strand-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:1rem; }
+    .strand-item {
+      border-radius:var(--radius); padding:1.2rem 1.4rem;
+      border-left:3px solid transparent; transition:all 0.18s;
+    }
+    .strand-item.math-strand { background:var(--math-blue-light); border-left-color:var(--math-blue); }
+    .strand-item.cs-strand   { background:var(--cs-green-light);  border-left-color:var(--cs-green);  }
+    .strand-item h4 { font-size:0.88rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
+    .strand-item p  { font-size:0.8rem;  color:var(--muted); line-height:1.6; }
+    .strand-item ul { margin-left:1rem; margin-top:4px; }
+    .strand-item ul li { font-size:0.78rem; color:var(--text); line-height:1.65; }
+
+    /* ── COMPETENCIES ── */
+    .comp-grid-2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; }
+    .comp-card {
+      background:var(--white); border-radius:var(--radius); padding:1.4rem;
+      border:1px solid rgba(0,0,0,0.05); box-shadow:0 4px 16px rgba(11,31,46,0.06); transition:all 0.2s;
+    }
+    .comp-card:hover { box-shadow:var(--shadow-hover); transform:translateY(-2px); }
+    .comp-icon { font-size:1.6rem; margin-bottom:0.6rem; }
+    .comp-card h4 { font-size:0.9rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
+    .comp-card p  { font-size:0.8rem; color:var(--muted); line-height:1.6; }
+
+    /* ── ASSESSMENT IN MATHS/CS ── */
+    .assess-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; }
+    .assess-card {
+      background:var(--white); border-radius:var(--radius-lg); padding:1.8rem;
+      border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow); transition:all 0.22s;
+    }
+    .assess-card:hover { box-shadow:var(--shadow-hover); transform:translateY(-3px); }
+    .assess-card-header { display:flex; align-items:center; gap:12px; margin-bottom:1rem; }
+    .assess-num {
+      background:var(--navy); color:var(--gold); font-family:var(--mono);
+      font-size:0.75rem; font-weight:700; width:36px; height:36px;
+      border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    }
+    .assess-card h4 { font-size:0.95rem; font-weight:700; color:var(--navy); }
+    .assess-card p  { font-size:0.82rem; color:var(--muted); line-height:1.7; margin-bottom:0.6rem; }
+    .assess-example {
+      background:rgba(201,160,61,0.07); border-left:3px solid var(--gold);
+      border-radius:0 8px 8px 0; padding:9px 13px;
+      font-size:0.78rem; color:var(--text); line-height:1.65; margin-top:0.6rem;
+    }
+    .assess-example strong { color:var(--navy); }
+
+    /* ── TEACHER REQUIREMENTS ── */
+    .req-band {
+      background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);
+      border-radius:var(--radius-lg); padding:2.5rem;
+    }
+    .req-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .req-col {
+      background:rgba(255,255,255,0.05); border:1px solid rgba(201,160,61,0.18);
+      border-radius:var(--radius); padding:1.8rem;
+    }
+    .req-col h3 { font-size:1.05rem; font-weight:800; color:var(--white); margin-bottom:1.2rem; display:flex; align-items:center; gap:10px; }
+    .req-col h3 span { font-size:1.2rem; }
+    .req-item {
+      display:flex; align-items:flex-start; gap:10px;
+      padding:9px 0; border-bottom:1px solid rgba(255,255,255,0.07);
+    }
+    .req-item:last-child { border-bottom:none; }
+    .req-bullet {
+      width:22px; height:22px; background:rgba(201,160,61,0.15); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-size:0.7rem; color:var(--gold); font-weight:700; flex-shrink:0; margin-top:1px;
+    }
+    .req-item p { font-size:0.83rem; color:rgba(255,228,196,0.8); line-height:1.65; }
+    .req-item p strong { color:var(--white); }
+    .tsc-note {
+      background:rgba(201,160,61,0.1); border:1px solid rgba(201,160,61,0.2);
+      border-radius:var(--radius); padding:1.2rem 1.5rem; margin-top:1.5rem;
+    }
+    .tsc-note p { font-size:0.83rem; color:rgba(255,228,196,0.8); line-height:1.7; }
+    .tsc-note p strong { color:var(--gold); }
+
+    /* ── LEARNING OUTCOMES ── */
+    .outcomes-split { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .outcome-card {
+      background:var(--white); border-radius:var(--radius-lg); padding:2rem;
+      border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow);
+    }
+    .outcome-card h3 { font-size:1.05rem; font-weight:800; color:var(--navy); margin-bottom:1rem; display:flex; align-items:center; gap:8px; }
+    .outcome-list { list-style:none; display:flex; flex-direction:column; gap:6px; }
+    .outcome-list li {
+      font-size:0.85rem; color:var(--text); padding:7px 10px 7px 30px;
+      position:relative; line-height:1.6;
+      border-bottom:1px solid rgba(0,0,0,0.04);
+    }
+    .outcome-list li:last-child { border-bottom:none; }
+    .outcome-list li::before {
+      content:''; position:absolute; left:8px; top:14px;
+      width:10px; height:10px; border-radius:2px; background:var(--gold);
+    }
+
+    /* ── PROJECTS ── */
+    .projects-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:1.5rem; }
+    .project-card {
+      background:var(--white); border-radius:var(--radius-lg); padding:1.8rem;
+      border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow); transition:all 0.22s;
+    }
+    .project-card:hover { box-shadow:var(--shadow-hover); transform:translateY(-3px); }
+    .project-header { display:flex; align-items:center; gap:12px; margin-bottom:1rem; }
+    .project-icon {
+      width:44px; height:44px; border-radius:12px;
+      display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;
+    }
+    .project-icon.math { background:var(--math-blue-light); }
+    .project-icon.cs   { background:var(--cs-green-light);  }
+    .project-card h4 { font-size:0.95rem; font-weight:700; color:var(--navy); }
+    .project-card .project-meta { font-size:0.75rem; color:var(--muted); font-weight:600; }
+    .project-card p { font-size:0.83rem; color:var(--muted); line-height:1.7; margin-bottom:0.8rem; }
+    .project-steps { list-style:none; counter-reset:step; }
+    .project-steps li {
+      counter-increment:step; font-size:0.8rem; color:var(--text);
+      padding:5px 0 5px 24px; position:relative; line-height:1.6;
+    }
+    .project-steps li::before {
+      content:counter(step); position:absolute; left:0; top:5px;
+      width:18px; height:18px; background:var(--navy); color:var(--gold);
+      border-radius:50%; font-size:0.65rem; font-weight:700;
+      display:flex; align-items:center; justify-content:center; font-family:var(--mono);
+    }
+    .project-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:0.8rem; }
+    .ptag { background:rgba(11,31,46,0.07); color:var(--navy); font-size:0.7rem; font-weight:600; padding:3px 10px; border-radius:40px; }
+
+    /* ── CAREERS SECTION ── */
+    .careers-split { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .careers-col {
+      background:var(--white); border-radius:var(--radius-lg); padding:2rem;
+      border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow);
+    }
+    .careers-col h3 { font-size:1.05rem; font-weight:800; color:var(--navy); margin-bottom:1.2rem; padding-bottom:0.8rem; border-bottom:2px solid rgba(201,160,61,0.15); }
+    .career-item {
+      display:flex; align-items:flex-start; gap:10px;
+      padding:8px 0; border-bottom:1px solid rgba(0,0,0,0.04);
+    }
+    .career-item:last-child { border-bottom:none; }
+    .career-icon { font-size:1.1rem; flex-shrink:0; margin-top:1px; }
+    .career-item h4 { font-size:0.85rem; font-weight:700; color:var(--navy); }
+    .career-item p  { font-size:0.78rem; color:var(--muted); line-height:1.5; }
+
+    /* ── INTEGRATION BAND ── */
+    .integration-band {
+      background:var(--navy); border-radius:var(--radius-lg); padding:3rem 2.5rem;
+    }
+    .integration-band h2 { font-size:1.5rem; font-weight:800; color:var(--white); margin-bottom:0.5rem; }
+    .integration-band h2 em { font-style:normal; color:var(--gold); }
+    .integration-band > p { font-size:0.93rem; color:rgba(255,228,196,0.75); line-height:1.75; max-width:680px; margin-bottom:2rem; }
+    .integration-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+    .integration-item {
+      background:rgba(255,255,255,0.05); border:1px solid rgba(201,160,61,0.15);
+      border-radius:var(--radius); padding:1.4rem;
+    }
+    .integration-item h4 { font-size:0.85rem; font-weight:700; color:var(--gold); margin-bottom:0.5rem; }
+    .integration-item p  { font-size:0.8rem; color:rgba(255,228,196,0.65); line-height:1.65; }
+
+    /* ── KICD / POLICY BOX ── */
+    .policy-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
+    .policy-card {
+      background:var(--white); border-radius:var(--radius-lg); padding:1.8rem;
+      border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow); transition:all 0.22s;
+    }
+    .policy-card:hover { box-shadow:var(--shadow-hover); transform:translateY(-3px); }
+    .policy-card-icon { font-size:2rem; margin-bottom:0.8rem; }
+    .policy-card h4 { font-size:0.95rem; font-weight:800; color:var(--navy); margin-bottom:0.5rem; }
+    .policy-card p  { font-size:0.83rem; color:var(--muted); line-height:1.7; }
+
+    /* ── ECOSYSTEM BAND ── */
+    .eco-band {
+      background:var(--white); border-radius:var(--radius-lg); padding:2.5rem;
+      border:1px solid rgba(0,0,0,0.06); box-shadow:var(--shadow); text-align:center;
+    }
+    .eco-band h2 { font-size:1.35rem; font-weight:800; color:var(--navy); margin-bottom:0.5rem; }
+    .eco-band p { font-size:0.9rem; color:var(--muted); max-width:540px; margin:0 auto 1.5rem; line-height:1.75; }
+    .eco-links { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    .eco-link {
+      background:var(--navy); color:var(--peach); padding:10px 24px;
+      border-radius:40px; font-weight:700; font-size:0.85rem; transition:all 0.2s;
+      display:inline-flex; align-items:center; gap:8px;
+    }
+    .eco-link:hover { background:var(--navy3); transform:translateY(-2px); }
+    .eco-link.gold { background:var(--gold); color:var(--navy); }
+    .eco-link.gold:hover { background:var(--gold2); }
+
+    /* ── FORUM BAND ── */
+    .forum-band {
+      background:var(--navy); border-radius:var(--radius-lg);
+      padding:2.5rem; text-align:center;
+    }
+    .forum-band h2 { font-size:1.5rem; font-weight:800; color:var(--white); margin-bottom:0.6rem; }
+    .forum-band p { color:rgba(255,228,196,0.75); font-size:0.93rem; max-width:540px; margin:0 auto 1.8rem; line-height:1.75; }
+    .forum-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+    .btn-f1 { background:var(--gold); color:var(--navy); padding:11px 28px; border-radius:40px; font-weight:700; font-size:0.9rem; transition:all 0.2s; display:inline-flex; align-items:center; gap:8px; }
+    .btn-f1:hover { background:var(--gold2); transform:translateY(-2px); }
+    .btn-f2 { background:rgba(255,228,196,0.1); border:1.5px solid rgba(255,228,196,0.3); color:var(--peach); padding:11px 28px; border-radius:40px; font-weight:700; font-size:0.9rem; transition:all 0.2s; display:inline-flex; align-items:center; gap:8px; }
+    .btn-f2:hover { border-color:var(--gold); color:var(--gold); transform:translateY(-2px); }
+
+    /* ── RESOURCES BAR ── */
+    .resources-bar { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; align-items:center; }
+    .btn-resource { background:var(--navy); color:var(--peach); padding:11px 24px; border-radius:40px; font-weight:700; font-size:0.88rem; transition:all 0.2s; display:inline-flex; align-items:center; gap:8px; }
+    .btn-resource:hover { background:var(--navy3); transform:translateY(-2px); }
+    .btn-resource.outline { background:transparent; border:1.5px solid rgba(11,31,46,0.2); color:var(--navy); }
+    .btn-resource.outline:hover { border-color:var(--navy); background:rgba(11,31,46,0.04); }
+
+    /* ── FOOTER ── */
+    footer { background:var(--navy); color:rgba(255,228,196,0.75); padding:4rem 0 2rem; margin-top:5rem; border-top:2px solid rgba(201,160,61,0.25); }
+    .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; margin-bottom:3rem; }
+    .footer-brand strong { display:block; font-size:1.15rem; color:var(--white); font-weight:800; margin-bottom:0.5rem; }
+    .footer-brand p { font-size:0.83rem; line-height:1.75; margin-bottom:1rem; max-width:280px; }
+    .footer-brand .ecosystem { font-size:0.78rem; color:rgba(255,228,196,0.5); }
+    .footer-brand .ecosystem a { color:var(--gold); font-weight:600; transition:color 0.2s; }
+    .footer-brand .ecosystem a:hover { color:var(--gold2); }
+    .footer-col h4 { color:var(--white); font-size:0.85rem; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:1rem; }
+    .footer-col a { display:block; font-size:0.83rem; color:rgba(255,228,196,0.65); padding:4px 0; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--gold); }
+    .footer-bottom { border-top:1px solid rgba(201,160,61,0.1); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .footer-bottom p { font-size:0.78rem; color:rgba(255,228,196,0.45); }
+    .footer-bottom a { color:rgba(201,160,61,0.8); }
+    .footer-bottom a:hover { color:var(--gold); }
+
+    /* ── TOC SIDEBAR LAYOUT ── */
+    .page-layout { display:grid; grid-template-columns:240px 1fr; gap:3rem; align-items:start; }
+    .toc-sidebar {
+      position:sticky; top:80px;
+      background:var(--white); border-radius:var(--radius); padding:1.5rem;
+      border:1px solid rgba(0,0,0,0.06); box-shadow:0 4px 16px rgba(11,31,46,0.06);
+    }
+    .toc-sidebar h4 { font-family:var(--mono); font-size:0.7rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:0.8rem; }
+    .toc-sidebar a { display:flex; align-items:center; gap:6px; font-size:0.8rem; color:var(--muted); padding:5px 0; transition:color 0.2s; font-weight:500; border-bottom:1px solid rgba(0,0,0,0.04); }
+    .toc-sidebar a:last-child { border-bottom:none; }
+    .toc-sidebar a:hover { color:var(--navy); }
+    .toc-sidebar a .toc-dot { width:6px; height:6px; border-radius:50%; background:rgba(201,160,61,0.35); flex-shrink:0; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:1024px) {
+      .page-layout { grid-template-columns:1fr; }
+      .toc-sidebar { display:none; }
+      .footer-top { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:768px) {
+      .menu-toggle { display:block; }
+      .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:var(--navy); flex-direction:column; align-items:flex-start; gap:0; padding:1rem 20px 1.5rem; border-top:1px solid rgba(201,160,61,0.15); box-shadow:0 12px 40px rgba(0,0,0,0.2); }
+      .nav-links.show { display:flex; }
+      .nav-links a { width:100%; padding:10px 8px; font-size:0.9rem; border-radius:8px; }
+      .site-header { position:relative; }
+      .subject-intro-grid, .req-grid, .outcomes-split, .careers-split { grid-template-columns:1fr; }
+      .teacher-band { grid-template-columns:1fr; }
+      .footer-top { grid-template-columns:1fr 1fr; gap:2rem; }
+      .footer-brand { grid-column:1/-1; }
+    }
+    @media (max-width:480px) {
+      .container { padding:0 18px; }
+      .section { padding:3rem 0; }
+      .footer-top { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">CB</div>
+      <div class="logo-text">
+        <strong>CBC Best</strong>
+        <span>Ronny Mwenda · Kenya's CBC Hub</span>
+      </div>
+    </a>
+    <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">☰ Menu</button>
+    <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="pathways.html">Pathways</a>
+      <a href="subjects-skills.html">Subjects</a>
+      <a href="assessment-tools.html">Assessment</a>
+      <a href="learning-outcomes.html">Outcomes</a>
+      <a href="teacher-requirements.html">Teachers</a>
+      <a href="mathematics-computer-science.html" class="active">Maths & CS</a>
+      <a href="resources.html">Resources</a>
+      <a href="forums.html">Forums</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">News</a>
+      <a href="about-contact.html" class="nav-cta">Contact →</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">CBC Best</a>
+      <span>›</span>
+      <a href="pathways.html">Pathways</a>
+      <span>›</span>
+      Mathematics &amp; Computer Science
+    </div>
+    <div class="hero-badge"><span></span> STEM Pathway · KICD-Aligned · CBC Grades 7–12</div>
+    <h1>Mathematics &amp; <em>Computer Science</em><br>in Kenya's CBC</h1>
+    <p class="hero-intro">A comprehensive, KICD-aligned breakdown of both leading STEM subjects — curriculum strands by grade, learning outcomes, formative assessment strategies, TSC teacher qualifications, classroom projects, and career pathways. Written by a practising Mathematics and Computer Science teacher.</p>
+    <div class="hero-chips">
+      <span class="hero-chip">📐 Junior Secondary (Gr 7–9)</span>
+      <span class="hero-chip">🔬 Senior Secondary STEM (Gr 10–12)</span>
+      <span class="hero-chip">👩‍🏫 TSC Teacher Standards</span>
+      <span class="hero-chip">📋 KICD Assessment Tools</span>
+      <span class="hero-chip">💼 Career Pathways</span>
+      <span class="hero-chip">🧩 Cross-subject Integration</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#mathematics" class="btn-primary">Jump to Mathematics ↓</a>
+      <a href="#computer-science" class="btn-secondary">Jump to Computer Science ↓</a>
+      <a href="#teacher-requirements" class="btn-secondary">Teacher Requirements ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEACHER INTRO ── -->
+<section class="section" style="background:var(--cream); padding-bottom:0;">
+  <div class="container">
+    <div class="teacher-band">
+      <div class="teacher-avatar">👨‍🏫</div>
+      <div>
+        <h2>From <span>Ronny Mwenda</span> — Mathematics &amp; Computer Science Teacher, Embu County</h2>
+        <p>I teach Mathematics and Computer Science under Kenya's Competency Based Curriculum. This page is my personal contribution to making both subjects fully understandable — for my own students, fellow teachers, parents, and policy stakeholders. All content is original, KICD-aligned, and grounded in daily classroom experience. My goal is simple: every Kenyan learner should leave school with strong mathematical reasoning and practical digital skills.</p>
+        <p>Beyond the classroom, I build digital tools that bring these subjects to life — including <strong style="color:var(--gold);">Bestronny</strong> (Mathematics resources), <strong style="color:var(--gold);">RonnyMwenda Portfolio</strong>, and <strong style="color:var(--gold);">RonnyGame</strong> (educational games).</p>
+        <div class="teacher-links">
+          <a href="https://bestronny.netlify.app" target="_blank" rel="noopener" class="teacher-link">⭐ Bestronny — Maths Resources</a>
+          <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener" class="teacher-link">👤 RonnyMwenda Portfolio</a>
+          <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener" class="teacher-link">🎮 RonnyGame</a>
+          <a href="about-contact.html" class="teacher-link">📧 Contact Ronny</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PAGE LAYOUT WITH TOC ── -->
+<div class="container" style="margin-top:3rem;">
+  <div class="page-layout">
+
+    <!-- SIDEBAR TOC -->
+    <aside class="toc-sidebar" aria-label="Page contents">
+      <h4>// On this page</h4>
+      <a href="#overview"><span class="toc-dot"></span> Subject overview</a>
+      <a href="#mathematics"><span class="toc-dot"></span> Mathematics strands</a>
+      <a href="#computer-science"><span class="toc-dot"></span> Computer Science strands</a>
+      <a href="#competencies"><span class="toc-dot"></span> Subject competencies</a>
+      <a href="#assessment"><span class="toc-dot"></span> Assessment strategies</a>
+      <a href="#learning-outcomes"><span class="toc-dot"></span> Learning outcomes</a>
+      <a href="#projects"><span class="toc-dot"></span> Classroom projects</a>
+      <a href="#teacher-requirements"><span class="toc-dot"></span> Teacher requirements</a>
+      <a href="#careers"><span class="toc-dot"></span> Career pathways</a>
+      <a href="#integration"><span class="toc-dot"></span> Maths ↔ CS integration</a>
+      <a href="#kicd-policy"><span class="toc-dot"></span> KICD &amp; policy context</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div>
+
+      <!-- 01 · SUBJECT OVERVIEW -->
+      <section id="overview" style="padding-bottom:3rem;">
+        <div class="section-label">// 01 · Subject Overview</div>
+        <div class="divider"></div>
+        <h2 class="section-title">Why Mathematics &amp; Computer Science Lead the STEM Pathway</h2>
+        <p class="section-desc">In Kenya's CBC, the STEM pathway positions Mathematics and Computer Science as foundational pillars. Every other STEM subject — Physics, Chemistry, Biology, Agriculture — depends on mathematical reasoning. Every digital tool used across all three pathways relies on computing principles. Together, these subjects build the two most transferable skill sets in Kenya's knowledge economy.</p>
+
+        <div class="subject-intro-grid">
+          <div class="subject-intro-card math">
+            <span class="subject-tag math">📐 Mathematics</span>
+            <h3>The Language of Logic</h3>
+            <p>Mathematics in CBC is no longer purely about computation. The KICD framework positions it as a tool for reasoning, modelling, and problem-solving. From Junior Secondary (Grades 7–9) through Senior School STEM (Grades 10–12), learners progress from number sense and basic algebra through to calculus, statistics, and discrete mathematics — always with real-world application at the centre.</p>
+            <p style="margin-top:0.8rem;">The CBC Mathematics curriculum is structured around <strong>strands</strong> and <strong>sub-strands</strong>, each with specified learning outcomes assessed through both formative and summative tools. Continuous Assessment Tests (CATs) contribute 40% of the final grade at senior level, with 60% from external KCSE examination.</p>
+          </div>
+          <div class="subject-intro-card cs">
+            <span class="subject-tag cs">💻 Computer Science</span>
+            <h3>The Tool of the Digital Age</h3>
+            <p>Computer Science in CBC teaches learners to <em>create</em> technology — not merely consume it. It is one of the elective subjects in the STEM pathway at Senior Secondary level and builds on ICT foundations laid throughout primary and Junior Secondary school. Digital Literacy as a core competency runs across <em>all</em> CBC learning areas, but Computer Science deepens it into programming, systems thinking, data management, and responsible digital citizenship.</p>
+            <p style="margin-top:0.8rem;">KICD has designed the Computer Science syllabus to align with Kenya's Digital Economy Blueprint and the Big Four Agenda, ensuring graduates are equipped for the growing tech sector, digital entrepreneurship, and TVET pathways in ICT.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 · MATHEMATICS STRANDS -->
+      <section id="mathematics" style="padding-bottom:3rem;">
+        <div class="section-label">// 02 · Mathematics Curriculum</div>
+        <div class="divider"></div>
+        <h2 class="section-title">Mathematics: KICD Strands by Level</h2>
+        <p class="section-desc">The CBC Mathematics curriculum is organised into distinct strands at each level. Each strand has sub-strands, specific learning outcomes, and recommended assessment tools. Below is a structured breakdown from Junior Secondary through Senior School.</p>
+
+        <div class="cur-tabs">
+          <button class="cur-tab active" onclick="switchTab(this,'math-js')">Junior Secondary (Gr 7–9)</button>
+          <button class="cur-tab" onclick="switchTab(this,'math-ss')">Senior School STEM (Gr 10–12)</button>
+        </div>
+
+        <div id="math-js" class="cur-panel active">
+          <div class="curriculum-block">
+            <div class="cur-level-title">
+              <span class="cur-level-badge">GR 7–9 · JSS</span>
+              Mathematics — Junior Secondary Strands
+            </div>
+            <div class="strand-grid">
+              <div class="strand-item math-strand">
+                <h4>Numbers</h4>
+                <p>Integers, fractions, decimals, percentages, indices and surds, rational and irrational numbers. Learners develop number sense and fluency with operations across all number sets.</p>
+              </div>
+              <div class="strand-item math-strand">
+                <h4>Algebra</h4>
+                <p>Algebraic expressions, linear equations and inequalities, simultaneous equations, quadratic expressions, factorisation, and introduction to functions and mappings.</p>
+              </div>
+              <div class="strand-item math-strand">
+                <h4>Geometry</h4>
+                <p>Properties of 2D and 3D shapes, angles and lines, symmetry, Pythagorean theorem, constructions, and introduction to coordinate geometry and transformations.</p>
+              </div>
+              <div class="strand-item math-strand">
+                <h4>Measurements</h4>
+                <p>Area, perimeter, volume, capacity, mass, time, and money. Includes the metric system and conversion between units. Application in real-world contexts including agriculture and construction.</p>
+              </div>
+              <div class="strand-item math-strand">
+                <h4>Statistics &amp; Probability</h4>
+                <p>Data collection, organisation, and representation (bar charts, histograms, pie charts, frequency tables). Measures of central tendency — mean, median, mode — and introduction to probability.</p>
+              </div>
+              <div class="strand-item math-strand">
+                <h4>Trigonometry (Grade 9)</h4>
+                <p>Introduction to trigonometric ratios (sine, cosine, tangent) in right-angled triangles. Applied to heights, distances, and bearings. Foundation for advanced trigonometry in STEM pathway.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="math-ss" class="cur-panel">
+          <div class="curriculum-block">
+            <div class="cur-level-title">
+              <span class="cur-level-badge">GR 10–12 · STEM</span>
+              Mathematics — Senior School STEM Strands
+            </div>
+            <div class="strand-grid">
+              <div class="strand-item math-strand">
+                <h4>Pure Mathematics — Algebra &amp; Calculus</h4>
+                <p>Polynomials, rational functions, partial fractions, sequences and series, limits, differentiation (product, quotient, chain rules), integration (definite and indefinite), and applications to rates of change and area.</p>
+              </div>
+              <div class="strand-item math-strand">
+                <h4>Pure Mathematics — Trigonometry</h4>
+                <p>Trigonometric identities and equations, compound and double-angle formulae, graphs of trig functions, inverse trig functions, and applications to waves, oscillations, and engineering problems.</p>
+              </div>
+              <div class="strand-item math-strand">
+                <h4>Pure Mathematics — Coordinate Geometry</h4>
+                <p>Equations of lines and circles, conic sections (parabola, ellipse, hyperbola), locus problems, and parametric equations. Applied to physics modelling and architectural design.</p>
+              </div>
+              <div class="strand-item math-strand">
+                <h4>Vectors &amp; Matrices</h4>
+                <p>2D and 3D vectors, dot and cross products, matrix algebra, determinants, inverses, and systems of linear equations. Foundation for mechanics, computer graphics, and AI/ML applications.</p>
+              </div>
+              <div class="strand-item math-strand">
+                <h4>Statistics &amp; Probability</h4>
+                <p>Probability distributions (binomial, Poisson, normal), hypothesis testing, confidence intervals, regression and correlation, and statistical decision-making. Applied to data science and research methodology.</p>
+              </div>
+              <div class="strand-item math-strand">
+                <h4>Discrete Mathematics</h4>
+                <p>Logic and Boolean algebra, sets, relations, graph theory basics, combinatorics (permutations and combinations), and number theory. Directly bridges into Computer Science algorithms and programming logic.</p>
+              </div>
+              <div class="strand-item math-strand">
+                <h4>Financial Mathematics</h4>
+                <p>Simple and compound interest, present value, future value, annuities, loan amortisation, and investment appraisal. Prepares learners for economics, business, and engineering finance modules.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 · COMPUTER SCIENCE STRANDS -->
+      <section id="computer-science" style="padding-bottom:3rem;">
+        <div class="section-label">// 03 · Computer Science Curriculum</div>
+        <div class="divider"></div>
+        <h2 class="section-title">Computer Science: KICD Strands by Level</h2>
+        <p class="section-desc">Computer Science builds progressively from foundational digital literacy in primary school through integrated ICT in Junior Secondary to a full, elective-level Computer Science subject in the Senior STEM pathway. Content is designed to produce creators, not merely users, of technology.</p>
+
+        <div class="cur-tabs">
+          <button class="cur-tab active" onclick="switchTab(this,'cs-js')">Junior Secondary (Gr 7–9)</button>
+          <button class="cur-tab" onclick="switchTab(this,'cs-ss')">Senior School STEM (Gr 10–12)</button>
+        </div>
+
+        <div id="cs-js" class="cur-panel active">
+          <div class="curriculum-block">
+            <div class="cur-level-title">
+              <span class="cur-level-badge">GR 7–9 · JSS</span>
+              ICT &amp; Digital Literacy — Junior Secondary Strands
+            </div>
+            <div class="strand-grid">
+              <div class="strand-item cs-strand">
+                <h4>Computer Systems</h4>
+                <p>Hardware components, software types, operating systems (Windows, Linux basics), file management, maintenance and troubleshooting, and understanding input-process-output models.</p>
+              </div>
+              <div class="strand-item cs-strand">
+                <h4>Digital Literacy &amp; Communication</h4>
+                <p>Internet usage, email communication, web browsing, evaluating online information, cloud tools, and safe and responsible use of digital platforms. Foundation of the CBC Digital Literacy competency.</p>
+              </div>
+              <div class="strand-item cs-strand">
+                <h4>Introduction to Programming</h4>
+                <p>Computational thinking, algorithms, flowcharts, pseudocode, and introductory block-based or text-based programming (Scratch or Python basics). Sequence, selection, and iteration constructs.</p>
+              </div>
+              <div class="strand-item cs-strand">
+                <h4>Spreadsheets &amp; Data Management</h4>
+                <p>Microsoft Excel / Google Sheets — data entry, formulas, charts, sorting and filtering. Connects directly to Mathematics Statistics strand and prepares for database concepts at senior level.</p>
+              </div>
+              <div class="strand-item cs-strand">
+                <h4>Digital Citizenship &amp; Ethics</h4>
+                <p>Cybersecurity awareness, online privacy, copyright and intellectual property, cyberbullying prevention, responsible social media use, and Kenya's Computer Misuse and Cybercrimes Act basics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="cs-ss" class="cur-panel">
+          <div class="curriculum-block">
+            <div class="cur-level-title">
+              <span class="cur-level-badge">GR 10–12 · STEM</span>
+              Computer Science — Senior School STEM Strands
+            </div>
+            <div class="strand-grid">
+              <div class="strand-item cs-strand">
+                <h4>Programming &amp; Software Development</h4>
+                <p>Object-oriented programming in Python, data types and structures (lists, tuples, dictionaries, stacks, queues), functions, modules, file handling, error handling, and unit testing. Introduction to JavaScript for web logic.</p>
+              </div>
+              <div class="strand-item cs-strand">
+                <h4>Web Technologies</h4>
+                <p>HTML5 semantic markup, CSS3 (Flexbox, Grid, responsive design), JavaScript DOM manipulation, and introduction to frameworks. Learners build and deploy functional websites using platforms such as Netlify or GitHub Pages.</p>
+              </div>
+              <div class="strand-item cs-strand">
+                <h4>Databases &amp; Data Management</h4>
+                <p>Relational database concepts, Entity-Relationship (ER) diagrams, SQL (SELECT, INSERT, UPDATE, DELETE, JOINs), database design (1NF, 2NF, 3NF normalisation), and introduction to NoSQL concepts.</p>
+              </div>
+              <div class="strand-item cs-strand">
+                <h4>Computer Networks &amp; the Internet</h4>
+                <p>Network topologies, protocols (TCP/IP, HTTP, FTP, DNS), IP addressing, LAN and WAN concepts, the role of routers and switches, wireless networks, and fundamentals of how the internet works.</p>
+              </div>
+              <div class="strand-item cs-strand">
+                <h4>Cybersecurity</h4>
+                <p>Common threats (malware, phishing, social engineering, brute-force attacks), encryption basics, firewalls, secure coding practices, password hygiene, Kenya's legal framework (Computer Misuse &amp; Cybercrimes Act 2018), and ethical hacking concepts.</p>
+              </div>
+              <div class="strand-item cs-strand">
+                <h4>Algorithms &amp; Data Structures</h4>
+                <p>Algorithm design, Big-O notation, sorting algorithms (bubble, merge, quicksort), searching algorithms (linear, binary), and data structures (arrays, linked lists, trees, graphs). Directly applies Discrete Mathematics concepts.</p>
+              </div>
+              <div class="strand-item cs-strand">
+                <h4>Artificial Intelligence &amp; Data Science (Grade 12)</h4>
+                <p>Introduction to AI/ML concepts, supervised and unsupervised learning, data pipelines, introduction to Python libraries (NumPy, Pandas, Matplotlib), basic model training, and ethical implications of AI in society.</p>
+              </div>
+              <div class="strand-item cs-strand">
+                <h4>Mobile &amp; App Development</h4>
+                <p>Introduction to mobile platforms, UI/UX design principles, app prototyping tools (Figma), and introductory app development. Connects to digital entrepreneurship and Kenya's growing mobile economy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 · SUBJECT COMPETENCIES -->
+      <section id="competencies" style="padding-bottom:3rem;">
+        <div class="section-label">// 04 · Subject-Specific Competencies</div>
+        <div class="divider"></div>
+        <h2 class="section-title">What Learners Must Be Able to Do</h2>
+        <p class="section-desc">Beyond the 7 core CBC competencies, KICD specifies subject-level competencies that learners must demonstrate at each key stage. These inform how teachers plan lessons, design projects, and select assessment tools.</p>
+
+        <div class="comp-grid-2">
+          <div class="comp-card">
+            <div class="comp-icon">🔢</div>
+            <h4>Numerical Fluency &amp; Estimation</h4>
+            <p>Confidently work with numbers across all contexts — mental arithmetic, estimation, approximation — without over-reliance on calculators at foundational levels.</p>
+          </div>
+          <div class="comp-card">
+            <div class="comp-icon">📊</div>
+            <h4>Mathematical Modelling</h4>
+            <p>Translate real-world situations into mathematical representations (equations, graphs, tables), solve them, and interpret results in context.</p>
+          </div>
+          <div class="comp-card">
+            <div class="comp-icon">🔍</div>
+            <h4>Mathematical Reasoning &amp; Proof</h4>
+            <p>Construct logical arguments, identify patterns, form conjectures, and demonstrate understanding through proof and justification.</p>
+          </div>
+          <div class="comp-card">
+            <div class="comp-icon">💡</div>
+            <h4>Algorithmic Thinking</h4>
+            <p>Break complex problems into ordered, repeatable steps. Identify patterns and generalise solutions — core to both programming and mathematical problem-solving.</p>
+          </div>
+          <div class="comp-card">
+            <div class="comp-icon">🖥️</div>
+            <h4>Coding Proficiency</h4>
+            <p>Write, test, debug, and document programs in at least one text-based language (Python). Understand code as a communication tool for both humans and machines.</p>
+          </div>
+          <div class="comp-card">
+            <div class="comp-icon">🔐</div>
+            <h4>Digital Safety &amp; Ethics</h4>
+            <p>Understand personal and community digital responsibilities — protecting privacy, respecting intellectual property, and recognising cyber threats and misinformation.</p>
+          </div>
+          <div class="comp-card">
+            <div class="comp-icon">📉</div>
+            <h4>Data Literacy</h4>
+            <p>Collect, clean, represent, analyse, and interpret data sets. Distinguish between correlation and causation, and evaluate statistical claims critically.</p>
+          </div>
+          <div class="comp-card">
+            <div class="comp-icon">🤝</div>
+            <h4>Collaborative Problem-Solving</h4>
+            <p>Work in teams on mathematical investigations and coding projects — planning, delegating, integrating contributions, and presenting joint findings.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 · ASSESSMENT IN MATHS & CS -->
+      <section id="assessment" style="padding-bottom:3rem;">
+        <div class="section-label">// 05 · Assessment Strategies</div>
+        <div class="divider"></div>
+        <h2 class="section-title">How Mathematics &amp; CS Are Assessed in CBC</h2>
+        <p class="section-desc">CBC assessment in Mathematics and Computer Science uses a combination of formative (continuous) and summative tools from the 13 KICD-prescribed assessment instruments. The weighting at Senior School is <strong>40% CATs + 60% KCSE examination</strong>. Junior Secondary assessment is predominantly formative, recorded in the learner's progress report.</p>
+
+        <div class="assess-grid">
+          <div class="assess-card">
+            <div class="assess-card-header">
+              <div class="assess-num">01</div>
+              <h4>Written Tests (CATs)</h4>
+            </div>
+            <p>The most commonly used summative tool. Mathematics CATs assess procedural knowledge, conceptual understanding, and problem-solving at set intervals each term. CS CATs include both theory questions and practical coding tasks.</p>
+            <div class="assess-example"><strong>Math example:</strong> "Solve the system of equations by matrix method and verify your solution."<br><strong>CS example:</strong> "Write a Python function that returns the nth Fibonacci number using recursion."</div>
+          </div>
+
+          <div class="assess-card">
+            <div class="assess-card-header">
+              <div class="assess-num">02</div>
+              <h4>Rubric-Based Project Assessment</h4>
+            </div>
+            <p>Projects are assessed using analytic rubrics aligned to the KICD Learning Outcomes. Criteria include accuracy, application of concepts, creativity, documentation, and presentation. Both holistic and analytic rubrics are used.</p>
+            <div class="assess-example"><strong>Math example:</strong> Rubric criteria for a statistics project — data collection (20%), analysis (30%), visualisation (25%), interpretation (25%).<br><strong>CS example:</strong> Website project rubric — functionality, code quality, design, security awareness.</div>
+          </div>
+
+          <div class="assess-card">
+            <div class="assess-card-header">
+              <div class="assess-num">03</div>
+              <h4>Portfolio Evidence</h4>
+            </div>
+            <p>Learners compile a portfolio of their work over a term or year — including worked solutions, investigations, code projects, reflections, and peer feedback. This demonstrates growth and competency development over time.</p>
+            <div class="assess-example"><strong>Math portfolio:</strong> Solved problems with annotations explaining reasoning, a data investigation report, and a self-reflection on areas of improvement.<br><strong>CS portfolio:</strong> Code projects, bug-fix logs, website screenshots, and a digital citizenship reflection.</div>
+          </div>
+
+          <div class="assess-card">
+            <div class="assess-card-header">
+              <div class="assess-num">04</div>
+              <h4>Observation Schedules</h4>
+            </div>
+            <p>Teachers observe learners during group work, practical activities, and laboratory sessions, recording specific behaviours against a structured checklist. Particularly relevant during CS practical sessions and Math group investigations.</p>
+            <div class="assess-example"><strong>CS practical observation:</strong> Does the learner independently navigate a code editor? Do they debug systematically or randomly? Do they test edge cases?</div>
+          </div>
+
+          <div class="assess-card">
+            <div class="assess-card-header">
+              <div class="assess-num">05</div>
+              <h4>Peer &amp; Self-Assessment</h4>
+            </div>
+            <p>Structured peer review of code, mathematical proofs, and project write-ups using agreed criteria. Self-assessment develops metacognition — learners identify their own knowledge gaps and learning strategies.</p>
+            <div class="assess-example"><strong>Peer code review:</strong> "Does the code follow correct indentation? Are variable names meaningful? Does it handle incorrect input?" Rated on a 4-point scale.</div>
+          </div>
+
+          <div class="assess-card">
+            <div class="assess-card-header">
+              <div class="assess-num">06</div>
+              <h4>Oral Questions &amp; Interviews</h4>
+            </div>
+            <p>One-on-one or group questioning to probe depth of understanding beyond what written tests reveal. Particularly powerful for identifying misconceptions in algebra, or gaps in conceptual understanding of algorithms.</p>
+            <div class="assess-example"><strong>Math oral:</strong> "Explain in your own words why you cannot divide by zero. Give me a real-life example."<br><strong>CS oral:</strong> "Walk me through your code — what does this function do and why did you write it this way?"</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(201,160,61,0.07); border-left:4px solid var(--gold); border-radius:0 var(--radius) var(--radius) 0; padding:1.5rem 1.8rem; margin-top:2rem;">
+          <strong style="color:var(--navy); font-size:0.95rem;">📋 Summative Examinations — Senior School (Grades 10–12)</strong>
+          <p style="font-size:0.88rem; color:var(--muted); margin-top:0.5rem; line-height:1.75;">Mathematics and Computer Science both feature in the Kenya Certificate of Secondary Education (KCSE) examination at Grade 12. KICD prescribes that 60% of the final grade comes from the national examination, with 40% from school-based Continuous Assessment Tests (CATs) recorded and moderated by KNEC. This replaces the 100% exam-based grading of the 8-4-4 system and ensures consistent formative assessment across the academic year.</p>
+        </div>
+      </section>
+
+      <!-- 06 · LEARNING OUTCOMES -->
+      <section id="learning-outcomes" style="padding-bottom:3rem;">
+        <div class="section-label">// 06 · Learning Outcomes (KICD Format)</div>
+        <div class="divider"></div>
+        <h2 class="section-title">Sample Learning Outcomes — VOC &amp; ABCD Models</h2>
+        <p class="section-desc">KICD requires all learning outcomes to be written using approved models such as the VOC (Verb-Object-Context) or ABCD (Audience-Behaviour-Condition-Degree) model. Below are subject-specific examples used in lesson planning for Mathematics and Computer Science.</p>
+
+        <div class="outcomes-split">
+          <div class="outcome-card">
+            <h3>📐 Mathematics Learning Outcomes</h3>
+            <ul class="outcome-list">
+              <li><strong>Grade 7:</strong> Identify and apply properties of integers to solve addition and subtraction problems in real-life contexts.</li>
+              <li><strong>Grade 8:</strong> Solve linear simultaneous equations using elimination and substitution methods, interpreting solutions graphically.</li>
+              <li><strong>Grade 9:</strong> Apply trigonometric ratios to calculate heights and distances in practical surveying activities.</li>
+              <li><strong>Grade 10:</strong> Differentiate polynomial functions and apply the result to find stationary points and rates of change.</li>
+              <li><strong>Grade 11:</strong> Evaluate definite integrals and apply integration to calculate areas under curves in real-world modelling contexts.</li>
+              <li><strong>Grade 12:</strong> Analyse and interpret statistical data using probability distributions (normal, binomial) to make informed decisions.</li>
+              <li><strong>Cross-level:</strong> Construct and present mathematical arguments using precise language, symbols, and logical structure.</li>
+            </ul>
+          </div>
+          <div class="outcome-card">
+            <h3>💻 Computer Science Learning Outcomes</h3>
+            <ul class="outcome-list">
+              <li><strong>Grade 7:</strong> Identify hardware and software components of a computer and describe their functions using correct technical terminology.</li>
+              <li><strong>Grade 8:</strong> Write basic Python programs using sequence, selection (if/else), and iteration (for/while loops) to solve simple problems.</li>
+              <li><strong>Grade 9:</strong> Design and build a functional HTML/CSS web page with at least three sections, applying responsive design principles.</li>
+              <li><strong>Grade 10:</strong> Develop a Python program that uses functions and file I/O to store and retrieve user data from a text file.</li>
+              <li><strong>Grade 11:</strong> Design a normalised relational database schema and write SQL queries to insert, retrieve, and update records.</li>
+              <li><strong>Grade 12:</strong> Implement a basic supervised machine learning model using Python (scikit-learn) and evaluate its accuracy on a given dataset.</li>
+              <li><strong>Cross-level:</strong> Apply digital citizenship principles by identifying and responding appropriately to cybersecurity threats and ethical dilemmas.</li>
+            </ul>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:1.5rem;">
+          <a href="learning-outcomes.html" class="btn-resource">View full outcomes writing guide + Bloom's verbs →</a>
+        </div>
+      </section>
+
+      <!-- 07 · CLASSROOM PROJECTS -->
+      <section id="projects" style="padding-bottom:3rem;">
+        <div class="section-label">// 07 · Classroom Projects (PBL)</div>
+        <div class="divider"></div>
+        <h2 class="section-title">Project-Based Learning in Mathematics &amp; CS</h2>
+        <p class="section-desc">CBC emphasises Project-Based Learning (PBL) and Community Service Learning (CSL). Projects must link curriculum content to real-world problems, demonstrating competency beyond rote recall. Below are classroom-tested project ideas aligned to KICD learning outcomes.</p>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon math">📊</div>
+              <div>
+                <h4>School Budget Analysis</h4>
+                <p class="project-meta">Mathematics · Grade 8–9 · Statistics &amp; Financial Maths</p>
+              </div>
+            </div>
+            <p>Learners collect real or simulated school financial data, calculate percentages and ratios, create visualisations, and present recommendations for resource allocation.</p>
+            <ol class="project-steps">
+              <li>Collect income and expenditure data from a sample school budget</li>
+              <li>Calculate percentage allocations per category</li>
+              <li>Construct pie charts and bar graphs to represent findings</li>
+              <li>Compute mean, median, and mode of monthly expenditures</li>
+              <li>Write a report with at least one data-driven financial recommendation</li>
+              <li>Present findings to classmates using visual aids</li>
+            </ol>
+            <div class="project-tags">
+              <span class="ptag">Statistics</span><span class="ptag">Financial Maths</span><span class="ptag">Data Representation</span><span class="ptag">Communication</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon cs">🌐</div>
+              <div>
+                <h4>Community Information Website</h4>
+                <p class="project-meta">Computer Science · Grade 10 · Web Technologies</p>
+              </div>
+            </div>
+            <p>Learners design and build a multi-page website about a local community issue (e.g. water access, health clinic, tourism spot), applying HTML, CSS, and basic JavaScript.</p>
+            <ol class="project-steps">
+              <li>Research and plan content for at least 4 web pages</li>
+              <li>Create wireframes using paper prototyping or Figma</li>
+              <li>Write HTML structure for all pages using semantic elements</li>
+              <li>Style with CSS — responsive layout, colour scheme, typography</li>
+              <li>Add a JavaScript feature: image carousel, form validation, or FAQ toggle</li>
+              <li>Deploy on Netlify and share the live URL with the class</li>
+            </ol>
+            <div class="project-tags">
+              <span class="ptag">HTML/CSS</span><span class="ptag">JavaScript</span><span class="ptag">Responsive Design</span><span class="ptag">Deployment</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon math">📐</div>
+              <div>
+                <h4>Bridge Design &amp; Calculus Modelling</h4>
+                <p class="project-meta">Mathematics · Grade 11 · Calculus &amp; Vectors</p>
+              </div>
+            </div>
+            <p>Using calculus and vectors, learners analyse the geometry of a bridge design — computing optimal arch curvature, load distribution, and structural angles.</p>
+            <ol class="project-steps">
+              <li>Research types of bridge structures (arch, suspension, beam)</li>
+              <li>Model the arch curve as a quadratic or trigonometric function</li>
+              <li>Differentiate to find the point of maximum height and gradient</li>
+              <li>Use integration to calculate the area under the arch profile</li>
+              <li>Apply vectors to represent force components at anchor points</li>
+              <li>Present a technical report with annotated diagrams and calculations</li>
+            </ol>
+            <div class="project-tags">
+              <span class="ptag">Calculus</span><span class="ptag">Vectors</span><span class="ptag">Modelling</span><span class="ptag">Engineering</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon cs">🤖</div>
+              <div>
+                <h4>Data Story — Local Climate Analysis</h4>
+                <p class="project-meta">CS + Mathematics · Grade 11–12 · Data Science</p>
+              </div>
+            </div>
+            <p>Learners obtain open-source climate data (e.g. Kenya Meteorological Service), clean and analyse it using Python, and produce a visual data story with findings.</p>
+            <ol class="project-steps">
+              <li>Download a CSV dataset of rainfall or temperature records</li>
+              <li>Load and clean data using Python Pandas (handle missing values)</li>
+              <li>Calculate statistical summaries: mean, standard deviation, trends</li>
+              <li>Plot time-series graphs and scatter plots using Matplotlib</li>
+              <li>Identify correlations and test a hypothesis about seasonal patterns</li>
+              <li>Write a 500-word data story with visualisations and interpretation</li>
+            </ol>
+            <div class="project-tags">
+              <span class="ptag">Python</span><span class="ptag">Pandas</span><span class="ptag">Statistics</span><span class="ptag">Data Visualisation</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon cs">🔐</div>
+              <div>
+                <h4>Cybersecurity Awareness Campaign</h4>
+                <p class="project-meta">Computer Science · Grade 10–11 · Digital Citizenship</p>
+              </div>
+            </div>
+            <p>Learners research cybersecurity threats relevant to Kenyan youth, design an awareness campaign, and create digital materials to educate peers and parents.</p>
+            <ol class="project-steps">
+              <li>Research 3 common cyber threats targeting young people in Kenya</li>
+              <li>Study relevant provisions of the Computer Misuse &amp; Cybercrimes Act 2018</li>
+              <li>Design an infographic poster using Canva or equivalent tool</li>
+              <li>Build a simple HTML awareness page with tips and resources</li>
+              <li>Write and present a 5-minute assembly talk on one chosen threat</li>
+              <li>Develop a quiz for peers to test their cybersecurity knowledge</li>
+            </ol>
+            <div class="project-tags">
+              <span class="ptag">Cybersecurity</span><span class="ptag">Digital Citizenship</span><span class="ptag">Communication</span><span class="ptag">Kenya Law</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon math">🎲</div>
+              <div>
+                <h4>Probability Simulation Game</h4>
+                <p class="project-meta">Mathematics + CS · Grade 9–10 · Probability &amp; Programming</p>
+              </div>
+            </div>
+            <p>An integrating project: learners first study theoretical probability, then code a Python simulation to verify predictions experimentally using the Law of Large Numbers.</p>
+            <ol class="project-steps">
+              <li>Calculate theoretical probabilities for coin flips, dice, and card draws</li>
+              <li>Write Python code to simulate 10, 100, 1,000, and 10,000 trials</li>
+              <li>Record experimental frequencies and compare to theoretical values</li>
+              <li>Plot the convergence graph as sample size increases</li>
+              <li>Write a mathematical explanation of the Law of Large Numbers</li>
+              <li>Reflect on what this means for real-world applications like insurance</li>
+            </ol>
+            <div class="project-tags">
+              <span class="ptag">Probability</span><span class="ptag">Python</span><span class="ptag">Simulation</span><span class="ptag">Integration</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 · TEACHER REQUIREMENTS -->
+      <section id="teacher-requirements" style="padding-bottom:3rem;">
+        <div class="section-label">// 08 · Teacher Qualifications (TSC &amp; KICD)</div>
+        <div class="divider"></div>
+        <h2 class="section-title">Professional Requirements for Maths &amp; CS Teachers</h2>
+        <p class="section-desc">The Teachers Service Commission (TSC) and KICD jointly define the minimum qualifications and continuous professional development (CPD) requirements for teachers delivering Mathematics and Computer Science under CBC. Below is a structured breakdown.</p>
+
+        <div class="req-band">
+          <div class="req-grid">
+            <div class="req-col">
+              <h3><span>📐</span> Mathematics Teacher Requirements</h3>
+              <div class="req-item">
+                <div class="req-bullet">1</div>
+                <p><strong>Minimum academic qualification:</strong> Bachelor of Education (Mathematics), B.Ed (Mathematics &amp; Physics), or Bachelor of Science in Mathematics plus a Post-Graduate Diploma in Education (PGDE).</p>
+              </div>
+              <div class="req-item">
+                <div class="req-bullet">2</div>
+                <p><strong>TSC Registration:</strong> All teachers must hold a valid TSC Certificate number and be in good professional standing with no active disciplinary cases.</p>
+              </div>
+              <div class="req-item">
+                <div class="req-bullet">3</div>
+                <p><strong>CBC Retooling:</strong> Must have completed the KICD-facilitated CBC orientation and retooling programme covering competency-based pedagogy, formative assessment, and learner-centred approaches.</p>
+              </div>
+              <div class="req-item">
+                <div class="req-bullet">4</div>
+                <p><strong>Technology proficiency:</strong> Competence in GeoGebra (dynamic geometry &amp; graphing), spreadsheets (Excel/Google Sheets) for statistical work, and at least one CAS (Computer Algebra System) is strongly recommended.</p>
+              </div>
+              <div class="req-item">
+                <div class="req-bullet">5</div>
+                <p><strong>CPD requirement:</strong> TSC requires a minimum of 40 CPD hours per year. Mathematics teachers should prioritise CBC curriculum updates, assessment literacy, and differentiated instruction workshops.</p>
+              </div>
+              <div class="req-item">
+                <div class="req-bullet">6</div>
+                <p><strong>Curriculum documents:</strong> Must possess and regularly consult the KICD Mathematics Curriculum Design documents for the relevant level, plus KNEC assessment rubrics for CAT administration.</p>
+              </div>
+            </div>
+
+            <div class="req-col">
+              <h3><span>💻</span> Computer Science Teacher Requirements</h3>
+              <div class="req-item">
+                <div class="req-bullet">1</div>
+                <p><strong>Minimum academic qualification:</strong> Bachelor of Education (Computer Science / ICT), B.Ed (Business &amp; Computer Studies), or BSc Computer Science / Information Technology plus a PGDE.</p>
+              </div>
+              <div class="req-item">
+                <div class="req-bullet">2</div>
+                <p><strong>TSC Registration:</strong> Valid TSC Certificate required. Teachers deployed to deliver Computer Science at STEM Senior level should confirm subject allocation with the school administration in line with TSC deployment guidelines.</p>
+              </div>
+              <div class="req-item">
+                <div class="req-bullet">3</div>
+                <p><strong>CBC Retooling:</strong> KICD retooling for ICT teachers covers the transition from the 8-4-4 Computer Studies syllabus to the CBC Computer Science curriculum — including programming pedagogy, database instruction, and cybersecurity education.</p>
+              </div>
+              <div class="req-item">
+                <div class="req-bullet">4</div>
+                <p><strong>Technical proficiency (preferred):</strong> Demonstrated programming skill in Python and/or JavaScript. Industry certifications (Python Institute PCEP, Cisco NetAcad CCNA Intro, Google IT Support) are advantageous and recognised in CPD records.</p>
+              </div>
+              <div class="req-item">
+                <div class="req-bullet">5</div>
+                <p><strong>Lab management:</strong> Ability to set up, maintain, and troubleshoot school computer labs, including network configurations, software installations, and basic hardware servicing.</p>
+              </div>
+              <div class="req-item">
+                <div class="req-bullet">6</div>
+                <p><strong>CPD requirement:</strong> 40 CPD hours annually. Recommended focus areas: cybersecurity updates, emerging tech (AI/ML basics), cloud tools for classroom, and data privacy law updates (Kenya Data Protection Act 2019).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tsc-note">
+            <p><strong>TSC Note on Deployment &amp; Subject Combination:</strong> Under CBC, TSC deploys teachers based on subject combination and pathway. A B.Ed graduate with Mathematics and Physics combination is well-positioned to teach in the STEM pathway. Computer Science teachers may also be required to support Digital Literacy delivery in Junior Secondary. Schools should work with TSC County Staffing Officers to ensure every learner in the STEM pathway has a qualified specialist teacher for both Mathematics and Computer Science. <strong>TSC Website: www.tsc.go.ke</strong></p>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:1.5rem;">
+          <a href="teacher-requirements.html" class="btn-resource">Full teacher requirements for all pathways →</a>
+        </div>
+      </section>
+
+      <!-- 09 · CAREERS -->
+      <section id="careers" style="padding-bottom:3rem;">
+        <div class="section-label">// 09 · Career Pathways</div>
+        <div class="divider"></div>
+        <h2 class="section-title">What You Can Become — Career Routes from Maths &amp; CS</h2>
+        <p class="section-desc">The STEM pathway provides access to the broadest range of higher education and career options in Kenya and globally. Below are concrete career pathways linked to each subject, including relevant Kenyan universities and institutions offering these programmes.</p>
+
+        <div class="careers-split">
+          <div class="careers-col">
+            <h3>📐 Careers from Mathematics</h3>
+            <div class="career-item">
+              <div class="career-icon">📊</div>
+              <div>
+                <h4>Actuary / Risk Analyst</h4>
+                <p>Insurance companies, pension funds, NSE-listed firms. Requires BSc Actuarial Science (UoN, JKUAT, Strathmore).</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">🔬</div>
+              <div>
+                <h4>Data Scientist / Statistician</h4>
+                <p>KNBS, research institutions, tech companies. Mathematics + CS combination is the ideal entry path.</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">🏗️</div>
+              <div>
+                <h4>Civil / Structural Engineer</h4>
+                <p>Roads, bridges, buildings. BSc Civil Engineering (UoN, TU-K, JKUAT). Strong calculus and mechanics background essential.</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">💹</div>
+              <div>
+                <h4>Financial Analyst / Economist</h4>
+                <p>CBK, commercial banks, government ministries. BA/BSc Economics or Finance with strong Mathematics foundation.</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">✈️</div>
+              <div>
+                <h4>Aeronautical / Aerospace Engineer</h4>
+                <p>Kenya Airways, aviation sector. Advanced Mathematics (vectors, calculus, mechanics) is the gateway.</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">🏫</div>
+              <div>
+                <h4>Mathematics Teacher / Lecturer</h4>
+                <p>School system (TSC), universities, TVET. B.Ed Mathematics qualifies for secondary-level deployment.</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">🧬</div>
+              <div>
+                <h4>Biostatistician / Epidemiologist</h4>
+                <p>KEMRI, WHO Kenya, health ministries. Combines Mathematics with biology — growing demand post-COVID-19.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="careers-col">
+            <h3>💻 Careers from Computer Science</h3>
+            <div class="career-item">
+              <div class="career-icon">💻</div>
+              <div>
+                <h4>Software Developer / Engineer</h4>
+                <p>Tech companies (Safaricom, Andela, Twiga Foods, startups). BSc Computer Science (UoN, USIU, Strathmore, JKUAT).</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">🔐</div>
+              <div>
+                <h4>Cybersecurity Analyst</h4>
+                <p>Banks, government agencies (CA Kenya, NIS), ICT firms. Kenya is among Africa's fastest-growing cybersecurity job markets.</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">🌐</div>
+              <div>
+                <h4>Web / Full-Stack Developer</h4>
+                <p>Digital agencies, e-commerce, NGOs. HTML/CSS/JavaScript + backend (Python/Node) skills from CBC CS curriculum directly applicable.</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">🤖</div>
+              <div>
+                <h4>AI / Machine Learning Engineer</h4>
+                <p>AI4D Africa, research institutions, tech multinationals in Nairobi. Requires Python, statistics (Maths), and ML frameworks.</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">📱</div>
+              <div>
+                <h4>Mobile App Developer</h4>
+                <p>High demand in Kenya's mobile-first economy. M-Pesa ecosystem, health apps, education platforms. Android (Kotlin) or cross-platform (Flutter).</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">🎮</div>
+              <div>
+                <h4>Game Developer</h4>
+                <p>Growing industry in East Africa. Combines CS (Unity, C#, Python) with mathematics (physics simulation, procedural generation).</p>
+              </div>
+            </div>
+            <div class="career-item">
+              <div class="career-icon">🗄️</div>
+              <div>
+                <h4>Database Administrator / Cloud Architect</h4>
+                <p>Government digital systems (e-Citizen), hospitals, banks. SQL + cloud platforms (AWS, Azure, GCP). High-paying TVET-accessible route.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 · INTEGRATION -->
+      <section id="integration" style="padding-bottom:3rem;">
+        <div class="section-label">// 10 · Subject Integration</div>
+        <div class="divider"></div>
+
+        <div class="integration-band">
+          <h2>Why Mathematics &amp; Computer Science <em>Belong Together</em></h2>
+          <p>In the CBC STEM pathway, these two subjects are designed to be mutually reinforcing. Every algorithm is a mathematical function. Every piece of software solves a mathematical problem. Teaching them in isolation wastes one of the most powerful educational synergies available to Kenyan learners. In my own classroom, I deliberately cross-reference both subjects — and the results are consistently stronger understanding in both.</p>
+          <div class="integration-grid">
+            <div class="integration-item">
+              <h4>📐 + 💡 Boolean Algebra → Programming Logic</h4>
+              <p>Discrete Mathematics Boolean logic (AND, OR, NOT, XOR) maps directly onto Python conditional statements (if/elif/else) and bitwise operators. Teaching these together reduces misconception in both subjects.</p>
+            </div>
+            <div class="integration-item">
+              <h4>f(x) → Functions in Code</h4>
+              <p>Mathematical functions (domain, range, composition) are mirrored in programming functions (parameters, return values, function composition). A learner who understands f(g(x)) intuitively grasps nested function calls.</p>
+            </div>
+            <div class="integration-item">
+              <h4>📊 Statistics → Data Science</h4>
+              <p>Mean, variance, and normal distributions from the Mathematics Statistics strand are the mathematical backbone of machine learning models. A Grade 12 learner who has studied both is ready for entry-level data science.</p>
+            </div>
+            <div class="integration-item">
+              <h4>🔁 Sequences &amp; Series → Loops &amp; Recursion</h4>
+              <p>Arithmetic progressions and Fibonacci sequences computed analytically in Maths become for-loop and recursive function exercises in CS. The same pattern, two languages.</p>
+            </div>
+            <div class="integration-item">
+              <h4>Matrices → Computer Graphics &amp; AI</h4>
+              <p>Matrix multiplication from the Vectors &amp; Matrices strand directly powers neural network layers, 3D graphics transformations, and cryptographic operations. Maths provides the theory; CS provides the implementation.</p>
+            </div>
+            <div class="integration-item">
+              <h4>🎲 Probability → Simulation &amp; ML</h4>
+              <p>Probability distributions — binomial, Poisson, normal — are not just theoretical constructs. They are the basis for random number generators, Monte Carlo simulations, and Bayesian classifiers in machine learning.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 · KICD & POLICY CONTEXT -->
+      <section id="kicd-policy" style="padding-bottom:3rem;">
+        <div class="section-label">// 11 · KICD &amp; Policy Context</div>
+        <div class="divider"></div>
+        <h2 class="section-title">Institutional &amp; Policy Framework</h2>
+        <p class="section-desc">Mathematics and Computer Science in CBC are guided by documents and policies from multiple government bodies. Understanding this landscape helps teachers align their practice and helps learners and parents make informed decisions.</p>
+
+        <div class="policy-grid">
+          <div class="policy-card">
+            <div class="policy-card-icon">📚</div>
+            <h4>KICD — Kenya Institute of Curriculum Development</h4>
+            <p>The primary curriculum authority. KICD designs the CBC curriculum frameworks, prescribes learning outcomes, approves textbooks, and provides teacher support materials. All strand breakdowns on this page are derived from KICD curriculum designs. Website: <strong>kicd.ac.ke</strong></p>
+          </div>
+          <div class="policy-card">
+            <div class="policy-card-icon">🏫</div>
+            <h4>TSC — Teachers Service Commission</h4>
+            <p>Responsible for teacher recruitment, deployment, promotion, and discipline. TSC registers all teachers and sets minimum qualifications per subject area. CBC retooling for Mathematics and CS teachers is mandated through TSC partnerships with KICD. Website: <strong>tsc.go.ke</strong></p>
+          </div>
+          <div class="policy-card">
+            <div class="policy-card-icon">📝</div>
+            <h4>KNEC — Kenya National Examinations Council</h4>
+            <p>Conducts and certifies national examinations — KPSEA (Grade 6), KJSEA (Grade 9), and KCSE (Grade 12). KNEC also moderates school-based CATs at Senior Secondary level and publishes marking schemes aligned to the KICD curriculum. Website: <strong>knec.ac.ke</strong></p>
+          </div>
+          <div class="policy-card">
+            <div class="policy-card-icon">🏛️</div>
+            <h4>MoE — Ministry of Education</h4>
+            <p>Provides policy direction for CBC implementation, oversees school infrastructure and equipment grants (including computer labs), and coordinates transition timelines. The Senior School pathway selection policy for 2025/2026 is a Ministry of Education directive.</p>
+          </div>
+          <div class="policy-card">
+            <div class="policy-card-icon">💻</div>
+            <h4>Kenya Digital Economy Blueprint 2019</h4>
+            <p>Government strategy document that directly influences CBC's emphasis on digital literacy, ICT infrastructure in schools, and Computer Science as a STEM elective. KICD designed the CS curriculum in alignment with the Blueprint's human capital pillar.</p>
+          </div>
+          <div class="policy-card">
+            <div class="policy-card-icon">🔐</div>
+            <h4>Computer Misuse &amp; Cybercrimes Act 2018</h4>
+            <p>Kenya's primary cybersecurity legislation, incorporated into the CBC Computer Science Digital Citizenship strand. Teachers are expected to ensure learners understand relevant provisions including offences relating to unauthorised access, cyberbullying, and data privacy (Data Protection Act 2019).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ECOSYSTEM BAND -->
+      <section style="padding-bottom:3rem;">
+        <div class="eco-band">
+          <h2>🚀 Explore Ronny Mwenda's Digital Ecosystem</h2>
+          <p>Beyond CBC Best, Ronny Mwenda builds digital tools that bring Mathematics and Computer Science to life for Kenyan learners. Each site is a different dimension of the same commitment to education.</p>
+          <div class="eco-links">
+            <a href="https://bestronny.netlify.app" target="_blank" rel="noopener" class="eco-link gold">⭐ Bestronny — Mathematics Resources</a>
+            <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener" class="eco-link">👤 RonnyMwenda Portfolio</a>
+            <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener" class="eco-link">🎮 RonnyGame — Educational Games</a>
+            <a href="about-contact.html" class="eco-link">📧 Contact &amp; About</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORUM BAND -->
+      <section style="padding-bottom:3rem;">
+        <div class="forum-band">
+          <h2>💬 Join the STEM Discussion Forums</h2>
+          <p>Dedicated spaces for Maths and CS learners and teachers — ask questions, share resources, discuss past paper problems, and collaborate on CBC projects across Kenya.</p>
+          <div class="forum-btns">
+            <a href="forums.html?forum=stem-student" class="btn-f1">👨‍🎓 STEM Student Forum</a>
+            <a href="forums.html?forum=stem-teacher" class="btn-f2">👩‍🏫 STEM Teacher Forum</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESOURCES BAR -->
+      <section style="padding-bottom:3rem;">
+        <div style="text-align:center; margin-bottom:1.2rem;">
+          <p style="font-size:0.88rem; color:var(--muted);">More resources for Mathematics &amp; Computer Science in CBC</p>
+        </div>
+        <div class="resources-bar">
+          <a href="resources.html" class="btn-resource">📚 Download CBC resources</a>
+          <a href="assessment-tools.html" class="btn-resource outline">📋 All 13 assessment tools</a>
+          <a href="learning-outcomes.html" class="btn-resource outline">🎯 Learning outcomes guide</a>
+          <a href="pathways.html#stem" class="btn-resource outline">🔬 Full STEM pathway</a>
+          <a href="faq.html" class="btn-resource outline">❓ CBC FAQs</a>
+        </div>
+      </section>
+
+    </div><!-- /main content -->
+  </div><!-- /page-layout -->
+</div><!-- /container -->
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>📘 CBC Best</strong>
+        <p>Kenya's most comprehensive Competency Based Curriculum resource — KICD-aligned content for students, teachers, and parents. By Ronny Mwenda (Ronny Best), Mathematics &amp; Computer Science Teacher, Embu County, Kenya.</p>
+        <div class="ecosystem">
+          Part of the Ronny Mwenda digital ecosystem:
+          <a href="https://bestronny.netlify.app" target="_blank" rel="noopener">Bestronny</a> ·
+          <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener">RonnyMwenda</a> ·
+          <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener">RonnyGame</a>
+        </div>
+        <div style="margin-top:1rem; font-size:0.78rem; color:rgba(255,228,196,0.45);">
+          📧 <a href="mailto:ronnymwenda89@gmail.com" style="color:rgba(201,160,61,0.8);">ronnymwenda89@gmail.com</a> &nbsp;·&nbsp;
+          📱 <a href="tel:+254799188900" style="color:rgba(201,160,61,0.8);">+254 799 188 900</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>CBC Best</h4>
+        <a href="index.html">Home</a>
+        <a href="pathways.html">Pathways</a>
+        <a href="subjects-skills.html">Subjects &amp; Skills</a>
+        <a href="assessment-tools.html">Assessment Tools</a>
+        <a href="learning-outcomes.html">Learning Outcomes</a>
+        <a href="teacher-requirements.html">Teacher Hub</a>
+        <a href="mathematics-computer-science.html">Maths &amp; CS</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="resources.html">Downloads</a>
+        <a href="faq.html">CBC FAQ</a>
+        <a href="blog.html">News &amp; Updates</a>
+        <a href="forums.html">Discussion Forums</a>
+        <a href="about-contact.html">About Ronny</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CBC Best — Competency Based Curriculum Hub. Original KICD-aligned content for Kenyan educators and learners. By Ronny Mwenda. Google AdSense &amp; Search Console compliant.</p>
+      <p><a href="/sitemap.xml">Sitemap</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-use.html">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── Tab switching for curriculum panels ── */
+  function switchTab(btn, panelId) {
+    // deactivate all tabs in the same tab group
+    const tabGroup = btn.closest('.cur-tabs');
+    tabGroup.querySelectorAll('.cur-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+
+    // find the sibling panels (next sibling elements that are .cur-panel)
+    const allPanels = [];
+    let el = tabGroup.nextElementSibling;
+    while (el && el.classList.contains('cur-panel')) {
+      allPanels.push(el);
+      el = el.nextElementSibling;
+    }
+    allPanels.forEach(p => p.classList.remove('active'));
+    const target = document.getElementById(panelId);
+    if (target) target.classList.add('active');
+  }
+
+  /* ── Mobile nav toggle ── */
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const navLinks = document.getElementById('navLinks');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('show');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      menuBtn.textContent = isOpen ? '✕ Close' : '☰ Menu';
+    });
+  }
+
+  /* ── Active nav highlight ── */
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    if (link.getAttribute('href') === 'mathematics-computer-science.html') {
+      link.classList.add('active');
+    }
+  });
+
+  /* ── Smooth scroll for anchor links ── */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  console.log('%cCBC Best — Ronny Mwenda (Ronny Best)\nMathematics & Computer Science Teacher · Embu, Kenya\nhttps://cbcbest.netlify.app', 'color:#C9A03D; font-weight:bold;');
+</script>
+
+<!-- PWA Service Worker -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(r => console.log('SW registered:', r.scope))
+        .catch(e => console.log('SW failed:', e));
+    });
+  }
+</script>
+
+</body>
+</html>

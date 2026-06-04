@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Theme / PWA -->
+  <meta name="theme-color" content="#0B1F2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CBC Best">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="msapplication-TileImage" content="images/icon-144.png">
+  <meta name="msapplication-TileColor" content="#0B1F2E">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+ 
+  <title>CBC FAQ | Frequently Asked Questions — Kenya's CBC Hub by Ronny Mwenda</title>
+  <meta name="description" content="Comprehensive, KICD-aligned FAQ on Kenya's Competency Based Curriculum (CBC). Accurate answers for students, teachers, parents, and school administrators on pathways, assessment, teacher standards, learning outcomes, and the 2-6-3-3 structure. By Ronny Mwenda.">
+  <meta name="keywords" content="CBC FAQ Kenya, CBC questions and answers, Competency Based Curriculum Kenya, KICD CBC, KJSEA Kenya, CBC pathways STEM, CBC teacher qualifications TSC, CBC assessment tools, CBC learning outcomes models, VOC ABCD SMART Mager, 2-6-3-3 Kenya, CBC Grade 7 9 10 12">
+  <meta name="author" content="Ronny Mwenda (Ronny Best)">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cbcbest.netlify.app/faq.html">
+  <meta property="og:title" content="CBC FAQ | Frequently Asked Questions — CBC Best Kenya">
+  <meta property="og:description" content="KICD-aligned answers to the most common CBC questions for students, teachers, and parents. By Ronny Mwenda.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cbcbest.netlify.app/faq.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:   #0B1F2E;
+      --navy2:  #132c40;
+      --navy3:  #1a3a54;
+      --gold:   #C9A03D;
+      --gold2:  #e6b94a;
+      --cream:  #FFF8EE;
+      --peach:  #FFE4C4;
+      --white:  #FFFFFF;
+      --text:   #1E2F3E;
+      --muted:  #5a7285;
+      --border: rgba(201,160,61,0.18);
+      --card-bg:#FFFFFF;
+      --radius: 20px;
+      --radius-lg: 32px;
+      --shadow: 0 8px 32px rgba(11,31,46,0.10);
+      --shadow-hover: 0 16px 48px rgba(11,31,46,0.18);
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --mono: 'Space Mono', monospace;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family:var(--font); background:var(--cream); color:var(--text); line-height:1.65; font-size:16px; -webkit-font-smoothing:antialiased; }
+    a { cursor:pointer; color:inherit; text-decoration:none; }
+    button { cursor:pointer; font-family:var(--font); }
+
+    .container { max-width:1240px; margin:0 auto; padding:0 28px; }
+
+    /* ── HEADER ── */
+    .site-header { background:var(--navy); position:sticky; top:0; z-index:200; border-bottom:1px solid rgba(201,160,61,0.15); }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; padding:0.9rem 28px; max-width:1240px; margin:0 auto; gap:1.5rem; }
+    .logo { display:flex; align-items:center; gap:12px; flex-shrink:0; }
+    .logo-icon { width:40px; height:40px; background:var(--gold); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; font-weight:800; color:var(--navy); font-family:var(--mono); flex-shrink:0; }
+    .logo-text { line-height:1.2; }
+    .logo-text strong { display:block; font-size:1.15rem; font-weight:800; color:var(--white); letter-spacing:-0.3px; }
+    .logo-text span { font-size:0.72rem; color:rgba(255,228,196,0.7); letter-spacing:0.4px; font-weight:500; }
+    .nav-links { display:flex; align-items:center; gap:0.15rem; flex-wrap:nowrap; }
+    .nav-links a { color:rgba(255,228,196,0.85); font-weight:600; font-size:0.82rem; padding:6px 11px; border-radius:8px; transition:all 0.18s; white-space:nowrap; letter-spacing:0.2px; }
+    .nav-links a:hover, .nav-links a.active { color:var(--white); background:rgba(201,160,61,0.15); }
+    .nav-links a.active { color:var(--gold); }
+    .nav-cta { background:var(--gold) !important; color:var(--navy) !important; padding:7px 16px !important; border-radius:40px !important; font-weight:700 !important; }
+    .nav-cta:hover { background:var(--gold2) !important; transform:translateY(-1px); }
+    .menu-toggle { display:none; background:none; border:1px solid rgba(201,160,61,0.4); color:var(--peach); padding:7px 14px; border-radius:8px; font-weight:700; font-size:0.85rem; flex-shrink:0; transition:0.2s; }
+    .menu-toggle:hover { border-color:var(--gold); color:var(--gold); }
+
+    /* ── PAGE HERO ── */
+    .page-hero { background:var(--navy); padding:4rem 0 3.5rem; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; top:-100px; right:-100px; width:450px; height:450px; background:radial-gradient(circle,rgba(201,160,61,0.08) 0%,transparent 70%); pointer-events:none; }
+    .page-hero::after { content:''; position:absolute; bottom:-80px; left:-60px; width:320px; height:320px; background:radial-gradient(circle,rgba(26,58,84,0.5) 0%,transparent 70%); pointer-events:none; }
+    .breadcrumb { display:flex; align-items:center; gap:8px; font-size:0.78rem; color:rgba(255,228,196,0.5); margin-bottom:1.2rem; font-weight:500; }
+    .breadcrumb a { color:rgba(255,228,196,0.65); transition:color 0.2s; }
+    .breadcrumb a:hover { color:var(--gold); }
+    .breadcrumb span { color:rgba(255,228,196,0.3); }
+    .page-hero-label { display:inline-flex; align-items:center; gap:8px; background:rgba(201,160,61,0.12); border:1px solid rgba(201,160,61,0.3); color:var(--gold); font-size:0.78rem; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; padding:6px 14px; border-radius:40px; margin-bottom:1.2rem; }
+    .page-hero h1 { font-size:clamp(1.9rem,4vw,2.8rem); font-weight:800; color:var(--white); line-height:1.15; letter-spacing:-0.8px; margin-bottom:1rem; max-width:700px; }
+    .page-hero h1 em { font-style:italic; color:var(--gold); }
+    .page-hero-sub { font-size:1rem; color:rgba(255,228,196,0.8); max-width:640px; line-height:1.8; margin-bottom:2rem; }
+    .hero-faq-counts { display:flex; flex-wrap:wrap; gap:2rem; padding-top:1.8rem; border-top:1px solid rgba(255,255,255,0.07); }
+    .hero-faq-count strong { display:block; font-family:var(--mono); font-size:1.6rem; font-weight:700; color:var(--white); }
+    .hero-faq-count span { font-size:0.75rem; color:rgba(255,228,196,0.55); font-weight:500; }
+
+    /* ── ACCURACY NOTICE ── */
+    .accuracy-notice { background:rgba(201,160,61,0.08); border:1px solid rgba(201,160,61,0.22); border-radius:var(--radius); padding:1.1rem 1.5rem; margin:2rem 0; display:flex; align-items:flex-start; gap:14px; }
+    .accuracy-notice .icon { font-size:1.3rem; flex-shrink:0; margin-top:1px; }
+    .accuracy-notice p { font-size:0.84rem; color:var(--text); line-height:1.7; }
+    .accuracy-notice strong { color:var(--navy); }
+    .accuracy-notice a { color:var(--gold); font-weight:600; border-bottom:1px solid rgba(201,160,61,0.3); }
+    .accuracy-notice a:hover { border-bottom-color:var(--gold); }
+
+    /* ── SEARCH + FILTER BAR ── */
+    .controls-band { background:var(--card-bg); border-radius:var(--radius-lg); padding:1.5rem 2rem; box-shadow:var(--shadow); border:1px solid rgba(0,0,0,0.04); margin-bottom:2rem; display:flex; flex-direction:column; gap:1.2rem; }
+    .search-row { display:flex; align-items:center; gap:1rem; }
+    .search-input-wrap { flex:1; background:var(--cream); border:1.5px solid rgba(0,0,0,0.08); border-radius:40px; display:flex; align-items:center; padding:0 16px; gap:10px; transition:border-color 0.2s; }
+    .search-input-wrap:focus-within { border-color:var(--gold); }
+    .search-input-wrap span { font-size:1rem; }
+    .search-input-wrap input { flex:1; border:none; background:transparent; padding:11px 0; font-size:0.93rem; outline:none; font-family:var(--font); color:var(--text); }
+    .search-input-wrap input::placeholder { color:var(--muted); }
+    .filters-row { display:flex; flex-wrap:wrap; gap:8px; }
+    .filter-pill { background:var(--cream); border:1.5px solid transparent; color:var(--muted); padding:7px 16px; border-radius:40px; font-weight:600; font-size:0.8rem; cursor:pointer; transition:all 0.18s; }
+    .filter-pill:hover { border-color:var(--gold); color:var(--navy); }
+    .filter-pill.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
+    .results-meta { font-size:0.82rem; color:var(--muted); font-weight:500; }
+    .results-meta strong { color:var(--navy); }
+
+    /* ── FAQ LAYOUT ── */
+    .faq-layout { display:grid; grid-template-columns:260px 1fr; gap:2.5rem; align-items:start; margin-top:2rem; }
+    
+    /* ── SIDEBAR TOC ── */
+    .faq-sidebar { position:sticky; top:90px; background:var(--card-bg); border-radius:var(--radius-lg); padding:1.5rem; box-shadow:var(--shadow); border:1px solid rgba(0,0,0,0.04); }
+    .sidebar-title { font-family:var(--mono); font-size:0.68rem; color:var(--gold); font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:1rem; }
+    .toc-item { display:flex; align-items:center; gap:10px; padding:9px 12px; border-radius:12px; font-size:0.83rem; font-weight:600; color:var(--muted); cursor:pointer; transition:all 0.18s; margin-bottom:3px; border:none; background:none; width:100%; text-align:left; }
+    .toc-item:hover { background:rgba(11,31,46,0.05); color:var(--navy); }
+    .toc-item.active { background:var(--navy); color:var(--white); }
+    .toc-item .toc-icon { font-size:1rem; flex-shrink:0; }
+    .toc-count { margin-left:auto; font-family:var(--mono); font-size:0.65rem; font-weight:700; background:rgba(201,160,61,0.15); color:var(--gold); padding:2px 7px; border-radius:20px; }
+    .toc-item.active .toc-count { background:rgba(201,160,61,0.25); color:var(--gold2); }
+    .sidebar-divider { height:1px; background:rgba(0,0,0,0.05); margin:1rem 0; }
+    .sidebar-quick-links { display:flex; flex-direction:column; gap:6px; }
+    .sidebar-link { font-size:0.78rem; color:var(--muted); display:flex; align-items:center; gap:7px; padding:5px 2px; transition:color 0.2s; border:none; background:none; text-align:left; cursor:pointer; }
+    .sidebar-link:hover { color:var(--gold); }
+    .sidebar-link::before { content:'→'; color:var(--gold); font-size:0.72rem; }
+
+    /* ── FAQ SECTIONS ── */
+    .faq-main {flex: 1;
+  min-width: 0;
+  width: 100%;}
+    .faq-section-block { margin-bottom:2.5rem; scroll-margin-top:100px; }
+    .section-header-bar { display:flex; align-items:center; gap:14px; margin-bottom:1.2rem; padding-bottom:0.9rem; border-bottom:2px solid rgba(0,0,0,0.05); }
+    .section-header-bar .section-icon { width:44px; height:44px; border-radius:13px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+    .section-header-bar .section-meta { flex:1; }
+    .section-header-bar .section-label-sm { font-family:var(--mono); font-size:0.65rem; color:var(--gold); font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:2px; }
+    .section-header-bar h2 { font-size:1.2rem; font-weight:800; color:var(--navy); letter-spacing:-0.3px; }
+    .section-count-badge { font-family:var(--mono); font-size:0.7rem; font-weight:700; padding:4px 10px; border-radius:20px; background:rgba(11,31,46,0.07); color:var(--navy); }
+
+    .s-general .section-icon { background:rgba(26,127,196,0.1); }
+    .s-structure .section-icon { background:rgba(201,160,61,0.12); }
+    .s-pathways .section-icon { background:rgba(45,168,130,0.1); }
+    .s-assessment .section-icon { background:rgba(124,58,196,0.1); }
+    .s-outcomes .section-icon { background:rgba(196,80,26,0.1); }
+    .s-teachers .section-icon { background:rgba(196,26,124,0.1); }
+    .s-students .section-icon { background:rgba(26,127,196,0.1); }
+    .s-parents .section-icon { background:rgba(46,125,50,0.1); }
+    .s-careers .section-icon { background:rgba(201,160,61,0.12); }
+
+    /* ── ACCORDION ── */
+    .accordion-item { border:1px solid rgba(0,0,0,0.05); border-radius:var(--radius); margin-bottom:10px; overflow:hidden; transition:box-shadow 0.2s; background:var(--card-bg); }
+    .accordion-item:hover { box-shadow:0 4px 16px rgba(11,31,46,0.08); }
+    .accordion-item.is-open { box-shadow:0 6px 24px rgba(11,31,46,0.10); border-color:rgba(201,160,61,0.25); }
+    .accordion-q { width:100%; background:none; border:none; padding:1.1rem 1.4rem; text-align:left; font-family:var(--font); font-size:0.95rem; font-weight:700; color:var(--navy); display:flex; align-items:center; justify-content:space-between; gap:1rem; cursor:pointer; line-height:1.4; transition:background 0.18s; }
+    .accordion-q:hover { background:rgba(201,160,61,0.04); }
+    .accordion-q .q-text { flex:1; }
+    .accordion-chevron { width:28px; height:28px; border-radius:8px; background:rgba(11,31,46,0.06); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all 0.25s; font-size:0.75rem; color:var(--muted); }
+    .accordion-item.is-open .accordion-chevron { background:var(--gold); color:var(--navy); transform:rotate(180deg); }
+    .accordion-body { max-height:0; overflow:hidden; transition:max-height 0.32s cubic-bezier(0.4,0,0.2,1); }
+    .accordion-body-inner { padding:0 1.4rem 1.4rem; border-top:1px solid rgba(0,0,0,0.05); }
+    .accordion-body-inner p { font-size:0.9rem; color:var(--muted); line-height:1.8; margin-bottom:0.7rem; }
+    .accordion-body-inner p:last-child { margin-bottom:0; }
+    .accordion-body-inner p strong { color:var(--navy); font-weight:700; }
+    .accordion-body-inner ul, .accordion-body-inner ol { padding-left:1.4rem; margin:0.5rem 0; }
+    .accordion-body-inner li { font-size:0.88rem; color:var(--muted); line-height:1.75; margin-bottom:3px; }
+    .accordion-body-inner li strong { color:var(--navy); }
+    .accordion-body-inner .ref-tag { display:inline-flex; align-items:center; gap:6px; background:rgba(201,160,61,0.1); border:1px solid rgba(201,160,61,0.25); color:#8B6B2D; font-size:0.72rem; font-weight:700; padding:3px 10px; border-radius:20px; margin-top:0.7rem; }
+    .accordion-body-inner a { color:var(--gold); font-weight:600; border-bottom:1px solid rgba(201,160,61,0.3); transition:border-color 0.2s; }
+    .accordion-body-inner a:hover { border-bottom-color:var(--gold); }
+    .highlight-box { background:rgba(201,160,61,0.07); border-left:3px solid var(--gold); border-radius:0 10px 10px 0; padding:10px 14px; margin:0.7rem 0; font-size:0.86rem; color:var(--text); line-height:1.7; }
+    .highlight-box strong { color:var(--navy); }
+    .model-pill { display:inline-flex; align-items:center; gap:5px; background:var(--navy); color:var(--gold); font-family:var(--mono); font-size:0.68rem; font-weight:700; letter-spacing:1px; padding:3px 9px; border-radius:20px; margin:2px; }
+
+    /* ── EMPTY SEARCH STATE ── */
+    .no-results { text-align:center; padding:4rem 2rem; background:var(--card-bg); border-radius:var(--radius-lg); border:1px solid rgba(0,0,0,0.04); }
+    .no-results p { color:var(--muted); margin-top:0.8rem; font-size:0.9rem; }
+
+    /* ── FEATURED RESOURCES BAND ── */
+    .resources-band { background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%); border-radius:var(--radius-lg); padding:2.5rem; margin:3rem 0; display:grid; grid-template-columns:1fr auto; gap:2rem; align-items:center; }
+    .resources-band h3 { font-size:1.3rem; font-weight:800; color:var(--white); margin-bottom:0.5rem; }
+    .resources-band h3 span { color:var(--gold); }
+    .resources-band p { font-size:0.88rem; color:rgba(255,228,196,0.7); line-height:1.75; max-width:520px; }
+    .btn-primary { background:var(--gold); color:var(--navy); border:none; padding:12px 26px; font-weight:700; border-radius:40px; font-size:0.92rem; transition:all 0.2s; display:inline-flex; align-items:center; gap:8px; cursor:pointer; }
+    .btn-primary:hover { background:var(--gold2); transform:translateY(-2px); box-shadow:0 8px 24px rgba(201,160,61,0.3); }
+    .btn-ghost { background:rgba(255,255,255,0.07); border:1.5px solid rgba(201,160,61,0.3); color:var(--peach); padding:11px 22px; border-radius:40px; font-weight:700; font-size:0.88rem; display:inline-flex; align-items:center; gap:8px; transition:all 0.2s; }
+    .btn-ghost:hover { border-color:var(--gold); color:var(--gold); transform:translateY(-2px); }
+
+    /* ── CONTACT BAND ── */
+    .contact-band { background:var(--navy); border-radius:var(--radius-lg); padding:2.5rem; text-align:center; margin:2rem 0; }
+    .contact-band h3 { font-size:1.3rem; font-weight:800; color:var(--white); margin-bottom:0.6rem; }
+    .contact-band p { font-size:0.9rem; color:rgba(255,228,196,0.7); max-width:520px; margin:0 auto 1.5rem; line-height:1.75; }
+    .contact-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+    /* ── ECOSYSTEM BAND ── */
+    .ecosystem-band { background:var(--card-bg); border-radius:var(--radius-lg); padding:2rem 2.5rem; border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow); margin:2rem 0; }
+    .ecosystem-band h4 { font-size:0.85rem; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:1px; font-family:var(--mono); margin-bottom:1.2rem; }
+    .eco-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+    .eco-card { background:var(--cream); border:1.5px solid transparent; border-radius:var(--radius); padding:1.2rem; display:flex; align-items:flex-start; gap:12px; transition:all 0.2s; }
+    .eco-card:hover { border-color:var(--gold); background:rgba(201,160,61,0.05); transform:translateY(-2px); }
+    .eco-icon { font-size:1.6rem; flex-shrink:0; }
+    .eco-name { font-size:0.88rem; font-weight:700; color:var(--navy); margin-bottom:3px; }
+    .eco-desc { font-size:0.75rem; color:var(--muted); line-height:1.5; }
+    .eco-url { font-size:0.72rem; color:var(--gold); font-weight:600; margin-top:4px; display:block; }
+
+    /* ── FOOTER ── */
+    footer { background:var(--navy); color:rgba(255,228,196,0.75); padding:4rem 0 2rem; margin-top:5rem; border-top:2px solid rgba(201,160,61,0.25); }
+    .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; margin-bottom:3rem; }
+    .footer-brand strong { display:block; font-size:1.15rem; color:var(--white); font-weight:800; margin-bottom:0.5rem; }
+    .footer-brand p { font-size:0.83rem; line-height:1.75; margin-bottom:1rem; max-width:280px; }
+    .footer-brand .ecosystem { font-size:0.78rem; color:rgba(255,228,196,0.5); }
+    .footer-brand .ecosystem a { color:var(--gold); font-weight:600; transition:color 0.2s; }
+    .footer-brand .ecosystem a:hover { color:var(--gold2); }
+    .footer-col h4 { color:var(--white); font-size:0.85rem; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:1rem; }
+    .footer-col a { display:block; font-size:0.83rem; color:rgba(255,228,196,0.65); padding:4px 0; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--gold); }
+    .footer-bottom { border-top:1px solid rgba(201,160,61,0.1); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .footer-bottom p { font-size:0.78rem; color:rgba(255,228,196,0.45); }
+    .footer-bottom a { color:rgba(201,160,61,0.8); }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px){ .footer-top{grid-template-columns:1fr 1fr;} }
+    @media(max-width:900px){ .faq-layout{grid-template-columns:1fr;} .faq-sidebar{position:static;} }
+    @media(max-width:768px){
+      .menu-toggle{display:block;}
+      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;align-items:flex-start;gap:0;padding:1rem 20px 1.5rem;border-top:1px solid rgba(201,160,61,0.15);box-shadow:0 12px 40px rgba(0,0,0,0.2);}
+      .nav-links.show{display:flex;}
+      .nav-links a{width:100%;padding:10px 8px;font-size:0.9rem;}
+      .site-header{position:relative;}
+      .resources-band{grid-template-columns:1fr;}
+      .footer-top{grid-template-columns:1fr 1fr;gap:2rem;}
+      .footer-brand{grid-column:1/-1;}
+      .search-row{flex-direction:column;}
+    }
+    @media(max-width:480px){
+      .container{padding:0 18px;}
+      .footer-top{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">CB</div>
+      <div class="logo-text">
+        <strong>CBC Best</strong>
+        <span>Ronny Mwenda · Kenya's CBC Hub</span>
+      </div>
+    </a>
+    <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">☰ Menu</button>
+    <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="pathways.html">Pathways</a>
+      <a href="subjects-skills.html">Subjects</a>
+      <a href="assessment-tools.html">Assessment</a>
+      <a href="learning-outcomes.html">Outcomes</a>
+      <a href="teacher-requirements.html">Teachers</a>
+      <a href="mathematics-computer-science.html">Maths & CS</a>
+      <a href="resources.html">Resources</a>
+      <a href="forums.html">Forums</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="blog.html">News</a>
+      <a href="about-contact.html" class="nav-cta">Contact →</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span style="color:rgba(255,228,196,0.75);">FAQ</span>
+    </div>
+    <div class="page-hero-label">❓ Frequently Asked Questions</div>
+    <h1>Your CBC Questions,<br><em>Answered Accurately</em></h1>
+    <p class="page-hero-sub">Comprehensive, KICD-aligned answers to the most common questions about Kenya's Competency Based Curriculum — for students, teachers, parents, school administrators, and the public. All content reflects official CBC, BECF, TSC, and KICD policy.</p>
+    <div class="hero-faq-counts">
+      <div class="hero-faq-count"><strong>80+</strong><span>Detailed questions answered</span></div>
+      <div class="hero-faq-count"><strong>9</strong><span>Topic categories</span></div>
+      <div class="hero-faq-count"><strong>100%</strong><span>KICD & TSC aligned</span></div>
+      <div class="hero-faq-count"><strong>Free</strong><span>No login required</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- ── ACCURACY NOTICE ── -->
+  <div class="accuracy-notice">
+    <div class="icon">📋</div>
+    <p><strong>Accuracy & sourcing:</strong> All answers on this page reflect Kenya's official CBC policy documents — the Basic Education Curriculum Framework (BECF, 2017), KICD curriculum designs, TSC professional standards, and MoE circulars. Where official positions have not yet been finalised (e.g., specific KCSE weightings), this is clearly noted. For binding official documents, visit <a href="https://kicd.ac.ke" target="_blank" rel="noopener">kicd.ac.ke</a>, <a href="https://tsc.go.ke" target="_blank" rel="noopener">tsc.go.ke</a>, and <a href="https://education.go.ke" target="_blank" rel="noopener">education.go.ke</a>.</p>
+  </div>
+
+  <!-- ── SEARCH + FILTER ── -->
+  <div class="controls-band">
+    <div class="search-row">
+      <div class="search-input-wrap">
+        <span>🔍</span>
+        <input type="text" id="searchInput" placeholder="Search all FAQ questions and answers…" oninput="runSearch()">
+      </div>
+    </div>
+    <div class="filters-row" id="filtersRow">
+      <button class="filter-pill active" data-cat="all">📌 All Topics</button>
+      <button class="filter-pill" data-cat="general">📖 General CBC</button>
+      <button class="filter-pill" data-cat="structure">🏗️ Structure</button>
+      <button class="filter-pill" data-cat="pathways">🛤️ Pathways</button>
+      <button class="filter-pill" data-cat="assessment">📊 Assessment</button>
+      <button class="filter-pill" data-cat="outcomes">🎯 Learning Outcomes</button>
+      <button class="filter-pill" data-cat="teachers">👩‍🏫 Teachers</button>
+      <button class="filter-pill" data-cat="students">👨‍🎓 Students</button>
+      <button class="filter-pill" data-cat="parents">👨‍👩‍👧 Parents</button>
+      <button class="filter-pill" data-cat="careers">💼 Careers</button>
+    </div>
+    <p class="results-meta" id="resultsMeta">Showing <strong id="resultsCount">80+</strong> questions across all topics</p>
+  </div>
+
+  <!-- ── FAQ LAYOUT ── -->
+  <div class="faq-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="faq-sidebar" id="faqSidebar">
+      <div class="sidebar-title">Jump to topic</div>
+      <button class="toc-item active" data-target="all" onclick="filterSection('all',this)">
+        <span class="toc-icon">📌</span> All Topics
+        <span class="toc-count">80+</span>
+      </button>
+      <button class="toc-item" data-target="general" onclick="filterSection('general',this)">
+        <span class="toc-icon">📖</span> General CBC
+        <span class="toc-count">10</span>
+      </button>
+      <button class="toc-item" data-target="structure" onclick="filterSection('structure',this)">
+        <span class="toc-icon">🏗️</span> 2-6-3-3 Structure
+        <span class="toc-count">8</span>
+      </button>
+      <button class="toc-item" data-target="pathways" onclick="filterSection('pathways',this)">
+        <span class="toc-icon">🛤️</span> Pathways
+        <span class="toc-count">10</span>
+      </button>
+      <button class="toc-item" data-target="assessment" onclick="filterSection('assessment',this)">
+        <span class="toc-icon">📊</span> Assessment
+        <span class="toc-count">10</span>
+      </button>
+      <button class="toc-item" data-target="outcomes" onclick="filterSection('outcomes',this)">
+        <span class="toc-icon">🎯</span> Learning Outcomes
+        <span class="toc-count">8</span>
+      </button>
+      <button class="toc-item" data-target="teachers" onclick="filterSection('teachers',this)">
+        <span class="toc-icon">👩‍🏫</span> Teachers & TSC
+        <span class="toc-count">10</span>
+      </button>
+      <button class="toc-item" data-target="students" onclick="filterSection('students',this)">
+        <span class="toc-icon">👨‍🎓</span> Students
+        <span class="toc-count">8</span>
+      </button>
+      <button class="toc-item" data-target="parents" onclick="filterSection('parents',this)">
+        <span class="toc-icon">👨‍👩‍👧</span> Parents & Guardians
+        <span class="toc-count">8</span>
+      </button>
+      <button class="toc-item" data-target="careers" onclick="filterSection('careers',this)">
+        <span class="toc-icon">💼</span> Careers & University
+        <span class="toc-count">10</span>
+      </button>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-title">Quick links</div>
+      <div class="sidebar-quick-links">
+        <a href="pathways.html" class="sidebar-link">CBC Pathways guide</a>
+        <a href="assessment-tools.html" class="sidebar-link">All 13 assessment tools</a>
+        <a href="learning-outcomes.html" class="sidebar-link">Learning outcomes models</a>
+        <a href="teacher-requirements.html" class="sidebar-link">Teacher requirements</a>
+        <a href="resources.html" class="sidebar-link">Download free resources</a>
+        <a href="forums.html" class="sidebar-link">Ask in the forums</a>
+      </div>
+    </aside>
+
+    <!-- MAIN FAQ CONTENT -->
+    <div class="faq-main" id="faqMain">
+
+      <!-- ── SECTION: GENERAL CBC ── -->
+      <section class="faq-section-block s-general" id="sec-general" data-section="general">
+        <div class="section-header-bar">
+          <div class="section-icon">📖</div>
+          <div class="section-meta">
+            <div class="section-label-sm">// Topic 01</div>
+            <h2>General CBC Questions</h2>
+          </div>
+          <span class="section-count-badge">10 Q&amp;As</span>
+        </div>
+
+        <div class="accordion-item" data-section="general" data-text="what is cbc competency based curriculum kenya education system">
+          <button class="accordion-q"><span class="q-text">What is CBC and why was it introduced in Kenya?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC — the Competency Based Curriculum — is Kenya's reformed national education system, introduced to replace the 8-4-4 model. Rather than rewarding rote memorisation and performance in a single high-stakes examination, CBC evaluates what a learner can actually <strong>do</strong> with knowledge: apply it, analyse it, create with it, and use it to solve real-world problems.</p>
+            <p>CBC was designed based on the recommendations of the <strong>Task Force on the Re-Alignment of Education to the Constitution (Odhiambo Report, 2012)</strong> and the <strong>Basic Education Curriculum Framework (BECF, 2017)</strong>, which were developed to align education with Kenya's Vision 2030 and the East African Community integration goals.</p>
+            <div class="highlight-box"><strong>Core purpose:</strong> To develop well-rounded, globally competitive Kenyan citizens with skills in critical thinking, creativity, digital literacy, communication, and self-directed learning.</div>
+            <span class="ref-tag">📌 Source: KICD Basic Education Curriculum Framework (BECF), 2017</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="general" data-text="8-4-4 versus cbc differences comparison old new curriculum kenya">
+          <button class="accordion-q"><span class="q-text">What are the key differences between 8-4-4 and CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The differences span structure, philosophy, assessment, and learning approach:</p>
+            <ul>
+              <li><strong>Structure:</strong> 8-4-4 ran for 16 years (8 primary, 4 secondary, 4 university minimum). CBC follows a 2-6-3-3 structure (2 pre-primary, 6 primary, 3 junior secondary, 3 senior secondary) before university or TVET.</li>
+              <li><strong>Assessment:</strong> 8-4-4 relied on one high-stakes exam at each exit point (KCPE, KCSE). CBC uses continuous assessment (coursework contributes significantly) plus national examinations at transition points.</li>
+              <li><strong>Pathways:</strong> 8-4-4 had one secondary school track for all. CBC offers three distinct senior school pathways aligned to learner aptitude and interest: STEM, Social Sciences, and Arts &amp; Sports Science.</li>
+              <li><strong>Focus:</strong> 8-4-4 was content-heavy and exam-focused. CBC emphasises the development of seven core competencies alongside subject knowledge.</li>
+              <li><strong>Role of the teacher:</strong> In 8-4-4, teachers were primarily content transmitters. In CBC, teachers are facilitators of learning, mentors, and formative assessors.</li>
+              <li><strong>Community engagement:</strong> CBC introduces Community Service Learning (CSL) as a mandatory component — not present in 8-4-4.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017; KICD Curriculum Designs, 2022–2025</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="general" data-text="seven core competencies CBC kenya list">
+          <button class="accordion-q"><span class="q-text">What are the 7 core competencies of CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The BECF identifies seven core competencies that every Kenyan learner must develop across all learning areas and grade levels. These are embedded in every subject and assessed continuously:</p>
+            <ol>
+              <li><strong>Communication and Collaboration</strong> — Effective expression of ideas and working productively in diverse groups.</li>
+              <li><strong>Critical Thinking and Problem Solving</strong> — Applying reasoning, evidence, and systematic approaches to analyse and resolve challenges.</li>
+              <li><strong>Creativity and Imagination</strong> — Generating original ideas, inventive solutions, and novel approaches to real problems.</li>
+              <li><strong>Citizenship</strong> — Understanding civic rights, national identity, responsibilities to society, and ethical conduct.</li>
+              <li><strong>Digital Literacy</strong> — Responsible, effective use of technology and digital tools for learning and communication.</li>
+              <li><strong>Learning to Learn</strong> — Developing self-directed study skills, metacognition, and habits of lifelong learning.</li>
+              <li><strong>Self-Efficacy</strong> — Belief in one's capacity to achieve, regulate personal growth, and persist through challenges.</li>
+            </ol>
+            <div class="highlight-box">These competencies are not separate subjects — they are woven into every lesson, project, and assessment across all learning areas from Grade 1 to Grade 12.</div>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017, Chapter 4</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="general" data-text="CBC start date when did it start implementation timeline history 2017 2019">
+          <button class="accordion-q"><span class="q-text">When did CBC start in Kenya and what is the implementation timeline?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC was developed based on the 2012 Odhiambo Task Force recommendations. The key milestones are:</p>
+            <ul>
+              <li><strong>2017:</strong> KICD publishes the Basic Education Curriculum Framework (BECF). Pilot schools begin phased trials.</li>
+              <li><strong>2019:</strong> Full national rollout begins with Grades 1, 2, and 3 simultaneously.</li>
+              <li><strong>2020–2023:</strong> Grade-by-grade rollout continues upward. COVID-19 caused delays and accelerated review of implementation guidelines.</li>
+              <li><strong>2023:</strong> First cohort completes Grade 6 and transitions to Junior Secondary School (Grade 7) — a landmark transition.</li>
+              <li><strong>2025/2026:</strong> First cohort enters Senior Secondary School (Grade 10) and selects a pathway.</li>
+              <li><strong>Approx. 2028/2029:</strong> First CBC cohort sits for KCSE under the new framework.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: MoE Implementation Guidelines; KICD Rollout Schedules</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="general" data-text="BECF basic education curriculum framework what is it">
+          <button class="accordion-q"><span class="q-text">What is the Basic Education Curriculum Framework (BECF)?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The <strong>Basic Education Curriculum Framework (BECF, 2017)</strong> is the foundational policy document that defines the entire philosophy, structure, and guiding principles of CBC in Kenya. It was developed by KICD and approved by the Ministry of Education.</p>
+            <p>The BECF sets out:</p>
+            <ul>
+              <li>The 2-6-3-3 education structure</li>
+              <li>The 7 core competencies every learner must develop</li>
+              <li>The 6 core values (Unity, Responsibility, Respect, Integrity, Patriotism, Social Justice)</li>
+              <li>The 4 Pertinent and Contemporary Issues (PCI) embedded across all subjects</li>
+              <li>The general principles guiding curriculum design, assessment, and pedagogy</li>
+              <li>Roles of teachers, parents, community, and government in curriculum delivery</li>
+            </ul>
+            <p>All KICD curriculum designs for individual subjects and grades must align with the BECF.</p>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017 — available at kicd.ac.ke</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="general" data-text="CBC core values PCIs pertinent contemporary issues kenya six values">
+          <button class="accordion-q"><span class="q-text">What are the core values and Pertinent &amp; Contemporary Issues (PCIs) in CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The BECF identifies <strong>six core values</strong> that CBC aims to instil in all learners:</p>
+            <ul>
+              <li>Love</li>
+              <li>Responsibility</li>
+              <li>Respect</li>
+              <li>Unity</li>
+              <li>Peace</li>
+              <li>Patriotism</li>
+            </ul>
+            <p>The BECF also identifies <strong>Pertinent and Contemporary Issues (PCIs)</strong> that must be embedded across all subjects — not taught as standalone topics, but integrated within lessons and projects. These include:</p>
+            <ul>
+              <li>Environmental education</li>
+              <li>Health education (including HIV/AIDS)</li>
+              <li>Financial literacy</li>
+              <li>Substance abuse education</li>
+              <li>Safety and security</li>
+              <li>Child rights and responsibilities</li>
+              <li>Citizenship</li>
+              <li>Gender and social inclusion</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017, Chapter 5</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="general" data-text="CBC project based learning PBL community service learning CSL what is">
+          <button class="accordion-q"><span class="q-text">What is Project-Based Learning (PBL) and Community Service Learning (CSL) in CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p><strong>Project-Based Learning (PBL)</strong> is a pedagogical strategy in CBC where learners engage in extended, real-world tasks that require applying knowledge from multiple subjects. Projects are assessed using rubrics and contribute to coursework grades. A mathematics project, for example, might involve collecting local data, computing statistics, and presenting findings to the school community.</p>
+            <p><strong>Community Service Learning (CSL)</strong> is a mandatory component in which learners engage in organised service to their communities — such as environmental cleanup, visiting the elderly, or peer tutoring — and then reflect on the learning gained from that experience. CSL develops citizenship, empathy, and the competency of self-efficacy.</p>
+            <div class="highlight-box">Both PBL and CSL are assessed and contribute to the School-Based Assessment (SBA) component of a learner's overall grade.</div>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017; KICD Assessment Policy, 2018</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="general" data-text="CBC grades structure what grades primary junior secondary senior">
+          <button class="accordion-q"><span class="q-text">What grades are covered under CBC and who is currently in CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC covers all levels from Pre-Primary (PP1 and PP2) through Grade 12. As of the 2025/2026 academic year:</p>
+            <ul>
+              <li><strong>PP1–PP2:</strong> All learners in pre-primary are in CBC</li>
+              <li><strong>Grades 1–9:</strong> All learners are fully in CBC (the first CBC cohort completed Grade 9/KJSEA in 2024)</li>
+              <li><strong>Grade 10:</strong> The pioneer CBC senior school class enrolled in 2025</li>
+              <li><strong>Grades 11–12:</strong> Will be fully in CBC by 2026 and 2027 respectively</li>
+              <li><strong>Former 8-4-4 learners:</strong> Those still in Form 3–4 as of 2025 are completing 8-4-4 on a parallel track until the full transition is complete</li>
+            </ul>
+            <span class="ref-tag">📌 Source: MoE Transition Guidelines, 2023–2025</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="general" data-text="KPSEA KJSEA KCSE national assessments examinations CBC">
+          <button class="accordion-q"><span class="q-text">What national assessments exist under CBC — KPSEA, KJSEA, and KCSE?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC has three national assessments at key transition points, all administered by <strong>KNEC (Kenya National Examinations Council)</strong>:</p>
+            <ul>
+              <li><strong>KPSEA — Kenya Primary School Education Assessment:</strong> Sat at the end of Grade 6. Certifies completion of primary school and informs placement into Junior Secondary School. Not primarily a selection exam — all learners proceed to JSS.</li>
+              <li><strong>KJSEA — Kenya Junior School Education Assessment:</strong> Sat at the end of Grade 9. Certifies junior secondary completion and is a key factor — alongside school-based aptitude assessment and guidance — in determining which senior secondary pathway a learner is placed into (STEM, Social Sciences, or Arts &amp; Sports Science).</li>
+              <li><strong>KCSE — Kenya Certificate of Secondary Education:</strong> Sat at the end of Grade 12. The terminal certificate for senior secondary school, used for university and TVET admissions. The first CBC cohort is expected to sit KCSE approximately 2028/2029.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KNEC; MoE CBC Assessment Policy</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="general" data-text="CBC criticism challenges problems Kenya implementation issues">
+          <button class="accordion-q"><span class="q-text">What are the known challenges in CBC implementation in Kenya?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The MoE and KICD have publicly acknowledged several implementation challenges, and academic and professional bodies have raised concerns:</p>
+            <ul>
+              <li><strong>Infrastructure:</strong> Many schools lack the laboratories, libraries, ICT equipment, and materials needed for project-based, practical learning — particularly in rural and ASAL areas.</li>
+              <li><strong>Teacher capacity:</strong> Not all teachers have received CBC retooling. Some teachers trained under 8-4-4 pedagogy find the shift to facilitation-based teaching difficult.</li>
+              <li><strong>Assessment workload:</strong> The continuous assessment model, with 13 tools and multiple portfolios, creates a significant administrative burden for teachers who may have 40+ learners per class.</li>
+              <li><strong>Pathway resources:</strong> Developing subject-specific resources (textbooks, lab equipment, ICT tools) for three distinct pathways requires considerably more investment than a single-track system.</li>
+              <li><strong>Transition management:</strong> Running CBC and 8-4-4 simultaneously during the transition period has strained school administration.</li>
+            </ul>
+            <p>The government has responded with phased textbook procurement, KICD digital resource platforms, and expanded TSC recruitment — though critics argue the pace is insufficient.</p>
+            <span class="ref-tag">📌 Source: Kenya Education Review Commission (KERC), 2023; MoE Status Reports</span>
+          </div></div>
+        </div>
+
+      </section><!-- /general -->
+
+      <!-- ── SECTION: STRUCTURE ── -->
+      <section class="faq-section-block s-structure" id="sec-structure" data-section="structure">
+        <div class="section-header-bar">
+          <div class="section-icon">🏗️</div>
+          <div class="section-meta">
+            <div class="section-label-sm">// Topic 02</div>
+            <h2>The 2-6-3-3 Curriculum Structure</h2>
+          </div>
+          <span class="section-count-badge">8 Q&amp;As</span>
+        </div>
+
+        <div class="accordion-item" data-section="structure" data-text="2-6-3-3 structure what does it mean stages levels years">
+          <button class="accordion-q"><span class="q-text">What does the 2-6-3-3 structure mean in CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The 2-6-3-3 refers to the number of years at each stage of Kenya's education system under CBC:</p>
+            <ul>
+              <li><strong>2 years:</strong> Pre-Primary Education (PP1 and PP2) — ages approximately 4–5.</li>
+              <li><strong>6 years:</strong> Primary School (Grades 1–6) — ends with KPSEA.</li>
+              <li><strong>3 years:</strong> Junior Secondary School (Grades 7–9) — ends with KJSEA.</li>
+              <li><strong>3 years:</strong> Senior Secondary School (Grades 10–12) — ends with KCSE.</li>
+            </ul>
+            <p>After KCSE, learners proceed to university (minimum 3–5 years), TVET programmes, or direct employment. Some describe this as 2-6-3-3-3 to include university.</p>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="structure" data-text="junior secondary school JSS grades 7 8 9 subjects offered">
+          <button class="accordion-q"><span class="q-text">What subjects are taught in Junior Secondary School (Grades 7–9)?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>All learners in Grades 7–9 study the same core subjects — there are no pathways or options at this level. The Junior Secondary curriculum includes:</p>
+            <ul>
+              <li>English</li>
+              <li>Kiswahili / Kenya Sign Language (for learners with hearing impairments)</li>
+              <li>Mathematics</li>
+              <li>Integrated Science</li>
+              <li>Health Education</li>
+              <li>Pre-Technical and Pre-Career Education</li>
+              <li>Social Studies</li>
+              <li>Religious Education (CRE, IRE, or HRE — one selected based on school/parent preference)</li>
+              <li>Business Studies</li>
+              <li>Agriculture</li>
+              <li>Home Science</li>
+              <li>Creative Arts and Design</li>
+              <li>Physical and Health Education (PHE)</li>
+              <li>Foreign Language (Arabic, French, German, Mandarin — where available)</li>
+            </ul>
+            <div class="highlight-box">JSS is designed to be broad and exploratory — helping learners discover their strengths before choosing a pathway at Grade 10.</div>
+            <span class="ref-tag">📌 Source: KICD JSS Curriculum Designs, 2022–2023</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="structure" data-text="senior secondary school SSS grades 10 11 12 subjects pathway">
+          <button class="accordion-q"><span class="q-text">How is Senior Secondary School (Grades 10–12) structured?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Senior Secondary School runs for 3 years (Grades 10, 11, 12). Unlike JSS, it is organised into three distinct pathways:</p>
+            <ul>
+              <li><strong>STEM Pathway</strong> — focused on Sciences, Mathematics, Technology, and Engineering disciplines.</li>
+              <li><strong>Social Sciences Pathway</strong> — focused on Humanities, Business, and Social Studies disciplines.</li>
+              <li><strong>Arts and Sports Science Pathway</strong> — focused on Creative Arts, Performing Arts, Visual Design, and Sports Sciences.</li>
+            </ul>
+            <p>Within each pathway, some subjects are <strong>compulsory for all</strong> (English, Kiswahili, Mathematics for STEM, PHE) and others are <strong>elective</strong> (chosen from within the pathway's subject cluster).</p>
+            <p>Assessment in SSS combines School-Based Assessment (SBA) and the KCSE national examination at Grade 12.</p>
+            <span class="ref-tag">📌 Source: KICD SSS Curriculum Designs, 2024–2025; MoE SSS Policy</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="structure" data-text="primary school grades 1 to 6 CBC subjects strands">
+          <button class="accordion-q"><span class="q-text">What is taught in Primary School (Grades 1–6) under CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Primary school in CBC covers Grades 1 to 6, after which learners sit the KPSEA. The learning areas are:</p>
+            <ul>
+              <li>English Activity / English (literacy, communication, and reading)</li>
+              <li>Kiswahili Activity / Kiswahili (Lugha ya Kiswahili)</li>
+              <li>Mathematical Activity / Mathematics</li>
+              <li>Environmental Activity / Science and Technology (lower primary); Integrated Science (upper primary)</li>
+              <li>Creative Arts (Arts &amp; Craft, Music)</li>
+              <li>Physical and Health Education (PHE)</li>
+              <li>Religious Education (CRE, IRE, or HRE)</li>
+              <li>Home Science (upper primary)</li>
+              <li>Agriculture (upper primary)</li>
+            </ul>
+            <p>Lower Primary (Grades 1–3) uses a more play-based, activity-centred approach. Upper Primary (Grades 4–6) introduces more formal disciplinary learning.</p>
+            <span class="ref-tag">📌 Source: KICD Primary School Curriculum Designs, 2019–2022</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="structure" data-text="pre-primary CBC PP1 PP2 early childhood education learning areas">
+          <button class="accordion-q"><span class="q-text">How does CBC apply to Pre-Primary (PP1 and PP2)?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Pre-Primary education in CBC covers two years — PP1 (age ~4) and PP2 (age ~5). Learning is entirely play-based, activity-centred, and exploratory. The aim is to develop foundational literacy, numeracy, and social-emotional skills rather than formal academic content.</p>
+            <p>Learning areas at this level include: Language Activities, Mathematical Activities, Environmental Activities, Psychomotor and Creative Activities, and Religious Activities. No formal examinations are administered at this stage.</p>
+            <span class="ref-tag">📌 Source: KICD Pre-Primary Curriculum Design, 2019</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="structure" data-text="TVET technical vocational education training CBC pathway after grade 12">
+          <button class="accordion-q"><span class="q-text">How does TVET fit into the CBC structure?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>TVET (Technical and Vocational Education and Training) is a recognised and equal destination after Senior Secondary School (Grade 12). It is not a second-tier option — CBC explicitly positions TVET alongside university as a valid pathway to skilled, productive careers.</p>
+            <p>Learners who sit KCSE may proceed to:</p>
+            <ul>
+              <li>National Polytechnics (certificates, diplomas)</li>
+              <li>Technical Training Institutes (TTIs)</li>
+              <li>TVET Colleges (craft certificates to Higher National Diplomas)</li>
+              <li>Industry apprenticeships</li>
+            </ul>
+            <p>TVET programmes are regulated by TVET Authority (TVETA) under the Ministry of Education.</p>
+            <span class="ref-tag">📌 Source: TVET Authority Kenya; MoE TVET Policy</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="structure" data-text="school term calendar number of terms per year CBC how many terms">
+          <button class="accordion-q"><span class="q-text">How many school terms are there per year under CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Kenya's CBC school calendar maintains the traditional <strong>three-term academic year</strong>:</p>
+            <ul>
+              <li><strong>Term 1:</strong> January–April (approximately 13 weeks)</li>
+              <li><strong>Term 2:</strong> May–August (approximately 13 weeks)</li>
+              <li><strong>Term 3:</strong> September–November (approximately 11–12 weeks)</li>
+            </ul>
+            <p>The MoE publishes an official school calendar each year setting exact opening and closing dates. Public holidays, national events, and examination periods are factored in. Schools are expected to plan their schemes of work and assessment schedule in line with the official calendar.</p>
+            <span class="ref-tag">📌 Source: MoE Annual School Calendar Circulars</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="structure" data-text="special needs inclusive education CBC learners with disabilities">
+          <button class="accordion-q"><span class="q-text">How does CBC address learners with special needs and disabilities?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC places strong emphasis on <strong>inclusive education</strong>. The BECF requires that curriculum designs, instructional materials, and assessments be adapted to meet the needs of learners with physical, sensory, intellectual, and learning disabilities.</p>
+            <p>Key provisions include:</p>
+            <ul>
+              <li>Braille and large-print versions of learning materials for visually impaired learners</li>
+              <li>Kenya Sign Language as an alternative to Kiswahili for learners with hearing impairments</li>
+              <li>Adapted assessment tools and extended time allowances for learners with specific learning needs</li>
+              <li>Support for learners in special schools, integrated schools, and resource rooms</li>
+              <li>Training for teachers in differentiated instruction to accommodate diverse learners in the same classroom</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017; Special Needs Education Policy, Kenya</span>
+          </div></div>
+        </div>
+
+      </section><!-- /structure -->
+
+      <!-- ── SECTION: PATHWAYS ── -->
+      <section class="faq-section-block s-pathways" id="sec-pathways" data-section="pathways">
+        <div class="section-header-bar">
+          <div class="section-icon">🛤️</div>
+          <div class="section-meta">
+            <div class="section-label-sm">// Topic 03</div>
+            <h2>Senior Secondary School Pathways</h2>
+          </div>
+          <span class="section-count-badge">10 Q&amp;As</span>
+        </div>
+
+        <div class="accordion-item" data-section="pathways" data-text="three pathways CBC STEM social sciences arts sports science what are they">
+          <button class="accordion-q"><span class="q-text">What are the three CBC senior school pathways?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>From Grade 10, all learners select one of three pathways:</p>
+            <ul>
+              <li><strong>STEM Pathway (Science, Technology, Engineering, and Mathematics):</strong> Compulsory subjects include Core Mathematics, English, Kiswahili, and Physical &amp; Health Education. Learners then choose from Science subjects (Biology, Chemistry, Physics) and Applied STEM subjects (Computer Science, Agriculture, Home Science as applied science).</li>
+              <li><strong>Social Sciences Pathway:</strong> Compulsory subjects include English, Kiswahili, and PHE. Electives drawn from: History &amp; Citizenship, Geography, Business Studies, Economics, Religious Education, and Foreign Languages.</li>
+              <li><strong>Arts and Sports Science Pathway:</strong> Compulsory subjects include English, Kiswahili, and PHE. Electives drawn from: Performing Arts (Music, Drama, Dance), Visual Arts and Design, Film and Media Production, and Sports Science.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD SSS Curriculum Designs, 2024–2025; MoE Pathway Policy</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="pathways" data-text="how are learners placed in pathways KJSEA selection criteria aptitude">
+          <button class="accordion-q"><span class="q-text">How are learners placed into pathways after KJSEA?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Pathway placement at Grade 10 is informed by multiple factors — not solely KJSEA scores:</p>
+            <ul>
+              <li><strong>KJSEA results:</strong> Performance in relevant subject areas is considered. Strong Mathematics and Science scores support STEM pathway placement.</li>
+              <li><strong>School-Based Assessment (SBA) records:</strong> The continuous assessment record from Grades 7–9 is reviewed.</li>
+              <li><strong>Aptitude and interest inventories:</strong> Schools administer guidance tools to assess learner strengths and interests.</li>
+              <li><strong>Learner and parent choice:</strong> Learners and guardians express pathway preferences as part of the placement process.</li>
+              <li><strong>School capacity:</strong> Available teachers, laboratories, and facilities in each pathway stream.</li>
+            </ul>
+            <p>Schools are supported by <strong>Career Guidance and Counselling (CGC) teachers</strong>, who must have formal CGC training and TSC recognition.</p>
+            <div class="highlight-box">No single exam score alone determines pathway placement. The process is holistic and guided, not purely meritocratic.</div>
+            <span class="ref-tag">📌 Source: MoE Pathway Placement Guidelines, 2024</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="pathways" data-text="can learner change pathway switch after selection transfer">
+          <button class="accordion-q"><span class="q-text">Can a learner change pathways after selection into Grade 10?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Pathway transfers are possible, particularly during the first term of Grade 10, subject to:</p>
+            <ul>
+              <li>School principal approval</li>
+              <li>Review by the school's Guidance and Counselling teacher</li>
+              <li>Parent/guardian consent</li>
+              <li>Availability of space and resources in the desired pathway at that school</li>
+            </ul>
+            <p>After the first term, transfers become more complicated because the learner will have missed foundational pathway content. Mid-year or inter-year transfers are handled on a case-by-case basis. Learners who transfer later may need additional support to catch up.</p>
+            <span class="ref-tag">📌 Source: MoE Pathway Placement and Transfer Guidelines</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="pathways" data-text="STEM pathway subjects mathematics physics chemistry biology computer science">
+          <button class="accordion-q"><span class="q-text">What specific subjects are in the STEM pathway?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>In the STEM pathway, the subject structure is:</p>
+            <ul>
+              <li><strong>Compulsory for all STEM learners:</strong> Core Mathematics, English, Kiswahili, Physical and Health Education (PHE).</li>
+              <li><strong>Pure Sciences (choose at least 2):</strong> Biology, Chemistry, Physics.</li>
+              <li><strong>Applied STEM (choose at least 1):</strong> Computer Science, Agriculture, Home Science (applied science option).</li>
+            </ul>
+            <p>Common STEM combinations used in practice:</p>
+            <ul>
+              <li>Engineering track: Mathematics + Physics + Chemistry (+ Computer Science or Agriculture)</li>
+              <li>Medical track: Mathematics + Biology + Chemistry (+ Physics)</li>
+              <li>CS/Technology track: Mathematics + Computer Science + Physics or Chemistry</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD STEM Pathway Curriculum Designs, Grade 10–12, 2024–2025</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="pathways" data-text="social sciences pathway subjects history geography business economics religion">
+          <button class="accordion-q"><span class="q-text">What subjects are in the Social Sciences pathway?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p><strong>Compulsory for all Social Sciences learners:</strong> English, Kiswahili, Physical and Health Education.</p>
+            <p><strong>Elective subjects within the Social Sciences cluster:</strong></p>
+            <ul>
+              <li>History and Citizenship Education</li>
+              <li>Geography</li>
+              <li>Business Studies</li>
+              <li>Economics</li>
+              <li>Christian Religious Education (CRE) / Islamic Religious Education (IRE) / Hindu Religious Education (HRE)</li>
+              <li>Foreign Language (French, German, Arabic, Mandarin — where offered)</li>
+              <li>Business and Entrepreneurship</li>
+            </ul>
+            <p>Learners typically study 3–4 electives in addition to the compulsory subjects.</p>
+            <span class="ref-tag">📌 Source: KICD Social Sciences Pathway Curriculum Designs, 2024–2025</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="pathways" data-text="arts sports science pathway performing arts visual arts music drama dance PE">
+          <button class="accordion-q"><span class="q-text">What subjects are in the Arts and Sports Science pathway?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p><strong>Compulsory for all Arts &amp; Sports Science learners:</strong> English, Kiswahili, Physical and Health Education.</p>
+            <p><strong>Elective subjects within the Arts &amp; Sports cluster:</strong></p>
+            <ul>
+              <li>Music</li>
+              <li>Dance</li>
+              <li>Drama / Performing Arts</li>
+              <li>Fine Art and Visual Design</li>
+              <li>Craft and Technology</li>
+              <li>Film and Media Production</li>
+              <li>Sports Science</li>
+            </ul>
+            <p>This pathway leads to careers in professional performance, design, media, coaching, sports management, film production, and arts education.</p>
+            <span class="ref-tag">📌 Source: KICD Arts &amp; Sports Science Pathway Curriculum Designs, 2024–2025</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="pathways" data-text="pathways not ranked equal one better than another hierarchy stigma">
+          <button class="accordion-q"><span class="q-text">Is the STEM pathway more prestigious or better than the others?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>No. The BECF is explicit that <strong>all three pathways are of equal standing and dignity</strong>. No pathway is ranked above another. This is a deliberate policy position to challenge the cultural bias that historically valued academic/science tracks over arts, sports, and vocational routes.</p>
+            <p>Each pathway leads to distinct but equally valued outcomes:</p>
+            <ul>
+              <li>STEM → engineering, medicine, technology, science research</li>
+              <li>Social Sciences → law, economics, governance, education, journalism</li>
+              <li>Arts &amp; Sports → professional performance, design, media, sports</li>
+            </ul>
+            <p>The MoE, KICD, and TSC all reinforce this equity principle in official communications. Schools are expected to counsel learners and parents accordingly.</p>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017; MoE Pathway Policy Statement</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="pathways" data-text="mathematics compulsory all pathways or only STEM">
+          <button class="accordion-q"><span class="q-text">Is Mathematics compulsory in all three pathways?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Core Mathematics is compulsory in the <strong>STEM pathway</strong>. In the Social Sciences and Arts &amp; Sports Science pathways, learners take a <strong>General Mathematics</strong> or <strong>Applied Mathematics</strong> module rather than the full Core Mathematics programme — ensuring numeracy and quantitative reasoning skills are maintained across all pathways.</p>
+            <p>The specific mathematics requirement per pathway is still being finalised in some curriculum design documentation as of 2025, and schools should confirm the current requirement with their respective Sub-County TSC offices and KICD regional centres.</p>
+            <span class="ref-tag">📌 Source: KICD Mathematics Curriculum Designs; MoE Communications 2024–2025</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="pathways" data-text="pathway selection guidance counselling CGC teacher role career">
+          <button class="accordion-q"><span class="q-text">Who helps learners choose the right pathway?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Each school is required to have a qualified <strong>Career Guidance and Counselling (CGC) teacher</strong> who facilitates pathway choice. This teacher:</p>
+            <ul>
+              <li>Administers aptitude and interest inventories to Grade 8 and 9 learners</li>
+              <li>Organises pathway exposure sessions, career talks, and pathway expos</li>
+              <li>Counsels individual learners and their parents on pathway options</li>
+              <li>Reviews KJSEA results and SBA records to give evidence-based advice</li>
+              <li>Documents all guidance interactions in the school's records</li>
+            </ul>
+            <p>Parents and guardians are integral to this process — the final pathway selection is made collaboratively between the learner, parents, and the school's guidance team.</p>
+            <span class="ref-tag">📌 Source: TSC CGC Guidelines; MoE Pathway Placement Circulars</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="pathways" data-text="pathways available in all schools Kenya rural urban access">
+          <button class="accordion-q"><span class="q-text">Are all three pathways available in every school across Kenya?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Not yet. The availability of all three pathways in every school is an aspiration that is being phased in. In practice:</p>
+            <ul>
+              <li>Most urban and well-resourced schools are able to offer all three pathways or will do so by 2026.</li>
+              <li>Smaller rural schools may initially offer only one or two pathways, depending on teacher availability and infrastructure.</li>
+              <li>The government has committed to expanding STEM facilities (labs, computers) to more schools and recruiting specialist teachers for Arts and Sports Science pathways.</li>
+              <li>Learners in schools not offering their desired pathway may be transferred to nearby schools that do — subject to MoE boarding and travel support policies.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: MoE CBC Implementation Status Reports, 2023–2025</span>
+          </div></div>
+        </div>
+
+      </section><!-- /pathways -->
+
+      <!-- ── SECTION: ASSESSMENT ── -->
+      <section class="faq-section-block s-assessment" id="sec-assessment" data-section="assessment">
+        <div class="section-header-bar">
+          <div class="section-icon">📊</div>
+          <div class="section-meta">
+            <div class="section-label-sm">// Topic 04</div>
+            <h2>Assessment in CBC</h2>
+          </div>
+          <span class="section-count-badge">10 Q&amp;As</span>
+        </div>
+
+        <div class="accordion-item" data-section="assessment" data-text="how does assessment work CBC formative summative 60 40 coursework exams">
+          <button class="accordion-q"><span class="q-text">How does assessment work in CBC — what is the 60/40 split?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC uses a <strong>dual-component assessment model</strong>:</p>
+            <ul>
+              <li><strong>School-Based Assessment (SBA) — approximately 60%:</strong> This is the continuous assessment component, accumulated throughout the term and year. It includes Continuous Assessment Tests (CATs), projects, portfolios, Community Service Learning records, and teacher observations. The precise SBA weighting per subject is defined in individual KICD curriculum designs.</li>
+              <li><strong>National Examination — approximately 40%:</strong> External assessments administered by KNEC at transition points (KPSEA, KJSEA, KCSE). For the final KCSE at Grade 12, this will be the main summative, standardised component.</li>
+            </ul>
+            <div class="highlight-box">Note: The exact SBA-to-examination ratio for KCSE is still being finalised by KNEC and MoE as of 2025. These percentages reflect the general CBC philosophy and interim guidelines — confirm with your school and KICD regional office for the most current ratios.</div>
+            <span class="ref-tag">📌 Source: KICD Assessment Policy; KNEC CBC Assessment Framework</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="assessment" data-text="13 assessment tools KICD list all tools formative summative">
+          <button class="accordion-q"><span class="q-text">What are the 13 KICD assessment tools and when is each used?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>KICD prescribes 13 assessment tools for use across all subjects and grade levels. Teachers select the most appropriate tool(s) based on the learning outcome, strand, and activity:</p>
+            <ol>
+              <li><strong>Observation Schedule</strong> — Records specific learner behaviours during an activity in structured format.</li>
+              <li><strong>Oral Questions and Answers</strong> — Verbal assessment of understanding through direct questioning.</li>
+              <li><strong>Written Tests</strong> — Pen-and-paper assessments for cognitive outcomes.</li>
+              <li><strong>Checklist</strong> — A binary (yes/no or done/not done) record of whether criteria are met.</li>
+              <li><strong>Rating Scale</strong> — A scale (e.g. 1–4, or Excellent/Good/Fair/Poor) for grading degree of performance.</li>
+              <li><strong>Rubric</strong> — Detailed scoring guide with descriptors for each level of performance on each criterion.</li>
+              <li><strong>Portfolio</strong> — A curated, reflective collection of a learner's work showing growth over time.</li>
+              <li><strong>Project</strong> — An extended task requiring application of knowledge to produce a tangible output.</li>
+              <li><strong>Anecdotal Records</strong> — Brief factual observations written by the teacher about a learner at a significant moment.</li>
+              <li><strong>Peer Assessment</strong> — Learners evaluate each other's work using agreed criteria.</li>
+              <li><strong>Self-Assessment</strong> — Learners reflect on and evaluate their own learning and performance.</li>
+              <li><strong>Questionnaire</strong> — Structured written questions gathering learner attitudes, knowledge, or perceptions.</li>
+              <li><strong>Interview</strong> — A directed verbal exchange to assess depth and breadth of understanding.</li>
+            </ol>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017; KICD Teacher Guides; CBC Curriculum Designs</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="assessment" data-text="rubric what is it how to use analytic holistic">
+          <button class="accordion-q"><span class="q-text">What is a rubric in CBC and how should teachers use it?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>A rubric is a scoring guide that describes the expected quality of performance at each level for a given task or criterion. In CBC, rubrics are the most detailed and commonly required assessment tool for project work, presentations, and creative tasks.</p>
+            <p>There are two types used in CBC:</p>
+            <ul>
+              <li><strong>Analytic rubric:</strong> Breaks the task into separate criteria (e.g. Accuracy, Communication, Organisation, Creativity) and scores each independently. Gives learners detailed feedback on specific areas.</li>
+              <li><strong>Holistic rubric:</strong> Gives a single overall score for the complete performance. Faster to use but less diagnostically specific.</li>
+            </ul>
+            <p>CBC performance levels are typically described as: <strong>Exceeding Expectations (EE) | Meeting Expectations (ME) | Approaching Expectations (AE) | Below Expectations (BE)</strong>.</p>
+            <span class="ref-tag">📌 Source: KICD Assessment Policy; KICD Teacher Competency Framework</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="assessment" data-text="CAT continuous assessment test how many per term what are they">
+          <button class="accordion-q"><span class="q-text">How many CATs (Continuous Assessment Tests) are there per term?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The exact number of CATs per term is specified in individual KICD curriculum designs for each subject and level. The typical structure for most subjects at Senior Secondary level is <strong>2–3 CATs per term</strong>, administered at roughly equal intervals (e.g. after every 4–5 weeks of instruction).</p>
+            <p>CATs typically cover the content taught since the previous CAT or the beginning of term. Where three CATs are administered, KICD often recommends counting the <strong>best two out of three</strong> scores toward the final SBA tally.</p>
+            <p>In addition to CATs, the SBA component includes: project work, portfolios, community service learning documentation, and practicals (for science and practical subjects).</p>
+            <span class="ref-tag">📌 Source: KICD Subject-Specific Curriculum Designs; KICD Assessment Guidelines</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="assessment" data-text="portfolio what goes in it how is it assessed purpose">
+          <button class="accordion-q"><span class="q-text">What is a portfolio in CBC and what should it contain?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>A portfolio is a purposeful, organised collection of a learner's work over time. Unlike a folder of all work produced, a CBC portfolio is <strong>selected evidence</strong> chosen by the learner (with teacher guidance) to demonstrate growth, achievement, and competency development.</p>
+            <p>A well-organised CBC portfolio typically contains:</p>
+            <ul>
+              <li>Table of contents and a learner introduction ("Who I am as a learner")</li>
+              <li>Best-work samples from different strands and topics, each annotated</li>
+              <li>Draft and final versions of at least one piece of work (showing improvement)</li>
+              <li>One major project report or write-up</li>
+              <li>Community Service Learning records and reflections</li>
+              <li>Self-reflection entries (at least one per term)</li>
+              <li>Teacher feedback notes and marked assessment records</li>
+            </ul>
+            <p>Portfolios are assessed using a rubric or checklist and contribute to the SBA grade.</p>
+            <span class="ref-tag">📌 Source: KICD Assessment Policy; KICD Portfolio Guidelines</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="assessment" data-text="CBC grading scale EE ME AE BE marks grades performance levels">
+          <button class="accordion-q"><span class="q-text">What is the CBC grading/performance scale (EE, ME, AE, BE)?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC uses a four-level performance scale for reporting learner achievement, particularly in lower and junior secondary levels:</p>
+            <ul>
+              <li><strong>EE — Exceeding Expectations:</strong> The learner demonstrates performance significantly above the expected level for their grade.</li>
+              <li><strong>ME — Meeting Expectations:</strong> The learner demonstrates the expected level of performance for their grade consistently.</li>
+              <li><strong>AE — Approaching Expectations:</strong> The learner shows progress toward the expected level but has not fully met it.</li>
+              <li><strong>BE — Below Expectations:</strong> The learner is not yet meeting the expected level and requires additional support.</li>
+            </ul>
+            <p>For Senior Secondary School and the KCSE examination, numerical marks and letter grade scales aligned to KNEC's grading system are used, as in 8-4-4 (A, A-, B+, B, B-, C+, C, C-, D+, D, D-, E).</p>
+            <span class="ref-tag">📌 Source: KICD Assessment Reporting Guidelines; KNEC Grading Framework</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="assessment" data-text="formative assessment summative difference what is it">
+          <button class="accordion-q"><span class="q-text">What is the difference between formative and summative assessment in CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p><strong>Formative assessment</strong> happens <em>during</em> learning. Its purpose is to monitor progress, provide feedback, and help the teacher adjust instruction. Examples: class observations, oral Q&amp;A, exit tickets, peer feedback, quick checklists. Formative assessment does not always produce a recorded grade — it guides the teaching process.</p>
+            <p><strong>Summative assessment</strong> happens <em>at the end of</em> a unit, term, or learning cycle. Its purpose is to measure the overall achievement of learning outcomes. Examples: end-of-term CAT, KJSEA, KCSE, end-of-unit project. Summative results are recorded and contribute to the official SBA or examination grade.</p>
+            <p>CBC emphasises that both are equally important and that assessment should always serve learning — not just measure it.</p>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017; KICD Assessment Policy</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="assessment" data-text="SBA school based assessment marks records kept who">
+          <button class="accordion-q"><span class="q-text">Who keeps SBA records and how are they verified?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>SBA records are the responsibility of the <strong>class teacher</strong> for each subject. They are maintained in:</p>
+            <ul>
+              <li>Individual assessment record books (one per subject per class)</li>
+              <li>Learner portfolios (kept by learners, reviewed and stamped by the teacher)</li>
+              <li>The school's digital or physical SBA register</li>
+            </ul>
+            <p>SBA records are subject to verification by:</p>
+            <ul>
+              <li><strong>The school principal</strong> — internal quality assurance</li>
+              <li><strong>TSC school inspectors</strong> — during scheduled inspection visits</li>
+              <li><strong>KNEC moderators</strong> — who may visit schools as part of the KCSE moderation process</li>
+              <li><strong>County/Sub-County education officers</strong> — as part of the national monitoring system</li>
+            </ul>
+            <p>Falsification of SBA records is a disciplinary offence under the TSC Code of Conduct and Regulations for Teachers.</p>
+            <span class="ref-tag">📌 Source: KICD SBA Guidelines; TSC Code of Conduct, 2015</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="assessment" data-text="peer assessment self assessment how to do it guide learners">
+          <button class="accordion-q"><span class="q-text">How should peer assessment and self-assessment be implemented properly?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Peer and self-assessment are powerful tools in CBC but require careful implementation to be educationally valid:</p>
+            <p><strong>For peer assessment:</strong></p>
+            <ul>
+              <li>Learners must be given a clear rubric or checklist before they assess a peer's work.</li>
+              <li>Training sessions should precede the first formal peer assessment activity.</li>
+              <li>Feedback should be written, specific, and constructive — not just a score.</li>
+              <li>The teacher reviews all peer assessments before they are recorded.</li>
+            </ul>
+            <p><strong>For self-assessment:</strong></p>
+            <ul>
+              <li>Learners reflect on their own work against defined criteria.</li>
+              <li>Self-assessment forms part of the portfolio and must include written reflection.</li>
+              <li>It should not be used as the sole grade for a component — it is evidence of metacognition, not just a mark.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD Teacher Professional Development Guides</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="assessment" data-text="KCSE mark scheme how will it work grade 12 final exam CBC weighting">
+          <button class="accordion-q"><span class="q-text">How will the KCSE examination work for the first CBC cohort?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The full structure of KCSE for the first CBC cohort (expected to sit approximately 2028/2029) is still being finalised by KNEC and MoE as of 2025. What is known:</p>
+            <ul>
+              <li>KCSE will remain the terminal national assessment at end of Grade 12.</li>
+              <li>It will assess subject knowledge alongside competencies developed through the chosen pathway.</li>
+              <li>The SBA component accumulated across Grades 10–12 will contribute to the final KCSE grade.</li>
+              <li>KNEC will define the mark scheme, subject combinations required for different university courses, and the minimum grade requirements.</li>
+              <li>The KCSE grade will be reported using letter grades (A to E), aligned with existing university admission requirements.</li>
+            </ul>
+            <p>Teachers and learners are advised to monitor communications from KNEC and MoE as specific details are progressively released.</p>
+            <span class="ref-tag">📌 Source: KNEC CBC Assessment Framework (ongoing updates); MoE Circulars</span>
+          </div></div>
+        </div>
+
+      </section><!-- /assessment -->
+
+      <!-- ── SECTION: LEARNING OUTCOMES ── -->
+      <section class="faq-section-block s-outcomes" id="sec-outcomes" data-section="outcomes">
+        <div class="section-header-bar">
+          <div class="section-icon">🎯</div>
+          <div class="section-meta">
+            <div class="section-label-sm">// Topic 05</div>
+            <h2>Learning Outcomes &amp; Lesson Planning</h2>
+          </div>
+          <span class="section-count-badge">8 Q&amp;As</span>
+        </div>
+
+        <div class="accordion-item" data-section="outcomes" data-text="what is a specific learning outcome SLO what is it CBC lesson">
+          <button class="accordion-q"><span class="q-text">What is a Specific Learning Outcome (SLO) in CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>A Specific Learning Outcome (SLO) is a clear, measurable statement of what a learner should be able to <strong>do</strong> by the end of a lesson, unit, or term. SLOs are learner-centred and action-oriented — they describe observable behaviours, not teacher activities.</p>
+            <p>An SLO must be:</p>
+            <ul>
+              <li><strong>Learner-centred:</strong> Written from the learner's perspective ("The learner will be able to…") not the teacher's ("I will teach…")</li>
+              <li><strong>Observable:</strong> Expressed using a verb that describes a visible, measurable action</li>
+              <li><strong>Achievable:</strong> Realistic within the time, resources, and learner readiness available</li>
+              <li><strong>Aligned:</strong> Directly linked to the KICD curriculum design strand and sub-strand</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD BECF; KICD Curriculum Designs; KICD Teacher Guides</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="outcomes" data-text="four models writing learning outcomes VOC ABCD SMART Mager performance">
+          <button class="accordion-q"><span class="q-text">What are the four models for writing CBC learning outcomes?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>KICD recognises four models for writing Specific Learning Outcomes:</p>
+            <ul>
+              <li><span class="model-pill">VOC</span> <strong>Verb + Object + Context:</strong> The simplest and most widely used model for individual lesson SLOs. E.g. "Simplify [V] surds [O] using the product rule [C]"</li>
+              <li><span class="model-pill">ABCD</span> <strong>Audience + Behaviour + Condition + Degree:</strong> Used for unit and scheme-level outcomes where the standard of performance needs to be specified. E.g. "Grade 10 learners (A) will solve quadratic equations (B) using the formula (C) with 80% accuracy (D)"</li>
+              <li><span class="model-pill">SMART</span> <strong>Specific + Measurable + Achievable + Relevant + Time-bound:</strong> Used for project goals, term targets, and portfolio objectives.</li>
+              <li><span class="model-pill">MAGER</span> <strong>Performance + Condition + Criterion:</strong> Used for practical tasks, laboratory work, and observable skill demonstrations. E.g. "Given a burette and sodium hydroxide solution (Condition), perform a titration (Performance) to within ±0.02 mL (Criterion)"</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD Teacher Professional Development Materials; KICD Curriculum Designs</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="outcomes" data-text="Bloom's taxonomy CBC verb action observable levels knowledge comprehension application">
+          <button class="accordion-q"><span class="q-text">How does Bloom's Taxonomy relate to writing SLOs in CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Bloom's Revised Taxonomy provides the framework for selecting the <strong>action verb</strong> in an SLO. The six levels, from lower-order to higher-order thinking, are:</p>
+            <ol>
+              <li><strong>Remembering:</strong> Define, List, Name, Recall, State, Identify</li>
+              <li><strong>Understanding:</strong> Explain, Describe, Summarise, Classify, Compare</li>
+              <li><strong>Applying:</strong> Solve, Calculate, Demonstrate, Use, Apply, Perform</li>
+              <li><strong>Analysing:</strong> Analyse, Distinguish, Examine, Investigate, Categorise</li>
+              <li><strong>Evaluating:</strong> Evaluate, Justify, Critique, Assess, Defend, Recommend</li>
+              <li><strong>Creating:</strong> Design, Create, Develop, Compose, Invent, Build</li>
+            </ol>
+            <div class="highlight-box">CBC requires that SLOs progress through all levels across a term or unit — not just recalling facts, but also applying, analysing, and creating. Junior secondary learners should regularly encounter Levels 3–5 and senior secondary learners Levels 4–6.</div>
+            <span class="ref-tag">📌 Source: KICD Teacher Professional Development Materials; KICD Curriculum Designs</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="outcomes" data-text="strand sub-strand specific learning outcome SLO relationship link curriculum design">
+          <button class="accordion-q"><span class="q-text">What is the relationship between Strands, Sub-Strands, and SLOs in a CBC curriculum design?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>KICD organises each subject curriculum in a three-tier hierarchy:</p>
+            <ul>
+              <li><strong>Strand:</strong> The broadest thematic area within a subject. E.g. in Grade 10 Mathematics: "Strand 1.0 — Numbers"</li>
+              <li><strong>Sub-Strand:</strong> A more specific content area within a Strand. E.g. "Sub-Strand 1.1 — Surds and Indices"</li>
+              <li><strong>Specific Learning Outcomes (SLOs):</strong> The individual, lesson-level competency statements within each Sub-Strand. E.g. "Simplify surds using the product rule in real-world contexts"</li>
+            </ul>
+            <p>Teachers write their schemes of work and lesson plans by selecting the relevant Strand → Sub-Strand → SLOs from the KICD curriculum design for their subject and grade, then designing learning experiences and assessment tools to match.</p>
+            <span class="ref-tag">📌 Source: KICD Subject Curriculum Designs (all grades and subjects)</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="outcomes" data-text="scheme of work lesson plan difference format CBC template">
+          <button class="accordion-q"><span class="q-text">What is the difference between a scheme of work and a lesson plan in CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p><strong>Scheme of Work:</strong> A term-length document showing how the teacher plans to cover all SLOs in the curriculum design across all the lessons of the term. It is a planning grid that maps out, week by week and lesson by lesson: the Strand, Sub-Strand, specific SLO, learning experiences, resources, and assessment tools to be used. It must be prepared before the term begins and approved by the Head of Department.</p>
+            <p><strong>Lesson Plan:</strong> A detailed, single-lesson document (covering one or two lessons) that expands on one row of the scheme of work. It contains: lesson SLOs (written using a prescribed model), prerequisite knowledge, resources, a full lesson development (Introduction / Main lesson / Consolidation / Closure), differentiation strategies, and post-lesson teacher reflection.</p>
+            <div class="highlight-box">Both documents are required by the TSC and may be inspected during school visits. Failure to maintain current schemes of work and lesson plans is a performance issue under TSC's TPAD system.</div>
+            <span class="ref-tag">📌 Source: KICD Teacher Guides; TSC TPAD Guidelines</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="outcomes" data-text="differentiated instruction CBC support extension core tiered tasks diverse learners">
+          <button class="accordion-q"><span class="q-text">What is differentiated instruction and is it required in CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Differentiated instruction (DI) is a teaching approach that adjusts the <strong>content, process, product, or learning environment</strong> to meet the diverse readiness levels, interests, and learning profiles of all learners in a class. It is not a single strategy but a mindset that guides lesson planning.</p>
+            <p>In CBC, DI is a professional requirement — not optional. The BECF and KICD teacher guides explicitly require teachers to plan for:</p>
+            <ul>
+              <li><strong>Support activities</strong> for learners below the expected level (scaffolded tasks, visual aids, reduced complexity)</li>
+              <li><strong>Core activities</strong> for learners meeting expectations (standard lesson)</li>
+              <li><strong>Extension activities</strong> for learners exceeding expectations (deeper application, independent research, additional challenge)</li>
+            </ul>
+            <p>All three groups must be provided for in the lesson plan's differentiation section.</p>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017; KICD Teacher Guides; TSC Competency Framework</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="outcomes" data-text="common mistakes writing SLOs teacher errors avoid">
+          <button class="accordion-q"><span class="q-text">What are common mistakes teachers make when writing SLOs?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>These are the most frequently observed errors during KICD training and TSC appraisal visits:</p>
+            <ul>
+              <li><strong>"The teacher will explain/teach..."</strong> — SLOs must be about the learner, not the teacher.</li>
+              <li><strong>Using unobservable verbs</strong> — "Understand", "know", "appreciate", and "feel" cannot be directly observed or measured. Replace with: explain, demonstrate, solve, identify, analyse.</li>
+              <li><strong>Writing too broad an outcome</strong> — "Solve mathematics problems" is not a measurable lesson SLO. Specify the type of problem and method: "Solve quadratic equations using the factorisation method".</li>
+              <li><strong>Copying outcomes verbatim from the curriculum design</strong> — The curriculum design provides the broad expected outcomes; lesson SLOs must be narrower and specific to what will be taught in that lesson.</li>
+              <li><strong>Writing outcomes that cannot be assessed in the lesson</strong> — If you write the outcome, you must also plan how you will assess it in that same lesson.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD CBC Teacher Retooling Programme Materials</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="outcomes" data-text="strand based approach versus topic based what changed from old system">
+          <button class="accordion-q"><span class="q-text">What is the strand-based approach and how does it differ from topic-based teaching?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>In the 8-4-4 system, syllabi were organised by <strong>topics</strong> — discrete, sequential content units. Each topic was taught, examined, and largely set aside. In CBC, curriculum is organised by <strong>strands and sub-strands</strong>:</p>
+            <ul>
+              <li><strong>Strands</strong> are thematic, broad learning areas that recur and deepen across multiple grades. E.g. the "Data Handling and Probability" strand in Mathematics appears in Grade 7, 8, 9, 10, 11, and 12 — each year building on the prior year's competencies.</li>
+              <li><strong>Sub-strands</strong> are the specific content areas within each strand, progressively developed over the years.</li>
+            </ul>
+            <p>This spiral curriculum approach ensures that foundational competencies are reinforced and deepened rather than taught once and abandoned. A learner does not simply "finish" statistics in Grade 8 — they return to it with greater sophistication in Grade 10 and 11.</p>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017; KICD Curriculum Designs</span>
+          </div></div>
+        </div>
+
+      </section><!-- /outcomes -->
+
+      <!-- ── SECTION: TEACHERS ── -->
+      <section class="faq-section-block s-teachers" id="sec-teachers" data-section="teachers">
+        <div class="section-header-bar">
+          <div class="section-icon">👩‍🏫</div>
+          <div class="section-meta">
+            <div class="section-label-sm">// Topic 06</div>
+            <h2>Teachers, TSC &amp; Professional Standards</h2>
+          </div>
+          <span class="section-count-badge">10 Q&amp;As</span>
+        </div>
+
+        <div class="accordion-item" data-section="teachers" data-text="TSC teacher service commission registration requirements CBC teacher">
+          <button class="accordion-q"><span class="q-text">What are the TSC registration requirements for a CBC teacher?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>To be registered and practice as a teacher in Kenya under CBC, a person must:</p>
+            <ul>
+              <li>Hold a <strong>minimum of a Bachelor of Education (BEd) degree</strong> from a recognised university, with a relevant subject specialisation (for primary and secondary school) OR a Bachelor's degree in a relevant subject plus a <strong>Post-Graduate Diploma in Education (PGDE)</strong>.</li>
+              <li>Pass the <strong>TSC Competency Assessment</strong> — a professional certification process assessing teaching knowledge and skills.</li>
+              <li>Hold a valid <strong>Certificate of Good Conduct</strong> from the Kenya Police / Directorate of Criminal Investigations (DCI).</li>
+              <li>Have completed <strong>CBC retooling training</strong> as facilitated by KICD or TSC-accredited providers.</li>
+              <li>Not appear on the <strong>National Teacher Registration exclusion list</strong> (for those deregistered for professional misconduct).</li>
+            </ul>
+            <span class="ref-tag">📌 Source: TSC Act, 2012; TSC Registration Guidelines; TSC Circular on CBC Retooling</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="teachers" data-text="CBC retooling training what is it mandatory all teachers">
+          <button class="accordion-q"><span class="q-text">What is CBC retooling and is it mandatory for all teachers?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC retooling is a structured professional development programme designed to equip existing teachers — particularly those trained under the 8-4-4 system — with the knowledge, skills, and dispositions required to deliver CBC effectively.</p>
+            <p>Retooling covers:</p>
+            <ul>
+              <li>CBC philosophy, core competencies, and the BECF</li>
+              <li>Competency-based pedagogy and learner-centred instruction</li>
+              <li>Formative assessment and use of the 13 KICD assessment tools</li>
+              <li>Writing learning outcomes using the four prescribed models</li>
+              <li>Differentiated instruction for diverse learners</li>
+              <li>ICT integration in teaching and learning</li>
+              <li>Strand-based curriculum organisation and lesson/scheme planning</li>
+            </ul>
+            <p>Retooling is <strong>mandatory</strong> for all practising teachers as a condition of continued TSC registration renewal and TPAD appraisal. Both face-to-face and online (KICD e-learning platform) retooling options exist.</p>
+            <span class="ref-tag">📌 Source: TSC Circular on CBC Retooling; KICD CPD Programme</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="teachers" data-text="TPAD teacher performance appraisal development system how does it work">
+          <button class="accordion-q"><span class="q-text">What is TPAD and how does it assess CBC teachers?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>TPAD — the <strong>Teacher Performance Appraisal and Development System</strong> — is TSC's framework for evaluating the professional performance of all registered teachers. Under CBC, TPAD assessments focus on:</p>
+            <ul>
+              <li>Quality of scheme of work and lesson plan preparation (including correct SLOs and differentiation)</li>
+              <li>Use of a range of assessment tools (not just written tests)</li>
+              <li>Evidence of learner progress in SBA records</li>
+              <li>Maintenance of portfolios and project documentation</li>
+              <li>Community engagement facilitation (CSL support)</li>
+              <li>Professional development and retooling completion</li>
+              <li>Classroom management and creation of a conducive learning environment</li>
+            </ul>
+            <p>TPAD scores are used by TSC for promotion decisions, deployment, and — in cases of persistent poor performance — remediation or disciplinary action.</p>
+            <span class="ref-tag">📌 Source: TSC TPAD Guidelines, 2016 (updated 2022); TSC Act, 2012</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="teachers" data-text="CPD continuing professional development hours requirement teachers Kenya">
+          <button class="accordion-q"><span class="q-text">What are the CPD requirements for CBC teachers?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>All TSC-registered teachers are required to participate in <strong>Continuing Professional Development (CPD)</strong> to maintain their registration and TPAD standing. The TSC mandates a minimum of <strong>30 CPD hours per year</strong>, which can be earned through:</p>
+            <ul>
+              <li>KICD-facilitated CBC retooling modules (face-to-face or online)</li>
+              <li>TSC-accredited subject-specific workshops and seminars</li>
+              <li>School-based professional learning communities (PLCs)</li>
+              <li>Relevant university courses or diplomas</li>
+              <li>Published research and peer-reviewed contributions to education</li>
+              <li>Participation in curriculum development activities with KICD</li>
+            </ul>
+            <p>CPD records must be documented and submitted as part of TPAD appraisal.</p>
+            <span class="ref-tag">📌 Source: TSC CPD Policy; TSC TPAD Framework</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="teachers" data-text="teacher code of conduct TSC misconduct disciplinary professional ethics">
+          <button class="accordion-q"><span class="q-text">What professional conduct is expected of CBC teachers under TSC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The <strong>TSC Code of Regulations for Teachers (2015)</strong> governs the professional conduct of all registered teachers. Key conduct expectations include:</p>
+            <ul>
+              <li>Delivering quality, learner-centred instruction consistent with CBC guidelines</li>
+              <li>Maintaining accurate, honest assessment records — including SBA</li>
+              <li>Protecting the rights, dignity, and safety of all learners at all times</li>
+              <li>Not engaging in corporal punishment (prohibited under Kenyan law)</li>
+              <li>Maintaining professional boundaries with learners</li>
+              <li>Reporting cases of child abuse or neglect through the appropriate channels</li>
+              <li>Not using school resources, learner data, or assessment records for personal gain</li>
+              <li>Upholding examination integrity — any involvement in exam malpractice is a criminal and professional offence</li>
+            </ul>
+            <p>Violations are investigated by the TSC Disciplinary Committee, which has the authority to reprimand, suspend, or deregister a teacher.</p>
+            <span class="ref-tag">📌 Source: TSC Code of Regulations for Teachers, 2015; TSC Act, 2012</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="teachers" data-text="subject specialisation requirements teacher mathematics computer science">
+          <button class="accordion-q"><span class="q-text">What subject specialisation do teachers need for STEM pathway subjects like Mathematics and Computer Science?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>For teaching in the STEM pathway at Senior Secondary level:</p>
+            <ul>
+              <li><strong>Mathematics:</strong> A Bachelor of Education (Mathematics) or Bachelor of Science (Mathematics) + PGDE. The teacher must demonstrate strong content knowledge in Pure Mathematics including calculus, statistics, algebra, and geometry to Grade 12 level.</li>
+              <li><strong>Computer Science:</strong> A Bachelor of Education (Computer Science) or Bachelor of Science/Computer Science + PGDE. Additionally, TSC and KICD expect Computer Science teachers to demonstrate practical programming competence — including proficiency in at least one high-level language (Python is recommended by KICD for Grade 10–11) and database management concepts.</li>
+              <li><strong>Physics, Chemistry, Biology:</strong> Respective BEd specialisation or BSc + PGDE, with valid lab safety certification.</li>
+            </ul>
+            <p>Teachers who qualified in 8-4-4 subject areas that did not previously include Computer Science (e.g., Mathematics + Business Studies) may need to undertake additional subject upgrading to qualify for CS teaching.</p>
+            <span class="ref-tag">📌 Source: TSC Subject Deployment Policy; KICD CS Curriculum Design, 2024–2025</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="teachers" data-text="how many CBC teachers trained Kenya TSC numbers statistics">
+          <button class="accordion-q"><span class="q-text">How many teachers has Kenya trained for CBC so far?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>As of 2024/2025, the TSC and KICD report that:</p>
+            <ul>
+              <li>Over <strong>246,000 teachers</strong> have participated in at least one CBC retooling module.</li>
+              <li>The TSC has a registered teacher base of approximately <strong>350,000</strong> across public primary and secondary schools.</li>
+              <li>Training for Senior Secondary School (Grades 10–12) pathway teachers is ongoing, with KICD prioritising pathway-specific curriculum familiarisation for Grade 10 teachers in 2025.</li>
+              <li>A significant gap exists in teachers qualified for Computer Science, Creative Arts, and Sports Science — subjects that were limited or absent in 8-4-4.</li>
+            </ul>
+            <p>The government is working to address the teacher gap through TSC recruitment drives and university curriculum adjustments to produce more CBC-ready graduates.</p>
+            <span class="ref-tag">📌 Source: TSC Annual Report 2023/2024; KICD CBC Status Reports</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="teachers" data-text="school head teacher principal role CBC implementation oversight">
+          <button class="accordion-q"><span class="q-text">What is the role of the school principal/head teacher in CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The school principal (or head teacher) plays a critical leadership and oversight role in CBC implementation. Their key responsibilities include:</p>
+            <ul>
+              <li>Ensuring all teachers have prepared and are using current, KICD-aligned schemes of work and lesson plans</li>
+              <li>Approving timetables that provide sufficient time for practical, project, and CSL activities — not just academic lessons</li>
+              <li>Overseeing the school's SBA records, portfolio system, and assessment documentation</li>
+              <li>Ensuring teachers complete required CBC retooling and CPD hours</li>
+              <li>Facilitating pathway selection processes with the CGC teacher at the Grade 9–10 transition</li>
+              <li>Maintaining the school's KICD-approved instructional materials and laboratory/equipment inventory</li>
+              <li>Liaising with Sub-County Education Officers on CBC implementation issues</li>
+            </ul>
+            <span class="ref-tag">📌 Source: MoE School Management Guidelines; TSC Institutional Leadership Standards</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="teachers" data-text="teacher workload SBA assessment tools burden challenges Kenya CBC">
+          <button class="accordion-q"><span class="q-text">How should teachers manage the SBA workload in large classes?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Managing the CBC assessment workload in classes of 40+ learners is a real challenge. KICD and TSC advise teachers to:</p>
+            <ul>
+              <li><strong>Stagger assessments:</strong> Not all tools need to be used in every lesson. Plan which tools are used when, across the whole term.</li>
+              <li><strong>Use group-based tools:</strong> Observation schedules and projects can be applied to groups of 5–8, reducing individual assessment frequency.</li>
+              <li><strong>Leverage peer and self-assessment:</strong> These tools actively involve learners in the process and reduce the teacher's individual marking load while building metacognition.</li>
+              <li><strong>Pre-prepare record templates:</strong> Checklists and rating scales with pre-printed learner names significantly speed up real-time recording.</li>
+              <li><strong>Maintain a rolling portfolio review schedule:</strong> Review 8–10 portfolios per week rather than all at once at term end.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD CBC Teacher Professional Development Guides</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="teachers" data-text="career guidance counselling CGC teacher role pathway selection Grade 9 10">
+          <button class="accordion-q"><span class="q-text">What qualifications does a Career Guidance and Counselling (CGC) teacher need?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Under TSC and MoE guidelines, the designated CGC teacher in a secondary school should ideally hold:</p>
+            <ul>
+              <li>A Bachelor of Education (Counselling) or a BEd with a post-graduate qualification in Counselling or Career Guidance</li>
+              <li>TSC registration with CGC as a recognised specialty area</li>
+              <li>Training in standardised aptitude and interest assessment instruments</li>
+            </ul>
+            <p>In practice, many schools do not yet have a formally qualified CGC specialist, and the role is fulfilled by a teacher with relevant experience plus MoE/TSC short-course CGC training. The MoE is working to standardise CGC teacher deployment alongside the Grade 9–10 pathway transition.</p>
+            <span class="ref-tag">📌 Source: MoE CGC Policy; TSC Deployment Guidelines</span>
+          </div></div>
+        </div>
+
+      </section><!-- /teachers -->
+
+      <!-- ── SECTION: STUDENTS ── -->
+      <section class="faq-section-block s-students" id="sec-students" data-section="students">
+        <div class="section-header-bar">
+          <div class="section-icon">👨‍🎓</div>
+          <div class="section-meta">
+            <div class="section-label-sm">// Topic 07</div>
+            <h2>Student Questions</h2>
+          </div>
+          <span class="section-count-badge">8 Q&amp;As</span>
+        </div>
+
+        <div class="accordion-item" data-section="students" data-text="how to choose pathway STEM social arts sports grade 9 student tips">
+          <button class="accordion-q"><span class="q-text">How should a Grade 9 student decide which pathway to choose?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Choosing a pathway is one of the most important decisions in your education. Here is a practical approach:</p>
+            <ul>
+              <li><strong>Know your strengths:</strong> Look at your SBA records and KJSEA performance. Which subjects did you consistently perform well in? Which did you genuinely enjoy, not just pass?</li>
+              <li><strong>Identify your interests:</strong> Beyond school, what do you spend time on voluntarily? Building things, computing, drawing, debating, sport, music? These are strong signals.</li>
+              <li><strong>Explore the careers:</strong> Research what professionals in your area of interest actually do day to day — not just their job titles. Speak to adults in those fields.</li>
+              <li><strong>Use the CGC teacher:</strong> Your school's Career Guidance and Counselling teacher has aptitude tools and knowledge about pathways and careers — use that resource.</li>
+              <li><strong>Don't choose based on peer pressure:</strong> "All my friends are doing STEM" is not a good reason to enter a pathway that doesn't match your genuine strengths and interests.</li>
+              <li><strong>Consult your parents:</strong> Your parents' input matters, but the final choice should align with what you genuinely want to build your life around — not solely their preferences.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD Career Education Guidelines; MoE Pathway Guidance Materials</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="students" data-text="what happens if I fail KJSEA can I still go to senior school pathway">
+          <button class="accordion-q"><span class="q-text">What happens if a learner performs poorly in KJSEA — can they still proceed?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Yes. KJSEA is primarily a <strong>certification and guidance assessment</strong> — it does not function as a strict gatekeeping barrier the way the old KCPE operated. All learners who complete Grade 9 are expected to transition to Senior Secondary School, regardless of KJSEA results.</p>
+            <p>However, KJSEA results, combined with SBA records, inform which pathway a learner is most likely to succeed in. A learner who struggled significantly in Mathematics and Integrated Science will receive guidance counselling suggesting pathways other than the purely science-based STEM track — but they are not barred from senior school altogether.</p>
+            <p>The MoE's position is that no learner should be left without a secondary school pathway on the basis of one assessment alone.</p>
+            <span class="ref-tag">📌 Source: MoE KJSEA Policy; MoE Pathway Placement Guidelines</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="students" data-text="CBC project how to do it tips guide advice students assessment">
+          <button class="accordion-q"><span class="q-text">How can students do well in CBC projects?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC projects are assessed using rubrics that look for multiple qualities, not just correct answers. To excel:</p>
+            <ul>
+              <li><strong>Read the rubric before you start:</strong> Understand exactly what is being assessed — content accuracy, originality, communication, citizenship connection, etc.</li>
+              <li><strong>Choose a real, locally relevant problem or topic:</strong> Projects that connect to your community score higher on the Citizenship competency and show genuine engagement.</li>
+              <li><strong>Show your process:</strong> Keep drafts, notes, planning documents, and photographs. The journey of your thinking is as important as the final product.</li>
+              <li><strong>Write a genuine self-reflection:</strong> Assessors can tell the difference between "I enjoyed this project" and a real reflection on what you learned and what you would do differently.</li>
+              <li><strong>Meet all deadlines:</strong> Late or incomplete submissions affect your SBA record, which contributes to your final grade.</li>
+              <li><strong>Seek feedback early:</strong> Ask your teacher for formative feedback at the midpoint of the project, while you can still act on it.</li>
+            </ul>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="students" data-text="how to prepare for KJSEA study tips Grade 9 exam Kenya">
+          <button class="accordion-q"><span class="q-text">How should Grade 9 students prepare for the KJSEA?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>KJSEA assesses the competencies and knowledge developed across Grades 7–9. Effective preparation involves:</p>
+            <ul>
+              <li><strong>Review all strands, not just popular topics:</strong> KJSEA covers the full KICD curriculum design, including areas that received less classroom time.</li>
+              <li><strong>Build on your SBA work:</strong> Go back through your marked CATs, corrected errors, and feedback from your teachers — these are direct signals of where you need to improve.</li>
+              <li><strong>Practice applying knowledge, not just recalling it:</strong> KJSEA assessments are competency-based — expect questions asking you to analyse, evaluate, or apply concepts, not just define them.</li>
+              <li><strong>Form study groups:</strong> Explaining concepts to peers reinforces your own understanding and develops Communication competency.</li>
+              <li><strong>Maintain your portfolio:</strong> For subjects with a practical or portfolio component, ensure your record is complete and well-organised.</li>
+            </ul>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="students" data-text="CBC extra curriculum activities sports arts clubs competitive examinations do they matter">
+          <button class="accordion-q"><span class="q-text">Do co-curricular activities matter in CBC — sports, clubs, music competitions?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Yes, significantly more than in 8-4-4. Under CBC, co-curricular activities are directly aligned to the core competencies — particularly Creativity, Citizenship, Collaboration, and Self-Efficacy.</p>
+            <p>For learners in the <strong>Arts and Sports Science pathway</strong>, co-curricular performance, competitions, and productions may form part of the assessed portfolio evidence for their pathway subjects.</p>
+            <p>More broadly, participation in:</p>
+            <ul>
+              <li>Sports (developing teamwork, physical competency, resilience)</li>
+              <li>Music, drama, and art clubs (developing creativity and expression)</li>
+              <li>Science clubs and competitions (developing critical thinking and inquiry)</li>
+              <li>Debate, journalism, and student government (developing communication and citizenship)</li>
+            </ul>
+            <p>...are all encouraged by KICD as authentic evidence of competency development. Schools are expected to create time and space for these activities — they are not extras that happen at the expense of learning.</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="students" data-text="career preparation Grade 10 11 12 work placement internship experiential learning">
+          <button class="accordion-q"><span class="q-text">Does CBC include any work experience or career exposure for senior school students?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Yes. The CBC Senior Secondary curriculum incorporates career-oriented learning experiences:</p>
+            <ul>
+              <li><strong>Work-Based Learning (WBL):</strong> A planned component where learners are attached to businesses, government offices, or community organisations relevant to their pathway. This may take the form of short internships, job shadowing, or structured visits.</li>
+              <li><strong>Community Service Learning (CSL):</strong> Mandatory across all grades, CSL often involves projects that connect to real-world career contexts.</li>
+              <li><strong>Industry and career talks:</strong> Schools are encouraged to invite professionals from relevant fields to interact with learners.</li>
+            </ul>
+            <p>The detailed WBL implementation guidelines for each pathway are still being rolled out with the pioneer Grade 10 cohort.</p>
+            <span class="ref-tag">📌 Source: KICD SSS Curriculum Designs; MoE Work-Based Learning Guidelines</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="students" data-text="university admission requirements grades CBC KCSE minimum cut-off points">
+          <button class="accordion-q"><span class="q-text">What grades will be needed for university admission under CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The specific minimum KCSE grades required for different university courses under the CBC framework are still being developed by the Kenya Universities and Colleges Central Placement Service (KUCCPS), KNEC, and MoE. The full details will be announced ahead of the first CBC cohort's KCSE (expected approximately 2028/2029).</p>
+            <p>What is known and expected:</p>
+            <ul>
+              <li>University admission will continue to use KCSE grades as a primary criterion.</li>
+              <li>Subject combination requirements will be pathway-specific — e.g., Medicine will require strong performance in Biology, Chemistry, and Mathematics from the STEM pathway.</li>
+              <li>The SBA component of KCSE may carry some weight in competitive programmes.</li>
+            </ul>
+            <p>Students are advised to follow official MoE, KNEC, and KUCCPS announcements closely as the first cohort approaches Grade 12.</p>
+            <span class="ref-tag">📌 Source: KUCCPS; KNEC; MoE Higher Education Policy</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="students" data-text="mathematics computer science important career Kenya why study digital skills">
+          <button class="accordion-q"><span class="q-text">Why are Mathematics and Computer Science especially important in CBC Kenya?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Mathematics and Computer Science sit at the centre of Kenya's Vision 2030 development strategy and digital economy ambitions. Here's why they matter:</p>
+            <ul>
+              <li><strong>Gateway subjects:</strong> Strong Mathematics performance opens pathways to Engineering, Medicine, Actuarial Science, Architecture, Finance, and Data Science.</li>
+              <li><strong>Digital economy foundation:</strong> Computer Science underpins careers in software development, cybersecurity, artificial intelligence, fintech, and digital media — sectors experiencing the fastest growth in Kenya and East Africa.</li>
+              <li><strong>Quantitative competence:</strong> Even outside STEM, numeracy and data literacy are required in business, law, healthcare, and public administration.</li>
+              <li><strong>CBC emphasis:</strong> KICD has produced comprehensive curriculum designs for both subjects, from Grade 7 to Grade 12, precisely because they are foundational to the kind of citizens and professionals Kenya needs to produce.</li>
+            </ul>
+            <div class="highlight-box">For more Mathematics and Computer Science CBC content, lesson notes, schemes, and resources, visit <a href="https://bestronny.netlify.app" target="_blank" rel="noopener">bestronny.netlify.app</a> — Ronny Best Mathematics, and the <a href="mathematics-computer-science.html">CBC Maths &amp; CS Hub</a> on this site.</div>
+          </div></div>
+        </div>
+
+      </section><!-- /students -->
+
+      <!-- ── SECTION: PARENTS ── -->
+      <section class="faq-section-block s-parents" id="sec-parents" data-section="parents">
+        <div class="section-header-bar">
+          <div class="section-icon">👨‍👩‍👧</div>
+          <div class="section-meta">
+            <div class="section-label-sm">// Topic 08</div>
+            <h2>Parents &amp; Guardians</h2>
+          </div>
+          <span class="section-count-badge">8 Q&amp;As</span>
+        </div>
+
+        <div class="accordion-item" data-section="parents" data-text="parents role CBC how can they support children homework projects learning home">
+          <button class="accordion-q"><span class="q-text">What is the role of parents in CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC is designed on the principle that education happens in the home and community as much as in the classroom. Parents are <strong>active partners</strong> in CBC implementation. Specific parental roles include:</p>
+            <ul>
+              <li>Supporting Community Service Learning (CSL) activities — supervising and providing sign-off for CSL assignments done at home or in the community</li>
+              <li>Providing a supportive home environment for project work — including materials, workspace, and access to relevant community contacts</li>
+              <li>Attending scheduled parent-teacher conferences to review their child's SBA progress and portfolio</li>
+              <li>Participating in pathway guidance discussions at Grade 9 — providing input on family context, career aspirations, and the child's interests</li>
+              <li>Not placing excessive pressure on children to pursue a particular pathway against the child's aptitude and interests</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017; MoE Parent Engagement Guidelines</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="parents" data-text="how to read CBC report understand progress grades AE ME EE BE what do they mean">
+          <button class="accordion-q"><span class="q-text">How do parents read and understand a CBC progress report?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC progress reports for lower and junior secondary levels use the four-level performance scale rather than percentage marks:</p>
+            <ul>
+              <li><strong>EE — Exceeding Expectations:</strong> Your child is performing above the expected level. This is excellent — they may benefit from additional challenge or extension activities.</li>
+              <li><strong>ME — Meeting Expectations:</strong> Your child is performing at the expected level for their grade. This is the target level and means they are progressing well.</li>
+              <li><strong>AE — Approaching Expectations:</strong> Your child is making progress but has not yet consistently met the expected level. Additional support and practice at home would be beneficial.</li>
+              <li><strong>BE — Below Expectations:</strong> Your child requires significant additional support. You should meet with their teacher to discuss a support plan and home-based reinforcement strategies.</li>
+            </ul>
+            <p>For Senior Secondary School, reports will use numerical marks and letter grades (A to E) aligned with KCSE.</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="parents" data-text="CBC books materials cost fees learning government free textbooks">
+          <button class="accordion-q"><span class="q-text">Are CBC textbooks and materials provided by the government or must parents buy them?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>For public schools in Kenya:</p>
+            <ul>
+              <li><strong>Primary School (Grades 1–6):</strong> The government has provided KICD-approved textbooks and workbooks through a phased procurement programme. In many schools, core textbooks are available free of charge through the school.</li>
+              <li><strong>Junior Secondary School (Grades 7–9):</strong> Government procurement of KICD-approved JSS textbooks has been ongoing from 2023. Access varies by school and county. Parents may be asked to supplement with specific reference books.</li>
+              <li><strong>Senior Secondary School (Grades 10–12):</strong> Textbook procurement for the pioneer Grade 10 cohort (2025) is in progress. The situation will become clearer as the cohort progresses.</li>
+            </ul>
+            <p>Project and portfolio materials (stationery, files, printing) are generally the responsibility of parents, within the bounds of each school's reasonable policy.</p>
+            <span class="ref-tag">📌 Source: MoE Textbook Procurement Reports; Kenya Basic Education Act, 2013</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="parents" data-text="concerns about CBC children stressed overloaded projects worried parents Kenya">
+          <button class="accordion-q"><span class="q-text">My child seems overwhelmed by CBC projects and assessments — is this normal?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Some learners and families have reported feeling overwhelmed, particularly in the early stages of adaptation to CBC's project and portfolio requirements. Here is important context:</p>
+            <ul>
+              <li>CBC is designed to reduce the single-exam pressure of 8-4-4, not replace one form of stress with another. If your child is regularly overwhelmed, this may signal implementation issues at the school level rather than a design flaw.</li>
+              <li>Projects should be manageable within school time, with some — but not unreasonable — home-based component. If a project is consuming several hours daily, speak with the teacher.</li>
+              <li>The KICD curriculum designs specify how long each project should take. Teachers are not supposed to assign multiple major projects simultaneously.</li>
+            </ul>
+            <p>If you have specific concerns, you have the right to raise them with your child's class teacher, the Head of Department, or the school principal. Parents can also raise systemic concerns through School Management Committees (SMCs) or Parent-Teacher Associations (PTAs).</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="parents" data-text="School Management Committee SMC PTA parent involvement governance school">
+          <button class="accordion-q"><span class="q-text">How can parents formally participate in school governance and CBC oversight?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Parents have formal channels for engagement in school governance:</p>
+            <ul>
+              <li><strong>School Management Committee (SMC):</strong> For public primary schools. Elected parent representatives sit on the SMC, which oversees school management, resources, and educational quality.</li>
+              <li><strong>Board of Governors (BoG):</strong> For secondary schools. Parent representatives on the BoG participate in school policy decisions, including curriculum implementation oversight.</li>
+              <li><strong>Parent-Teacher Association (PTA):</strong> A consultative forum for parents and teachers to discuss school performance, CBC implementation concerns, and resource needs.</li>
+              <li><strong>County Education Forums:</strong> County education offices periodically hold public forums on CBC implementation where parents can contribute.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: Kenya Basic Education Act, 2013; MoE School Governance Guidelines</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="parents" data-text="private school CBC same curriculum as public school same standard">
+          <button class="accordion-q"><span class="q-text">Do private schools follow the same CBC curriculum as public schools?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Yes. All registered schools in Kenya — public and private — are required by the Kenya Basic Education Act (2013) and MoE regulations to implement the KICD-approved national curriculum. Private schools may offer additional subjects or enrichment programmes, but they cannot teach below or outside the national curriculum framework.</p>
+            <p>All registered private schools must:</p>
+            <ul>
+              <li>Use KICD-approved curriculum designs</li>
+              <li>Enter learners for KNEC national assessments (KPSEA, KJSEA, KCSE)</li>
+              <li>Employ TSC-registered teachers</li>
+              <li>Maintain SBA records in accordance with KICD and KNEC guidelines</li>
+            </ul>
+            <span class="ref-tag">📌 Source: Kenya Basic Education Act, 2013; MoE Private Schools Regulations</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="parents" data-text="child not performing well CBC what support is available remediation extra tuition">
+          <button class="accordion-q"><span class="q-text">What support is available for a child who is consistently below expectations?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>CBC acknowledges that learners progress at different rates and require different levels of support. Available support mechanisms include:</p>
+            <ul>
+              <li><strong>Differentiated instruction:</strong> Teachers are required to plan support-level activities for learners below expectations in every lesson.</li>
+              <li><strong>Remedial teaching:</strong> Schools are expected to identify and provide additional time for learners who are significantly behind in core competencies.</li>
+              <li><strong>Special Needs Education support:</strong> If a learning difficulty is suspected (e.g., dyslexia, dyscalculia, ADHD), the school should refer the learner to a qualified educational assessment service for evaluation and an Individual Education Plan (IEP).</li>
+              <li><strong>School counsellor:</strong> If emotional, family, or social factors are affecting performance, the school's guidance teacher can provide support or refer to external services.</li>
+              <li><strong>Home support:</strong> Parents reading with younger learners, reviewing key vocabulary, and maintaining a consistent study routine all make a measurable difference.</li>
+            </ul>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="parents" data-text="class size school ratio learner teacher 40 50 students CBC quality">
+          <button class="accordion-q"><span class="q-text">Is the quality of CBC implementation consistent across all schools?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Honestly — no, not yet. The quality of CBC implementation varies considerably across Kenya due to:</p>
+            <ul>
+              <li>Differences in teacher training levels and completion of CBC retooling</li>
+              <li>Infrastructure gaps between urban/well-resourced and rural/ASAL schools</li>
+              <li>Class sizes (some classes exceed 60 learners, making formative assessment practically very difficult)</li>
+              <li>Availability of KICD-approved textbooks and project materials</li>
+              <li>School leadership quality and commitment to CBC fidelity</li>
+            </ul>
+            <p>This is acknowledged by MoE, KICD, and independent education research organisations. The government's investment in infrastructure, teacher training, and resource distribution is ongoing. Advocacy by parents, School Management Committees, and community organisations remains important in driving equitable implementation.</p>
+            <span class="ref-tag">📌 Source: Kenya Education Review Commission (KERC), 2023; UNICEF Kenya Education Reports</span>
+          </div></div>
+        </div>
+
+      </section><!-- /parents -->
+
+      <!-- ── SECTION: CAREERS ── -->
+      <section class="faq-section-block s-careers" id="sec-careers" data-section="careers">
+        <div class="section-header-bar">
+          <div class="section-icon">💼</div>
+          <div class="section-meta">
+            <div class="section-label-sm">// Topic 09</div>
+            <h2>Careers, University &amp; the Future</h2>
+          </div>
+          <span class="section-count-badge">10 Q&amp;As</span>
+        </div>
+
+        <div class="accordion-item" data-section="careers" data-text="STEM pathway careers engineering medicine data science AI technology Kenya">
+          <button class="accordion-q"><span class="q-text">What careers does the STEM pathway lead to?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The STEM pathway opens access to some of Kenya's highest-demand and fastest-growing careers:</p>
+            <ul>
+              <li><strong>Engineering:</strong> Civil, Electrical, Mechanical, Structural, Petroleum, Mechatronics (requires Mathematics + Physics + Chemistry)</li>
+              <li><strong>Medicine and Health:</strong> Doctor, Pharmacist, Dentist, Veterinary Surgeon, Nutritionist, Physiotherapist (requires Biology + Chemistry + Mathematics)</li>
+              <li><strong>Computing and Technology:</strong> Software Engineer, Data Scientist, Cybersecurity Analyst, AI/ML Engineer, UX Designer, Systems Architect (requires Computer Science + Mathematics + Physics)</li>
+              <li><strong>Pure and Applied Science:</strong> Chemist, Physicist, Marine Biologist, Geologist, Environmental Scientist, Meteorologist</li>
+              <li><strong>Agriculture and Food:</strong> Agricultural Scientist, Food Technologist, Agronomist, Biotechnologist</li>
+              <li><strong>Finance:</strong> Actuary, Statistician, Quantitative Analyst (requires strong Mathematics)</li>
+            </ul>
+            <span class="ref-tag">📌 Source: Kenya Universities and Colleges Central Placement Service (KUCCPS); Career Guidance Materials, KICD</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="careers" data-text="social sciences pathway careers law economics journalism psychology Kenya">
+          <button class="accordion-q"><span class="q-text">What careers does the Social Sciences pathway lead to?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Social Sciences leads to vital roles in governance, institutions, and human development:</p>
+            <ul>
+              <li><strong>Law and Justice:</strong> Advocate, State Counsel, Human Rights Lawyer, Magistrate, Arbitrator</li>
+              <li><strong>Economics and Finance:</strong> Economist, Banker, Financial Analyst, Development Economist, Policy Analyst</li>
+              <li><strong>Governance and Public Service:</strong> Civil Servant, Public Administrator, Foreign Service Officer, Member of County Assembly/Parliament</li>
+              <li><strong>Social Work and Psychology:</strong> Counselling Psychologist, Social Worker, Community Development Officer, Child Protection Officer</li>
+              <li><strong>Media and Communication:</strong> Journalist, PR Specialist, News Editor, Digital Content Creator, Communication Officer</li>
+              <li><strong>Education:</strong> Secondary School Teacher (Humanities), University Lecturer, Education Policy Researcher</li>
+              <li><strong>Business:</strong> Entrepreneur, HR Manager, Business Development Manager, Supply Chain Specialist</li>
+            </ul>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="careers" data-text="arts sports science pathway careers professional athlete musician designer film">
+          <button class="accordion-q"><span class="q-text">What careers does the Arts and Sports Science pathway lead to?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>This pathway leads to some of the most dynamic and economically growing sectors:</p>
+            <ul>
+              <li><strong>Performing Arts:</strong> Actor, Dancer, Musician, Choreographer, Theatre Director, Music Producer</li>
+              <li><strong>Visual Arts and Design:</strong> Graphic Designer, Illustrator, Animator, Interior Designer, Architect (design component), Fashion Designer</li>
+              <li><strong>Film and Media:</strong> Film Director, Videographer, Scriptwriter, Film Editor, Broadcast Journalist, Social Media Manager</li>
+              <li><strong>Sports:</strong> Professional Athlete (Football, Athletics, Swimming, Rugby, Basketball), Sports Coach, Referee, Sports Administrator</li>
+              <li><strong>Sports Science:</strong> Sports Physiotherapist, Fitness Trainer, Sports Nutritionist, Sports Psychologist</li>
+              <li><strong>Education:</strong> Arts Teacher, Drama Teacher, Physical Education Teacher, Sports Coach in schools</li>
+            </ul>
+            <p>Kenya's creative economy — film, music, visual art, digital design — and sports industries are growing rapidly and increasingly seeking formally trained, competent practitioners.</p>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="careers" data-text="can all three pathways go to university admission CBC yes no">
+          <button class="accordion-q"><span class="q-text">Can learners from all three pathways go to university?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Yes. All three pathways can lead to university, provided the learner's KCSE performance meets the minimum requirements for their chosen degree programme. The key is that specific programmes require specific subject combinations:</p>
+            <ul>
+              <li>A Medical degree requires Biology, Chemistry, Mathematics — only achievable through the STEM pathway.</li>
+              <li>A Law degree requires English, History/Geography — achievable through Social Sciences (and possibly STEM with the right electives).</li>
+              <li>A Bachelor of Music or Fine Art degree requires portfolio evidence and audition — achievable through the Arts pathway.</li>
+            </ul>
+            <p>KUCCPS determines which subjects qualify for each university programme. Learners and parents should consult KUCCPS published admission requirements as they become available for the CBC cohort.</p>
+            <span class="ref-tag">📌 Source: KUCCPS; Universities Act, Kenya; MoE Higher Education Policy</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="careers" data-text="university admission Kenya process KUCCPS placement how does it work CBC">
+          <button class="accordion-q"><span class="q-text">How does university admission work in Kenya under CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>The current university admission process in Kenya is managed by <strong>KUCCPS (Kenya Universities and Colleges Central Placement Service)</strong>. The process is expected to continue under CBC with adaptations:</p>
+            <ul>
+              <li>Learners apply through KUCCPS after receiving their KCSE results.</li>
+              <li>KUCCPS matches learners to programmes based on: KCSE grades, subject combinations, programme minimum requirements, and available places.</li>
+              <li>Applicants list up to 6 degree/diploma programme choices in order of preference.</li>
+              <li>Government-sponsored placements are competitive — higher KCSE grades increase access to highly subscribed programmes.</li>
+              <li>Self-sponsored (parallel) admission is available for learners who do not qualify for government sponsorship but meet programme minimum requirements.</li>
+            </ul>
+            <p>KUCCPS will adapt its minimum entry requirements to reflect CBC subject combinations and KCSE structures ahead of the first CBC KCSE cohort.</p>
+            <span class="ref-tag">📌 Source: KUCCPS; Universities Act, Cap 210B</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="careers" data-text="scholarships available students Kenya HELB bursary CBC university funding">
+          <button class="accordion-q"><span class="q-text">What scholarships and bursaries are available for Kenyan students after CBC?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Several funding avenues are available for university-bound students:</p>
+            <ul>
+              <li><strong>HELB (Higher Education Loans Board):</strong> Government loans available to all eligible Kenyan citizens admitted to accredited universities. Apply at helb.co.ke. Includes loans and, for needy students, bursary components.</li>
+              <li><strong>Government Bursary Fund:</strong> The National Government Constituencies Development Fund (NG-CDF) and County Government bursaries support students from financially needy backgrounds. Apply through your local MP's or MCA's office.</li>
+              <li><strong>Equity Wings to Fly:</strong> Scholarship programme supporting bright students from disadvantaged backgrounds through secondary and university education.</li>
+              <li><strong>University-specific scholarships:</strong> Most Kenyan universities have merit-based and needs-based bursary funds. Inquire directly at the university's Student Finance Office.</li>
+              <li><strong>International scholarships:</strong> MasterCard Foundation Scholars (at multiple African universities), Aga Khan Foundation, and bilateral government scholarships (US Fulbright, UK Commonwealth) for postgraduate study.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: HELB; NG-CDF; MoE Higher Education Directives</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="careers" data-text="digital economy career Kenya CBC tech Africa opportunities software engineering data">
+          <button class="accordion-q"><span class="q-text">What opportunities does the digital economy offer CBC graduates in Kenya?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Kenya is one of Africa's leading digital economies — home to the M-PESA mobile money revolution, a growing startup ecosystem (Silicon Savannah), and significant foreign tech investment. CBC graduates with strong STEM — particularly Computer Science and Mathematics — skills are positioned for:</p>
+            <ul>
+              <li><strong>Software development:</strong> Kenya's tech sector is growing at 15–20% annually. Local companies and multinationals (e.g., Google, Microsoft, IBM — all with Nairobi offices) actively recruit Kenyan CS graduates.</li>
+              <li><strong>Data science and AI:</strong> Demand for data analysts and machine learning engineers is rising rapidly across fintech, health, agriculture, and government sectors.</li>
+              <li><strong>Freelance global work:</strong> Kenyan developers and designers work for global clients through platforms like Upwork and Toptal — earning foreign currency while based locally.</li>
+              <li><strong>Fintech and mobile money:</strong> Kenya's fintech innovation continues to lead Africa — requiring engineers, product managers, and cybersecurity specialists.</li>
+              <li><strong>AgriTech and HealthTech:</strong> Technology applied to agriculture and healthcare is among the fastest-growing sectors in Kenya and East Africa.</li>
+            </ul>
+            <div class="highlight-box">For Mathematics and Computer Science study resources specifically designed for CBC Kenya, visit <a href="https://bestronny.netlify.app" target="_blank" rel="noopener">bestronny.netlify.app</a>.</div>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="careers" data-text="CBC prepare global competitiveness Africa world work future skills">
+          <button class="accordion-q"><span class="q-text">How does CBC prepare Kenyan learners for the global job market?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>One of the explicit design goals of CBC, as stated in the BECF, is to produce graduates who are competitive both locally and globally. The curriculum achieves this through:</p>
+            <ul>
+              <li><strong>21st-century competencies:</strong> The 7 core competencies — especially Digital Literacy, Critical Thinking, Creativity, and Collaboration — are the same competencies global employers and universities seek.</li>
+              <li><strong>Project-based learning:</strong> Builds portfolio-quality work product and demonstrates applied skills — something global universities and employers increasingly look for beyond exam certificates.</li>
+              <li><strong>Pathway specialisation:</strong> Deeper subject knowledge from Grade 10 produces graduates with more focused, market-relevant expertise.</li>
+              <li><strong>Digital literacy integration:</strong> CBC requires ICT to be integrated across all subjects — not taught as a standalone once-weekly lesson.</li>
+              <li><strong>Community Service Learning:</strong> Develops the civic awareness and professional soft skills increasingly required in global workplaces.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: KICD BECF, 2017; Kenya Vision 2030 Education Pillar</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="careers" data-text="Kenya universities accepting CBC students admission 2028 2029 preparation">
+          <button class="accordion-q"><span class="q-text">Are Kenyan universities prepared to receive the first CBC cohort?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Preparations are underway but uneven. As of 2025:</p>
+            <ul>
+              <li>The <strong>Kenya Universities and Colleges Central Placement Service (KUCCPS)</strong> is working with MoE and KNEC to align admission requirements with CBC subject combinations.</li>
+              <li>Some universities have begun reviewing their first-year course structures to account for the changed prior learning profile of CBC graduates — particularly in STEM programmes that will now include Computer Science as a potential prerequisite.</li>
+              <li>The <strong>Commission for University Education (CUE)</strong> is developing guidelines for how CBC-stream applicants' qualifications will be evaluated.</li>
+              <li>There is an acknowledged transition challenge: the last 8-4-4 KCSE cohort and the first CBC KCSE cohort will be seeking university places in the same period — requiring careful management.</li>
+            </ul>
+            <p>Students and parents are advised to monitor KUCCPS, CUE, and MoE communications closely from 2027 onwards.</p>
+            <span class="ref-tag">📌 Source: CUE; KUCCPS; MoE Higher Education Transition Planning</span>
+          </div></div>
+        </div>
+
+        <div class="accordion-item" data-section="careers" data-text="TVET technical vocational education equal university worth it CBC pathway">
+          <button class="accordion-q"><span class="q-text">Is TVET a respected and viable option under CBC, compared to university?</span><span class="accordion-chevron">▾</span></button>
+          <div class="accordion-body"><div class="accordion-body-inner">
+            <p>Yes — and the CBC framework explicitly works to change the historical stigma around TVET in Kenya. The BECF positions TVET as an <strong>equally valid and dignified</strong> path to skilled employment and economic contribution:</p>
+            <ul>
+              <li>Kenya has a significant and growing skills gap in technical trades — electricians, plumbers, welders, mechanics, ICT technicians — that TVET graduates are uniquely positioned to fill.</li>
+              <li>TVET graduates in specialised fields can earn competitive and often better incomes than many degree-holding graduates, particularly in the first 5–10 years of their careers.</li>
+              <li>TVET programmes lead to recognised qualifications (Craft Certificate, Diploma, Higher National Diploma) regulated by TVETA and the Kenya National Qualifications Authority (KNQA).</li>
+              <li>Advanced TVET programmes can articulate into university degrees — a learner with a TVET Diploma may enter a university degree programme at advanced standing in some universities.</li>
+            </ul>
+            <span class="ref-tag">📌 Source: TVET Authority (TVETA); Kenya National Qualifications Framework; KICD BECF</span>
+          </div></div>
+        </div>
+
+      </section><!-- /careers -->
+
+      <!-- ── NO RESULTS STATE ── -->
+      <div class="no-results" id="noResults" style="display:none;">
+        <div style="font-size:3rem; margin-bottom:1rem;">🔍</div>
+        <strong style="color:var(--navy); font-size:1.05rem;">No matching questions found</strong>
+        <p>Try a different keyword, or browse all topics by selecting "All Topics" above.</p>
+        <div style="margin-top:1.2rem;">
+          <button onclick="clearSearch()" style="background:var(--navy); color:var(--white); border:none; padding:10px 22px; border-radius:40px; font-weight:700; font-size:0.85rem; cursor:pointer;">Clear search</button>
+        </div>
+      </div>
+
+    </div><!-- /faq-main -->
+  </div><!-- /faq-layout -->
+
+  <!-- ── RESOURCES BAND ── -->
+  <div class="resources-band">
+    <div>
+      <div style="font-family:var(--mono); font-size:0.7rem; color:rgba(201,160,61,0.6); letter-spacing:2px; text-transform:uppercase; margin-bottom:0.5rem;">Free Downloads</div>
+      <h3>Need <span>CBC Documents?</span></h3>
+      <p>Ronny Mwenda has created a full library of free, KICD-aligned CBC resources for download — schemes of work, lesson plans, curriculum design summaries, assessment rubrics, and student revision notes for Mathematics, Computer Science, and more.</p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:1.2rem;">
+        <a href="resources.html" class="btn-primary">📥 Browse & Download Resources →</a>
+        <a href="learning-outcomes.html" class="btn-ghost">🎯 Learning Outcomes Guide</a>
+      </div>
+    </div>
+    <div style="background:rgba(201,160,61,0.08); border:1px solid rgba(201,160,61,0.2); border-radius:var(--radius); padding:1.5rem; min-width:200px;">
+      <div style="font-size:0.72rem; color:rgba(255,228,196,0.5); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:0.8rem; font-family:var(--mono);">More pages</div>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:7px;">
+        <li><a href="pathways.html" style="font-size:0.82rem; color:var(--gold); display:flex; align-items:center; gap:6px;">→ CBC Pathways guide</a></li>
+        <li><a href="assessment-tools.html" style="font-size:0.82rem; color:rgba(255,228,196,0.7); display:flex; align-items:center; gap:6px;">→ 13 Assessment tools</a></li>
+        <li><a href="teacher-requirements.html" style="font-size:0.82rem; color:rgba(255,228,196,0.7); display:flex; align-items:center; gap:6px;">→ Teacher requirements</a></li>
+        <li><a href="mathematics-computer-science.html" style="font-size:0.82rem; color:rgba(255,228,196,0.7); display:flex; align-items:center; gap:6px;">→ Maths &amp; CS Hub</a></li>
+        <li><a href="forums.html" style="font-size:0.82rem; color:rgba(255,228,196,0.7); display:flex; align-items:center; gap:6px;">→ Discussion Forums</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── ECOSYSTEM ── -->
+  <div class="ecosystem-band">
+    <h4>// Ronny Mwenda Digital Ecosystem</h4>
+    <div class="eco-grid">
+      <a href="https://cbcbest.netlify.app" class="eco-card" style="border-color:var(--gold);">
+        <div class="eco-icon">📘</div>
+        <div>
+          <div class="eco-name">CBC Best</div>
+          <div class="eco-desc">Kenya's comprehensive CBC hub — pathways, outcomes, assessment, teacher standards, and free resources. You are here.</div>
+          <span class="eco-url">cbcbest.netlify.app</span>
+        </div>
+      </a>
+      <a href="https://bestronny.netlify.app" target="_blank" rel="noopener" class="eco-card">
+        <div class="eco-icon">🧮</div>
+        <div>
+          <div class="eco-name">Ronny Best Mathematics</div>
+          <div class="eco-desc">Interactive Mathematics resources, problem sets, CBC-aligned revision notes, and STEM learning tools.</div>
+          <span class="eco-url">bestronny.netlify.app</span>
+        </div>
+      </a>
+      <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener" class="eco-card">
+        <div class="eco-icon">👤</div>
+        <div>
+          <div class="eco-name">Ronny Mwenda Portfolio</div>
+          <div class="eco-desc">The professional portfolio of Ronny Mwenda — Mathematics &amp; CS Teacher, Embu County, Kenya. Projects, profile, and more.</div>
+          <span class="eco-url">ronnymwenda.netlify.app</span>
+        </div>
+      </a>
+      <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener" class="eco-card">
+        <div class="eco-icon">🎮</div>
+        <div>
+          <div class="eco-name">RonnyGame</div>
+          <div class="eco-desc">Educational and interactive game projects by Ronny Mwenda — learning through play and creative digital experiences.</div>
+          <span class="eco-url">ronnygame.netlify.app</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── CONTACT BAND ── -->
+  <div class="contact-band">
+    <h3>💬 Still have a question?</h3>
+    <p>If your question is not answered here, join the CBC Best discussion forums or contact Ronny Mwenda directly. All sincere questions from students, teachers, and parents are welcome.</p>
+    <div class="contact-btns">
+      <a href="forums.html" class="btn-primary">💬 Ask in the Forums →</a>
+      <a href="about-contact.html" class="btn-ghost">📧 Contact Ronny</a>
+    </div>
+  </div>
+
+</div><!-- /container -->
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>📘 CBC Best</strong>
+        <p>Kenya's most comprehensive Competency Based Curriculum resource — KICD-aligned content for students, teachers, and parents. By Ronny Mwenda (Ronny Best), Mathematics & Computer Science Teacher, Embu County, Kenya.</p>
+        <div class="ecosystem">
+          Part of the Ronny Mwenda digital ecosystem:
+          <a href="https://bestronny.netlify.app" target="_blank" rel="noopener">Bestronny</a> ·
+          <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener">RonnyMwenda</a> ·
+          <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener">RonnyGame</a>
+        </div>
+        <div style="margin-top:1rem; font-size:0.78rem; color:rgba(255,228,196,0.45);">
+          📧 <a href="mailto:ronnymwenda89@gmail.com" style="color:rgba(201,160,61,0.8);">ronnymwenda89@gmail.com</a> &nbsp;·&nbsp;
+          📱 <a href="tel:+254799188900" style="color:rgba(201,160,61,0.8);">+254 799 188 900</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>CBC Best</h4>
+        <a href="index.html">Home</a>
+        <a href="pathways.html">Pathways</a>
+        <a href="subjects-skills.html">Subjects & Skills</a>
+        <a href="assessment-tools.html">Assessment Tools</a>
+        <a href="learning-outcomes.html">Learning Outcomes</a>
+        <a href="teacher-requirements.html">Teacher Hub</a>
+        <a href="mathematics-computer-science.html">Maths & CS</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="resources.html">Downloads</a>
+        <a href="faq.html">CBC FAQ</a>
+        <a href="blog.html">News & Updates</a>
+        <a href="forums.html">Discussion Forums</a>
+        <a href="about-contact.html">About Ronny</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CBC Best — Comprehensive CBC FAQ. All content is original, KICD-aligned, and written by Ronny Mwenda. Google AdSense compliant.</p>
+      <p><a href="/sitemap.xml">Sitemap</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-use.html">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── ACCORDION ──────────────────────────────────────────────
+document.querySelectorAll('.accordion-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const body = btn.nextElementSibling;
+    const isOpen = item.classList.contains('is-open');
+
+    // Close all open items in same section
+    const section = item.closest('.faq-section-block');
+    section.querySelectorAll('.accordion-item.is-open').forEach(open => {
+      open.classList.remove('is-open');
+      open.querySelector('.accordion-body').style.maxHeight = '0';
+    });
+
+    if (!isOpen) {
+      item.classList.add('is-open');
+      body.style.maxHeight = body.scrollHeight + 'px';
+    }
+  });
+});
+
+// ── FILTER BY SECTION ────────────────────────────────────
+function filterSection(cat, clickedBtn) {
+  // Update sidebar buttons
+  document.querySelectorAll('.toc-item').forEach(b => b.classList.remove('active'));
+  if (clickedBtn) clickedBtn.classList.add('active');
+
+  // Update filter pills
+  document.querySelectorAll('.filter-pill').forEach(p => {
+    p.classList.toggle('active', p.dataset.cat === cat);
+  });
+
+  // Show/hide sections
+  document.querySelectorAll('.faq-section-block').forEach(sec => {
+    if (cat === 'all' || sec.dataset.section === cat) {
+      sec.style.display = 'block';
+    } else {
+      sec.style.display = 'none';
+    }
+  });
+
+  // Reset search
+  document.getElementById('searchInput').value = '';
+  document.getElementById('noResults').style.display = 'none';
+  updateCount();
+}
+
+// ── FILTER PILLS ─────────────────────────────────────────
+document.querySelectorAll('.filter-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    const cat = pill.dataset.cat;
+    // find matching toc button
+    const tocBtn = document.querySelector(`.toc-item[data-target="${cat}"]`);
+    filterSection(cat, tocBtn);
+  });
+});
+
+// ── SEARCH ───────────────────────────────────────────────
+function runSearch() {
+  const term = document.getElementById('searchInput').value.toLowerCase().trim();
+
+  if (!term) {
+    // Restore to current filter
+    const activeCat = document.querySelector('.filter-pill.active')?.dataset.cat || 'all';
+    filterSection(activeCat, null);
+    document.getElementById('noResults').style.display = 'none';
+    return;
+  }
+
+  // Show all sections for search
+  document.querySelectorAll('.faq-section-block').forEach(sec => sec.style.display = 'block');
+
+  let totalVisible = 0;
+  document.querySelectorAll('.accordion-item').forEach(item => {
+    const qText = item.querySelector('.accordion-q .q-text')?.textContent.toLowerCase() || '';
+    const aText = item.querySelector('.accordion-body')?.textContent.toLowerCase() || '';
+    const dataText = item.dataset.text || '';
+    const match = qText.includes(term) || aText.includes(term) || dataText.includes(term);
+    item.style.display = match ? 'block' : 'none';
+    if (match) totalVisible++;
+  });
+
+  // Hide empty sections
+  document.querySelectorAll('.faq-section-block').forEach(sec => {
+    const visibleItems = [...sec.querySelectorAll('.accordion-item')].filter(i => i.style.display !== 'none');
+    sec.style.display = visibleItems.length > 0 ? 'block' : 'none';
+  });
+
+  document.getElementById('noResults').style.display = totalVisible === 0 ? 'block' : 'none';
+  document.getElementById('resultsCount').textContent = totalVisible;
+  document.getElementById('resultsMeta').innerHTML = `Showing <strong id="resultsCount">${totalVisible}</strong> result${totalVisible !== 1 ? 's' : ''} for "<em>${esc(term)}</em>"`;
+}
+
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  runSearch();
+}
+
+function updateCount() {
+  const visible = [...document.querySelectorAll('.accordion-item')].filter(i => i.style.display !== 'none').length;
+  document.getElementById('resultsMeta').innerHTML = `Showing <strong>${visible || '80+'}</strong> questions across all topics`;
+}
+
+function esc(s) {
+  return s ? s.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])) : '';
+}
+
+// ── MOBILE MENU ──────────────────────────────────────────
+const menuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+if (menuBtn) {
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('show');
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.textContent = open ? '✕ Close' : '☰ Menu';
+  });
+}
+
+// ── PWA ───────────────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(r => console.log('SW registered:', r.scope))
+      .catch(e => console.log('SW failed:', e));
+  });
+}
+</script>
+</body>
+</html>

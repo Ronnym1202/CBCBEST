@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CBC Best Icon Generator - Ronny Mwenda</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #FFE4C4;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 { color: #1E3A5F; margin-bottom: 0.5rem; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .icon-preview {
+      background: linear-gradient(135deg, #1E3A5F 0%, #C9A03D 100%);
+      width: 200px;
+      height: 200px;
+      border-radius: 40px;
+      margin: 2rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .sizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .size-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1rem;
+      text-align: center;
+      min-width: 100px;
+      transition: transform 0.2s;
+    }
+    .size-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .size-card canvas {
+      display: block;
+      margin: 0 auto 0.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .download-btn {
+      background: #1E3A5F;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0.5rem;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .download-btn:hover { background: #C9A03D; color: #1E2F3E; }
+    .instructions {
+      background: white;
+      border-radius: 24px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      text-align: left;
+    }
+    code {
+      background: #1E2F3E;
+      color: #C9A03D;
+      padding: 2px 6px;
+      border-radius: 8px;
+      font-family: monospace;
+    }
+    hr { margin: 1rem 0; }
+    pre {
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>📘 CBC Best Icon Generator</h1>
+  <div class="icon-preview" id="iconPreview"></div>
+
+  <div class="sizes" id="iconSizes"></div>
+
+  <div class="instructions">
+    <h6>✅ All icons below have been generated with "CBC" in bisque color (#FFE4C4)</h6>
+    <hr>
+    <h3>📥 How to use these icons:</h3>
+    <p>1. Click each <strong>Download</strong> button to save the PNG files<br>
+    2. Upload them to your server in an <code>/images/</code> folder<br>
+    3. Add this code to the &lt;head&gt; of EVERY HTML page:</p>
+    
+    <pre style="background:#1E2F3E; color:#C9A03D; padding:1rem; border-radius:16px; overflow-x:auto;">
+&lt;!-- PWA Manifest --&gt;
+&lt;link rel="manifest" href="manifest.json"&gt;
+
+&lt;!-- Theme Colors --&gt;
+&lt;meta name="theme-color" content="#1E3A5F"&gt;
+&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
+&lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;
+&lt;meta name="apple-mobile-web-app-title" content="CBC Best"&gt;
+
+&lt;!-- Icons --&gt;
+&lt;link rel="icon" type="image/png" sizes="72x72" href="images/icon-72.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="96x96" href="images/icon-96.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="128x128" href="images/icon-128.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="144x144" href="images/icon-144.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="152x152" href="images/icon-152.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="256x256" href="images/icon-256.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="384x384" href="images/icon-384.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png"&gt;
+&lt;link rel="apple-touch-icon" href="images/icon-192.png"&gt;
+&lt;meta name="msapplication-TileImage" content="images/icon-144.png"&gt;
+&lt;meta name="msapplication-TileColor" content="#1E3A5F"&gt;
+    </pre>
+
+    <hr>
+
+    <h3>📁 Required folder structure after download:</h3>
+    <pre style="background:#1E2F3E; color:#C9A03D; padding:1rem; border-radius:16px;">
+cbcbest.netlify.app/
+├── index.html
+├── manifest.json (create this file separately)
+├── images/
+│   ├── icon-72.png
+│   ├── icon-96.png
+│   ├── icon-128.png
+│   ├── icon-144.png
+│   ├── icon-152.png
+│   ├── icon-192.png
+│   ├── icon-256.png
+│   ├── icon-384.png
+│   └── icon-512.png
+└── (all other HTML files)
+    </pre>
+    
+    <p style="margin-top: 1rem;">⚠️ <strong>Note:</strong> The icons are being generated and displayed below. Click download to save each one!</p>
+  </div>
+</div>
+
+<script>
+  // Icon sizes needed for PWA
+  const sizes = [72, 96, 128, 144, 152, 192, 256, 384, 512];
+  
+  // Helper for rounded rectangle
+  if (!CanvasRenderingContext2D.prototype.roundRect) {
+    CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
+      if (w < 2 * r) r = w / 2;
+      if (h < 2 * r) r = h / 2;
+      this.moveTo(x+r, y);
+      this.lineTo(x+w-r, y);
+      this.quadraticCurveTo(x+w, y, x+w, y+r);
+      this.lineTo(x+w, y+h-r);
+      this.quadraticCurveTo(x+w, y+h, x+w-r, y+h);
+      this.lineTo(x+r, y+h);
+      this.quadraticCurveTo(x, y+h, x, y+h-r);
+      this.lineTo(x, y+r);
+      this.quadraticCurveTo(x, y, x+r, y);
+      return this;
+    };
+  }
+  
+  // Generate icon with "CBC" in bisque color (#FFE4C4)
+  function generateIcon(size) {
+    const canvas = document.createElement('canvas');
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext('2d');
+    
+    // Background gradient (navy to gold)
+    const gradient = ctx.createLinearGradient(0, 0, size, size);
+    gradient.addColorStop(0, '#1E3A5F');
+    gradient.addColorStop(1, '#C9A03D');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, size, size);
+    
+    // Rounded corners
+    const radius = size * 0.15;
+    ctx.globalCompositeOperation = 'destination-in';
+    ctx.beginPath();
+    ctx.roundRect(0, 0, size, size, radius);
+    ctx.fill();
+    ctx.globalCompositeOperation = 'source-over';
+    
+    // Draw decorative book motif (subtle background element)
+    const centerX = size / 2;
+    const centerY = size / 2;
+    const bookWidth = size * 0.55;
+    const bookHeight = size * 0.45;
+    const spineX = centerX;
+    const leftPageX = centerX - bookWidth/2;
+    
+    // Semi-transparent book background
+    ctx.globalAlpha = 0.15;
+    ctx.fillStyle = '#FFFFFF';
+    ctx.beginPath();
+    ctx.roundRect(leftPageX, centerY - bookHeight/2, bookWidth, bookHeight, size * 0.05);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    
+    // Book spine line
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(255,215,140,0.5)';
+    ctx.lineWidth = Math.max(2, size * 0.02);
+    ctx.moveTo(spineX, centerY - bookHeight/2);
+    ctx.lineTo(spineX, centerY + bookHeight/2);
+    ctx.stroke();
+    
+    // Main label: "CBC" in BISQUE color (#FFE4C4)
+    const bisqueColor = '#FFE4C4';
+    
+    // Use bold font with shadow for visibility
+    const fontSize = size * 0.32;
+    ctx.font = `bold ${fontSize}px "Segoe UI", "Poppins", "Montserrat", system-ui, sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    
+    // Shadow for better readability
+    ctx.shadowColor = 'rgba(0,0,0,0.4)';
+    ctx.shadowBlur = Math.max(3, size * 0.04);
+    ctx.shadowOffsetX = Math.max(2, size * 0.015);
+    ctx.shadowOffsetY = Math.max(2, size * 0.015);
+    
+    // Fill with bisque color
+    ctx.fillStyle = bisqueColor;
+    ctx.fillText('CBC', centerX, centerY);
+    
+    // Reset shadow
+    ctx.shadowColor = 'transparent';
+    
+    // Add small book emoji decoration below (only for larger sizes)
+    if (size >= 96) {
+      ctx.font = `${size * 0.16}px "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif`;
+      ctx.fillStyle = '#EEDDAA';
+      ctx.fillText('📘', centerX, centerY + size * 0.28);
+    }
+    
+    // Add subtle border
+    ctx.strokeStyle = 'rgba(255,240,200,0.3)';
+    ctx.lineWidth = Math.max(1, size * 0.01);
+    ctx.beginPath();
+    ctx.roundRect(0, 0, size, size, radius);
+    ctx.stroke();
+    
+    return canvas;
+  }
+  
+  // Display all icon sizes and enable downloads
+  const container = document.getElementById('iconSizes');
+  
+  sizes.forEach(size => {
+    const canvas = generateIcon(size);
+    const dataURL = canvas.toDataURL('image/png');
+    
+    const card = document.createElement('div');
+    card.className = 'size-card';
+    
+    // Preview canvas (scale to 64x64 for display)
+    const previewCanvas = document.createElement('canvas');
+    previewCanvas.width = 64;
+    previewCanvas.height = 64;
+    const previewCtx = previewCanvas.getContext('2d');
+    previewCtx.drawImage(canvas, 0, 0, size, size, 0, 0, 64, 64);
+    card.appendChild(previewCanvas);
+    
+    const label = document.createElement('div');
+    label.textContent = `${size}x${size}`;
+    label.style.margin = '0.5rem 0';
+    label.style.fontWeight = 'bold';
+    card.appendChild(label);
+    
+    const btn = document.createElement('button');
+    btn.textContent = '⬇️ Download';
+    btn.className = 'download-btn';
+    btn.style.padding = '6px 12px';
+    btn.style.fontSize = '0.8rem';
+    btn.onclick = () => {
+      const link = document.createElement('a');
+      link.download = `icon-${size}.png`;
+      link.href = dataURL;
+      link.click();
+    };
+    card.appendChild(btn);
+    
+    container.appendChild(card);
+  });
+  
+  // Update the main preview at the top
+  const previewDiv = document.getElementById('iconPreview');
+  if (previewDiv) {
+    previewDiv.innerHTML = '';
+    const previewCanvas = document.createElement('canvas');
+    previewCanvas.width = 200;
+    previewCanvas.height = 200;
+    const previewCtx = previewCanvas.getContext('2d');
+    const sourceCanvas = generateIcon(200);
+    previewCtx.drawImage(sourceCanvas, 0, 0, 200, 200);
+    previewCanvas.style.borderRadius = '40px';
+    previewCanvas.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+    previewDiv.appendChild(previewCanvas);
+  }
+  
+  // Log success message
+  console.log('✅ Icon generator ready! All icons feature "CBC" in bisque color (#FFE4C4)');
+</script>
+</body>
+</html>

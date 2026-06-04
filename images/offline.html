@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Theme / PWA -->
+  <meta name="theme-color" content="#0B1F2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CBC Best">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="msapplication-TileImage" content="images/icon-144.png">
+  <meta name="msapplication-TileColor" content="#0B1F2E">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Offline | CBC Best</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, #1E3A5F 0%, #0f2a44 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .offline-container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 500px;
+    }
+    .offline-icon { font-size: 5rem; margin-bottom: 1rem; }
+    h1 { color: #C9A03D; margin-bottom: 1rem; }
+    p { margin-bottom: 1rem; opacity: 0.9; }
+    .btn {
+      background: #C9A03D;
+      color: #1E3A5F;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .saved-pages {
+      background: rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 1rem;
+      margin-top: 2rem;
+      text-align: left;
+    }
+    .saved-pages a {
+      color: #C9A03D;
+      text-decoration: none;
+      display: block;
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+<div class="offline-container">
+  <div class="offline-icon">📡</div>
+  <h1>You're Offline</h1>
+  <p>Your internet connection is unavailable. Don't worry — you can still access saved pages below!</p>
+  <button class="btn" onclick="window.location.reload()">⟳ Try Again</button>
+  
+  <div class="saved-pages">
+    <h3 style="color:#C9A03D; margin-bottom:0.5rem;">📚 Available Offline Pages:</h3>
+    <a href="/index.html">🏠 Home</a>
+    <a href="/pathways.html">🛤️ CBC Pathways</a>
+    <a href="/mathematics-computer-science.html">🧮 Mathematics & CS</a>
+    <a href="/faq.html">❓ Frequently Asked Questions</a>
+    <a href="/resources.html">📚 Resources</a>
+  </div>
+  
+  <p style="margin-top: 2rem; font-size: 0.8rem;">CBC Best — Kenya's Competency Based Curriculum Hub</p>
+</div>
+</body>
+</html>

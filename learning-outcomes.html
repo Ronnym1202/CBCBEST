@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Theme / PWA -->
+  <meta name="theme-color" content="#0B1F2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CBC Best">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="msapplication-TileImage" content="images/icon-144.png">
+  <meta name="msapplication-TileColor" content="#0B1F2E">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>Learning Outcomes | CBC Kenya — Models, Theories & Writing Guide | CBC Best</title>
+  <meta name="description" content="Comprehensive guide to writing Expected Learning Outcomes (ELOs) in Kenya's CBC. Covers VOC, ABCD, SMART, Mager, KSV/A models, Bloom's Taxonomy, and KICD-aligned theories. By Ronny Mwenda.">
+  <meta name="keywords" content="CBC learning outcomes Kenya, KICD ELO, VOC model CBC, ABCD model CBC, SMART learning outcomes, KSV/A model Kenya, Bloom's Taxonomy CBC, Mager model, CBC lesson plan outcomes, competency based curriculum Kenya">
+  <meta name="author" content="Ronny Mwenda (Ronny Best)">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cbcbest.netlify.app/learning-outcomes.html">
+
+  <meta property="og:title" content="Learning Outcomes | CBC Kenya — Models, Theories & Writing Guide">
+  <meta property="og:description" content="Master the art of writing KICD-aligned Expected Learning Outcomes for Kenya's CBC — VOC, ABCD, SMART, KSV/A, Mager models explained with examples.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cbcbest.netlify.app/learning-outcomes.html">
+  <meta property="og:locale" content="en_KE">
+  <meta property="og:site_name" content="CBC Best">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@ronnymwenda89">
+  <meta name="twitter:title" content="Learning Outcomes | CBC Kenya — Models, Theories & Writing Guide">
+  <meta name="twitter:description" content="KICD-aligned guide to writing CBC Expected Learning Outcomes — by Ronny Mwenda.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:   #0B1F2E;
+      --navy2:  #132c40;
+      --navy3:  #1a3a54;
+      --gold:   #C9A03D;
+      --gold2:  #e6b94a;
+      --cream:  #FFF8EE;
+      --peach:  #FFE4C4;
+      --white:  #FFFFFF;
+      --text:   #1E2F3E;
+      --muted:  #5a7285;
+      --border: rgba(201,160,61,0.18);
+      --card-bg:#FFFFFF;
+      --radius: 20px;
+      --radius-lg: 32px;
+      --shadow: 0 8px 32px rgba(11,31,46,0.10);
+      --shadow-hover: 0 16px 48px rgba(11,31,46,0.18);
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --mono: 'Space Mono', monospace;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { cursor: pointer; color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: var(--font); }
+    img { max-width: 100%; display: block; }
+
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: var(--navy);
+      position: sticky; top: 0; z-index: 200;
+      border-bottom: 1px solid rgba(201,160,61,0.15);
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.9rem 28px; max-width: 1240px; margin: 0 auto; gap: 1.5rem;
+    }
+    .logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .logo-icon {
+      width: 40px; height: 40px; background: var(--gold); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; font-weight: 800; color: var(--navy);
+      font-family: var(--mono); flex-shrink: 0;
+    }
+    .logo-text { line-height: 1.2; }
+    .logo-text strong { display: block; font-size: 1.15rem; font-weight: 800; color: var(--white); letter-spacing: -0.3px; }
+    .logo-text span { font-size: 0.72rem; color: rgba(255,228,196,0.7); letter-spacing: 0.4px; font-weight: 500; }
+    .nav-links { display: flex; align-items: center; gap: 0.15rem; flex-wrap: nowrap; }
+    .nav-links a {
+      color: rgba(255,228,196,0.85); font-weight: 600; font-size: 0.82rem;
+      padding: 6px 11px; border-radius: 8px; transition: all 0.18s;
+      white-space: nowrap; letter-spacing: 0.2px;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); background: rgba(201,160,61,0.15); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 7px 16px !important; border-radius: 40px !important; font-weight: 700 !important; }
+    .nav-cta:hover { background: var(--gold2) !important; transform: translateY(-1px); }
+    .menu-toggle {
+      display: none; background: none; border: 1px solid rgba(201,160,61,0.4);
+      color: var(--peach); padding: 7px 14px; border-radius: 8px;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0; transition: 0.2s;
+    }
+    .menu-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: var(--navy);
+      padding: 4.5rem 0 4rem;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; top: -80px; right: -100px;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle, rgba(201,160,61,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-hero::after {
+      content: 'ELO';
+      position: absolute; right: 5%; top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--mono); font-size: 10rem; font-weight: 700;
+      color: rgba(201,160,61,0.04); line-height: 1; pointer-events: none;
+      letter-spacing: -5px;
+    }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.78rem; color: rgba(255,228,196,0.5);
+      margin-bottom: 1.2rem; font-weight: 500;
+    }
+    .breadcrumb a { color: rgba(201,160,61,0.7); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { color: rgba(255,228,196,0.3); }
+    .page-hero-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,160,61,0.12); border: 1px solid rgba(201,160,61,0.3);
+      color: var(--gold); font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 1.2px; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 40px; margin-bottom: 1.4rem;
+    }
+    .page-hero-label span {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--gold);
+      display: inline-block; animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:0.5; transform:scale(0.7); } }
+    .page-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3.1rem); font-weight: 800; color: var(--white);
+      line-height: 1.15; letter-spacing: -0.8px; margin-bottom: 1.1rem; max-width: 760px;
+    }
+    .page-hero h1 em { font-style: italic; color: var(--gold); }
+    .page-hero-sub {
+      font-size: 1.05rem; color: rgba(255,228,196,0.78); max-width: 680px;
+      margin-bottom: 2rem; line-height: 1.8;
+    }
+    .page-hero-meta {
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .meta-chip {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.8rem; color: rgba(255,228,196,0.6); font-weight: 500;
+    }
+    .meta-chip strong { color: rgba(255,228,196,0.9); font-weight: 700; }
+
+    /* ── TOC SIDEBAR LAYOUT ── */
+    .page-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      padding: 3rem 0 4rem;
+    }
+    .toc-sidebar {
+      position: sticky; top: 80px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      overflow: hidden;
+    }
+    .toc-sidebar::before {
+      content: ''; display: block;
+      height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold2));
+      margin: -1.5rem -1.5rem 1.2rem;
+    }
+    .toc-header {
+      font-family: var(--mono); font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 1.8px; text-transform: uppercase;
+      color: var(--navy); margin-bottom: 1rem; opacity: 0.6;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .toc-list li a {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.8rem; font-weight: 600; color: var(--muted);
+      padding: 7px 10px; border-radius: 10px; transition: all 0.18s;
+      line-height: 1.4;
+    }
+    .toc-list li a:hover, .toc-list li a.active {
+      background: rgba(201,160,61,0.09); color: var(--navy);
+    }
+    .toc-list li a.active { color: var(--gold); font-weight: 700; }
+    .toc-num {
+      font-family: var(--mono); font-size: 0.65rem; font-weight: 700;
+      color: var(--gold); opacity: 0.8; flex-shrink: 0; margin-top: 1px;
+    }
+    .toc-divider { height: 1px; background: rgba(0,0,0,0.06); margin: 0.6rem 0; }
+    .toc-cta {
+      margin-top: 1.2rem; display: block;
+      background: var(--navy); color: var(--peach);
+      text-align: center; padding: 10px; border-radius: 12px;
+      font-size: 0.78rem; font-weight: 700; transition: all 0.2s;
+    }
+    .toc-cta:hover { background: var(--navy3); }
+
+    /* ── MAIN CONTENT ── */
+    .main-content { min-width: 0; }
+
+    /* ── SECTION SHARED ── */
+    .section { padding: 3.5rem 0; }
+    .section-label {
+      font-family: var(--mono); font-size: 0.72rem; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 2.8vw, 2rem); font-weight: 800;
+      color: var(--navy); letter-spacing: -0.4px; line-height: 1.2; margin-bottom: 0.75rem;
+    }
+    .section-desc { font-size: 0.95rem; color: var(--muted); line-height: 1.78; margin-bottom: 2rem; }
+    .divider { width: 48px; height: 3px; background: var(--gold); border-radius: 4px; margin-bottom: 1.2rem; }
+
+    /* ── CONTENT BLOCK (section anchors) ── */
+    .content-block {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: var(--shadow);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      scroll-margin-top: 90px;
+    }
+    .content-block + .content-block { margin-top: 0; }
+
+    /* ── DEFINITION INTRO BOX ── */
+    .definition-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      position: relative; overflow: hidden;
+    }
+    .definition-box::after {
+      content: '"';
+      position: absolute; right: 2rem; top: -1rem;
+      font-family: Georgia, serif; font-size: 9rem;
+      color: rgba(201,160,61,0.08); line-height: 1; pointer-events: none;
+    }
+    .definition-box h2 {
+      font-size: 1.25rem; font-weight: 800; color: var(--white); margin-bottom: 0.8rem;
+    }
+    .definition-box p {
+      font-size: 0.93rem; color: rgba(255,228,196,0.78); line-height: 1.8; max-width: 700px;
+    }
+    .definition-box .def-highlight {
+      display: inline-block; background: rgba(201,160,61,0.15);
+      border: 1px solid rgba(201,160,61,0.3); color: var(--gold);
+      font-weight: 700; padding: 2px 10px; border-radius: 6px; font-size: 0.88rem;
+    }
+
+    /* ── ELO FORMULA BAR ── */
+    .elo-formula {
+      display: flex; align-items: center; flex-wrap: wrap;
+      gap: 8px; margin: 1.5rem 0;
+      background: rgba(201,160,61,0.06);
+      border: 1px dashed rgba(201,160,61,0.35);
+      border-radius: 14px; padding: 1rem 1.4rem;
+    }
+    .formula-part {
+      background: var(--navy); color: var(--white);
+      border-radius: 8px; padding: 6px 14px;
+      font-family: var(--mono); font-size: 0.8rem; font-weight: 700;
+      display: flex; flex-direction: column; align-items: center; gap: 2px;
+    }
+    .formula-part .fp-letter { color: var(--gold); font-size: 1rem; }
+    .formula-part .fp-word { font-size: 0.62rem; color: rgba(255,228,196,0.6); font-weight: 400; letter-spacing: 0.5px; }
+    .formula-plus {
+      font-family: var(--mono); font-size: 1.1rem; font-weight: 700;
+      color: var(--gold); flex-shrink: 0;
+    }
+    .formula-eq { font-family: var(--mono); font-size: 1rem; color: var(--muted); flex-shrink: 0; }
+    .formula-result {
+      background: var(--gold); color: var(--navy);
+      border-radius: 8px; padding: 6px 16px;
+      font-family: var(--mono); font-size: 0.78rem; font-weight: 700;
+    }
+
+    /* ── MODEL CARD ── */
+    .model-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.2s;
+      scroll-margin-top: 90px;
+    }
+    .model-card:hover { box-shadow: var(--shadow-hover); }
+    .model-card-header {
+      background: var(--navy);
+      padding: 1.6rem 2rem;
+      display: flex; align-items: center; gap: 1.2rem;
+    }
+    .model-number {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: rgba(201,160,61,0.15); border: 1px solid rgba(201,160,61,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--gold);
+      flex-shrink: 0;
+    }
+    .model-header-text { flex: 1;
+  color: var(--white);}
+    .model-header-text h3 { font-size: 1.2rem; font-weight: 800; color: var(--white); margin-bottom: 3px; }
+    .model-header-text p { font-size: 0.8rem; color: rgba(255,228,196,0.6); line-height: 1.5; }
+    .model-badge {
+      margin-left: auto;
+      background: rgba(201,160,61,0.15); border: 1px solid rgba(201,160,61,0.3);
+      color: var(--gold); font-family: var(--mono); font-size: 0.65rem;
+      font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 40px; flex-shrink: 0;
+    }
+    .model-body { padding: 2rem; }
+
+    /* ── COMPONENT BREAKDOWN ── */
+    .component-row {
+      display: grid; gap: 1px;
+      background: rgba(0,0,0,0.06);
+      border-radius: 14px; overflow: hidden;
+      margin: 1.2rem 0;
+    }
+    .component-item {
+      background: var(--card-bg);
+      display: grid; grid-template-columns: 60px 130px 1fr;
+      align-items: stretch; gap: 0;
+    }
+    .ci-letter {
+      background: var(--navy); display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 1.5rem; font-weight: 700; color: var(--gold);
+      padding: 1rem 0;
+    }
+    .ci-name {
+      background: rgba(11,31,46,0.04);
+      display: flex; align-items: center; padding: 0.9rem 1rem;
+      font-weight: 700; font-size: 0.85rem; color: var(--navy);
+      border-right: 1px solid rgba(0,0,0,0.06);
+    }
+    .ci-desc {
+      padding: 0.9rem 1.2rem; font-size: 0.85rem; color: var(--text); line-height: 1.65;
+      display: flex; align-items: center;
+    }
+
+    /* ── EXAMPLE BOX ── */
+    .example-box {
+      background: rgba(201,160,61,0.06);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 1.2rem 1.4rem;
+      margin-top: 1.2rem;
+    }
+    .example-label {
+      font-family: var(--mono); font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold);
+      margin-bottom: 0.6rem; opacity: 0.9;
+    }
+    .example-text { font-size: 0.9rem; color: var(--text); line-height: 1.7; }
+    .example-text strong { color: var(--navy); }
+    .example-text em { font-style: italic; color: var(--gold); }
+
+    .example-tabs { display: flex; gap: 6px; margin-top: 1rem; flex-wrap: wrap; }
+    .ex-tab {
+      background: var(--navy); color: var(--peach);
+      font-size: 0.75rem; font-weight: 600; padding: 5px 14px;
+      border-radius: 40px; border: none; transition: all 0.18s; cursor: pointer;
+    }
+    .ex-tab.active, .ex-tab:hover { background: var(--gold); color: var(--navy); }
+    .ex-content { display: none; }
+    .ex-content.active { display: block; }
+
+    /* ── TIPS BOX ── */
+    .tips-box {
+      background: rgba(11,31,46,0.04); border-radius: 14px;
+      padding: 1.2rem 1.4rem; margin-top: 1.2rem;
+    }
+    .tips-box h5 {
+      font-size: 0.82rem; font-weight: 700; color: var(--navy);
+      margin-bottom: 0.7rem; display: flex; align-items: center; gap: 6px;
+    }
+    .tips-box ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+    .tips-box ul li {
+      font-size: 0.82rem; color: var(--text); padding-left: 18px; position: relative; line-height: 1.5;
+    }
+    .tips-box ul li::before {
+      content: '→'; position: absolute; left: 0; color: var(--gold); font-weight: 700; font-size: 0.8rem;
+    }
+
+    /* ── BLOOM'S TAXONOMY ── */
+    .blooms-pyramid {
+      display: flex; flex-direction: column; gap: 4px;
+      margin: 1.5rem 0;
+    }
+    .bloom-level {
+      border-radius: 10px; padding: 1rem 1.4rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      transition: all 0.2s; cursor: default;
+    }
+    .bloom-level:hover { transform: translateX(4px); box-shadow: var(--shadow); }
+    .bloom-left { display: flex; align-items: center; gap: 14px; }
+    .bloom-rank {
+      font-family: var(--mono); font-size: 0.68rem; font-weight: 700;
+      color: var(--white); opacity: 0.7; width: 24px; text-align: center; flex-shrink: 0;
+    }
+    .bloom-name { font-size: 0.95rem; font-weight: 800; color: var(--white); }
+    .bloom-desc { font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 1px; line-height: 1.4; }
+    .bloom-verbs {
+      display: flex; flex-wrap: wrap; gap: 4px; flex-shrink: 0; max-width: 380px; justify-content: flex-end;
+    }
+    .verb-chip {
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.68rem; font-weight: 600;
+      padding: 2px 8px; border-radius: 40px; letter-spacing: 0.2px;
+    }
+
+    /* Bloom levels colors */
+    .bl-1 { background: #1a3a54; }
+    .bl-2 { background: #1e4460; }
+    .bl-3 { background: #1f5070; }
+    .bl-4 { background: #1f5e7e; }
+    .bl-5 { background: #1a6b8a; }
+    .bl-6 { background: linear-gradient(135deg, #b8860b, #c9a03d); }
+    .bl-6 .bloom-name, .bl-6 .bloom-desc { color: var(--navy); }
+    .bl-6 .bloom-rank { color: var(--navy); }
+    .bl-6 .verb-chip { background: rgba(11,31,46,0.15); color: var(--navy); }
+
+    /* ── KSV/A MODEL ── */
+    .ksva-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+      margin: 1.4rem 0;
+    }
+    .ksva-card {
+      border-radius: var(--radius); overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.2s;
+    }
+    .ksva-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .ksva-head {
+      background: var(--navy); padding: 1rem 1.2rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .ksva-letter {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: rgba(201,160,61,0.15); border: 1px solid rgba(201,160,61,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 1.1rem; font-weight: 700; color: var(--gold);
+      flex-shrink: 0;
+    }
+    .ksva-head-text {flex: 1;
+  color: var(--white);}
+    .ksva-head-text h4 { font-size: 0.9rem; font-weight: 800; color: var(--white); }
+    .ksva-head-text span { font-size: 0.72rem; color: rgba(255,228,196,0.5); }
+    .ksva-body { background: var(--card-bg); padding: 1.2rem; }
+    .ksva-body p { font-size: 0.82rem; color: var(--muted); line-height: 1.7; margin-bottom: 0.8rem; }
+    .ksva-examples { display: flex; flex-direction: column; gap: 4px; }
+    .ksva-ex {
+      font-size: 0.78rem; color: var(--text); padding: 4px 10px 4px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04); line-height: 1.4;
+      display: flex; gap: 6px;
+    }
+    .ksva-ex:last-child { border-bottom: none; }
+    .ksva-ex::before { content: '•'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+    .ksva-domain-badge {
+      display: inline-block; font-size: 0.7rem; font-weight: 700;
+      padding: 2px 8px; border-radius: 40px; margin-top: 0.6rem;
+    }
+    .badge-k { background: rgba(30,68,96,0.1); color: #1e4460; }
+    .badge-s { background: rgba(31,94,126,0.1); color: #1f5e7e; }
+    .badge-va { background: rgba(201,160,61,0.12); color: #8b6914; }
+
+    /* ── THEORIES SECTION ── */
+    .theory-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .theory-card {
+      background: var(--card-bg); border-radius: var(--radius);
+      border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 16px rgba(11,31,46,0.06);
+      padding: 1.5rem; transition: all 0.2s;
+    }
+    .theory-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+    .theory-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+    .theory-card h4 { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.4rem; }
+    .theory-card .theorist {
+      font-size: 0.72rem; font-weight: 700; color: var(--gold);
+      letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.7rem;
+      font-family: var(--mono);
+    }
+    .theory-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.72; }
+    .theory-cbc-link {
+      display: flex; align-items: flex-start; gap: 8px;
+      background: rgba(201,160,61,0.07); border-radius: 8px;
+      padding: 8px 10px; margin-top: 0.8rem;
+      font-size: 0.78rem; color: var(--text); line-height: 1.5;
+    }
+    .theory-cbc-link::before { content: '↳'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    /* ── COMMON MISTAKES ── */
+    .mistakes-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0;
+    }
+    .mistake-block { border-radius: 12px; padding: 1.2rem; }
+    .mistake-block.wrong {
+      background: rgba(220,53,69,0.06); border: 1px solid rgba(220,53,69,0.15);
+    }
+    .mistake-block.right {
+      background: rgba(40,167,69,0.06); border: 1px solid rgba(40,167,69,0.15);
+    }
+    .mistake-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      margin-bottom: 0.6rem; display: flex; align-items: center; gap: 6px;
+    }
+    .mistake-block.wrong .mistake-label { color: #c0392b; }
+    .mistake-block.right .mistake-label { color: #27ae60; }
+    .mistake-block p { font-size: 0.83rem; line-height: 1.65; }
+    .mistake-block.wrong p { color: #7a1b1b; }
+    .mistake-block.right p { color: #1a5c2a; }
+
+    /* ── QUICK REFERENCE TABLE ── */
+    .ref-table {
+      width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 1rem 0;
+    }
+    .ref-table thead tr { background: var(--navy); }
+    .ref-table th {
+      color: var(--peach); padding: 10px 14px; text-align: left;
+      font-weight: 700; font-size: 0.78rem; letter-spacing: 0.3px;
+    }
+    .ref-table th:first-child { border-radius: 10px 0 0 0; }
+    .ref-table th:last-child { border-radius: 0 10px 0 0; }
+    .ref-table td { padding: 9px 14px; border-bottom: 1px solid rgba(0,0,0,0.05); color: var(--text); vertical-align: top; line-height: 1.5; }
+    .ref-table tr:nth-child(even) td { background: rgba(201,160,61,0.03); }
+    .ref-table td strong { color: var(--navy); }
+    .ref-table td .tag-sm {
+      display: inline-block; background: rgba(11,31,46,0.07); color: var(--navy);
+      font-size: 0.68rem; font-weight: 700; padding: 1px 7px; border-radius: 40px;
+    }
+
+    /* ── STEP-BY-STEP GUIDE ── */
+    .step-guide { display: flex; flex-direction: column; gap: 0; margin: 1.4rem 0; }
+    .step-item {
+      display: flex; gap: 1.2rem; align-items: flex-start;
+      padding: 1.2rem 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .step-item:last-child { border-bottom: none; }
+    .step-circle {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--navy); display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 0.8rem; font-weight: 700; color: var(--gold);
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .step-content h5 { font-size: 0.92rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .step-content p { font-size: 0.83rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── HIGHLIGHT BAND ── */
+    .highlight-band {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      border-radius: var(--radius-lg); padding: 2.5rem; margin: 2rem 0;
+    }
+    .highlight-band h3 { font-size: 1.15rem; font-weight: 800; color: var(--white); margin-bottom: 0.7rem; }
+    .highlight-band p { font-size: 0.88rem; color: rgba(255,228,196,0.72); line-height: 1.78; }
+    .hb-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .hb-item {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(201,160,61,0.15);
+      border-radius: var(--radius); padding: 1.2rem; transition: all 0.2s;
+    }
+    .hb-item:hover { background: rgba(201,160,61,0.09); border-color: rgba(201,160,61,0.35); }
+    .hb-title { font-size: 0.85rem; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+    .hb-text { font-size: 0.78rem; color: rgba(255,228,196,0.55); line-height: 1.6; }
+
+    /* ── COMPARISON TABLE SECTION ── */
+    .models-compare {
+      background: var(--card-bg); border-radius: var(--radius-lg);
+      border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--shadow);
+      overflow: hidden; margin-bottom: 2rem;
+    }
+    .mc-header {
+      background: var(--navy); padding: 1.4rem 2rem;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .mc-header h3 { font-size: 1.05rem; font-weight: 800; color: var(--white); }
+    .mc-header p { font-size: 0.8rem; color: rgba(255,228,196,0.55); margin-top: 2px; }
+    .mc-body { padding: 0; overflow-x: auto; }
+
+    /* ── NAV BOTTOM STRIP ── */
+    .page-nav-strip {
+      background: var(--card-bg); border-radius: var(--radius);
+      border: 1px solid rgba(0,0,0,0.06); box-shadow: var(--shadow);
+      padding: 1.5rem 2rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      flex-wrap: wrap; margin-top: 2rem;
+    }
+    .pns-prev, .pns-next {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.85rem; font-weight: 700; color: var(--navy); transition: all 0.2s;
+    }
+    .pns-prev:hover { color: var(--gold); transform: translateX(-3px); }
+    .pns-next:hover { color: var(--gold); transform: translateX(3px); }
+    .pns-label { font-size: 0.7rem; color: var(--muted); font-weight: 500; display: block; }
+    .pns-arrow {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(11,31,46,0.06); display: flex; align-items: center;
+      justify-content: center; font-size: 1rem; flex-shrink: 0;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      background: var(--gold); color: var(--navy); border: none;
+      padding: 12px 26px; font-weight: 700; border-radius: 40px; font-size: 0.9rem;
+      transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; letter-spacing: 0.1px;
+    }
+    .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,160,61,0.3); }
+    .btn-secondary {
+      background: transparent; border: 1.5px solid rgba(11,31,46,0.2);
+      color: var(--navy); padding: 11px 24px; border-radius: 40px;
+      font-weight: 600; font-size: 0.9rem; transition: all 0.2s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-secondary:hover { border-color: var(--navy); background: rgba(11,31,46,0.04); transform: translateY(-2px); }
+    .btn-resource {
+      background: var(--navy); color: var(--peach);
+      padding: 11px 24px; border-radius: 40px; font-weight: 700;
+      font-size: 0.88rem; transition: all 0.2s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-resource:hover { background: var(--navy3); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy); color: rgba(255,228,196,0.75);
+      padding: 4rem 0 2rem; margin-top: 5rem;
+      border-top: 2px solid rgba(201,160,61,0.25);
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-brand strong { display: block; font-size: 1.15rem; color: var(--white); font-weight: 800; margin-bottom: 0.5rem; }
+    .footer-brand p { font-size: 0.83rem; line-height: 1.75; margin-bottom: 1rem; max-width: 280px; }
+    .footer-brand .ecosystem { font-size: 0.78rem; color: rgba(255,228,196,0.5); }
+    .footer-brand .ecosystem a { color: var(--gold); font-weight: 600; transition: color 0.2s; }
+    .footer-brand .ecosystem a:hover { color: var(--gold2); }
+    .footer-col h4 { color: var(--white); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: 0.83rem; color: rgba(255,228,196,0.65); padding: 4px 0; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(201,160,61,0.1); padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,228,196,0.45); }
+    .footer-bottom a { color: rgba(201,160,61,0.8); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .page-layout { grid-template-columns: 1fr; }
+      .toc-sidebar { position: static; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      .nav-links {
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--navy); flex-direction: column; align-items: flex-start;
+        gap: 0; padding: 1rem 20px 1.5rem;
+        border-top: 1px solid rgba(201,160,61,0.15);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      }
+      .nav-links.show { display: flex; }
+      .nav-links a { width: 100%; padding: 10px 8px; font-size: 0.9rem; border-radius: 8px; }
+      .site-header { position: relative; }
+      .ksva-grid { grid-template-columns: 1fr; }
+      .theory-grid { grid-template-columns: 1fr; }
+      .mistakes-grid { grid-template-columns: 1fr; }
+      .hb-grid { grid-template-columns: 1fr; }
+      .content-block { padding: 1.5rem; }
+      .model-body { padding: 1.5rem; }
+      .model-card-header { padding: 1.2rem 1.5rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand { grid-column: 1 / -1; }
+      .component-item { grid-template-columns: 50px 110px 1fr; }
+      .bloom-verbs { display: none; }
+      .page-hero::after { display: none; }
+      .model-badge { display: none; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 18px; }
+      .page-hero { padding: 3rem 0 2.5rem; }
+      .footer-top { grid-template-columns: 1fr; }
+      .component-item { grid-template-columns: 44px 1fr; }
+      .ci-name { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">CB</div>
+      <div class="logo-text">
+        <strong>CBC Best</strong>
+        <span>Ronny Mwenda · Kenya's CBC Hub</span>
+      </div>
+    </a>
+    <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">☰ Menu</button>
+    <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="pathways.html">Pathways</a>
+      <a href="subjects-skills.html">Subjects</a>
+      <a href="assessment-tools.html">Assessment</a>
+      <a href="learning-outcomes.html" class="active">Outcomes</a>
+      <a href="teacher-requirements.html">Teachers</a>
+      <a href="mathematics-computer-science.html">Maths & CS</a>
+      <a href="resources.html">Resources</a>
+      <a href="forums.html">Forums</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">News</a>
+      <a href="about-contact.html" class="nav-cta">Contact →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span style="color:rgba(255,228,196,0.8);">Learning Outcomes</span>
+    </div>
+    <div class="page-hero-label"><span></span> KICD-Aligned · CBC Kenya</div>
+    <h1>Writing <em>Expected Learning<br>Outcomes</em> in CBC</h1>
+    <p class="page-hero-sub">A complete, authoritative guide to crafting KICD-compliant Expected Learning Outcomes (ELOs) — covering all four recognised models, Bloom's Taxonomy, the KSV/A framework, underpinning theories, and practical worked examples across all CBC subjects and pathways.</p>
+    <div class="page-hero-meta">
+      <div class="meta-chip"><strong>4</strong>&nbsp;ELO Writing Models</div>
+      <div class="meta-chip"><strong>6</strong>&nbsp;Bloom's Levels</div>
+      <div class="meta-chip"><strong>3</strong>&nbsp;KSV/A Domains</div>
+      <div class="meta-chip"><strong>5+</strong>&nbsp;Learning Theories</div>
+      <div class="meta-chip"><strong>By</strong>&nbsp;Ronny Mwenda, Embu County</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MAIN PAGE LAYOUT ── -->
+<main>
+<div class="container">
+<div class="page-layout">
+
+  <!-- ── SIDEBAR TOC ── -->
+  <aside class="toc-sidebar" aria-label="Table of contents">
+    <div class="toc-header">// Contents</div>
+    <ul class="toc-list">
+      <li><a href="#what-is-elo" id="toc-what"><span class="toc-num">01</span> What is an ELO?</a></li>
+      <li><a href="#elo-characteristics" id="toc-chars"><span class="toc-num">02</span> Characteristics of a Good ELO</a></li>
+      <div class="toc-divider"></div>
+      <li><a href="#voc-model" id="toc-voc"><span class="toc-num">03</span> VOC Model</a></li>
+      <li><a href="#abcd-model" id="toc-abcd"><span class="toc-num">04</span> ABCD Model</a></li>
+      <li><a href="#smart-model" id="toc-smart"><span class="toc-num">05</span> SMART Model</a></li>
+      <li><a href="#mager-model" id="toc-mager"><span class="toc-num">06</span> Mager's Performance Model</a></li>
+      <div class="toc-divider"></div>
+      <li><a href="#ksva-framework" id="toc-ksva"><span class="toc-num">07</span> KSV/A Framework</a></li>
+      <li><a href="#blooms-taxonomy" id="toc-blooms"><span class="toc-num">08</span> Bloom's Taxonomy</a></li>
+      <div class="toc-divider"></div>
+      <li><a href="#theories" id="toc-theories"><span class="toc-num">09</span> Underpinning Theories</a></li>
+      <li><a href="#models-comparison" id="toc-compare"><span class="toc-num">10</span> Models Comparison</a></li>
+      <li><a href="#common-mistakes" id="toc-mistakes"><span class="toc-num">11</span> Common Mistakes</a></li>
+      <li><a href="#writing-steps" id="toc-steps"><span class="toc-num">12</span> Step-by-Step Writing Guide</a></li>
+    </ul>
+    <a href="resources.html" class="toc-cta">📥 Download ELO Templates</a>
+  </aside>
+
+  <!-- ── MAIN CONTENT ── -->
+  <div class="main-content">
+
+    <!-- 01 · WHAT IS AN ELO -->
+    <div class="content-block" id="what-is-elo">
+      <div class="section-label">// 01 · Definition</div>
+      <div class="divider"></div>
+      <h2 class="section-title">What is an Expected Learning Outcome (ELO)?</h2>
+
+      <div class="definition-box">
+        <h2>Official KICD Definition</h2>
+        <p>An <span class="def-highlight">Expected Learning Outcome (ELO)</span> is a clear, precise, and measurable statement that describes what a learner should be able to <strong style="color:var(--gold);">know</strong>, <strong style="color:var(--gold);">do</strong>, or <strong style="color:var(--gold);">value</strong> by the end of a lesson, unit, strand, or sub-strand — expressed in terms of observable learner behaviour, not teacher activity.</p>
+        <p style="margin-top:1rem;">In Kenya's CBC framework, ELOs are written at the <em>lesson level</em> (Specific Learning Outcomes/SLOs) and at the <em>curriculum design level</em> (General Learning Outcomes/GLOs). KICD requires all ELOs to be <strong style="color:var(--gold);">learner-centred</strong>, <strong style="color:var(--gold);">observable</strong>, <strong style="color:var(--gold);">measurable</strong>, and <strong style="color:var(--gold);">achievable</strong> within the specified timeframe.</p>
+      </div>
+
+      <h3 style="font-size:1rem; font-weight:800; color:var(--navy); margin-bottom:0.8rem; margin-top:1.5rem;">The Core Distinction: GLOs vs SLOs</h3>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+        <div style="background:rgba(11,31,46,0.04); border-radius:14px; padding:1.2rem; border:1px solid rgba(0,0,0,0.05);">
+          <div style="font-family:var(--mono); font-size:0.68rem; color:var(--gold); font-weight:700; letter-spacing:1px; margin-bottom:0.6rem;">GLO · General Learning Outcome</div>
+          <p style="font-size:0.83rem; color:var(--text); line-height:1.7;">Broad statements written at strand or sub-strand level by KICD curriculum designers. They describe the overall competency targets for a subject across a grade band. Teachers do not write GLOs — they are provided in the curriculum design documents.</p>
+          <div style="margin-top:0.8rem; font-size:0.78rem; font-style:italic; color:var(--muted);">Example: "The learner should be able to apply algebraic reasoning to solve real-world problems."</div>
+        </div>
+        <div style="background:rgba(201,160,61,0.06); border-radius:14px; padding:1.2rem; border:1px solid rgba(201,160,61,0.15);">
+          <div style="font-family:var(--mono); font-size:0.68rem; color:var(--gold); font-weight:700; letter-spacing:1px; margin-bottom:0.6rem;">SLO · Specific Learning Outcome</div>
+          <p style="font-size:0.83rem; color:var(--text); line-height:1.7;">Precise, lesson-level statements written by the teacher in the lesson plan. SLOs must be directly derived from the relevant GLO, limited in number (typically 2–4 per lesson), and achievable within the lesson period. <strong>This is what most CBC teachers write daily.</strong></p>
+          <div style="margin-top:0.8rem; font-size:0.78rem; font-style:italic; color:var(--muted);">Example: "By the end of the lesson, the learner should be able to solve two-step linear equations using the balance method."</div>
+        </div>
+      </div>
+
+      <div class="tips-box" style="margin-top:1.5rem;">
+        <h5>🔑 Why ELOs matter in CBC</h5>
+        <ul>
+          <li>They guide the teacher's choice of learning activities, resources, and assessment tools from the 13 KICD instruments.</li>
+          <li>They define exactly what evidence will show that learning has occurred — making formative assessment purposeful.</li>
+          <li>They ensure alignment between curriculum design (KICD), instruction (teacher), and assessment (TSC portfolios and KPSEA/KJSEA/KCSE).</li>
+          <li>They protect learners from teacher-centred lessons where teaching happens but learning is not verified.</li>
+          <li>They form the starting point of backward design — you plan assessment first, then design activities that lead to the outcome.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 02 · CHARACTERISTICS -->
+    <div class="content-block" id="elo-characteristics">
+      <div class="section-label">// 02 · Characteristics</div>
+      <div class="divider"></div>
+      <h2 class="section-title">Characteristics of a Well-Written ELO</h2>
+      <p class="section-desc">KICD's curriculum framework prescribes that every Expected Learning Outcome must meet the following quality standards to be considered valid and usable.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:1rem;">
+        <div style="background:var(--card-bg); border-radius:14px; padding:1.2rem; border:1px solid rgba(0,0,0,0.06); box-shadow:0 4px 16px rgba(11,31,46,0.05);">
+          <div style="font-size:1.4rem; margin-bottom:0.5rem;">🎯</div>
+          <h4 style="font-size:0.9rem; font-weight:800; color:var(--navy); margin-bottom:0.4rem;">Learner-Centred</h4>
+          <p style="font-size:0.8rem; color:var(--muted); line-height:1.65;">Must begin with "The learner should be able to…" or "By the end of the lesson, the learner will…" — never describe what the <em>teacher</em> will do.</p>
+        </div>
+        <div style="background:var(--card-bg); border-radius:14px; padding:1.2rem; border:1px solid rgba(0,0,0,0.06); box-shadow:0 4px 16px rgba(11,31,46,0.05);">
+          <div style="font-size:1.4rem; margin-bottom:0.5rem;">👁️</div>
+          <h4 style="font-size:0.9rem; font-weight:800; color:var(--navy); margin-bottom:0.4rem;">Observable</h4>
+          <p style="font-size:0.8rem; color:var(--muted); line-height:1.65;">Must use an action verb from Bloom's Taxonomy that can be seen and measured — avoid vague verbs like "understand", "know", or "appreciate".</p>
+        </div>
+        <div style="background:var(--card-bg); border-radius:14px; padding:1.2rem; border:1px solid rgba(0,0,0,0.06); box-shadow:0 4px 16px rgba(11,31,46,0.05);">
+          <div style="font-size:1.4rem; margin-bottom:0.5rem;">📏</div>
+          <h4 style="font-size:0.9rem; font-weight:800; color:var(--navy); margin-bottom:0.4rem;">Measurable</h4>
+          <p style="font-size:0.8rem; color:var(--muted); line-height:1.65;">Must specify a performance criterion or degree (e.g. "correctly", "at least 3 out of 4", "with reference to a diagram") so teachers can assess attainment.</p>
+        </div>
+        <div style="background:var(--card-bg); border-radius:14px; padding:1.2rem; border:1px solid rgba(0,0,0,0.06); box-shadow:0 4px 16px rgba(11,31,46,0.05);">
+          <div style="font-size:1.4rem; margin-bottom:0.5rem;">✅</div>
+          <h4 style="font-size:0.9rem; font-weight:800; color:var(--navy); margin-bottom:0.4rem;">Achievable</h4>
+          <p style="font-size:0.8rem; color:var(--muted); line-height:1.65;">Must be realistic for the learner's level (grade, age, prior knowledge) and attainable within the allotted lesson time — not too easy, not too demanding.</p>
+        </div>
+        <div style="background:var(--card-bg); border-radius:14px; padding:1.2rem; border:1px solid rgba(0,0,0,0.06); box-shadow:0 4px 16px rgba(11,31,46,0.05);">
+          <div style="font-size:1.4rem; margin-bottom:0.5rem;">🔗</div>
+          <h4 style="font-size:0.9rem; font-weight:800; color:var(--navy); margin-bottom:0.4rem;">Aligned to GLO</h4>
+          <p style="font-size:0.8rem; color:var(--muted); line-height:1.65;">Every SLO must be a logical narrowing of the relevant General Learning Outcome from the curriculum design — direct curriculum alignment is non-negotiable in CBC.</p>
+        </div>
+        <div style="background:var(--card-bg); border-radius:14px; padding:1.2rem; border:1px solid rgba(0,0,0,0.06); box-shadow:0 4px 16px rgba(11,31,46,0.05);">
+          <div style="font-size:1.4rem; margin-bottom:0.5rem;">🌍</div>
+          <h4 style="font-size:0.9rem; font-weight:800; color:var(--navy); margin-bottom:0.4rem;">Contextualised</h4>
+          <p style="font-size:0.8rem; color:var(--muted); line-height:1.65;">Good ELOs situate learning in a real, familiar, or locally relevant context — connecting classroom knowledge to the community, career world, or everyday life.</p>
+        </div>
+        <div style="background:var(--card-bg); border-radius:14px; padding:1.2rem; border:1px solid rgba(0,0,0,0.06); box-shadow:0 4px 16px rgba(11,31,46,0.05);">
+          <div style="font-size:1.4rem; margin-bottom:0.5rem;">🔑</div>
+          <h4 style="font-size:0.9rem; font-weight:800; color:var(--navy); margin-bottom:0.4rem;">Competency-Based</h4>
+          <p style="font-size:0.8rem; color:var(--muted); line-height:1.65;">Must reflect at least one of the 7 CBC core competencies (e.g. Communication, Critical Thinking, Digital Literacy) — not just content recall.</p>
+        </div>
+        <div style="background:var(--card-bg); border-radius:14px; padding:1.2rem; border:1px solid rgba(0,0,0,0.06); box-shadow:0 4px 16px rgba(11,31,46,0.05);">
+          <div style="font-size:1.4rem; margin-bottom:0.5rem;">🔢</div>
+          <h4 style="font-size:0.9rem; font-weight:800; color:var(--navy); margin-bottom:0.4rem;">Appropriately Numbered</h4>
+          <p style="font-size:0.8rem; color:var(--muted); line-height:1.65;">KICD lesson plan format recommends 2–4 SLOs per lesson. Too few risk shallow coverage; too many indicate a lesson that is overloaded and undeliverable in one period.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 · VOC MODEL -->
+    <div class="model-card" id="voc-model">
+      <div class="model-card-header">
+        <div class="model-number">M·01</div>
+        <div class="model-header-text">
+          <h3>The VOC Model — Verb · Object · Context</h3>
+          <p>The simplest and most widely used ELO writing model in Kenya's CBC classrooms</p>
+        </div>
+        <div class="model-badge">Most Used</div>
+      </div>
+      <div class="model-body">
+        <p style="font-size:0.9rem; color:var(--muted); line-height:1.78; margin-bottom:1.2rem;">The VOC model produces a learning outcome in a single, well-structured sentence containing exactly three elements: a Bloom's Taxonomy <strong style="color:var(--navy);">Verb</strong> (the observable action), an <strong style="color:var(--navy);">Object</strong> (the specific content or concept), and a <strong style="color:var(--navy);">Context</strong> (the real-world or classroom condition). It is the preferred model for daily CBC lesson plans at all grade levels.</p>
+
+        <div class="elo-formula">
+          <div class="formula-part"><span class="fp-letter">V</span><span class="fp-word">Action Verb</span></div>
+          <div class="formula-plus">+</div>
+          <div class="formula-part"><span class="fp-letter">O</span><span class="fp-word">Object</span></div>
+          <div class="formula-plus">+</div>
+          <div class="formula-part"><span class="fp-letter">C</span><span class="fp-word">Context</span></div>
+          <div class="formula-eq">=</div>
+          <div class="formula-result">Expected Learning Outcome</div>
+        </div>
+
+        <div class="component-row">
+          <div class="component-item">
+            <div class="ci-letter">V</div>
+            <div class="ci-name">Verb (Action Word)</div>
+            <div class="ci-desc">An observable, measurable action verb drawn from Bloom's Taxonomy (e.g. <em>identify, explain, classify, design, evaluate, construct, compare</em>). The verb determines the <strong>cognitive level</strong> of the outcome and must be appropriate for the learner's grade and prior knowledge. Vague verbs like "understand", "know", "appreciate", or "be aware of" are <strong>not acceptable</strong> in CBC ELOs because they cannot be directly observed or measured.</div>
+          </div>
+          <div class="component-item">
+            <div class="ci-letter">O</div>
+            <div class="ci-name">Object (Content)</div>
+            <div class="ci-desc">The specific topic, concept, skill, or knowledge the learner will act upon. This is directly derived from the CBC curriculum sub-strand. It should be narrow enough to be achievable in one lesson — not an entire topic. For example, "fractions" is too broad; "equivalent fractions using a number line" is appropriate.</div>
+          </div>
+          <div class="component-item">
+            <div class="ci-letter">C</div>
+            <div class="ci-name">Context (Condition)</div>
+            <div class="ci-desc">The real-world, local, or classroom situation in which learning will be demonstrated. The context grounds the outcome in CBC's emphasis on contextualised, meaningful learning. It connects the classroom to the community and gives the learner a reason to learn. Context can be a physical setting, a specific resource, a social situation, or a career scenario.</div>
+          </div>
+        </div>
+
+        <h4 style="font-size:0.9rem; font-weight:800; color:var(--navy); margin: 1.2rem 0 0.5rem;">Worked Examples Across Subjects</h4>
+
+        <div class="example-tabs">
+          <button class="ex-tab active" onclick="showTab(this,'voc','math')">Mathematics</button>
+          <button class="ex-tab" onclick="showTab(this,'voc','sci')">Science</button>
+          <button class="ex-tab" onclick="showTab(this,'voc','eng')">English</button>
+          <button class="ex-tab" onclick="showTab(this,'voc','cs')">Computer Science</button>
+          <button class="ex-tab" onclick="showTab(this,'voc','ss')">Social Studies</button>
+        </div>
+
+        <div class="example-box">
+          <div class="example-label">📌 VOC Example</div>
+          <div id="voc-math" class="ex-content active">
+            <div class="example-text">
+              <strong>Subject:</strong> Mathematics · Grade 8 · Strand: Numbers · Sub-strand: Fractions<br><br>
+              <em>"<strong>Calculate</strong> [V] the percentage increase of commodity prices [O] using data from the local market survey [C]."</em><br><br>
+              <strong>Verb:</strong> Calculate — a Bloom's Application level verb, observable through workings and final answer.<br>
+              <strong>Object:</strong> Percentage increase of commodity prices — specific enough for one lesson; derived from the GLO on percentage applications.<br>
+              <strong>Context:</strong> Local market survey data — connects to real community life, makes learning relevant and CBC-aligned.
+            </div>
+          </div>
+          <div id="voc-sci" class="ex-content">
+            <div class="example-text">
+              <strong>Subject:</strong> Integrated Science · Grade 7 · Strand: Living Things · Sub-strand: Classification<br><br>
+              <em>"<strong>Classify</strong> [V] ten locally found organisms [O] into the five kingdoms using observable features [C]."</em><br><br>
+              <strong>Verb:</strong> Classify — Bloom's Comprehension/Analysis; observable through the classification chart produced.<br>
+              <strong>Object:</strong> Locally found organisms — narrow and specific, achievable in one lesson using field specimens.<br>
+              <strong>Context:</strong> Using observable features — situates learning in hands-on inquiry, supporting CBC's PBL approach.
+            </div>
+          </div>
+          <div id="voc-eng" class="ex-content">
+            <div class="example-text">
+              <strong>Subject:</strong> English · Grade 9 · Strand: Writing · Sub-strand: Functional Writing<br><br>
+              <em>"<strong>Write</strong> [V] a formal letter of complaint [O] in response to a school canteen quality issue [C]."</em><br><br>
+              <strong>Verb:</strong> Write — Bloom's Application; observable through the written letter produced by the learner.<br>
+              <strong>Object:</strong> A formal letter of complaint — specific genre, not just "a letter" in general.<br>
+              <strong>Context:</strong> School canteen quality issue — a familiar, age-relevant situation that gives the task authentic purpose.
+            </div>
+          </div>
+          <div id="voc-cs" class="ex-content">
+            <div class="example-text">
+              <strong>Subject:</strong> Computer Science · Grade 10 · Strand: Programming · Sub-strand: Algorithms<br><br>
+              <em>"<strong>Design</strong> [V] a flowchart for a sorting algorithm [O] to solve a real inventory management scenario [C]."</em><br><br>
+              <strong>Verb:</strong> Design — Bloom's Synthesis/Creation; observable through the drawn/digital flowchart submitted.<br>
+              <strong>Object:</strong> Flowchart for a sorting algorithm — precise enough for one lesson; maps directly to the STEM pathway CS curriculum.<br>
+              <strong>Context:</strong> Inventory management scenario — real-world business application, reinforcing Digital Literacy competency.
+            </div>
+          </div>
+          <div id="voc-ss" class="ex-content">
+            <div class="example-text">
+              <strong>Subject:</strong> Social Studies · Grade 7 · Strand: Our Country Kenya · Sub-strand: Physical Features<br><br>
+              <em>"<strong>Label</strong> [V] the major relief features of Kenya [O] on an outline map of East Africa [C]."</em><br><br>
+              <strong>Verb:</strong> Label — Bloom's Knowledge/Comprehension; observable through the completed annotated map.<br>
+              <strong>Object:</strong> Major relief features of Kenya — specific sub-strand content, not all of geography.<br>
+              <strong>Context:</strong> An outline map of East Africa — specifies the instructional tool and connects to regional geography.
+            </div>
+          </div>
+        </div>
+
+        <div class="tips-box">
+          <h5>⚠️ VOC Model — Teacher Tips</h5>
+          <ul>
+            <li>Never split the VOC into three separate bullet points. Write it as one complete, grammatically correct sentence.</li>
+            <li>The context does not have to be a physical place — it can be a tool ("using a calculator"), a source ("from the textbook data"), or a scenario ("given a patient case study").</li>
+            <li>For affective/values outcomes, VOC still works: "Demonstrate [V] respect for diverse cultural practices [O] during a class community mapping activity [C]."</li>
+            <li>One lesson may have 2–4 VOC-based SLOs — one at knowledge level, one at application, and optionally one at values/attitudes level (KSV/A alignment).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 · ABCD MODEL -->
+    <div class="model-card" id="abcd-model">
+      <div class="model-card-header">
+        <div class="model-number">M·02</div>
+        <div class="model-header-text">
+          <h3>The ABCD Model — Audience · Behaviour · Condition · Degree</h3>
+          <p>A four-component instructional design model widely used in curriculum planning and teacher training</p>
+        </div>
+        <div class="model-badge">Curriculum Design</div>
+      </div>
+      <div class="model-body">
+        <p style="font-size:0.9rem; color:var(--muted); line-height:1.78; margin-bottom:1.2rem;">The ABCD model, developed in instructional design theory and adopted by KICD for curriculum development and teacher training contexts, extends the VOC by explicitly naming the learner (<strong>Audience</strong>) and adding a performance standard (<strong>Degree</strong>). It is especially useful when writing outcomes for <em>diverse learning populations</em> or when a specific pass criterion must be stated.</p>
+
+        <div class="elo-formula">
+          <div class="formula-part"><span class="fp-letter">A</span><span class="fp-word">Audience</span></div>
+          <div class="formula-plus">+</div>
+          <div class="formula-part"><span class="fp-letter">B</span><span class="fp-word">Behaviour</span></div>
+          <div class="formula-plus">+</div>
+          <div class="formula-part"><span class="fp-letter">C</span><span class="fp-word">Condition</span></div>
+          <div class="formula-plus">+</div>
+          <div class="formula-part"><span class="fp-letter">D</span><span class="fp-word">Degree</span></div>
+          <div class="formula-eq">=</div>
+          <div class="formula-result">Expected Learning Outcome</div>
+        </div>
+
+        <div class="component-row">
+          <div class="component-item">
+            <div class="ci-letter">A</div>
+            <div class="ci-name">Audience</div>
+            <div class="ci-desc">The specific group of learners the outcome is written for. In CBC lesson plans, this is usually "the learner" or "Grade 8 learners" or for differentiated instruction, "learners with advanced literacy skills". Being specific about the audience helps the teacher plan differentiated activities for diverse learners — a key CBC pedagogical requirement.</div>
+          </div>
+          <div class="component-item">
+            <div class="ci-letter">B</div>
+            <div class="ci-name">Behaviour</div>
+            <div class="ci-desc">The observable, measurable action the learner will perform — equivalent to the Verb + Object in the VOC model. This is the core of the ELO. It must be stated using a precise Bloom's Taxonomy verb and specific content. The behaviour must be demonstrable through one of the 13 KICD assessment tools.</div>
+          </div>
+          <div class="component-item">
+            <div class="ci-letter">C</div>
+            <div class="ci-name">Condition</div>
+            <div class="ci-desc">The given materials, tools, constraints, or context under which the behaviour will be demonstrated. This could be resources provided ("given a periodic table"), constraints applied ("without a calculator"), or the setting specified ("during a group discussion"). Conditions make the outcome assessable and specific.</div>
+          </div>
+          <div class="component-item">
+            <div class="ci-letter">D</div>
+            <div class="ci-name">Degree</div>
+            <div class="ci-desc">The criterion or standard against which the learner's performance is judged — the minimum acceptable level. It answers: "How well must the learner perform?" Examples: "with at least 80% accuracy", "correctly naming 5 out of 6", "without any grammatical errors", "scoring at least 3 on a 4-point rubric". This element makes formative assessment concrete and actionable.</div>
+          </div>
+        </div>
+
+        <div class="example-box">
+          <div class="example-label">📌 ABCD Examples</div>
+          <div class="example-text">
+            <strong>Mathematics (Grade 9 · Algebra):</strong><br>
+            <em>"<strong>Grade 9 learners</strong> [A] will <strong>solve simultaneous linear equations</strong> [B] using the substitution method, given two equations and a worked example [C], <strong>correctly solving at least 3 out of 4 problems</strong> [D]."</em>
+            <br><br>
+            <strong>Biology (Grade 11 · STEM · Cell Division):</strong><br>
+            <em>"<strong>The learner</strong> [A] will <strong>draw and label the four stages of mitosis</strong> [B] from memory, without reference to a textbook [C], <strong>correctly labelling all stages with accurate descriptions of chromosomal behaviour</strong> [D]."</em>
+            <br><br>
+            <strong>Kiswahili (Grade 7 · Uandishi):</strong><br>
+            <em>"<strong>Wanafunzi wa Darasa la 7</strong> [A] wataweza <strong>kuandika barua rasmi</strong> [B] kwa kutumia muundo sahihi wa KICD [C], <strong>wakipata angalau alama 12 kati ya 20 kwenye rubric ya tathmini</strong> [D]."</em>
+          </div>
+        </div>
+
+        <div class="tips-box">
+          <h5>💡 When to prefer ABCD over VOC</h5>
+          <ul>
+            <li>When writing outcomes for curriculum documents, schemes of work, or teacher induction materials — the Degree makes accountability explicit.</li>
+            <li>When planning differentiated instruction — stating the Audience allows writing separate outcomes for learners at different ability levels.</li>
+            <li>When designing summative assessment tasks where a pass mark or rubric threshold must be stated in the task brief.</li>
+            <li>The ABCD model is the recommended format for CBC Teacher Performance Standards documentation submitted to TSC.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 · SMART MODEL -->
+    <div class="model-card" id="smart-model">
+      <div class="model-card-header">
+        <div class="model-number">M·03</div>
+        <div class="model-header-text">
+          <h3>The SMART Model — Specific · Measurable · Achievable · Relevant · Time-bound</h3>
+          <p>A goal-setting framework adapted for curriculum and lesson planning in CBC contexts</p>
+        </div>
+        <div class="model-badge">Goal-Setting</div>
+      </div>
+      <div class="model-body">
+        <p style="font-size:0.9rem; color:var(--muted); line-height:1.78; margin-bottom:1.2rem;">Originally developed in management and goal-setting literature, the SMART framework is used in CBC to <em>audit and verify</em> the quality of already-written ELOs, and as a planning checklist during unit and scheme-of-work development. A well-written ELO should satisfy all five SMART criteria simultaneously.</p>
+
+        <div class="component-row">
+          <div class="component-item">
+            <div class="ci-letter">S</div>
+            <div class="ci-name">Specific</div>
+            <div class="ci-desc">The outcome must target one clear, well-defined skill, concept, or value — not a broad topic. "The learner will understand photosynthesis" fails this criterion. "The learner will explain the role of chlorophyll in light-dependent reactions" passes. Specificity allows the teacher to plan one focused activity and select one appropriate assessment tool.</div>
+          </div>
+          <div class="component-item">
+            <div class="ci-letter">M</div>
+            <div class="ci-name">Measurable</div>
+            <div class="ci-desc">Evidence of achievement must be collectable using one of the 13 KICD assessment tools (Observation Schedule, Rubric, Checklist, Written Test, Portfolio, etc.). The outcome must describe a behaviour that produces a visible, audible, or tangible product that the teacher can assess. If you cannot design a fair assessment for it, the outcome is not measurable.</div>
+          </div>
+          <div class="component-item">
+            <div class="ci-letter">A</div>
+            <div class="ci-name">Achievable</div>
+            <div class="ci-desc">The outcome must be realistic for the learner's current developmental stage, prior knowledge, available resources, and lesson time. An outcome requiring a Grade 7 learner to "develop a fully functional mobile application" in one period is not achievable. Achievability also considers equity — outcomes must be reachable by all learners, with differentiated support where needed.</div>
+          </div>
+          <div class="component-item">
+            <div class="ci-letter">R</div>
+            <div class="ci-name">Relevant</div>
+            <div class="ci-desc">The outcome must directly contribute to the attainment of the CBC sub-strand's General Learning Outcome and at least one core competency. It must also be meaningful to the learner's life, community, or future career pathway. Relevance is central to CBC's value of contextualised learning and community connection.</div>
+          </div>
+          <div class="component-item">
+            <div class="ci-letter">T</div>
+            <div class="ci-name">Time-bound</div>
+            <div class="ci-desc">The outcome must be stated within a specific time frame — "by the end of this lesson", "within this unit", or "by the end of Grade 9". This prevents vague, open-ended outcomes and enables teachers to plan lesson pacing, assess progress within the KICD term-by-term content coverage, and sequence learning progressively across units.</div>
+          </div>
+        </div>
+
+        <div class="example-box">
+          <div class="example-label">📌 SMART Audit Example — History & Citizenship (Grade 8)</div>
+          <div class="example-text">
+            <strong>Original ELO (unaudited):</strong> <em>"The learner will understand the colonial period in Kenya."</em><br><br>
+            <strong>SMART audit:</strong>
+            <br>❌ <strong>S:</strong> "Colonial period" is far too broad — multiple lessons' worth of content.
+            <br>❌ <strong>M:</strong> "Understand" cannot be measured with any KICD tool.
+            <br>✅ <strong>A:</strong> Colonial history is grade-appropriate content.
+            <br>❌ <strong>R:</strong> No connection stated to core competencies or the learner's community.
+            <br>❌ <strong>T:</strong> No time frame specified.
+            <br><br>
+            <strong>Revised ELO (SMART-compliant):</strong><br>
+            <em>"By the end of this lesson, the learner will <strong>compare</strong> the economic impacts of colonial land policies on Kenyan communities using textbook sources and local oral history, identifying at least three specific effects."</em>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 · MAGER'S MODEL -->
+    <div class="model-card" id="mager-model">
+      <div class="model-card-header">
+        <div class="model-number">M·04</div>
+        <div class="model-header-text">
+          <h3>Mager's Performance Objective Model — Performance · Condition · Criterion</h3>
+          <p>Robert Mager's classic model, emphasising strict performance specifications and measurable criteria</p>
+        </div>
+        <div class="model-badge">Technical & TVET</div>
+      </div>
+      <div class="model-body">
+        <p style="font-size:0.9rem; color:var(--muted); line-height:1.78; margin-bottom:1.2rem;">Robert Mager introduced this model in <em>Preparing Instructional Objectives</em> (1962), and it remains one of the most precise ELO writing frameworks adopted in KICD's assessment and curriculum documentation. It is particularly suited to <strong>technical, vocational, and psychomotor outcomes</strong> — making it ideal for CBC's STEM, Arts & Sports, and TVET pathways where specific performance standards must be stated.</p>
+
+        <div class="elo-formula">
+          <div class="formula-part"><span class="fp-letter">P</span><span class="fp-word">Performance</span></div>
+          <div class="formula-plus">+</div>
+          <div class="formula-part"><span class="fp-letter">C</span><span class="fp-word">Condition</span></div>
+          <div class="formula-plus">+</div>
+          <div class="formula-part"><span class="fp-letter">Cr</span><span class="fp-word">Criterion</span></div>
+          <div class="formula-eq">=</div>
+          <div class="formula-result">Performance Objective</div>
+        </div>
+
+        <div class="component-row">
+          <div class="component-item">
+            <div class="ci-letter">P</div>
+            <div class="ci-name">Performance</div>
+            <div class="ci-desc">The specific, observable act the learner will perform — expressed as a verb + content phrase. It describes the terminal behaviour: what the learner will actually <em>do</em> at the end of the lesson. For CBC, this must be a Bloom's Taxonomy action verb. The performance is the heart of the objective — the other two components simply sharpen it.</div>
+          </div>
+          <div class="component-item">
+            <div class="ci-letter">C</div>
+            <div class="ci-name">Condition</div>
+            <div class="ci-desc">The specific situation, tools, resources, constraints, or stimuli under which the performance will be demonstrated. For TVET and STEM subjects, conditions are very precise: "given a vernier calliper and a steel cylinder", "using Python 3 and a standard IDE", "with access to a periodic table but no other reference". This ensures fairness and reproducibility of assessment.</div>
+          </div>
+          <div class="component-item">
+            <div class="ci-letter">Cr</div>
+            <div class="ci-name">Criterion</div>
+            <div class="ci-desc">The explicit standard that defines acceptable performance — the benchmark for "good enough". It can be expressed as accuracy ("within ±0.5mm"), completeness ("all 8 safety checks"), speed ("within 10 minutes"), or quality ("achieving a score of 3 or higher on a 4-level analytic rubric"). The criterion directly feeds into CBC's competency grading and formative assessment records.</div>
+          </div>
+        </div>
+
+        <div class="example-box">
+          <div class="example-label">📌 Mager's Model Examples</div>
+          <div class="example-text">
+            <strong>Technical Drawing / Design & Technology (Grade 10 · STEM):</strong><br>
+            <em>"<strong>Draw a first-angle orthographic projection of a cylindrical bracket</strong> [P], given a 3D isometric view and drawing instruments but without a template [C], <strong>with all dimensions correctly labelled to ±0.5mm accuracy and full title block completed</strong> [Cr]."</em>
+            <br><br>
+            <strong>Physical Education / Sports Science (Grade 11 · Arts & Sports):</strong><br>
+            <em>"<strong>Demonstrate the correct technique for a basketball lay-up shot</strong> [P], from a live-ball dribble situation in a 3-vs-2 defensive drill [C], <strong>achieving a successful basket in at least 4 out of 6 attempts</strong> [Cr]."</em>
+            <br><br>
+            <strong>Agriculture (Grade 9 · STEM/Practical):</strong><br>
+            <em>"<strong>Prepare a seedbed for transplanting tomato seedlings</strong> [P], using locally available materials and without supervisor assistance [C], <strong>completing all 7 steps on the KICD practical checklist within 40 minutes</strong> [Cr]."</em>
+          </div>
+        </div>
+
+        <div class="tips-box">
+          <h5>🔧 Mager Model — Best Use Cases in CBC</h5>
+          <ul>
+            <li>Psychomotor domain outcomes (lab experiments, sports techniques, art production, music performance).</li>
+            <li>TVET pathway assessments where industry-standard precision is required in lesson planning.</li>
+            <li>Practical examination preparation — where exact conditions and criteria must be communicated to learners in advance.</li>
+            <li>Writing rubric anchor descriptors — the Criterion directly translates into rubric performance level descriptors.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 · KSV/A FRAMEWORK -->
+    <div class="content-block" id="ksva-framework">
+      <div class="section-label">// 07 · KSV/A Framework</div>
+      <div class="divider"></div>
+      <h2 class="section-title">The KSV/A Framework — Knowledge · Skills · Values/Attitudes</h2>
+      <p class="section-desc">The KSV/A framework is KICD's three-domain taxonomy for categorising what CBC learning outcomes target. Every well-rounded CBC lesson should include outcomes across all three domains — not just cognitive knowledge.</p>
+
+      <div class="definition-box">
+        <h2>Why KICD Uses KSV/A</h2>
+        <p>The 8-4-4 curriculum was criticised for producing learners rich in <em>knowledge</em> but lacking in practical <em>skills</em> and positive <em>values and attitudes</em>. CBC addresses this directly through the KSV/A framework — requiring that lesson planning, instruction, and assessment address all three learning domains in every sub-strand. A lesson plan with only knowledge-level ELOs is considered incomplete under KICD standards.</p>
+      </div>
+
+      <div class="ksva-grid">
+        <div class="ksva-card">
+          <div class="ksva-head">
+            <div class="ksva-letter">K</div>
+            <div class="ksva-head-text">
+              <h4>Knowledge</h4>
+              <span>Cognitive Domain</span>
+            </div>
+          </div>
+          <div class="ksva-body">
+            <p>What the learner will <strong>know, understand, and recall</strong> — facts, concepts, principles, theories, and information. Knowledge outcomes target the mind and are assessed through written tests, oral Q&A, interviews, and questionnaires. They correspond to the lower-to-middle levels of Bloom's Taxonomy (Remembering → Analysing).</p>
+            <div class="ksva-domain-badge badge-k">Bloom's Levels 1–4</div>
+            <div class="ksva-examples">
+              <div class="ksva-ex">State the three states of matter and their properties</div>
+              <div class="ksva-ex">Identify the organs of the digestive system</div>
+              <div class="ksva-ex">Recall the causes of World War I</div>
+              <div class="ksva-ex">Define osmosis and give two examples</div>
+              <div class="ksva-ex">Name the layers of the atmosphere in order</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ksva-card">
+          <div class="ksva-head">
+            <div class="ksva-letter">S</div>
+            <div class="ksva-head-text">
+              <h4>Skills</h4>
+              <span>Psychomotor + Higher Cognitive</span>
+            </div>
+          </div>
+          <div class="ksva-body">
+            <p>What the learner will be able to <strong>do, apply, create, and perform</strong> — practical, communication, analytical, and technical skills. Skills outcomes are assessed through projects, portfolios, observation schedules, peer assessment, and practical demonstrations. They correspond to the upper levels of Bloom's (Applying → Creating).</p>
+            <div class="ksva-domain-badge badge-s">Bloom's Levels 3–6</div>
+            <div class="ksva-examples">
+              <div class="ksva-ex">Construct a circuit diagram using correct symbols</div>
+              <div class="ksva-ex">Write a persuasive speech on climate change</div>
+              <div class="ksva-ex">Design a database schema for a school library</div>
+              <div class="ksva-ex">Perform a forward roll with correct technique</div>
+              <div class="ksva-ex">Use a microscope to prepare and observe a slide</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ksva-card">
+          <div class="ksva-head">
+            <div class="ksva-letter">V/A</div>
+            <div class="ksva-head-text">
+              <h4>Values &amp; Attitudes</h4>
+              <span>Affective Domain</span>
+            </div>
+          </div>
+          <div class="ksva-body">
+            <p>What the learner will <strong>internalise, value, believe, and consistently demonstrate</strong> in behaviour — moral, civic, and interpersonal dispositions. Values/Attitudes outcomes are often the most neglected but are central to CBC's citizenship competency. Assessed through anecdotal records, self-assessment, observation schedules, and portfolios over time.</p>
+            <div class="ksva-domain-badge badge-va">Affective Domain</div>
+            <div class="ksva-examples">
+              <div class="ksva-ex">Demonstrate teamwork during group projects</div>
+              <div class="ksva-ex">Show respect for different cultural practices</div>
+              <div class="ksva-ex">Appreciate the importance of environmental conservation</div>
+              <div class="ksva-ex">Develop a habit of punctuality and time management</div>
+              <div class="ksva-ex">Exhibit honesty when reporting laboratory results</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-band">
+        <h3>KSV/A Balance in a CBC Lesson Plan</h3>
+        <p>KICD recommends that a standard lesson plan (2–4 ELOs) includes at least one Knowledge outcome, one Skills outcome, and one Values/Attitudes outcome. This ensures learners develop as whole persons — cognitively, practically, and morally — fulfilling the CBC holistic education mandate.</p>
+        <div class="hb-grid">
+          <div class="hb-item">
+            <div class="hb-title">✅ Well-Balanced Lesson (Gr 8 Sci)</div>
+            <div class="hb-text">K: State the products of photosynthesis. S: Conduct a leaf starch test experiment. V/A: Appreciate the role of plants in ecosystem balance.</div>
+          </div>
+          <div class="hb-item">
+            <div class="hb-title">⚠️ Knowledge-Heavy (Imbalanced)</div>
+            <div class="hb-text">K1: Define photosynthesis. K2: List the reactants. K3: State the equation. — All three outcomes are at Bloom's Level 1–2 with no skills or values dimension. Common in 8-4-4 legacy teaching.</div>
+          </div>
+          <div class="hb-item">
+            <div class="hb-title">💡 Differentiating V/A Outcomes</div>
+            <div class="hb-text">Values/Attitudes outcomes develop over time — write them as "The learner will develop/appreciate/show/demonstrate" and assess through observation schedules and anecdotal records across the unit, not just in one lesson.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 · BLOOM'S TAXONOMY -->
+    <div class="content-block" id="blooms-taxonomy">
+      <div class="section-label">// 08 · Bloom's Taxonomy</div>
+      <div class="divider"></div>
+      <h2 class="section-title">Bloom's Revised Taxonomy — The Verb Source for ELOs</h2>
+      <p class="section-desc">Bloom's Revised Taxonomy (Anderson & Krathwohl, 2001 — a revision of Bloom's 1956 original) is the primary source for action verbs in CBC ELO writing. KICD explicitly requires teachers to select verbs from Bloom's levels appropriate to the learner's grade and lesson purpose.</p>
+
+      <p style="font-size:0.88rem; color:var(--muted); margin-bottom:1.2rem; line-height:1.7;">The taxonomy organises cognitive learning into six hierarchical levels — from simple recall at the base to complex creative synthesis at the apex. <strong style="color:var(--navy);">CBC's competency-based approach demands outcomes across all six levels</strong>, with higher-order outcomes (Analysis, Evaluation, Creation) especially valued because they reflect real-world problem-solving and not just memorisation.</p>
+
+      <div class="blooms-pyramid">
+        <div class="bloom-level bl-6">
+          <div class="bloom-left">
+            <div class="bloom-rank">06</div>
+            <div>
+              <div class="bloom-name">Creating (Synthesis)</div>
+              <div class="bloom-desc">Producing new or original work — highest cognitive level</div>
+            </div>
+          </div>
+          <div class="bloom-verbs">
+            <span class="verb-chip">Design</span><span class="verb-chip">Construct</span><span class="verb-chip">Develop</span>
+            <span class="verb-chip">Formulate</span><span class="verb-chip">Produce</span><span class="verb-chip">Compose</span>
+            <span class="verb-chip">Plan</span><span class="verb-chip">Invent</span><span class="verb-chip">Build</span>
+          </div>
+        </div>
+        <div class="bloom-level bl-5">
+          <div class="bloom-left">
+            <div class="bloom-rank">05</div>
+            <div>
+              <div class="bloom-name">Evaluating (Judgment)</div>
+              <div class="bloom-desc">Making justified judgments based on criteria and evidence</div>
+            </div>
+          </div>
+          <div class="bloom-verbs">
+            <span class="verb-chip">Evaluate</span><span class="verb-chip">Justify</span><span class="verb-chip">Critique</span>
+            <span class="verb-chip">Judge</span><span class="verb-chip">Argue</span><span class="verb-chip">Assess</span>
+            <span class="verb-chip">Recommend</span><span class="verb-chip">Defend</span><span class="verb-chip">Appraise</span>
+          </div>
+        </div>
+        <div class="bloom-level bl-4">
+          <div class="bloom-left">
+            <div class="bloom-rank">04</div>
+            <div>
+              <div class="bloom-name">Analysing (Breakdown)</div>
+              <div class="bloom-desc">Breaking material into components; recognising patterns</div>
+            </div>
+          </div>
+          <div class="bloom-verbs">
+            <span class="verb-chip">Analyse</span><span class="verb-chip">Differentiate</span><span class="verb-chip">Compare</span>
+            <span class="verb-chip">Contrast</span><span class="verb-chip">Classify</span><span class="verb-chip">Examine</span>
+            <span class="verb-chip">Distinguish</span><span class="verb-chip">Organise</span><span class="verb-chip">Deconstruct</span>
+          </div>
+        </div>
+        <div class="bloom-level bl-3">
+          <div class="bloom-left">
+            <div class="bloom-rank">03</div>
+            <div>
+              <div class="bloom-name">Applying (Use)</div>
+              <div class="bloom-desc">Using knowledge in new situations; carrying out procedures</div>
+            </div>
+          </div>
+          <div class="bloom-verbs">
+            <span class="verb-chip">Apply</span><span class="verb-chip">Calculate</span><span class="verb-chip">Solve</span>
+            <span class="verb-chip">Use</span><span class="verb-chip">Demonstrate</span><span class="verb-chip">Implement</span>
+            <span class="verb-chip">Execute</span><span class="verb-chip">Operate</span><span class="verb-chip">Carry out</span>
+          </div>
+        </div>
+        <div class="bloom-level bl-2">
+          <div class="bloom-left">
+            <div class="bloom-rank">02</div>
+            <div>
+              <div class="bloom-name">Understanding (Comprehension)</div>
+              <div class="bloom-desc">Constructing meaning from information; explaining ideas</div>
+            </div>
+          </div>
+          <div class="bloom-verbs">
+            <span class="verb-chip">Explain</span><span class="verb-chip">Summarise</span><span class="verb-chip">Interpret</span>
+            <span class="verb-chip">Describe</span><span class="verb-chip">Paraphrase</span><span class="verb-chip">Classify</span>
+            <span class="verb-chip">Compare</span><span class="verb-chip">Illustrate</span><span class="verb-chip">Infer</span>
+          </div>
+        </div>
+        <div class="bloom-level bl-1">
+          <div class="bloom-left">
+            <div class="bloom-rank">01</div>
+            <div>
+              <div class="bloom-name">Remembering (Recall)</div>
+              <div class="bloom-desc">Retrieving relevant knowledge from long-term memory</div>
+            </div>
+          </div>
+          <div class="bloom-verbs">
+            <span class="verb-chip">Define</span><span class="verb-chip">List</span><span class="verb-chip">Recall</span>
+            <span class="verb-chip">Name</span><span class="verb-chip">State</span><span class="verb-chip">Identify</span>
+            <span class="verb-chip">Label</span><span class="verb-chip">Match</span><span class="verb-chip">Reproduce</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(201,160,61,0.07); border-radius:14px; padding:1.4rem; margin-top:1.2rem; border:1px solid rgba(201,160,61,0.2);">
+        <h4 style="font-size:0.9rem; font-weight:800; color:var(--navy); margin-bottom:0.8rem;">🚫 Bloom's Forbidden Verbs in CBC ELOs</h4>
+        <p style="font-size:0.85rem; color:var(--text); line-height:1.7;">The following verbs are <strong style="color:#c0392b;">not acceptable</strong> in CBC ELO writing because they describe internal, unobservable mental states that cannot be directly assessed using any of the 13 KICD tools:</p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:0.8rem;">
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Understand</span>
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Know</span>
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Appreciate</span>
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Be aware of</span>
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Think about</span>
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Feel</span>
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Realise</span>
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Believe</span>
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Enjoy</span>
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Learn</span>
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Study</span>
+          <span style="background:rgba(220,53,69,0.1); color:#c0392b; font-size:0.75rem; font-weight:700; padding:3px 12px; border-radius:40px; border:1px solid rgba(220,53,69,0.2);">Be familiar with</span>
+        </div>
+        <p style="font-size:0.8rem; color:var(--muted); margin-top:0.8rem; line-height:1.6;"><strong>Exception:</strong> Values/Attitudes (V/A) outcomes may use words like "appreciate" or "develop" only when combined with observable behavioural indicators — e.g. "Appreciate the importance of water conservation by consistently participating in the school water-saving campaign."</p>
+      </div>
+    </div>
+
+    <!-- 09 · THEORIES -->
+    <div class="content-block" id="theories">
+      <div class="section-label">// 09 · Theoretical Foundations</div>
+      <div class="divider"></div>
+      <h2 class="section-title">Learning Theories Underpinning CBC ELOs</h2>
+      <p class="section-desc">The ELO writing models and the CBC curriculum are not arbitrary — they are grounded in well-established educational theories. Understanding these theories helps teachers write better ELOs and design more effective lessons.</p>
+
+      <div class="theory-grid">
+        <div class="theory-card">
+          <div class="theory-icon">🧱</div>
+          <h4>Constructivism</h4>
+          <div class="theorist">Vygotsky · Piaget · Bruner</div>
+          <p>Learners actively construct knowledge by connecting new experiences to prior knowledge. Knowledge is not passively received — it is personally built through interaction with the environment and social engagement.</p>
+          <div class="theory-cbc-link">CBC requires ELOs to build progressively from prior learning — "identify before classify before analyse". The Zone of Proximal Development (Vygotsky) directly informs the Achievable criterion in SMART outcomes and the Degree in Mager's model.</div>
+        </div>
+
+        <div class="theory-card">
+          <div class="theory-icon">🌱</div>
+          <h4>Experiential Learning Theory</h4>
+          <div class="theorist">David Kolb (1984)</div>
+          <p>Learning is a cycle: Concrete Experience → Reflective Observation → Abstract Conceptualisation → Active Experimentation. Learners learn best when they experience, reflect, conceptualise, and then test in new contexts.</p>
+          <div class="theory-cbc-link">CBC's Project-Based Learning (PBL) and Community Service Learning (CSL) are built on Kolb's cycle. ELOs for project and portfolio tasks should address all four stages of the cycle across a unit — not just conceptualisation alone.</div>
+        </div>
+
+        <div class="theory-card">
+          <div class="theory-icon">🔗</div>
+          <h4>Social Learning Theory</h4>
+          <div class="theorist">Albert Bandura (1977)</div>
+          <p>Learners learn by observing, modelling, and imitating others in social contexts. Self-efficacy — a learner's belief in their own ability — is a crucial predictor of learning success and persistence.</p>
+          <div class="theory-cbc-link">Self-Efficacy is one of CBC's 7 core competencies. ELOs must be achievable enough to build self-confidence, especially for lower-ability learners. Peer and self-assessment tools directly leverage Bandura's modelling principles.</div>
+        </div>
+
+        <div class="theory-card">
+          <div class="theory-icon">🎯</div>
+          <h4>Competency-Based Education (CBE) Theory</h4>
+          <div class="theorist">Benjamin Bloom · Grant Wiggins</div>
+          <p>Learners must demonstrate mastery of defined competencies before progressing — time is variable, but learning standards are fixed. This contrasts directly with the 8-4-4 time-fixed, standard-variable model.</p>
+          <div class="theory-cbc-link">CBC is Kenya's implementation of CBE. ELOs serve as the "mastery definitions" for each lesson and unit. The 60:40 (coursework:exam) split ensures competency is assessed continuously — not just at the terminal exam.</div>
+        </div>
+
+        <div class="theory-card">
+          <div class="theory-icon">🔄</div>
+          <h4>Backward Design (UbD)</h4>
+          <div class="theorist">Wiggins & McTighe (1998)</div>
+          <p>Effective curriculum design begins with the end in mind: first define the desired outcomes and assessment evidence, then design the learning activities. This is the opposite of "coverage-first" teaching.</p>
+          <div class="theory-cbc-link">KICD's lesson plan format follows backward design: ELOs are written first, assessment tools selected second, and learning activities planned last. This is why writing good ELOs is the single most important lesson planning skill in CBC.</div>
+        </div>
+
+        <div class="theory-card">
+          <div class="theory-icon">🧠</div>
+          <h4>Multiple Intelligences Theory</h4>
+          <div class="theorist">Howard Gardner (1983)</div>
+          <p>Learners have multiple distinct intelligences: linguistic, logical-mathematical, spatial, musical, bodily-kinesthetic, interpersonal, intrapersonal, and naturalist. Schools historically over-valued only the first two.</p>
+          <div class="theory-cbc-link">CBC's three-pathway structure (STEM, Social Sciences, Arts & Sports) and the KSV/A framework directly honour multiple intelligences. ELOs should be written across all three domains so that learners with different intelligences can demonstrate competency in different ways.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 · MODELS COMPARISON -->
+    <div class="models-compare" id="models-comparison">
+      <div class="mc-header">
+        <div>
+          <h3>// 10 · Quick Comparison of All Four Models</h3>
+          <p>When to use each ELO writing model in Kenya's CBC context</p>
+        </div>
+      </div>
+      <div class="mc-body">
+        <table class="ref-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Components</th>
+              <th>Best for</th>
+              <th>Assessment link</th>
+              <th>CBC level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>VOC</strong></td>
+              <td>Verb + Object + Context</td>
+              <td>Daily lesson plans at all grade levels; fastest to write; most teacher-friendly</td>
+              <td>All 13 KICD tools; best paired with Observation Schedule, Written Test, Checklist</td>
+              <td><span class="tag-sm">Gr 1–12</span></td>
+            </tr>
+            <tr>
+              <td><strong>ABCD</strong></td>
+              <td>Audience + Behaviour + Condition + Degree</td>
+              <td>Curriculum design documents, schemes of work, teacher induction, differentiated instruction</td>
+              <td>Best with Rubrics, Rating Scales, Portfolio; Degree maps directly to rubric levels</td>
+              <td><span class="tag-sm">Gr 7–12</span></td>
+            </tr>
+            <tr>
+              <td><strong>SMART</strong></td>
+              <td>Specific + Measurable + Achievable + Relevant + Time-bound</td>
+              <td>Auditing and improving existing ELOs; unit planning; quality assurance; CPD workshops</td>
+              <td>Used as a meta-checklist — does not prescribe assessment tools but verifies measurability</td>
+              <td><span class="tag-sm">All levels</span></td>
+            </tr>
+            <tr>
+              <td><strong>Mager's</strong></td>
+              <td>Performance + Condition + Criterion</td>
+              <td>Technical subjects, TVET, STEM practicals, Arts & Sports, psychomotor tasks</td>
+              <td>Best with Observation Schedule, Checklist, Project, Rubric; Criterion becomes rubric descriptor</td>
+              <td><span class="tag-sm">Gr 10–12</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 11 · COMMON MISTAKES -->
+    <div class="content-block" id="common-mistakes">
+      <div class="section-label">// 11 · Common Mistakes</div>
+      <div class="divider"></div>
+      <h2 class="section-title">Common ELO Writing Mistakes — and How to Fix Them</h2>
+      <p class="section-desc">These are the most frequently observed errors in CBC lesson plans inspected by KICD curriculum support officers and TSC quality assurance teams.</p>
+
+      <div class="mistakes-grid">
+        <div class="mistake-block wrong">
+          <div class="mistake-label">❌ Wrong</div>
+          <p>"The learner will <strong>understand</strong> photosynthesis."<br><br><em>Problem: "Understand" is an unobservable verb; no assessment tool can directly measure it.</em></p>
+        </div>
+        <div class="mistake-block right">
+          <div class="mistake-label">✅ Corrected</div>
+          <p>"The learner will <strong>explain</strong> the process of photosynthesis using a labelled diagram of a leaf cell."<br><br><em>Fix: Replaced with observable verb "explain"; object and context added.</em></p>
+        </div>
+
+        <div class="mistake-block wrong">
+          <div class="mistake-label">❌ Wrong</div>
+          <p>"The learner will study <strong>all of algebra</strong>."<br><br><em>Problem: Not specific; covers multiple sub-strands and many lessons' worth of content.</em></p>
+        </div>
+        <div class="mistake-block right">
+          <div class="mistake-label">✅ Corrected</div>
+          <p>"The learner will <strong>solve</strong> two-step linear equations involving one variable using the balancing method."<br><br><em>Fix: Narrowed to a specific skill with a clear method specified.</em></p>
+        </div>
+
+        <div class="mistake-block wrong">
+          <div class="mistake-label">❌ Wrong</div>
+          <p>"The <strong>teacher will teach</strong> the water cycle using a diagram."<br><br><em>Problem: Describes teacher activity, not learner outcome — violates the learner-centred principle.</em></p>
+        </div>
+        <div class="mistake-block right">
+          <div class="mistake-label">✅ Corrected</div>
+          <p>"The learner will <strong>trace</strong> the water cycle and <strong>label</strong> its four stages on a blank diagram."<br><br><em>Fix: Re-centred on the learner; two observable outcomes clearly stated.</em></p>
+        </div>
+
+        <div class="mistake-block wrong">
+          <div class="mistake-label">❌ Wrong</div>
+          <p>"The learner will write an essay, do a group presentation, complete a portfolio, conduct a survey, and create a model about climate change."<br><br><em>Problem: Five separate tasks in one lesson — unachievable and unfocused.</em></p>
+        </div>
+        <div class="mistake-block right">
+          <div class="mistake-label">✅ Corrected</div>
+          <p>"The learner will <strong>write</strong> a structured 3-paragraph opinion essay on the effects of climate change on Kenyan farming communities."<br><br><em>Fix: One achievable task with specific parameters; others moved to subsequent lessons.</em></p>
+        </div>
+
+        <div class="mistake-block wrong">
+          <div class="mistake-label">❌ Wrong (All K-level)</div>
+          <p>ELO 1: "Define erosion." ELO 2: "State three causes of erosion." ELO 3: "Name two types of soil erosion."<br><br><em>Problem: All three outcomes are at Bloom's Level 1 (Remember) — no skills or values dimension; typical 8-4-4 legacy planning.</em></p>
+        </div>
+        <div class="mistake-block right">
+          <div class="mistake-label">✅ KSV/A-Balanced</div>
+          <p>K: "Define soil erosion and identify its causes." S: "Construct a soil conservation model using local materials." V/A: "Show commitment to soil conservation practices in the school compound."<br><br><em>Fix: One outcome per KSV/A domain; progressive Bloom's levels.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 · STEP-BY-STEP GUIDE -->
+    <div class="content-block" id="writing-steps">
+      <div class="section-label">// 12 · Writing Guide</div>
+      <div class="divider"></div>
+      <h2 class="section-title">Step-by-Step: How to Write CBC ELOs for Your Lesson Plan</h2>
+      <p class="section-desc">Follow this seven-step process every time you write Expected Learning Outcomes for a CBC lesson plan — from curriculum consultation to final verification.</p>
+
+      <div class="step-guide">
+        <div class="step-item">
+          <div class="step-circle">01</div>
+          <div class="step-content">
+            <h5>Consult the KICD Curriculum Design Document</h5>
+            <p>Open the relevant KICD curriculum design document for your subject, grade, strand, and sub-strand. Identify the General Learning Outcome (GLO) for the sub-strand you are teaching. Your SLOs must be directly derived from this GLO — never invented independently. The curriculum document is your non-negotiable starting point.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">02</div>
+          <div class="step-content">
+            <h5>Determine What Can Be Achieved in One Lesson Period</h5>
+            <p>Break the GLO into smaller, lesson-sized chunks. Ask: "What is the single most important thing learners must be able to do after this 40-minute lesson that they could not do before?" This discipline prevents overloaded lesson plans and ensures realistic ELOs. A single lesson should contribute to — but not fully achieve — a broad GLO.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">03</div>
+          <div class="step-content">
+            <h5>Plan for KSV/A Coverage</h5>
+            <p>Decide which domains you will address in this lesson — Knowledge, Skills, and/or Values/Attitudes. Plan at least one outcome per domain. Remember: it is acceptable to have a stronger Knowledge + Skills lesson if a previous lesson covered Values/Attitudes deeply — balance can be achieved across a unit, not necessarily every single period.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">04</div>
+          <div class="step-content">
+            <h5>Select Your Bloom's Taxonomy Verbs</h5>
+            <p>For each planned outcome, choose one precise, observable Bloom's verb at the correct cognitive level for the learner's grade and prior knowledge. Progression within a unit should move upward through Bloom's levels — start lower-order early in a unit and progress to higher-order by the end. Avoid defaulting to Levels 1–2 only.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">05</div>
+          <div class="step-content">
+            <h5>Choose Your Writing Model and Draft the ELO</h5>
+            <p>Select the most appropriate model — VOC for daily lessons; ABCD for differentiated or formal planning; Mager's for technical/practical outcomes. Draft each ELO as one complete, grammatically correct sentence. Begin each with the standard stem: <em>"By the end of the lesson, the learner should be able to…"</em> followed immediately by your Bloom's verb.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">06</div>
+          <div class="step-content">
+            <h5>Run the SMART Audit on Each ELO</h5>
+            <p>Check each draft ELO against the five SMART criteria. Ask: Is it Specific enough? Can I measure it with a KICD tool? Is it Achievable for all my learners? Is it Relevant to the sub-strand and core competencies? Is the time frame stated? Edit until all five criteria are satisfied. This step prevents common errors before you finalise the lesson plan.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">07</div>
+          <div class="step-content">
+            <h5>Select Your Assessment Tool(s) and Design Backward</h5>
+            <p>For each finalised ELO, select the appropriate KICD assessment tool (e.g. Rubric for the Skills outcome; Observation Schedule for the Values/Attitudes outcome; Written Test for the Knowledge outcome). Then design your learning activities specifically to prepare learners to succeed in those assessments. This is backward design — assessment drives instruction, not the reverse.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-box" style="margin-top:0.5rem;">
+        <div class="example-label">📋 Complete Worked Example — Grade 8 Mathematics</div>
+        <div class="example-text">
+          <strong>Sub-strand:</strong> Algebra — Solving Linear Equations (Grades 7–9 Curriculum)<br>
+          <strong>GLO:</strong> The learner should be able to apply algebraic methods to model and solve real-life situations.<br><br>
+          <strong>ELO 1 (K · VOC · Bloom's L2):</strong> "By the end of the lesson, the learner should be able to <em>explain</em> the meaning of a variable and a coefficient in a linear equation using examples from daily spending."<br>
+          <strong>Assessment tool:</strong> Oral Questions & Answers<br><br>
+          <strong>ELO 2 (S · VOC · Bloom's L3):</strong> "By the end of the lesson, the learner should be able to <em>solve</em> two-step linear equations involving positive integers using the balancing method, given three word problems based on market pricing."<br>
+          <strong>Assessment tool:</strong> Written Test (3-question exercise)<br><br>
+          <strong>ELO 3 (V/A · VOC · Affective):</strong> "By the end of the lesson, the learner should be able to <em>demonstrate</em> patience and perseverance when solving multi-step problems during pair work."<br>
+          <strong>Assessment tool:</strong> Observation Schedule (teacher records behaviour during pair work)
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE NAV -->
+    <div class="page-nav-strip">
+      <a href="assessment-tools.html" class="pns-prev">
+        <div class="pns-arrow">←</div>
+        <div>
+          <span class="pns-label">Previous page</span>
+          Assessment Tools
+        </div>
+      </a>
+      <div style="text-align:center;">
+        <a href="resources.html" class="btn-resource" style="font-size:0.82rem; padding:9px 20px;">📥 Download ELO Templates</a>
+      </div>
+      <a href="teacher-requirements.html" class="pns-next">
+        <div>
+          <span class="pns-label">Next page</span>
+          Teacher Requirements
+        </div>
+        <div class="pns-arrow">→</div>
+      </a>
+    </div>
+
+  </div><!-- /.main-content -->
+</div><!-- /.page-layout -->
+</div><!-- /.container -->
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>📘 CBC Best</strong>
+        <p>Kenya's most comprehensive Competency Based Curriculum resource — KICD-aligned content for students, teachers, and parents. By Ronny Mwenda (Ronny Best), Mathematics & Computer Science Teacher, Embu County, Kenya.</p>
+        <div class="ecosystem">
+          Part of the Ronny Mwenda digital ecosystem:
+          <a href="https://bestronny.netlify.app" target="_blank" rel="noopener">Bestronny</a> ·
+          <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener">RonnyMwenda</a> ·
+          <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener">RonnyGame</a>
+        </div>
+        <div style="margin-top:1rem; font-size:0.78rem; color:rgba(255,228,196,0.45);">
+          📧 <a href="mailto:ronnymwenda89@gmail.com" style="color:rgba(201,160,61,0.8);">ronnymwenda89@gmail.com</a> &nbsp;·&nbsp;
+          📱 <a href="tel:+254799188900" style="color:rgba(201,160,61,0.8);">+254 799 188 900</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>CBC Best</h4>
+        <a href="index.html">Home</a>
+        <a href="pathways.html">Pathways</a>
+        <a href="subjects-skills.html">Subjects & Skills</a>
+        <a href="assessment-tools.html">Assessment Tools</a>
+        <a href="learning-outcomes.html">Learning Outcomes</a>
+        <a href="teacher-requirements.html">Teacher Hub</a>
+        <a href="mathematics-computer-science.html">Maths & CS</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="resources.html">Downloads</a>
+        <a href="faq.html">CBC FAQ</a>
+        <a href="blog.html">News & Updates</a>
+        <a href="forums.html">Discussion Forums</a>
+        <a href="about-contact.html">About Ronny</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CBC Best — Competency Based Curriculum Hub. Original KICD-aligned content for Kenyan educators and learners. By Ronny Mwenda (Ronny Best).</p>
+      <p><a href="/sitemap.xml">Sitemap</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-use.html">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── Tab switching (VOC examples) ── */
+  function showTab(btn, group, id) {
+    const container = btn.closest('.model-body');
+    container.querySelectorAll('.ex-tab').forEach(t => t.classList.remove('active'));
+    container.querySelectorAll('.ex-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    const el = document.getElementById(group + '-' + id);
+    if (el) el.classList.add('active');
+  }
+
+  /* ── Mobile nav ── */
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const navLinks = document.getElementById('navLinks');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('show');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      menuBtn.textContent = isOpen ? '✕ Close' : '☰ Menu';
+    });
+  }
+
+  /* ── Active nav link ── */
+  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    if (link.getAttribute('href') === currentFile) link.classList.add('active');
+  });
+
+  /* ── TOC active highlight on scroll ── */
+  const sections = document.querySelectorAll('[id]');
+  const tocLinks = document.querySelectorAll('.toc-list a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(link => link.classList.remove('active'));
+        const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.25, rootMargin: '-80px 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+
+  /* ── Scroll reveal animation ── */
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.content-block, .model-card, .models-compare, .theory-card, .ksva-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    revealObserver.observe(el);
+  });
+
+  console.log('%cCBC Best — Learning Outcomes\nRonny Mwenda (Ronny Best) · Embu, Kenya\nhttps://cbcbest.netlify.app/learning-outcomes.html', 'color:#C9A03D; font-weight:bold;');
+</script>
+
+<!-- PWA -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(r => console.log('SW:', r.scope))
+        .catch(e => console.log('SW error:', e));
+    });
+  }
+</script>
+</body>
+</html>

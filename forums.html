@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Theme / PWA -->
+  <meta name="theme-color" content="#0B1F2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CBC Best">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta name="msapplication-TileImage" content="images/icon-144.png">
+  <meta name="msapplication-TileColor" content="#0B1F2E">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>CBC Discussion Forums | Students, Teachers & Parents — CBC Best · Ronny Mwenda</title>
+  <meta name="description" content="CBC Best discussion forums — open, moderated spaces for Kenyan students, teachers, and parents to discuss the Competency Based Curriculum. Separate forums for STEM, Social Sciences, and Arts & Sports pathways. By Ronny Mwenda, Mathematics & Computer Science teacher, Embu.">
+  <meta name="keywords" content="CBC forums Kenya, CBC discussion, STEM forum Kenya, Social Sciences forum Kenya, Arts Sports forum CBC, CBC teacher community, CBC student help, KICD CBC community, CBC Embu, CBC Grade 7 8 9 10 11 12">
+  <meta name="author" content="Ronny Mwenda (Ronny Best)">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cbcbest.netlify.app/forums.html">
+  <meta property="og:title" content="CBC Discussion Forums | CBC Best — Ronny Mwenda">
+  <meta property="og:description" content="Open discussion forums for Kenyan students, teachers, and parents on the Competency Based Curriculum — STEM, Social Sciences, Arts & Sports.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cbcbest.netlify.app/forums.html">
+  <meta property="og:locale" content="en_KE">
+  <meta property="og:site_name" content="CBC Best">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@ronnymwenda89">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy:   #0B1F2E;
+      --navy2:  #132c40;
+      --navy3:  #1a3a54;
+      --gold:   #C9A03D;
+      --gold2:  #e6b94a;
+      --cream:  #FFF8EE;
+      --peach:  #FFE4C4;
+      --white:  #FFFFFF;
+      --text:   #1E2F3E;
+      --muted:  #5a7285;
+      --border: rgba(201,160,61,0.18);
+      --card-bg:#FFFFFF;
+      --radius: 20px;
+      --radius-lg: 32px;
+      --shadow: 0 8px 32px rgba(11,31,46,0.10);
+      --shadow-hover: 0 16px 48px rgba(11,31,46,0.18);
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --mono: 'Space Mono', monospace;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--cream); color: var(--text); line-height: 1.65; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { cursor: pointer; color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: var(--font); }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+
+    /* HEADER */
+    .site-header { background: var(--navy); position: sticky; top: 0; z-index: 200; border-bottom: 1px solid rgba(201,160,61,0.15); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 28px; max-width: 1240px; margin: 0 auto; gap: 1.5rem; }
+    .logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .logo-icon { width: 40px; height: 40px; background: var(--gold); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; color: var(--navy); font-family: var(--mono); flex-shrink: 0; }
+    .logo-text { line-height: 1.2; }
+    .logo-text strong { display: block; font-size: 1.15rem; font-weight: 800; color: var(--white); letter-spacing: -0.3px; }
+    .logo-text span { font-size: 0.72rem; color: rgba(255,228,196,0.7); letter-spacing: 0.4px; font-weight: 500; }
+    .nav-links { display: flex; align-items: center; gap: 0.15rem; flex-wrap: nowrap; }
+    .nav-links a { color: rgba(255,228,196,0.85); font-weight: 600; font-size: 0.82rem; padding: 6px 11px; border-radius: 8px; transition: all 0.18s; white-space: nowrap; letter-spacing: 0.2px; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); background: rgba(201,160,61,0.15); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 7px 16px !important; border-radius: 40px !important; font-weight: 700 !important; }
+    .nav-cta:hover { background: var(--gold2) !important; transform: translateY(-1px); }
+    .menu-toggle { display: none; background: none; border: 1px solid rgba(201,160,61,0.4); color: var(--peach); padding: 7px 14px; border-radius: 8px; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; transition: 0.2s; }
+    .menu-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* PAGE HERO */
+    .page-hero {
+      background: var(--navy);
+      padding: 3.5rem 0 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(201,160,61,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,160,61,0.12); border: 1px solid rgba(201,160,61,0.3);
+      color: var(--gold); font-size: 0.78rem; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; padding: 6px 14px; border-radius: 40px; margin-bottom: 1.2rem;
+    }
+    .hero-label span { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: inline-block; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.7)} }
+    .page-hero h1 { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 800; color: var(--white); line-height: 1.15; letter-spacing: -0.8px; margin-bottom: 0.9rem; max-width: 740px; }
+    .page-hero h1 em { font-style: italic; color: var(--gold); }
+    .page-hero p { font-size: 1rem; color: rgba(255,228,196,0.8); max-width: 620px; line-height: 1.75; margin-bottom: 0; }
+
+    /* FORUM NOTICE BAR */
+    .notice-bar {
+      background: rgba(201,160,61,0.12);
+      border: 1px solid rgba(201,160,61,0.25);
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin: 2rem 0 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.85rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .notice-bar .notice-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .notice-bar strong { color: var(--navy); }
+
+    /* FORUM TABS */
+    .forum-tabs-wrap {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 1.8rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .forum-tabs-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .forum-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .ftab {
+      border: 1.5px solid rgba(11,31,46,0.12);
+      background: transparent;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.83rem;
+      padding: 8px 16px;
+      border-radius: 40px;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ftab:hover { border-color: var(--navy); background: rgba(11,31,46,0.04); }
+    .ftab.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .ftab.active.stem-s, .ftab.active.stem-t { background: #1a6eaa; border-color: #1a6eaa; }
+    .ftab.active.soc-s, .ftab.active.soc-t { background: #1e7f63; border-color: #1e7f63; }
+    .ftab.active.arts-s, .ftab.active.arts-t { background: #b34d20; border-color: #b34d20; }
+    .ftab.active.gov { background: #6a3cad; border-color: #6a3cad; }
+    .ftab .role-dot {
+      width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+    }
+    .role-dot.student { background: #2da882; }
+    .role-dot.teacher { background: #C9A03D; }
+    .role-dot.parent { background: #b34d20; }
+    .role-dot.gov { background: #6a3cad; }
+
+    /* FORUM LAYOUT */
+    .forum-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 1.8rem;
+      align-items: start;
+    }
+
+    /* FORUM PANEL */
+    .forum-panel { display: none; }
+    .forum-panel.active-panel { display: block; animation: fadeIn 0.25s ease; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+
+    .panel-header {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.8rem;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: var(--shadow);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .panel-header-info h2 { font-size: 1.25rem; font-weight: 800; color: var(--navy); margin-bottom: 3px; }
+    .panel-header-info p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; max-width: 500px; }
+    .panel-stats { display: flex; gap: 1.2rem; flex-shrink: 0; }
+    .pstat { text-align: center; }
+    .pstat .n { font-family: var(--mono); font-size: 1.3rem; font-weight: 700; color: var(--navy); line-height: 1; }
+    .pstat .l { font-size: 0.7rem; color: var(--muted); font-weight: 600; letter-spacing: 0.3px; }
+    .btn-new-post {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      padding: 10px 22px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      transition: all 0.2s;
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .btn-new-post:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(201,160,61,0.3); }
+
+    /* SEARCH + SORT BAR */
+    .search-sort-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .search-box {
+      flex: 1;
+      min-width: 200px;
+      position: relative;
+    }
+    .search-box input {
+      width: 100%;
+      background: var(--white);
+      border: 1.5px solid rgba(11,31,46,0.1);
+      border-radius: 40px;
+      padding: 9px 18px 9px 42px;
+      font-family: var(--font);
+      font-size: 0.88rem;
+      color: var(--text);
+      transition: border-color 0.2s;
+    }
+    .search-box input:focus { outline: none; border-color: var(--gold); }
+    .search-box .s-icon {
+      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      color: var(--muted); font-size: 1rem; pointer-events: none;
+    }
+    .sort-select {
+      background: var(--white);
+      border: 1.5px solid rgba(11,31,46,0.1);
+      border-radius: 40px;
+      padding: 9px 18px;
+      font-family: var(--font);
+      font-size: 0.83rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+    .sort-select:focus { outline: none; }
+
+    /* POSTS */
+    .posts-list { display: flex; flex-direction: column; gap: 1rem; }
+    .post-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 4px 14px rgba(11,31,46,0.06);
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .post-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+    .post-card-header {
+      padding: 1.2rem 1.5rem 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .post-avatar {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 800; color: var(--gold);
+      font-family: var(--mono);
+      flex-shrink: 0;
+    }
+    .post-main { flex: 1; min-width: 0; }
+    .post-title-row { display: flex; align-items: flex-start; gap: 8px; flex-wrap: wrap; margin-bottom: 5px; }
+    .post-title { font-size: 1.05rem; font-weight: 700; color: var(--navy); line-height: 1.35; cursor: pointer; transition: color 0.2s; }
+    .post-title:hover { color: var(--gold); }
+    .post-badge {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 2px 9px; border-radius: 40px; flex-shrink: 0; margin-top: 2px;
+    }
+    .badge-student { background: rgba(45,168,130,0.12); color: #1e7f63; }
+    .badge-teacher { background: rgba(201,160,61,0.15); color: #8b6820; }
+    .badge-parent  { background: rgba(179,77,32,0.12); color: #b34d20; }
+    .badge-gov     { background: rgba(106,60,173,0.12); color: #6a3cad; }
+    .post-meta {
+      font-size: 0.75rem; color: var(--muted);
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    }
+    .post-meta .sep { opacity: 0.4; }
+    .post-body {
+      padding: 0 1.5rem 1rem;
+      font-size: 0.9rem; color: var(--text);
+      line-height: 1.75;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+    .post-body.collapsed { display: none; }
+    .post-footer {
+      padding: 0.9rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.6rem;
+    }
+    .post-actions { display: flex; gap: 8px; }
+    .action-btn {
+      background: rgba(11,31,46,0.05);
+      border: none;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text);
+      transition: all 0.18s;
+      display: inline-flex; align-items: center; gap: 5px;
+    }
+    .action-btn:hover { background: rgba(11,31,46,0.1); }
+    .action-btn.liked { background: rgba(201,160,61,0.15); color: var(--gold); }
+    .reply-count-badge {
+      font-size: 0.75rem; font-weight: 600; color: var(--muted);
+      display: flex; align-items: center; gap: 4px;
+    }
+
+    /* REPLIES */
+    .replies-section {
+      border-top: 1px solid rgba(0,0,0,0.04);
+      padding: 1rem 1.5rem 1.2rem;
+      background: rgba(255,248,238,0.5);
+    }
+    .replies-section.hidden { display: none; }
+    .replies-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 1rem; }
+    .reply-item {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 0.85rem 1.1rem;
+      border: 1px solid rgba(0,0,0,0.04);
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .reply-avatar {
+      width: 30px; height: 30px;
+      border-radius: 8px;
+      background: var(--navy2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 800; color: var(--gold);
+      font-family: var(--mono); flex-shrink: 0;
+    }
+    .reply-content { flex: 1; min-width: 0; }
+    .reply-header { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; flex-wrap: wrap; }
+    .reply-author { font-size: 0.82rem; font-weight: 700; color: var(--navy); }
+    .reply-date { font-size: 0.7rem; color: var(--muted); }
+    .reply-text { font-size: 0.87rem; color: var(--text); line-height: 1.65; }
+    .reply-form-wrap { display: flex; gap: 8px; align-items: flex-end; }
+    .reply-input {
+      flex: 1;
+      background: var(--white);
+      border: 1.5px solid rgba(11,31,46,0.12);
+      border-radius: 14px;
+      padding: 9px 14px;
+      font-family: var(--font);
+      font-size: 0.85rem;
+      color: var(--text);
+      resize: vertical;
+      min-height: 40px;
+      transition: border-color 0.2s;
+    }
+    .reply-input:focus { outline: none; border-color: var(--gold); }
+    .reply-submit-btn {
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      padding: 9px 20px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .reply-submit-btn:hover { background: var(--navy3); transform: translateY(-1px); }
+    .empty-forum {
+      text-align: center;
+      padding: 3.5rem 2rem;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px dashed rgba(11,31,46,0.12);
+    }
+    .empty-forum .empty-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .empty-forum h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+    .empty-forum p { font-size: 0.88rem; color: var(--muted); max-width: 320px; margin: 0 auto 1.2rem; }
+    .pagination { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 1.5rem; flex-wrap: wrap; }
+    .page-btn { background: var(--white); border: 1.5px solid rgba(11,31,46,0.1); border-radius: 10px; padding: 7px 14px; font-size: 0.82rem; font-weight: 600; color: var(--text); transition: all 0.18s; }
+    .page-btn:hover { border-color: var(--navy); }
+    .page-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+    /* SIDEBAR */
+    .sidebar { display: flex; flex-direction: column; gap: 1.2rem; position: sticky; top: 90px; }
+    .sidebar-card { background: var(--white); border-radius: var(--radius); padding: 1.4rem; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 14px rgba(11,31,46,0.06); }
+    .sidebar-card h3 { font-size: 0.88rem; font-weight: 800; color: var(--navy); margin-bottom: 1rem; letter-spacing: -0.2px; }
+    .sidebar-card h3 .label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); display: block; font-weight: 700; margin-bottom: 4px; }
+
+    /* Author card */
+    .author-avatar { width: 56px; height: 56px; background: var(--navy); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 800; color: var(--gold); font-family: var(--mono); margin-bottom: 0.8rem; }
+    .author-name { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 2px; }
+    .author-title { font-size: 0.78rem; color: var(--muted); line-height: 1.5; margin-bottom: 0.8rem; }
+    .author-links { display: flex; flex-direction: column; gap: 5px; }
+    .author-link { display: flex; align-items: center; gap: 7px; font-size: 0.78rem; font-weight: 600; color: var(--navy); transition: color 0.2s; padding: 4px 0; }
+    .author-link:hover { color: var(--gold); }
+    .author-link .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* Guidelines */
+    .guideline-item { display: flex; gap: 8px; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.04); font-size: 0.8rem; color: var(--text); line-height: 1.5; }
+    .guideline-item:last-child { border-bottom: none; }
+    .guideline-item .gi { font-size: 0.9rem; flex-shrink: 0; }
+
+    /* Trending */
+    .trending-item { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.04); cursor: pointer; transition: all 0.18s; border-radius: 6px; }
+    .trending-item:last-child { border-bottom: none; }
+    .trending-item:hover { padding-left: 4px; }
+    .trending-num { font-family: var(--mono); font-size: 0.7rem; font-weight: 700; color: var(--gold); min-width: 18px; margin-top: 2px; }
+    .trending-text { font-size: 0.82rem; font-weight: 600; color: var(--navy); line-height: 1.4; flex: 1; }
+    .trending-forum { font-size: 0.68rem; color: var(--muted); font-weight: 500; margin-top: 2px; }
+
+    /* Quick links */
+    .quick-link { display: flex; align-items: center; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid rgba(0,0,0,0.04); font-size: 0.82rem; font-weight: 600; color: var(--navy); transition: color 0.2s; }
+    .quick-link:last-child { border-bottom: none; }
+    .quick-link:hover { color: var(--gold); }
+    .quick-link .arrow { font-size: 0.75rem; color: var(--muted); transition: color 0.2s; }
+    .quick-link:hover .arrow { color: var(--gold); }
+
+    /* Stats mini */
+    .mini-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .mini-stat { background: rgba(11,31,46,0.04); border-radius: 10px; padding: 8px 10px; text-align: center; }
+    .mini-stat .n { font-family: var(--mono); font-size: 1.1rem; font-weight: 700; color: var(--navy); display: block; line-height: 1; }
+    .mini-stat .l { font-size: 0.65rem; color: var(--muted); font-weight: 600; letter-spacing: 0.3px; margin-top: 3px; display: block; }
+
+    /* MODAL */
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(11,31,46,0.6);
+      z-index: 500;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      width: 100%;
+      max-width: 580px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      animation: fadeIn 0.25s ease;
+    }
+    .modal-box h2 { font-size: 1.35rem; font-weight: 800; color: var(--navy); margin-bottom: 0.3rem; }
+    .modal-box .modal-sub { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .modal-close { position: absolute; top: 1.2rem; right: 1.2rem; background: rgba(11,31,46,0.06); border: none; width: 34px; height: 34px; border-radius: 50%; font-size: 1.1rem; color: var(--text); transition: background 0.18s; display: flex; align-items: center; justify-content: center; }
+    .modal-close:hover { background: rgba(11,31,46,0.12); }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; letter-spacing: 0.1px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; background: rgba(11,31,46,0.03); border: 1.5px solid rgba(11,31,46,0.1); border-radius: 14px; padding: 10px 14px; font-family: var(--font); font-size: 0.9rem; color: var(--text); transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--gold); background: var(--white); }
+    .form-group textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-notice { background: rgba(201,160,61,0.08); border: 1px solid rgba(201,160,61,0.2); border-radius: 10px; padding: 10px 14px; font-size: 0.78rem; color: var(--text); line-height: 1.55; margin-bottom: 1rem; }
+    .modal-btns { display: flex; gap: 10px; justify-content: flex-end; }
+    .btn-cancel { background: rgba(11,31,46,0.06); border: none; padding: 10px 22px; border-radius: 40px; font-weight: 600; font-size: 0.88rem; color: var(--text); transition: background 0.18s; }
+    .btn-cancel:hover { background: rgba(11,31,46,0.1); }
+    .btn-submit { background: var(--navy); color: var(--white); border: none; padding: 10px 26px; border-radius: 40px; font-weight: 700; font-size: 0.88rem; transition: all 0.2s; }
+    .btn-submit:hover { background: var(--navy3); transform: translateY(-1px); }
+    .char-count { font-size: 0.72rem; color: var(--muted); text-align: right; margin-top: 3px; }
+
+    /* TOAST */
+    .toast {
+      position: fixed; bottom: 24px; right: 24px;
+      background: var(--navy); color: var(--white);
+      padding: 12px 20px; border-radius: 14px;
+      font-size: 0.88rem; font-weight: 600;
+      box-shadow: var(--shadow-hover);
+      z-index: 1000; opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s;
+      max-width: 320px;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast .toast-icon { color: var(--gold); margin-right: 6px; }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(255,228,196,0.75); padding: 4rem 0 2rem; margin-top: 5rem; border-top: 2px solid rgba(201,160,61,0.25); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand strong { display: block; font-size: 1.15rem; color: var(--white); font-weight: 800; margin-bottom: 0.5rem; }
+    .footer-brand p { font-size: 0.83rem; line-height: 1.75; margin-bottom: 1rem; max-width: 280px; }
+    .footer-brand .ecosystem { font-size: 0.78rem; color: rgba(255,228,196,0.5); }
+    .footer-brand .ecosystem a { color: var(--gold); font-weight: 600; transition: color 0.2s; }
+    .footer-brand .ecosystem a:hover { color: var(--gold2); }
+    .footer-col h4 { color: var(--white); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: 0.83rem; color: rgba(255,228,196,0.65); padding: 4px 0; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(201,160,61,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,228,196,0.45); }
+    .footer-bottom a { color: rgba(201,160,61,0.8); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .forum-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); flex-direction: column; align-items: flex-start; gap: 0; padding: 1rem 20px 1.5rem; border-top: 1px solid rgba(201,160,61,0.15); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+      .nav-links.show { display: flex; }
+      .nav-links a { width: 100%; padding: 10px 8px; font-size: 0.9rem; border-radius: 8px; }
+      .site-header { position: relative; }
+      .panel-header { flex-direction: column; align-items: flex-start; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 18px; }
+      .footer-top { grid-template-columns: 1fr; }
+      .forum-tabs { flex-direction: column; }
+      .ftab { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">CB</div>
+      <div class="logo-text">
+        <strong>CBC Best</strong>
+        <span>Ronny Mwenda · Kenya's CBC Hub</span>
+      </div>
+    </a>
+    <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">☰ Menu</button>
+    <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="pathways.html">Pathways</a>
+      <a href="subjects-skills.html">Subjects</a>
+      <a href="assessment-tools.html">Assessment</a>
+      <a href="learning-outcomes.html">Outcomes</a>
+      <a href="teacher-requirements.html">Teachers</a>
+      <a href="mathematics-computer-science.html">Maths & CS</a>
+      <a href="resources.html">Resources</a>
+      <a href="forums.html" class="active">Forums</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">News</a>
+      <a href="about-contact.html" class="nav-cta">Contact →</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-label"><span></span> Open Community · All Are Welcome</div>
+    <h1>CBC <em>Discussion</em> Forums</h1>
+    <p>A professional, open space for Kenyan students, teachers, parents, and education stakeholders to discuss the Competency Based Curriculum — pathway choices, classroom strategies, assessment, careers, and policy.</p>
+  </div>
+</section>
+
+<div class="container" style="padding-top: 0; padding-bottom: 3rem;">
+
+  <!-- NOTICE -->
+  <div class="notice-bar">
+    <div class="notice-icon">📌</div>
+    <div>
+      <strong>Community Guidelines:</strong> These forums are a respectful, constructive space. All discussions must be accurate, helpful, and relevant to CBC Kenya. Spam, personal attacks, and misinformation will be removed. Posts are stored in your browser and shared across sessions on the same device. Be kind — many students, new teachers, and parents are learning alongside you.
+    </div>
+  </div>
+
+  <!-- FORUM TABS -->
+  <div class="forum-tabs-wrap">
+    <div class="forum-tabs-label">Select a forum</div>
+    <div class="forum-tabs" id="forumTabsContainer">
+      <button class="ftab stem-s" data-forum="stem-student"><span class="role-dot student"></span>🔬 STEM · Students</button>
+      <button class="ftab stem-t" data-forum="stem-teacher"><span class="role-dot teacher"></span>🔬 STEM · Teachers</button>
+      <button class="ftab soc-s" data-forum="social-student"><span class="role-dot student"></span>⚖️ Social Sciences · Students</button>
+      <button class="ftab soc-t" data-forum="social-teacher"><span class="role-dot teacher"></span>⚖️ Social Sciences · Teachers</button>
+      <button class="ftab arts-s" data-forum="arts-student"><span class="role-dot student"></span>🎨 Arts & Sports · Students</button>
+      <button class="ftab arts-t" data-forum="arts-teacher"><span class="role-dot teacher"></span>🎨 Arts & Sports · Teachers</button>
+      <button class="ftab gov" data-forum="parents-general"><span class="role-dot parent"></span>👨‍👩‍👧 Parents & Community</button>
+      <button class="ftab gov" data-forum="policy-general"><span class="role-dot gov"></span>🏛️ CBC Policy & News</button>
+    </div>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="forum-layout">
+    <div>
+      <!-- FORUM PANELS (one per forum) -->
+      <div id="panel-stem-student" class="forum-panel">
+        <div class="panel-header">
+          <div class="panel-header-info">
+            <h2>🔬 STEM Pathway — Student Forum</h2>
+            <p>Discuss Mathematics, Physics, Chemistry, Biology, Computer Science, and Agriculture. Share study tips, ask questions, post project ideas, and connect with fellow STEM learners across Kenya.</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+            <div class="panel-stats">
+              <div class="pstat"><div class="n" id="count-stem-student">0</div><div class="l">Posts</div></div>
+            </div>
+            <button class="btn-new-post" onclick="openModal('stem-student')">+ New Discussion</button>
+          </div>
+        </div>
+        <div class="search-sort-bar">
+          <div class="search-box">
+            <span class="s-icon">🔍</span>
+            <input type="text" placeholder="Search discussions…" oninput="filterPosts('stem-student', this.value)">
+          </div>
+          <select class="sort-select" onchange="sortPosts('stem-student', this.value)">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="most-replies">Most replies</option>
+            <option value="most-liked">Most liked</option>
+          </select>
+        </div>
+        <div id="posts-stem-student" class="posts-list"></div>
+        <div id="pagination-stem-student" class="pagination"></div>
+      </div>
+
+      <div id="panel-stem-teacher" class="forum-panel">
+        <div class="panel-header">
+          <div class="panel-header-info">
+            <h2>🔬 STEM Pathway — Teacher Forum</h2>
+            <p>Collaborate on lesson planning, practical lab sessions, KICD rubrics, and CBC assessment in Mathematics, Physics, Chemistry, Biology, and Computer Science. Share resources and best practices.</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+            <div class="panel-stats"><div class="pstat"><div class="n" id="count-stem-teacher">0</div><div class="l">Posts</div></div></div>
+            <button class="btn-new-post" onclick="openModal('stem-teacher')">+ New Discussion</button>
+          </div>
+        </div>
+        <div class="search-sort-bar">
+          <div class="search-box"><span class="s-icon">🔍</span><input type="text" placeholder="Search discussions…" oninput="filterPosts('stem-teacher', this.value)"></div>
+          <select class="sort-select" onchange="sortPosts('stem-teacher', this.value)"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="most-replies">Most replies</option><option value="most-liked">Most liked</option></select>
+        </div>
+        <div id="posts-stem-teacher" class="posts-list"></div>
+        <div id="pagination-stem-teacher" class="pagination"></div>
+      </div>
+
+      <div id="panel-social-student" class="forum-panel">
+        <div class="panel-header">
+          <div class="panel-header-info">
+            <h2>⚖️ Social Sciences Pathway — Student Forum</h2>
+            <p>Discuss History, Geography, Business Studies, Economics, Citizenship, and Religious Education. Ask about careers in Law, Policy, Teaching, NGOs, Journalism, and more.</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+            <div class="panel-stats"><div class="pstat"><div class="n" id="count-social-student">0</div><div class="l">Posts</div></div></div>
+            <button class="btn-new-post" onclick="openModal('social-student')">+ New Discussion</button>
+          </div>
+        </div>
+        <div class="search-sort-bar">
+          <div class="search-box"><span class="s-icon">🔍</span><input type="text" placeholder="Search discussions…" oninput="filterPosts('social-student', this.value)"></div>
+          <select class="sort-select" onchange="sortPosts('social-student', this.value)"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="most-replies">Most replies</option><option value="most-liked">Most liked</option></select>
+        </div>
+        <div id="posts-social-student" class="posts-list"></div>
+        <div id="pagination-social-student" class="pagination"></div>
+      </div>
+
+      <div id="panel-social-teacher" class="forum-panel">
+        <div class="panel-header">
+          <div class="panel-header-info">
+            <h2>⚖️ Social Sciences Pathway — Teacher Forum</h2>
+            <p>Exchange ideas on teaching History, Geography, Business, Citizenship, and Religious Education under CBC. Share fieldwork ideas, debate formats, community service learning approaches, and assessment rubrics.</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+            <div class="panel-stats"><div class="pstat"><div class="n" id="count-social-teacher">0</div><div class="l">Posts</div></div></div>
+            <button class="btn-new-post" onclick="openModal('social-teacher')">+ New Discussion</button>
+          </div>
+        </div>
+        <div class="search-sort-bar">
+          <div class="search-box"><span class="s-icon">🔍</span><input type="text" placeholder="Search discussions…" oninput="filterPosts('social-teacher', this.value)"></div>
+          <select class="sort-select" onchange="sortPosts('social-teacher', this.value)"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="most-replies">Most replies</option><option value="most-liked">Most liked</option></select>
+        </div>
+        <div id="posts-social-teacher" class="posts-list"></div>
+        <div id="pagination-social-teacher" class="pagination"></div>
+      </div>
+
+      <div id="panel-arts-student" class="forum-panel">
+        <div class="panel-header">
+          <div class="panel-header-info">
+            <h2>🎨 Arts & Sports Pathway — Student Forum</h2>
+            <p>Talk about Performing Arts, Visual Arts, Sports Science, Music, Film, and Physical Education. Share audition tips, competitions, talent development journeys, and career goals.</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+            <div class="panel-stats"><div class="pstat"><div class="n" id="count-arts-student">0</div><div class="l">Posts</div></div></div>
+            <button class="btn-new-post" onclick="openModal('arts-student')">+ New Discussion</button>
+          </div>
+        </div>
+        <div class="search-sort-bar">
+          <div class="search-box"><span class="s-icon">🔍</span><input type="text" placeholder="Search discussions…" oninput="filterPosts('arts-student', this.value)"></div>
+          <select class="sort-select" onchange="sortPosts('arts-student', this.value)"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="most-replies">Most replies</option><option value="most-liked">Most liked</option></select>
+        </div>
+        <div id="posts-arts-student" class="posts-list"></div>
+        <div id="pagination-arts-student" class="pagination"></div>
+      </div>
+
+      <div id="panel-arts-teacher" class="forum-panel">
+        <div class="panel-header">
+          <div class="panel-header-info">
+            <h2>🎨 Arts & Sports Pathway — Teacher Forum</h2>
+            <p>Discuss coaching methodologies, arts exhibitions, talent identification, sports psychology, nutrition, and how to embed CBC competencies into creative and physical education programmes.</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+            <div class="panel-stats"><div class="pstat"><div class="n" id="count-arts-teacher">0</div><div class="l">Posts</div></div></div>
+            <button class="btn-new-post" onclick="openModal('arts-teacher')">+ New Discussion</button>
+          </div>
+        </div>
+        <div class="search-sort-bar">
+          <div class="search-box"><span class="s-icon">🔍</span><input type="text" placeholder="Search discussions…" oninput="filterPosts('arts-teacher', this.value)"></div>
+          <select class="sort-select" onchange="sortPosts('arts-teacher', this.value)"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="most-replies">Most replies</option><option value="most-liked">Most liked</option></select>
+        </div>
+        <div id="posts-arts-teacher" class="posts-list"></div>
+        <div id="pagination-arts-teacher" class="pagination"></div>
+      </div>
+
+      <div id="panel-parents-general" class="forum-panel">
+        <div class="panel-header">
+          <div class="panel-header-info">
+            <h2>👨‍👩‍👧 Parents & Community Forum</h2>
+            <p>For parents, guardians, and community members. Ask questions about CBC, pathway choice for your child, school fees, special needs support, KPSEA/KJSEA, and how to support learning at home.</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+            <div class="panel-stats"><div class="pstat"><div class="n" id="count-parents-general">0</div><div class="l">Posts</div></div></div>
+            <button class="btn-new-post" onclick="openModal('parents-general')">+ New Discussion</button>
+          </div>
+        </div>
+        <div class="search-sort-bar">
+          <div class="search-box"><span class="s-icon">🔍</span><input type="text" placeholder="Search discussions…" oninput="filterPosts('parents-general', this.value)"></div>
+          <select class="sort-select" onchange="sortPosts('parents-general', this.value)"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="most-replies">Most replies</option><option value="most-liked">Most liked</option></select>
+        </div>
+        <div id="posts-parents-general" class="posts-list"></div>
+        <div id="pagination-parents-general" class="pagination"></div>
+      </div>
+
+      <div id="panel-policy-general" class="forum-panel">
+        <div class="panel-header">
+          <div class="panel-header-info">
+            <h2>🏛️ CBC Policy, Implementation & News Forum</h2>
+            <p>Discuss KICD guidelines, Ministry of Education updates, TSC retooling, new circulars, KPSEA/KJSEA/KCSE announcements, and CBC implementation challenges across counties in Kenya.</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+            <div class="panel-stats"><div class="pstat"><div class="n" id="count-policy-general">0</div><div class="l">Posts</div></div></div>
+            <button class="btn-new-post" onclick="openModal('policy-general')">+ New Discussion</button>
+          </div>
+        </div>
+        <div class="search-sort-bar">
+          <div class="search-box"><span class="s-icon">🔍</span><input type="text" placeholder="Search discussions…" oninput="filterPosts('policy-general', this.value)"></div>
+          <select class="sort-select" onchange="sortPosts('policy-general', this.value)"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="most-replies">Most replies</option><option value="most-liked">Most liked</option></select>
+        </div>
+        <div id="posts-policy-general" class="posts-list"></div>
+        <div id="pagination-policy-general" class="pagination"></div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <!-- Author card -->
+      <div class="sidebar-card">
+        <span class="label" style="font-family:var(--mono);font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:0.6rem;">Forum Host</span>
+        <div class="author-avatar">RM</div>
+        <div class="author-name">Ronny Mwenda</div>
+        <div class="author-title">Mathematics &amp; Computer Science Teacher · Embu County, Kenya. Education advocate and creator of CBC Best — Kenya's CBC learning hub.</div>
+        <div class="author-links">
+          <a href="https://cbcbest.netlify.app" class="author-link" target="_blank"><span class="dot"></span>cbcbest.netlify.app — CBC Hub</a>
+          <a href="https://bestronny.netlify.app" class="author-link" target="_blank"><span class="dot"></span>bestronny.netlify.app — Mathematics</a>
+          <a href="https://ronnymwenda.netlify.app" class="author-link" target="_blank"><span class="dot"></span>ronnymwenda.netlify.app — Portfolio</a>
+          <a href="https://ronnygame.netlify.app" class="author-link" target="_blank"><span class="dot"></span>ronnygame.netlify.app — Games</a>
+          <a href="mailto:ronnymwenda89@gmail.com" class="author-link"><span class="dot"></span>ronnymwenda89@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- Community stats -->
+      <div class="sidebar-card">
+        <h3><span class="label">Community</span>Forum Statistics</h3>
+        <div class="mini-stats" id="sidebarStats">
+          <div class="mini-stat"><span class="n" id="stat-total-posts">0</span><span class="l">Total posts</span></div>
+          <div class="mini-stat"><span class="n" id="stat-total-replies">0</span><span class="l">Replies</span></div>
+          <div class="mini-stat"><span class="n">8</span><span class="l">Forums</span></div>
+          <div class="mini-stat"><span class="n" id="stat-active-forums">0</span><span class="l">Active forums</span></div>
+        </div>
+      </div>
+
+      <!-- Forum guidelines -->
+      <div class="sidebar-card">
+        <h3><span class="label">Rules</span>Community Guidelines</h3>
+        <div class="guideline-item"><span class="gi">✅</span><span>Be respectful — all roles (student, teacher, parent) are equally valued here.</span></div>
+        <div class="guideline-item"><span class="gi">📚</span><span>Keep discussions relevant to CBC Kenya and education.</span></div>
+        <div class="guideline-item"><span class="gi">🎯</span><span>Share accurate information. If unsure, say so and ask.</span></div>
+        <div class="guideline-item"><span class="gi">🚫</span><span>No spam, advertising, or off-topic promotional content.</span></div>
+        <div class="guideline-item"><span class="gi">🔒</span><span>Do not share personal data such as student IDs or KCSE numbers.</span></div>
+        <div class="guideline-item"><span class="gi">🌍</span><span>Use English or Kiswahili. Both official languages are welcome.</span></div>
+      </div>
+
+      <!-- Quick links -->
+      <div class="sidebar-card">
+        <h3><span class="label">Navigate</span>Quick Links</h3>
+        <a href="pathways.html" class="quick-link">CBC Pathways Guide <span class="arrow">→</span></a>
+        <a href="assessment-tools.html" class="quick-link">All 13 Assessment Tools <span class="arrow">→</span></a>
+        <a href="mathematics-computer-science.html" class="quick-link">Maths &amp; CS Hub <span class="arrow">→</span></a>
+        <a href="learning-outcomes.html" class="quick-link">Learning Outcome Models <span class="arrow">→</span></a>
+        <a href="teacher-requirements.html" class="quick-link">Teacher Requirements <span class="arrow">→</span></a>
+        <a href="faq.html" class="quick-link">CBC FAQ <span class="arrow">→</span></a>
+        <a href="blog.html" class="quick-link">CBC News &amp; Updates <span class="arrow">→</span></a>
+        <a href="resources.html" class="quick-link">Download Resources <span class="arrow">→</span></a>
+      </div>
+
+      <!-- Trending topics (populated by JS) -->
+      <div class="sidebar-card">
+        <h3><span class="label">Active</span>Recent Discussions</h3>
+        <div id="trendingList">
+          <div style="font-size:0.8rem; color:var(--muted); text-align:center; padding:1rem 0;">No discussions yet. Be the first to post!</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+</main>
+
+<!-- NEW POST MODAL -->
+<div class="modal-overlay" id="postModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <h2>Start a New Discussion</h2>
+    <p class="modal-sub">Posting in: <strong id="modalForumLabel"></strong></p>
+    <div class="form-notice">
+      💡 <strong>Tip:</strong> Write a clear, specific title. The more detail you provide, the more helpful the responses will be. All posts are visible to everyone in this forum.
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="postAuthorName">Your Name <span style="color:var(--muted); font-weight:400;">(optional)</span></label>
+        <input type="text" id="postAuthorName" placeholder="e.g. Wanjiku Kamau" maxlength="60">
+      </div>
+      <div class="form-group">
+        <label for="postAuthorRole">Your Role</label>
+        <select id="postAuthorRole">
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+          <option value="parent">Parent / Guardian</option>
+          <option value="gov">Policy / Government</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="postTitleInput">Discussion Title <span style="color:#c00; font-weight:700;">*</span></label>
+      <input type="text" id="postTitleInput" placeholder="e.g. How do I choose between STEM and Social Sciences pathways?" maxlength="120">
+      <div class="char-count" id="titleCharCount">0 / 120</div>
+    </div>
+    <div class="form-group">
+      <label for="postBodyInput">Your Message <span style="color:#c00; font-weight:700;">*</span></label>
+      <textarea id="postBodyInput" rows="5" placeholder="Write your question, idea, or contribution here. Be as specific as possible..." maxlength="2000"></textarea>
+      <div class="char-count" id="bodyCharCount">0 / 2000</div>
+    </div>
+    <div class="modal-btns">
+      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+      <button class="btn-submit" onclick="submitPost()">Post Discussion →</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><span class="toast-icon">✓</span> <span id="toastMsg">Posted successfully!</span></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>📘 CBC Best</strong>
+        <p>Kenya's most comprehensive Competency Based Curriculum resource — KICD-aligned content for students, teachers, and parents. By Ronny Mwenda (Ronny Best), Mathematics &amp; Computer Science Teacher, Embu County.</p>
+        <div class="ecosystem">
+          Ronny Mwenda digital ecosystem:
+          <a href="https://bestronny.netlify.app" target="_blank" rel="noopener">Bestronny (Mathematics)</a> ·
+          <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener">Portfolio</a> ·
+          <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener">RonnyGame</a>
+        </div>
+        <div style="margin-top:1rem; font-size:0.78rem; color:rgba(255,228,196,0.45);">
+          📧 <a href="mailto:ronnymwenda89@gmail.com" style="color:rgba(201,160,61,0.8);">ronnymwenda89@gmail.com</a> &nbsp;·&nbsp;
+          📱 <a href="tel:+254799188900" style="color:rgba(201,160,61,0.8);">+254 799 188 900</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>CBC Best</h4>
+        <a href="index.html">Home</a>
+        <a href="pathways.html">Pathways</a>
+        <a href="subjects-skills.html">Subjects &amp; Skills</a>
+        <a href="assessment-tools.html">Assessment Tools</a>
+        <a href="learning-outcomes.html">Learning Outcomes</a>
+        <a href="teacher-requirements.html">Teacher Hub</a>
+        <a href="mathematics-computer-science.html">Maths &amp; CS</a>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <a href="forums.html">All Forums</a>
+        <a href="resources.html">Downloads</a>
+        <a href="faq.html">CBC FAQ</a>
+        <a href="blog.html">News &amp; Updates</a>
+        <a href="about-contact.html">About Ronny</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CBC Best — Competency Based Curriculum Hub. Original KICD-aligned content by Ronny Mwenda. Forum posts belong to their respective authors.</p>
+      <p><a href="/sitemap.xml">Sitemap</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-use.html">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ─── DATA LAYER ─────────────────────────────── */
+const FORUM_IDS = [
+  'stem-student','stem-teacher',
+  'social-student','social-teacher',
+  'arts-student','arts-teacher',
+  'parents-general','policy-general'
+];
+
+const FORUM_META = {
+  'stem-student':     { label: '🔬 STEM · Students',                role: 'student' },
+  'stem-teacher':     { label: '🔬 STEM · Teachers',                role: 'teacher' },
+  'social-student':   { label: '⚖️ Social Sciences · Students',     role: 'student' },
+  'social-teacher':   { label: '⚖️ Social Sciences · Teachers',     role: 'teacher' },
+  'arts-student':     { label: '🎨 Arts & Sports · Students',       role: 'student' },
+  'arts-teacher':     { label: '🎨 Arts & Sports · Teachers',       role: 'teacher' },
+  'parents-general':  { label: '👨‍👩‍👧 Parents & Community',           role: 'parent' },
+  'policy-general':   { label: '🏛️ CBC Policy & News',              role: 'gov' }
+};
+
+const SEED_POSTS = {
+  'stem-student': [
+    { id: 1001, title: "How does CBC Mathematics in Grade 10 differ from 8-4-4?", body: "I am joining Senior School next term and I am trying to understand what new topics we will cover in Mathematics under the STEM pathway. Is it harder than what we did in Junior Secondary? Any advice on how to prepare?", author: "Kamau Njoroge", role: "student", date: "2026-06-01T08:30:00Z", likes: 14, replies: [] },
+    { id: 1002, title: "Best resources for CBC Computer Science Grade 9", body: "Our CS teacher just introduced Python this term and I am struggling with loops and functions. Can anyone recommend free online resources that align with the CBC Computer Science curriculum? I want to practice more at home.", author: "Amina Waweru", role: "student", date: "2026-05-28T11:15:00Z", likes: 9, replies: [
+      { id: 2001, author: "Brian Otieno", role: "teacher", date: "2026-05-28T13:45:00Z", text: "Try W3Schools for Python basics — it is free and straightforward. Also look at Scratch for visual programming before moving fully to Python. The key is to practice small programs daily, not one big session per week." }
+    ]},
+    { id: 1003, title: "Is Biology required in the STEM pathway?", body: "I enjoy Chemistry and Physics but I am not strong in Biology. I heard that in the STEM pathway you must take all sciences. Is Biology compulsory or can I choose to focus only on Physical Sciences and Mathematics?", author: "Festus Kariuki", role: "student", date: "2026-05-25T09:00:00Z", likes: 7, replies: [] }
+  ],
+  'stem-teacher': [
+    { id: 1004, title: "Using rubrics effectively for CBC Mathematics projects — Grade 7", body: "I am a Mathematics teacher in Kisumu and I am designing rubrics for the first time for project-based assessment under CBC. How do other STEM teachers structure analytic vs holistic rubrics for practical investigations? Any templates you can share?", author: "Mr. Omondi", role: "teacher", date: "2026-06-02T07:45:00Z", likes: 22, replies: [
+      { id: 2002, author: "Ronny Mwenda", role: "teacher", date: "2026-06-02T09:00:00Z", text: "I use a 4-column analytic rubric for Grade 7 projects: Criterion / Exceeding / Meeting / Approaching / Below. For Mathematics, the criteria I focus on are: Mathematical accuracy, Logical reasoning, Presentation of working, and Real-world connection. I can share a sample template — post your email or check the Resources section on CBC Best." }
+    ]},
+    { id: 1005, title: "How to handle mixed-ability learners in CBC Computer Science", body: "My Grade 8 CS class has some learners who have never touched a computer at home and others who are already coding. CBC expects differentiated instruction but the school only has 20 computers for 42 learners. Practical advice welcome.", author: "Ms. Wairimu", role: "teacher", date: "2026-05-30T10:00:00Z", likes: 18, replies: [] }
+  ],
+  'social-student': [
+    { id: 1006, title: "What careers can I pursue from the Social Sciences pathway?", body: "My parents are pushing me to choose STEM because they say Social Sciences will not get me a job. I love History and Geography and I want to study Law or International Relations. Can someone explain what doors the Social Sciences pathway opens after Grade 12?", author: "Grace Muthoni", role: "student", date: "2026-06-01T14:00:00Z", likes: 31, replies: [
+      { id: 2003, author: "Ronny Mwenda", role: "teacher", date: "2026-06-01T16:00:00Z", text: "This is a very common concern. The Social Sciences pathway leads to degrees in Law, Public Administration, International Relations, Economics, Psychology, Sociology, Teaching, and Journalism — among many others. Kenyan universities including UoN, KU, and Strathmore have strong programmes in all these areas. The pathway is not a 'backup' — it requires strong analytical and communication skills, which are in high demand. Share this forum with your parents too." }
+    ]}
+  ],
+  'social-teacher': [
+    { id: 1007, title: "Integrating Community Service Learning into Geography lessons", body: "CBC requires us to include CSL in our teaching. I teach Geography in Nakuru and I want to design a CSL activity around soil erosion in our local area. Has anyone done something similar? How did you assess it using CBC tools?", author: "Mr. Mutua", role: "teacher", date: "2026-05-29T08:00:00Z", likes: 12, replies: [] }
+  ],
+  'arts-student': [
+    { id: 1008, title: "Can the Arts & Sports pathway lead to a university degree?", body: "I am very good at dance and drama and I want to take the Arts & Sports pathway in Grade 10. My school principal said I might not get direct university entry. Is this true? What universities in Kenya accept learners from this pathway?", author: "Natasha Oloo", role: "student", date: "2026-06-02T10:00:00Z", likes: 19, replies: [
+      { id: 2004, author: "Ronny Mwenda", role: "teacher", date: "2026-06-02T11:30:00Z", text: "This is a misconception that needs to be corrected. The Arts & Sports pathway can lead to university degrees — including Fine Art, Music, Film Studies, Sports Science, Physiotherapy, and Education. Kenyatta University, Moi University, and other institutions have dedicated programmes. You will sit KCSE at Grade 12 just like other pathways. Pathway choice affects which subjects you study, not whether you qualify for university." }
+    ]}
+  ],
+  'arts-teacher': [
+    { id: 1009, title: "Assessing talent vs effort in Physical Education under CBC", body: "This is a difficult balance. One learner may have natural athletic ability but puts in little effort. Another works extremely hard but has limited physical capacity. How do we use CBC assessment tools fairly in PE and Sports Science? The rating scale alone feels insufficient.", author: "Coach Ndegwa", role: "teacher", date: "2026-05-31T07:30:00Z", likes: 15, replies: [] }
+  ],
+  'parents-general': [
+    { id: 1010, title: "My child is in Grade 9 — how do we prepare for pathway selection in 2026/2027?", body: "My daughter is finishing Grade 9 this year and I am worried about making the right pathway choice. She is average in Sciences but very good in creative writing and English. How does the KJSEA result affect pathway placement? Can she change pathways after starting Grade 10?", author: "Sarah Wambui (Parent)", role: "parent", date: "2026-06-01T20:00:00Z", likes: 27, replies: [
+      { id: 2005, author: "Ronny Mwenda", role: "teacher", date: "2026-06-02T07:00:00Z", text: "Great question. The KJSEA at Grade 9 assesses overall competency and informs — not dictates — pathway placement. Your daughter's performance, interests, and school counsellor advice all count. Creative writing and English strength suggests she could thrive in Social Sciences or Arts pathways. Pathway changes after Grade 10 are possible but complex, so it is best to choose well from the start. Encourage her to talk to her school's CBC counsellor and visit pathways.html on CBC Best for a full breakdown." }
+    ]}
+  ],
+  'policy-general': [
+    { id: 1011, title: "First KCSE cohort under CBC — what to expect in 2028", body: "The first Grade 10 cohort entered Senior School in 2025/2026. This means the first CBC KCSE will be in 2028. Has KNEC released any guidelines yet on the format of the new KCSE? Will it still be predominantly written exams or will there be a larger practical component?", author: "Joseph Kamotho", role: "gov", date: "2026-05-30T12:00:00Z", likes: 44, replies: [
+      { id: 2006, author: "Ronny Mwenda", role: "teacher", date: "2026-05-30T14:00:00Z", text: "As of June 2026, KNEC has confirmed that the CBC KCSE will include both external written exams AND school-based assessment (SBA). The balance is roughly 60% coursework/SBA and 40% external written exams — a significant shift from the 8-4-4 system which was almost entirely exam-based. Specific subject guidelines are being released progressively by KICD. I will post updates in the News section on CBC Best as they come out." }
+    ]}
+  ]
+};
+
+/* ─── STATE ──────────────────────────────────── */
+let forumData = {};
+let activeForumId = 'stem-student';
+let currentModal = null;
+let filterQuery = {};
+let sortMode = {};
+const POSTS_PER_PAGE = 8;
+let currentPage = {};
+
+function loadData() {
+  FORUM_IDS.forEach(id => {
+    try {
+      const stored = localStorage.getItem('cbcforum_v3_' + id);
+      if (stored) {
+        forumData[id] = JSON.parse(stored);
+      } else {
+        forumData[id] = SEED_POSTS[id] ? JSON.parse(JSON.stringify(SEED_POSTS[id])) : [];
+        saveData(id);
+      }
+    } catch(e) {
+      forumData[id] = SEED_POSTS[id] ? JSON.parse(JSON.stringify(SEED_POSTS[id])) : [];
+    }
+    filterQuery[id] = '';
+    sortMode[id] = 'newest';
+    currentPage[id] = 1;
+  });
+}
+
+function saveData(forumId) {
+  try {
+    localStorage.setItem('cbcforum_v3_' + forumId, JSON.stringify(forumData[forumId]));
+  } catch(e) {}
+}
+
+/* ─── RENDER ─────────────────────────────────── */
+function getFilteredSorted(forumId) {
+  let posts = forumData[forumId] || [];
+  const q = (filterQuery[forumId] || '').toLowerCase().trim();
+  if (q) {
+    posts = posts.filter(p => p.title.toLowerCase().includes(q) || p.body.toLowerCase().includes(q) || (p.author || '').toLowerCase().includes(q));
+  }
+  const s = sortMode[forumId] || 'newest';
+  if (s === 'newest') posts = [...posts].sort((a,b) => new Date(b.date) - new Date(a.date));
+  else if (s === 'oldest') posts = [...posts].sort((a,b) => new Date(a.date) - new Date(b.date));
+  else if (s === 'most-replies') posts = [...posts].sort((a,b) => (b.replies||[]).length - (a.replies||[]).length);
+  else if (s === 'most-liked') posts = [...posts].sort((a,b) => (b.likes||0) - (a.likes||0));
+  return posts;
+}
+
+function renderForum(forumId) {
+  const container = document.getElementById('posts-' + forumId);
+  if (!container) return;
+  const posts = getFilteredSorted(forumId);
+  const page = currentPage[forumId] || 1;
+  const total = posts.length;
+  const start = (page - 1) * POSTS_PER_PAGE;
+  const pagePosts = posts.slice(start, start + POSTS_PER_PAGE);
+
+  // update count badge
+  const countEl = document.getElementById('count-' + forumId);
+  if (countEl) countEl.textContent = (forumData[forumId] || []).length;
+
+  if (total === 0) {
+    container.innerHTML = `<div class="empty-forum">
+      <div class="empty-icon">💬</div>
+      <h3>No discussions yet</h3>
+      <p>Be the first to start a conversation in this forum. Your question might help many others.</p>
+      <button class="btn-new-post" onclick="openModal('${forumId}')">Start First Discussion →</button>
+    </div>`;
+    document.getElementById('pagination-' + forumId).innerHTML = '';
+    return;
+  }
+
+  container.innerHTML = pagePosts.map(post => renderPost(post, forumId)).join('');
+  renderPagination(forumId, total);
+  updateStats();
+  updateTrending();
+}
+
+function renderPost(post, forumId) {
+  const initials = (post.author || 'AN').split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase() || 'AN';
+  const roleLabel = post.role === 'teacher' ? 'Teacher' : post.role === 'parent' ? 'Parent' : post.role === 'gov' ? 'Official' : 'Student';
+  const roleCls = post.role === 'teacher' ? 'badge-teacher' : post.role === 'parent' ? 'badge-parent' : post.role === 'gov' ? 'badge-gov' : 'badge-student';
+  const dateStr = formatDate(post.date);
+  const replyCount = (post.replies || []).length;
+  const liked = isLiked(forumId, post.id);
+  const repliesHtml = (post.replies || []).map(r => {
+    const ri = (r.author || 'AN').split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
+    return `<div class="reply-item">
+      <div class="reply-avatar">${escHtml(ri)}</div>
+      <div class="reply-content">
+        <div class="reply-header">
+          <span class="reply-author">${escHtml(r.author || 'Anonymous')}</span>
+          <span class="post-badge ${r.role === 'teacher' ? 'badge-teacher' : r.role === 'parent' ? 'badge-parent' : r.role === 'gov' ? 'badge-gov' : 'badge-student'}">${r.role === 'teacher' ? 'Teacher' : r.role === 'parent' ? 'Parent' : r.role === 'gov' ? 'Official' : 'Student'}</span>
+          <span class="reply-date">${formatDate(r.date)}</span>
+        </div>
+        <div class="reply-text">${escHtml(r.text)}</div>
+      </div>
+    </div>`;
+  }).join('');
+  return `<div class="post-card" id="post-${post.id}">
+    <div class="post-card-header">
+      <div class="post-avatar">${escHtml(initials)}</div>
+      <div class="post-main">
+        <div class="post-title-row">
+          <span class="post-title" onclick="toggleBody('${forumId}',${post.id})">${escHtml(post.title)}</span>
+          <span class="post-badge ${roleCls}">${roleLabel}</span>
+        </div>
+        <div class="post-meta">
+          <span>${escHtml(post.author || 'Anonymous')}</span>
+          <span class="sep">·</span>
+          <span>${dateStr}</span>
+          <span class="sep">·</span>
+          <span>${replyCount} repl${replyCount === 1 ? 'y' : 'ies'}</span>
+        </div>
+      </div>
+    </div>
+    <div class="post-body" id="body-${post.id}">${escHtml(post.body)}</div>
+    <div class="post-footer">
+      <div class="post-actions">
+        <button class="action-btn${liked ? ' liked' : ''}" onclick="toggleLike('${forumId}',${post.id})">
+          ${liked ? '★' : '☆'} ${post.likes || 0} Like${(post.likes || 0) !== 1 ? 's' : ''}
+        </button>
+        <button class="action-btn" onclick="toggleReplies('${forumId}',${post.id})">
+          💬 ${replyCount} ${replyCount === 1 ? 'Reply' : 'Replies'}
+        </button>
+      </div>
+      <div class="reply-count-badge"></div>
+    </div>
+    <div class="replies-section hidden" id="replies-${post.id}">
+      <div class="replies-list">${repliesHtml || '<div style="font-size:0.8rem;color:var(--muted);padding:4px 0;">No replies yet.</div>'}</div>
+      <div class="reply-form-wrap">
+        <textarea class="reply-input" id="replyInput-${forumId}-${post.id}" placeholder="Write a thoughtful reply…" rows="2"></textarea>
+        <button class="reply-submit-btn" onclick="submitReply('${forumId}',${post.id})">Reply →</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function toggleBody(forumId, postId) {
+  const el = document.getElementById('body-' + postId);
+  if (el) el.classList.toggle('collapsed');
+}
+
+function toggleReplies(forumId, postId) {
+  const el = document.getElementById('replies-' + postId);
+  if (el) el.classList.toggle('hidden');
+}
+
+function renderPagination(forumId, total) {
+  const container = document.getElementById('pagination-' + forumId);
+  if (!container) return;
+  const pages = Math.ceil(total / POSTS_PER_PAGE);
+  if (pages <= 1) { container.innerHTML = ''; return; }
+  const cur = currentPage[forumId] || 1;
+  let html = '';
+  if (cur > 1) html += `<button class="page-btn" onclick="goPage('${forumId}',${cur-1})">← Prev</button>`;
+  for (let i = 1; i <= pages; i++) {
+    html += `<button class="page-btn${i===cur?' active':''}" onclick="goPage('${forumId}',${i})">${i}</button>`;
+  }
+  if (cur < pages) html += `<button class="page-btn" onclick="goPage('${forumId}',${cur+1})">Next →</button>`;
+  container.innerHTML = html;
+}
+
+function goPage(forumId, page) {
+  currentPage[forumId] = page;
+  renderForum(forumId);
+  document.getElementById('panel-' + forumId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ─── INTERACTIONS ───────────────────────────── */
+function filterPosts(forumId, val) {
+  filterQuery[forumId] = val;
+  currentPage[forumId] = 1;
+  renderForum(forumId);
+}
+
+function sortPosts(forumId, val) {
+  sortMode[forumId] = val;
+  currentPage[forumId] = 1;
+  renderForum(forumId);
+}
+
+function isLiked(forumId, postId) {
+  try { return JSON.parse(localStorage.getItem('liked_' + forumId + '_' + postId) || 'false'); }
+  catch(e) { return false; }
+}
+
+function toggleLike(forumId, postId) {
+  const posts = forumData[forumId];
+  const post = posts.find(p => p.id === postId);
+  if (!post) return;
+  const liked = isLiked(forumId, postId);
+  post.likes = (post.likes || 0) + (liked ? -1 : 1);
+  if (post.likes < 0) post.likes = 0;
+  localStorage.setItem('liked_' + forumId + '_' + postId, JSON.stringify(!liked));
+  saveData(forumId);
+  renderForum(forumId);
+}
+
+function submitReply(forumId, postId) {
+  const input = document.getElementById('replyInput-' + forumId + '-' + postId);
+  if (!input) return;
+  const text = input.value.trim();
+  if (!text) { showToast('Please write something before replying.', true); return; }
+  if (text.length > 1500) { showToast('Reply is too long (max 1500 characters).', true); return; }
+  const posts = forumData[forumId];
+  const post = posts.find(p => p.id === postId);
+  if (!post) return;
+  if (!post.replies) post.replies = [];
+  post.replies.push({
+    id: Date.now(),
+    text: text,
+    author: 'Community Member',
+    role: 'student',
+    date: new Date().toISOString()
+  });
+  saveData(forumId);
+  renderForum(forumId);
+  // re-open replies after render
+  const replies = document.getElementById('replies-' + postId);
+  if (replies) replies.classList.remove('hidden');
+  showToast('Reply posted!');
+}
+
+/* ─── MODAL ──────────────────────────────────── */
+function openModal(forumId) {
+  currentModal = forumId;
+  document.getElementById('modalForumLabel').textContent = FORUM_META[forumId]?.label || forumId;
+  document.getElementById('postTitleInput').value = '';
+  document.getElementById('postBodyInput').value = '';
+  document.getElementById('postAuthorName').value = '';
+  document.getElementById('postAuthorRole').value = 'student';
+  document.getElementById('titleCharCount').textContent = '0 / 120';
+  document.getElementById('bodyCharCount').textContent = '0 / 2000';
+  document.getElementById('postModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('postTitleInput').focus(), 100);
+}
+
+function closeModal() {
+  document.getElementById('postModal').classList.remove('open');
+  document.body.style.overflow = '';
+  currentModal = null;
+}
+
+function submitPost() {
+  const title = document.getElementById('postTitleInput').value.trim();
+  const body = document.getElementById('postBodyInput').value.trim();
+  const author = document.getElementById('postAuthorName').value.trim() || 'Anonymous';
+  const role = document.getElementById('postAuthorRole').value;
+  if (!title) { showToast('Please enter a discussion title.', true); return; }
+  if (title.length < 10) { showToast('Title is too short. Please be more specific.', true); return; }
+  if (!body) { showToast('Please write your message before posting.', true); return; }
+  if (body.length < 20) { showToast('Message is too short. Please add more detail.', true); return; }
+  if (!currentModal) return;
+  const newPost = {
+    id: Date.now(),
+    title: title,
+    body: body,
+    author: author,
+    role: role,
+    date: new Date().toISOString(),
+    likes: 0,
+    replies: []
+  };
+  forumData[currentModal].unshift(newPost);
+  saveData(currentModal);
+  currentPage[currentModal] = 1;
+  closeModal();
+  renderForum(currentModal);
+  showToast('Your discussion has been posted!');
+}
+
+/* ─── STATS & TRENDING ───────────────────────── */
+function updateStats() {
+  let totalPosts = 0, totalReplies = 0, activeForums = 0;
+  FORUM_IDS.forEach(id => {
+    const posts = forumData[id] || [];
+    if (posts.length > 0) activeForums++;
+    totalPosts += posts.length;
+    posts.forEach(p => { totalReplies += (p.replies || []).length; });
+  });
+  const tpEl = document.getElementById('stat-total-posts');
+  const trEl = document.getElementById('stat-total-replies');
+  const afEl = document.getElementById('stat-active-forums');
+  if (tpEl) tpEl.textContent = totalPosts;
+  if (trEl) trEl.textContent = totalReplies;
+  if (afEl) afEl.textContent = activeForums;
+}
+
+function updateTrending() {
+  const list = document.getElementById('trendingList');
+  if (!list) return;
+  let allPosts = [];
+  FORUM_IDS.forEach(id => {
+    (forumData[id] || []).forEach(p => {
+      allPosts.push({ ...p, forumId: id, forumLabel: FORUM_META[id]?.label || id });
+    });
+  });
+  allPosts.sort((a,b) => ((b.replies||[]).length + (b.likes||0)) - ((a.replies||[]).length + (a.likes||0)));
+  const top = allPosts.slice(0, 6);
+  if (!top.length) { list.innerHTML = '<div style="font-size:0.8rem;color:var(--muted);text-align:center;padding:1rem 0;">No discussions yet.</div>'; return; }
+  list.innerHTML = top.map((p, i) => `<div class="trending-item" onclick="switchForum('${p.forumId}')">
+    <div class="trending-num">${String(i+1).padStart(2,'0')}</div>
+    <div>
+      <div class="trending-text">${escHtml(p.title.length > 60 ? p.title.slice(0,60)+'…' : p.title)}</div>
+      <div class="trending-forum">${escHtml(p.forumLabel)}</div>
+    </div>
+  </div>`).join('');
+}
+
+/* ─── TAB SWITCHING ──────────────────────────── */
+function switchForum(forumId) {
+  document.querySelectorAll('.forum-panel').forEach(p => p.classList.remove('active-panel'));
+  document.querySelectorAll('.ftab').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById('panel-' + forumId);
+  if (panel) panel.classList.add('active-panel');
+  const tab = document.querySelector('.ftab[data-forum="' + forumId + '"]');
+  if (tab) tab.classList.add('active');
+  activeForumId = forumId;
+  localStorage.setItem('cbcforum_active', forumId);
+  renderForum(forumId);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ─── HELPERS ────────────────────────────────── */
+function formatDate(iso) {
+  try {
+    const d = new Date(iso);
+    const now = new Date();
+    const diff = (now - d) / 1000;
+    if (diff < 60) return 'Just now';
+    if (diff < 3600) return Math.floor(diff/60) + ' min ago';
+    if (diff < 86400) return Math.floor(diff/3600) + ' hr ago';
+    if (diff < 7*86400) return Math.floor(diff/86400) + ' days ago';
+    return d.toLocaleDateString('en-KE', { day:'numeric', month:'short', year:'numeric' });
+  } catch(e) { return iso; }
+}
+
+function escHtml(str) {
+  if (!str) return '';
+  return String(str).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+let toastTimer;
+function showToast(msg, isErr) {
+  const t = document.getElementById('toast');
+  const m = document.getElementById('toastMsg');
+  if (!t || !m) return;
+  m.textContent = msg;
+  t.querySelector('.toast-icon').textContent = isErr ? '⚠️' : '✓';
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+/* ─── CHAR COUNTERS ─────────────────────────── */
+document.getElementById('postTitleInput').addEventListener('input', function() {
+  document.getElementById('titleCharCount').textContent = this.value.length + ' / 120';
+});
+document.getElementById('postBodyInput').addEventListener('input', function() {
+  document.getElementById('bodyCharCount').textContent = this.value.length + ' / 2000';
+});
+
+/* ─── TAB EVENTS ──────────────────────────── */
+document.querySelectorAll('.ftab').forEach(btn => {
+  btn.addEventListener('click', () => switchForum(btn.getAttribute('data-forum')));
+});
+
+/* ─── MODAL OUTSIDE CLICK ─────────────────── */
+document.getElementById('postModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+/* ─── MOBILE NAV ──────────────────────────── */
+const menuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+if (menuBtn) {
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('show');
+    menuBtn.textContent = open ? '✕ Close' : '☰ Menu';
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+}
+
+/* ─── INIT ──────────────────────────────────── */
+loadData();
+
+// Determine initial forum
+let init = 'stem-student';
+const urlHash = window.location.hash.replace('#','');
+if (FORUM_IDS.includes(urlHash)) init = urlHash;
+else {
+  const qp = new URLSearchParams(window.location.search).get('forum');
+  if (qp && FORUM_IDS.includes(qp)) init = qp;
+  else {
+    const saved = localStorage.getItem('cbcforum_active');
+    if (saved && FORUM_IDS.includes(saved)) init = saved;
+  }
+}
+
+// Pre-render all forums so sidebar stats are accurate
+FORUM_IDS.forEach(id => {
+  if (id !== init) {
+    const panel = document.getElementById('panel-' + id);
+    if (panel) renderForum(id);
+  }
+});
+
+switchForum(init);
+
+// Update URL hash when switching (for shareable links)
+const origSwitch = switchForum;
+window.switchForum = function(forumId) {
+  history.replaceState(null, '', '#' + forumId);
+  origSwitch(forumId);
+};
+
+console.log('%cCBC Best Forums — Ronny Mwenda (Ronny Best)\nMathematics & Computer Science · Embu, Kenya\nhttps://cbcbest.netlify.app/forums.html', 'color:#C9A03D; font-weight:bold;');
+</script>
+
+<!-- PWA Service Worker -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
+</script>
+</body>
+</html>

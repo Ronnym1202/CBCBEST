@@ -1,0 +1,198 @@
+# ============================================
+# CBC BEST WEBSITE - NETLIFY CONFIGURATION
+# Ronny Mwenda (Ronny Best) · https://cbcbest.netlify.app
+# ============================================
+
+# ============================================
+# BUILD SETTINGS
+# ============================================
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# ============================================
+# SECURITY & PERFORMANCE HEADERS
+# ============================================
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+    # HSTS - tell browsers to always use HTTPS (6 months)
+    Strict-Transport-Security = "max-age=15768000; includeSubDomains"
+
+    # CSP - allows your Google Fonts, inline styles/scripts (needed for your site)
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.anthropic.com"
+
+# HTML - no caching (always serve fresh content)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ============================================
+# CACHE HEADERS FOR STATIC ASSETS
+# ============================================
+
+# Images - 1 year (immutable)
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# CSS & JS - 1 month
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Fonts - 1 year
+[[headers]]
+  for = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# PWA manifest & service worker - always fresh
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ============================================
+# REDIRECTS
+# ============================================
+
+# WWW → non-WWW (must come first)
+[[redirects]]
+  from = "https://www.cbcbest.netlify.app/*"
+  to = "https://cbcbest.netlify.app/:splat"
+  status = 301
+  force = true
+
+# Clean URLs (extensionless → .html)
+[[redirects]]
+  from = "/pathways"
+  to = "/pathways.html"
+  status = 200
+
+[[redirects]]
+  from = "/subjects-skills"
+  to = "/subjects-skills.html"
+  status = 200
+
+[[redirects]]
+  from = "/assessment-tools"
+  to = "/assessment-tools.html"
+  status = 200
+
+[[redirects]]
+  from = "/learning-outcomes"
+  to = "/learning-outcomes.html"
+  status = 200
+
+[[redirects]]
+  from = "/teacher-requirements"
+  to = "/teacher-requirements.html"
+  status = 200
+
+[[redirects]]
+  from = "/mathematics-computer-science"
+  to = "/mathematics-computer-science.html"
+  status = 200
+
+[[redirects]]
+  from = "/forums"
+  to = "/forums.html"
+  status = 200
+
+[[redirects]]
+  from = "/resources"
+  to = "/resources.html"
+  status = 200
+
+[[redirects]]
+  from = "/faq"
+  to = "/faq.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about-contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/about-contact.html"
+  status = 200
+
+# Catch-all 404
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# ============================================
+# CONTEXT SETTINGS
+# ============================================
+[context.production]
+  [context.production.environment]
+    CONTEXT = "production"
+    URL = "https://cbcbest.netlify.app"
+
+[context.deploy-preview]
+  [context.deploy-preview.environment]
+    CONTEXT = "deploy-preview"
+
+[context.branch-deploy]
+  [context.branch-deploy.environment]
+    CONTEXT = "branch-deploy"
