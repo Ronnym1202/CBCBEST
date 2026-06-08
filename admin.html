@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — CBC Best Forums</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:  #0B1F2E;
+      --navy2: #132c40;
+      --navy3: #1a3a54;
+      --gold:  #C9A03D;
+      --gold2: #e6b94a;
+      --cream: #FFF8EE;
+      --white: #FFFFFF;
+      --text:  #1E2F3E;
+      --muted: #5a7285;
+      --red:   #c0392b;
+      --red2:  #e74c3c;
+      --green: #27ae60;
+      --font:  'Plus Jakarta Sans', system-ui, sans-serif;
+      --mono:  'Space Mono', monospace;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(11,31,46,0.10);
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: var(--font); background: #0d1b26; color: var(--white); min-height: 100vh; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: var(--font); }
+
+    /* ── LOGIN SCREEN ── */
+    #loginScreen {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0B1F2E 0%, #1a3a54 100%);
+      padding: 2rem;
+    }
+    .login-box {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,160,61,0.2);
+      border-radius: 24px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 420px;
+      backdrop-filter: blur(12px);
+    }
+    .login-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+    .login-logo-icon {
+      width: 44px; height: 44px;
+      background: var(--gold);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .login-logo-text strong { display: block; color: var(--white); font-size: 1.1rem; font-weight: 800; }
+    .login-logo-text span { font-size: 0.72rem; color: rgba(255,228,196,0.5); }
+    .login-title { font-size: 1.5rem; font-weight: 800; color: var(--white); margin-bottom: 0.3rem; }
+    .login-sub { font-size: 0.85rem; color: rgba(255,228,196,0.55); margin-bottom: 1.8rem; }
+    .login-field { margin-bottom: 1rem; }
+    .login-field label { display: block; font-size: 0.8rem; font-weight: 700; color: rgba(255,228,196,0.7); margin-bottom: 6px; }
+    .login-field input {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(201,160,61,0.2);
+      border-radius: 12px;
+      padding: 11px 16px;
+      font-family: var(--font);
+      font-size: 0.95rem;
+      color: var(--white);
+      transition: border-color 0.2s;
+    }
+    .login-field input:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,0.08); }
+    .login-field input::placeholder { color: rgba(255,228,196,0.3); }
+    .btn-login {
+      width: 100%;
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      padding: 12px;
+      border-radius: 40px;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      transition: all 0.2s;
+    }
+    .btn-login:hover { background: var(--gold2); transform: translateY(-2px); }
+    .btn-login:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .login-error { background: rgba(192,57,43,0.15); border: 1px solid rgba(192,57,43,0.3); border-radius: 10px; padding: 10px 14px; font-size: 0.82rem; color: #e74c3c; margin-top: 1rem; display: none; }
+
+    /* ── ADMIN LAYOUT ── */
+    #adminScreen { display: none; min-height: 100vh; background: #0d1b26; }
+
+    .admin-header {
+      background: var(--navy);
+      border-bottom: 1px solid rgba(201,160,61,0.15);
+      padding: 0.8rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .admin-header-left { display: flex; align-items: center; gap: 12px; }
+    .admin-badge {
+      background: rgba(201,160,61,0.15);
+      border: 1px solid rgba(201,160,61,0.3);
+      color: var(--gold);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 40px;
+    }
+    .admin-title { font-size: 1rem; font-weight: 800; color: var(--white); }
+    .admin-sub { font-size: 0.72rem; color: rgba(255,228,196,0.5); }
+    .btn-signout {
+      background: rgba(192,57,43,0.15);
+      border: 1px solid rgba(192,57,43,0.3);
+      color: #e74c3c;
+      padding: 7px 18px;
+      border-radius: 40px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    .btn-signout:hover { background: rgba(192,57,43,0.25); }
+
+    .admin-body { display: grid; grid-template-columns: 240px 1fr; min-height: calc(100vh - 57px); }
+
+    /* SIDEBAR NAV */
+    .admin-nav {
+      background: rgba(255,255,255,0.02);
+      border-right: 1px solid rgba(255,255,255,0.05);
+      padding: 1.5rem 1rem;
+    }
+    .nav-section-label {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,228,196,0.3);
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      margin-top: 1.2rem;
+      padding: 0 8px;
+    }
+    .nav-section-label:first-child { margin-top: 0; }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 10px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: rgba(255,228,196,0.6);
+      transition: all 0.18s;
+      cursor: pointer;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+    .nav-item:hover { background: rgba(255,255,255,0.05); color: rgba(255,228,196,0.9); }
+    .nav-item.active { background: rgba(201,160,61,0.12); color: var(--gold); }
+    .nav-item .icon { font-size: 1rem; width: 20px; flex-shrink: 0; }
+    .nav-badge { margin-left: auto; background: var(--red); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 1px 7px; border-radius: 40px; }
+
+    /* MAIN CONTENT */
+    .admin-main { padding: 2rem; overflow-y: auto; }
+
+    /* STATS OVERVIEW */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .stat-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.4rem;
+      transition: border-color 0.2s;
+    }
+    .stat-card:hover { border-color: rgba(201,160,61,0.2); }
+    .stat-card .s-label { font-size: 0.72rem; color: rgba(255,228,196,0.45); font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; }
+    .stat-card .s-value { font-family: var(--mono); font-size: 2rem; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 4px; }
+    .stat-card .s-sub { font-size: 0.72rem; color: var(--gold); font-weight: 600; }
+
+    /* SECTION HEADER */
+    .section-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; gap: 1rem; flex-wrap: wrap; }
+    .section-hdr h2 { font-size: 1.15rem; font-weight: 800; color: var(--white); }
+    .section-hdr p { font-size: 0.8rem; color: rgba(255,228,196,0.45); margin-top: 2px; }
+
+    /* FORUM SELECTOR */
+    .forum-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 1.2rem;
+    }
+    .fs-btn {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,228,196,0.6);
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: all 0.18s;
+    }
+    .fs-btn:hover { border-color: rgba(201,160,61,0.3); color: rgba(255,228,196,0.9); }
+    .fs-btn.active { background: rgba(201,160,61,0.12); border-color: rgba(201,160,61,0.35); color: var(--gold); }
+
+    /* SEARCH BAR */
+    .admin-search {
+      position: relative;
+      margin-bottom: 1.2rem;
+    }
+    .admin-search input {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1.5px solid rgba(255,255,255,0.08);
+      border-radius: 40px;
+      padding: 10px 18px 10px 42px;
+      font-family: var(--font);
+      font-size: 0.88rem;
+      color: var(--white);
+      transition: border-color 0.2s;
+    }
+    .admin-search input::placeholder { color: rgba(255,228,196,0.3); }
+    .admin-search input:focus { outline: none; border-color: var(--gold); }
+    .admin-search .s-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: rgba(255,228,196,0.4); }
+
+    /* POST CARDS — ADMIN */
+    .admin-posts { display: flex; flex-direction: column; gap: 10px; }
+    .admin-post-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.4rem;
+      transition: border-color 0.2s;
+    }
+    .admin-post-card:hover { border-color: rgba(255,255,255,0.12); }
+    .apc-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 8px; }
+    .apc-title { font-size: 0.95rem; font-weight: 700; color: var(--white); line-height: 1.35; flex: 1; }
+    .apc-meta { font-size: 0.75rem; color: rgba(255,228,196,0.4); display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+    .apc-body { font-size: 0.83rem; color: rgba(255,228,196,0.55); line-height: 1.65; margin-bottom: 10px; max-height: 80px; overflow: hidden; }
+    .apc-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-delete-post {
+      background: rgba(192,57,43,0.12);
+      border: 1px solid rgba(192,57,43,0.25);
+      color: #e74c3c;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      transition: all 0.18s;
+    }
+    .btn-delete-post:hover { background: rgba(192,57,43,0.25); }
+    .btn-view-replies {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,228,196,0.6);
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: all 0.18s;
+    }
+    .btn-view-replies:hover { border-color: rgba(201,160,61,0.3); color: var(--gold); }
+    .replies-admin { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.05); display: none; }
+    .replies-admin.open { display: block; }
+    .reply-admin-item { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .reply-admin-item:last-child { border-bottom: none; }
+    .reply-admin-text { font-size: 0.8rem; color: rgba(255,228,196,0.55); flex: 1; line-height: 1.55; }
+    .reply-admin-meta { font-size: 0.7rem; color: rgba(255,228,196,0.3); margin-top: 3px; }
+    .btn-delete-reply { background: rgba(192,57,43,0.1); border: none; color: #e74c3c; padding: 4px 12px; border-radius: 40px; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; transition: background 0.18s; }
+    .btn-delete-reply:hover { background: rgba(192,57,43,0.2); }
+
+    /* EMPTY / LOADING */
+    .admin-empty { text-align: center; padding: 3rem; color: rgba(255,228,196,0.3); font-size: 0.9rem; }
+    .admin-loading { text-align: center; padding: 2rem; }
+    .spinner { width: 36px; height: 36px; border: 3px solid rgba(201,160,61,0.2); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* TOAST */
+    .toast { position: fixed; bottom: 24px; right: 24px; background: var(--navy); color: var(--white); padding: 12px 20px; border-radius: 14px; font-size: 0.88rem; font-weight: 600; box-shadow: 0 8px 32px rgba(0,0,0,0.4); z-index: 9999; opacity: 0; transform: translateY(10px); transition: opacity 0.3s, transform 0.3s; }
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    /* PANELS */
+    .admin-panel { display: none; }
+    .admin-panel.active { display: block; }
+
+    @media (max-width: 768px) {
+      .admin-body { grid-template-columns: 1fr; }
+      .admin-nav { display: none; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── LOGIN SCREEN ── -->
+<div id="loginScreen">
+  <div class="login-box">
+    <div class="login-logo">
+      <div class="login-logo-icon">CB</div>
+      <div class="login-logo-text">
+        <strong>CBC Best</strong>
+        <span>Admin Portal</span>
+      </div>
+    </div>
+    <div class="login-title">Welcome back, Ronny</div>
+    <div class="login-sub">Sign in to moderate the CBC Best discussion forums.</div>
+    <div class="login-field">
+      <label>Email Address</label>
+      <input type="email" id="loginEmail" placeholder="ronnymwenda89@gmail.com" autocomplete="email">
+    </div>
+    <div class="login-field">
+      <label>Password</label>
+      <input type="password" id="loginPassword" placeholder="••••••••••" autocomplete="current-password">
+    </div>
+    <button class="btn-login" id="loginBtn" onclick="doLogin()">Sign In →</button>
+    <div class="login-error" id="loginError"></div>
+  </div>
+</div>
+
+<!-- ── ADMIN SCREEN ── -->
+<div id="adminScreen">
+
+  <!-- Header -->
+  <div class="admin-header">
+    <div class="admin-header-left">
+      <div style="width:36px;height:36px;background:var(--gold);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:0.9rem;font-weight:800;color:var(--navy);">CB</div>
+      <div>
+        <div class="admin-title">CBC Best — Admin Panel</div>
+        <div class="admin-sub">Forum Moderation Dashboard</div>
+      </div>
+      <div class="admin-badge">Admin</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <span style="font-size:0.78rem;color:rgba(255,228,196,0.4);" id="adminEmail"></span>
+      <a href="forums.html" style="font-size:0.78rem;color:rgba(255,228,196,0.5);font-weight:600;">← View Forums</a>
+      <button class="btn-signout" onclick="doSignOut()">Sign Out</button>
+    </div>
+  </div>
+
+  <div class="admin-body">
+
+    <!-- Sidebar Nav -->
+    <nav class="admin-nav">
+      <div class="nav-section-label">Overview</div>
+      <button class="nav-item active" data-panel="overview" onclick="showPanel('overview', this)">
+        <span class="icon">📊</span> Dashboard
+      </button>
+
+      <div class="nav-section-label">Moderation</div>
+      <button class="nav-item" data-panel="allposts" onclick="showPanel('allposts', this)">
+        <span class="icon">💬</span> All Posts
+      </button>
+      <button class="nav-item" data-panel="stemstudent" onclick="showPanel('stemstudent', this)">
+        <span class="icon">🔬</span> STEM · Students
+      </button>
+      <button class="nav-item" data-panel="stemteacher" onclick="showPanel('stemteacher', this)">
+        <span class="icon">🔬</span> STEM · Teachers
+      </button>
+      <button class="nav-item" data-panel="socialstudent" onclick="showPanel('socialstudent', this)">
+        <span class="icon">⚖️</span> Social · Students
+      </button>
+      <button class="nav-item" data-panel="socialteacher" onclick="showPanel('socialteacher', this)">
+        <span class="icon">⚖️</span> Social · Teachers
+      </button>
+      <button class="nav-item" data-panel="artsstudent" onclick="showPanel('artsstudent', this)">
+        <span class="icon">🎨</span> Arts · Students
+      </button>
+      <button class="nav-item" data-panel="artsteacher" onclick="showPanel('artsteacher', this)">
+        <span class="icon">🎨</span> Arts · Teachers
+      </button>
+      <button class="nav-item" data-panel="parents" onclick="showPanel('parents', this)">
+        <span class="icon">👨‍👩‍👧</span> Parents
+      </button>
+      <button class="nav-item" data-panel="policy" onclick="showPanel('policy', this)">
+        <span class="icon">🏛️</span> Policy & News
+      </button>
+
+      <div class="nav-section-label">Site</div>
+      <button class="nav-item" onclick="window.open('forums.html','_blank')">
+        <span class="icon">🌐</span> View Live Forums
+      </button>
+      <button class="nav-item" onclick="window.open('index.html','_blank')">
+        <span class="icon">🏠</span> CBC Best Home
+      </button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+
+      <!-- OVERVIEW PANEL -->
+      <div id="panel-overview" class="admin-panel active">
+        <div class="section-hdr">
+          <div><h2>📊 Dashboard Overview</h2><p>Real-time forum statistics from Firebase Firestore</p></div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="s-label">Total Posts</div><div class="s-value" id="ov-posts">—</div><div class="s-sub">Across all forums</div></div>
+          <div class="stat-card"><div class="s-label">Total Replies</div><div class="s-value" id="ov-replies">—</div><div class="s-sub">Community responses</div></div>
+          <div class="stat-card"><div class="s-label">Total Likes</div><div class="s-value" id="ov-likes">—</div><div class="s-sub">Engagement signals</div></div>
+          <div class="stat-card"><div class="s-label">Active Forums</div><div class="s-value" id="ov-forums">—</div><div class="s-sub">With at least 1 post</div></div>
+        </div>
+
+        <div class="section-hdr" style="margin-top:2rem;">
+          <div><h2>📋 Forum Breakdown</h2><p>Posts per forum</p></div>
+        </div>
+        <div id="forumBreakdown" class="admin-posts">
+          <div class="admin-loading"><div class="spinner"></div></div>
+        </div>
+      </div>
+
+      <!-- ALL POSTS PANEL -->
+      <div id="panel-allposts" class="admin-panel">
+        <div class="section-hdr">
+          <div><h2>💬 All Posts</h2><p>Every post across all 8 forums — delete anything that violates community guidelines</p></div>
+        </div>
+        <div class="admin-search">
+          <span class="s-icon">🔍</span>
+          <input type="text" placeholder="Search posts by title, author, or content…" id="globalSearch" oninput="renderAllPosts()">
+        </div>
+        <div id="allPostsList" class="admin-posts">
+          <div class="admin-loading"><div class="spinner"></div></div>
+        </div>
+      </div>
+
+      <!-- INDIVIDUAL FORUM PANELS -->
+      <div id="panel-stemstudent"   class="admin-panel"><div id="posts-stemstudent"   class="admin-posts"><div class="admin-loading"><div class="spinner"></div></div></div></div>
+      <div id="panel-stemteacher"   class="admin-panel"><div id="posts-stemteacher"   class="admin-posts"><div class="admin-loading"><div class="spinner"></div></div></div></div>
+      <div id="panel-socialstudent" class="admin-panel"><div id="posts-socialstudent" class="admin-posts"><div class="admin-loading"><div class="spinner"></div></div></div></div>
+      <div id="panel-socialteacher" class="admin-panel"><div id="posts-socialteacher" class="admin-posts"><div class="admin-loading"><div class="spinner"></div></div></div></div>
+      <div id="panel-artsstudent"   class="admin-panel"><div id="posts-artsstudent"   class="admin-posts"><div class="admin-loading"><div class="spinner"></div></div></div></div>
+      <div id="panel-artsteacher"   class="admin-panel"><div id="posts-artsteacher"   class="admin-posts"><div class="admin-loading"><div class="spinner"></div></div></div></div>
+      <div id="panel-parents"       class="admin-panel"><div id="posts-parents"       class="admin-posts"><div class="admin-loading"><div class="spinner"></div></div></div></div>
+      <div id="panel-policy"        class="admin-panel"><div id="posts-policy"        class="admin-posts"><div class="admin-loading"><div class="spinner"></div></div></div></div>
+
+    </main>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">Done!</div>
+
+<!-- ══════════════════════════════════════════
+     FIREBASE
+══════════════════════════════════════════ -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
+import { getFirestore, collection, getDocs, deleteDoc, doc, updateDoc, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB1seov0YM0ysvqGMkcrxqPcYhAk7K3IJo",
+  authDomain: "cbc-best.firebaseapp.com",
+  projectId: "cbc-best",
+  storageBucket: "cbc-best.firebasestorage.app",
+  messagingSenderId: "787584479208",
+  appId: "1:787584479208:web:30fd5db2b75164373a7e5d"
+};
+
+const app  = initializeApp(firebaseConfig);
+const db   = getFirestore(app);
+const auth = getAuth(app);
+
+/* ── FORUM MAP ── */
+const FORUM_MAP = {
+  stemstudent:   'stem-student',
+  stemteacher:   'stem-teacher',
+  socialstudent: 'social-student',
+  socialteacher: 'social-teacher',
+  artsstudent:   'arts-student',
+  artsteacher:   'arts-teacher',
+  parents:       'parents-general',
+  policy:        'policy-general'
+};
+
+const FORUM_LABELS = {
+  'stem-student':    '🔬 STEM · Students',
+  'stem-teacher':    '🔬 STEM · Teachers',
+  'social-student':  '⚖️ Social Sciences · Students',
+  'social-teacher':  '⚖️ Social Sciences · Teachers',
+  'arts-student':    '🎨 Arts & Sports · Students',
+  'arts-teacher':    '🎨 Arts & Sports · Teachers',
+  'parents-general': '👨‍👩‍👧 Parents & Community',
+  'policy-general':  '🏛️ CBC Policy & News'
+};
+
+let allPostsCache = {};
+const FORUM_IDS = Object.values(FORUM_MAP);
+
+/* ── EXPOSE GLOBALS ── */
+window.doLogin   = doLogin;
+window.doSignOut = doSignOut;
+window.showPanel = showPanel;
+window.renderAllPosts = renderAllPosts;
+
+/* ── AUTH ── */
+async function doLogin() {
+  const email = document.getElementById('loginEmail').value.trim();
+  const pass  = document.getElementById('loginPassword').value;
+  const btn   = document.getElementById('loginBtn');
+  const err   = document.getElementById('loginError');
+  err.style.display = 'none';
+  if (!email || !pass) { showErr('Please enter your email and password.'); return; }
+  btn.disabled = true; btn.textContent = 'Signing in…';
+  try {
+    await signInWithEmailAndPassword(auth, email, pass);
+  } catch(e) {
+    showErr('Invalid email or password. Please try again.');
+    btn.disabled = false; btn.textContent = 'Sign In →';
+  }
+  function showErr(msg) { err.textContent = msg; err.style.display = 'block'; }
+}
+
+async function doSignOut() {
+  if (!confirm('Sign out of the admin panel?')) return;
+  await signOut(auth);
+}
+
+/* Allow pressing Enter on password field */
+document.getElementById('loginPassword').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+
+onAuthStateChanged(auth, user => {
+  if (user) {
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('adminScreen').style.display = 'block';
+    document.getElementById('adminEmail').textContent = user.email;
+    loadAllForums();
+  } else {
+    document.getElementById('loginScreen').style.display = 'flex';
+    document.getElementById('adminScreen').style.display = 'none';
+  }
+});
+
+/* ── LOAD ALL FORUMS ── */
+function loadAllForums() {
+  FORUM_IDS.forEach(forumId => {
+    const q = query(collection(db, 'forums', forumId, 'posts'), orderBy('createdAt', 'desc'));
+    onSnapshot(q, snapshot => {
+      allPostsCache[forumId] = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+      updateOverview();
+      renderForumBreakdown();
+      renderAllPosts();
+      // Re-render the specific forum panel if it's showing
+      const panelKey = Object.keys(FORUM_MAP).find(k => FORUM_MAP[k] === forumId);
+      if (panelKey) renderForumPanel(panelKey, forumId);
+    });
+  });
+}
+
+/* ── OVERVIEW ── */
+function updateOverview() {
+  let posts = 0, replies = 0, likes = 0, active = 0;
+  FORUM_IDS.forEach(id => {
+    const fp = allPostsCache[id] || [];
+    if (fp.length) active++;
+    fp.forEach(p => { posts++; replies += p.replyCount||0; likes += p.likes||0; });
+  });
+  setText('ov-posts',   posts);
+  setText('ov-replies', replies);
+  setText('ov-likes',   likes);
+  setText('ov-forums',  active);
+}
+
+function renderForumBreakdown() {
+  const el = document.getElementById('forumBreakdown');
+  if (!el) return;
+  el.innerHTML = FORUM_IDS.map(id => {
+    const posts = allPostsCache[id] || [];
+    const replies = posts.reduce((s,p) => s + (p.replyCount||0), 0);
+    const likes   = posts.reduce((s,p) => s + (p.likes||0), 0);
+    return `<div class="admin-post-card" style="display:grid;grid-template-columns:1fr auto auto auto;gap:1rem;align-items:center;">
+      <div style="font-size:0.9rem;font-weight:700;color:var(--white);">${FORUM_LABELS[id]||id}</div>
+      <div style="text-align:center;"><div style="font-family:var(--mono);font-size:1.2rem;font-weight:700;color:var(--white);">${posts.length}</div><div style="font-size:0.68rem;color:rgba(255,228,196,0.4);margin-top:2px;">posts</div></div>
+      <div style="text-align:center;"><div style="font-family:var(--mono);font-size:1.2rem;font-weight:700;color:var(--white);">${replies}</div><div style="font-size:0.68rem;color:rgba(255,228,196,0.4);margin-top:2px;">replies</div></div>
+      <div style="text-align:center;"><div style="font-family:var(--mono);font-size:1.2rem;font-weight:700;color:var(--gold);">${likes}</div><div style="font-size:0.68rem;color:rgba(255,228,196,0.4);margin-top:2px;">likes</div></div>
+    </div>`;
+  }).join('');
+}
+
+/* ── RENDER ALL POSTS ── */
+function renderAllPosts() {
+  const el = document.getElementById('allPostsList');
+  if (!el) return;
+  const q = (document.getElementById('globalSearch')?.value||'').toLowerCase().trim();
+  let all = [];
+  FORUM_IDS.forEach(id => (allPostsCache[id]||[]).forEach(p => all.push({...p, forumId:id})));
+  all.sort((a,b) => toMs(b.createdAt) - toMs(a.createdAt));
+  if (q) all = all.filter(p => (p.title||'').toLowerCase().includes(q)||(p.body||'').toLowerCase().includes(q)||(p.author||'').toLowerCase().includes(q));
+  if (!all.length) { el.innerHTML = '<div class="admin-empty">No posts found.</div>'; return; }
+  el.innerHTML = all.map(p => renderAdminPost(p, p.forumId)).join('');
+}
+
+/* ── RENDER FORUM PANEL ── */
+function renderForumPanel(panelKey, forumId) {
+  const el = document.getElementById('posts-' + panelKey);
+  if (!el) return;
+  const posts = [...(allPostsCache[forumId]||[])].sort((a,b) => toMs(b.createdAt) - toMs(a.createdAt));
+  if (!posts.length) { el.innerHTML = '<div class="admin-empty">No posts in this forum yet.</div>'; return; }
+  el.innerHTML = posts.map(p => renderAdminPost(p, forumId)).join('');
+}
+
+/* ── RENDER ADMIN POST CARD ── */
+function renderAdminPost(post, forumId) {
+  const replies = post.replies || [];
+  const repliesHtml = replies.map(r => `
+    <div class="reply-admin-item">
+      <div>
+        <div class="reply-admin-text">${esc(r.text||'')}</div>
+        <div class="reply-admin-meta">${esc(r.author||'Anonymous')} · ${formatDate(r.createdAt)}</div>
+      </div>
+      <button class="btn-delete-reply" onclick="adminDeleteReply('${forumId}','${post.id}','${r.id}')">🗑 Remove</button>
+    </div>`).join('');
+
+  return `<div class="admin-post-card" id="apc-${post.id}">
+    <div class="apc-top">
+      <div class="apc-title">${esc(post.title||'Untitled')}</div>
+      <button class="btn-delete-post" onclick="adminDeletePost('${forumId}','${post.id}')">🗑 Delete Post</button>
+    </div>
+    <div class="apc-meta">
+      <span>👤 ${esc(post.author||'Anonymous')}</span>
+      <span>🏷 ${esc(({'teacher':'Teacher','parent':'Parent','gov':'Official'}[post.role]||'Student'))}</span>
+      <span>🕐 ${formatDate(post.createdAt)}</span>
+      <span>💬 ${post.replyCount||0} replies</span>
+      <span>★ ${post.likes||0} likes</span>
+      <span style="color:rgba(201,160,61,0.6);">📂 ${FORUM_LABELS[forumId]||forumId}</span>
+    </div>
+    <div class="apc-body">${esc(post.body||'')}</div>
+    ${replies.length ? `
+    <div class="apc-actions">
+      <button class="btn-view-replies" onclick="toggleAdminReplies('${post.id}')">💬 View ${replies.length} ${replies.length===1?'reply':'replies'}</button>
+    </div>
+    <div class="replies-admin" id="adminReplies-${post.id}">${repliesHtml}</div>` : ''}
+  </div>`;
+}
+
+/* ── ADMIN ACTIONS ── */
+window.adminDeletePost = async function(forumId, postId) {
+  if (!confirm('Permanently delete this post and all its replies?')) return;
+  try {
+    await deleteDoc(doc(db, 'forums', forumId, 'posts', postId));
+    showToast('✓ Post deleted successfully.');
+  } catch(e) { showToast('⚠️ Failed to delete post.'); }
+};
+
+window.adminDeleteReply = async function(forumId, postId, replyId) {
+  if (!confirm('Remove this reply?')) return;
+  try {
+    const post = (allPostsCache[forumId]||[]).find(p => p.id === postId);
+    if (!post) return;
+    const updatedReplies = (post.replies||[]).filter(r => r.id !== replyId);
+    await updateDoc(doc(db, 'forums', forumId, 'posts', postId), {
+      replies: updatedReplies,
+      replyCount: Math.max(0, updatedReplies.length)
+    });
+    showToast('✓ Reply removed.');
+  } catch(e) { showToast('⚠️ Failed to remove reply.'); }
+};
+
+window.toggleAdminReplies = function(postId) {
+  const el = document.getElementById('adminReplies-' + postId);
+  if (el) el.classList.toggle('open');
+};
+
+/* ── PANEL SWITCHING ── */
+function showPanel(name, btn) {
+  document.querySelectorAll('.admin-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById('panel-' + name);
+  if (panel) panel.classList.add('active');
+  if (btn) btn.classList.add('active');
+  // Trigger re-render for specific panels
+  if (name === 'allposts') renderAllPosts();
+  const forumId = FORUM_MAP[name];
+  if (forumId) renderForumPanel(name, forumId);
+}
+
+/* ── HELPERS ── */
+function toMs(ts) {
+  if (!ts) return 0;
+  if (ts.toMillis) return ts.toMillis();
+  if (ts.seconds) return ts.seconds * 1000;
+  return new Date(ts).getTime() || 0;
+}
+
+function formatDate(ts) {
+  try {
+    let d;
+    if (!ts) return '—';
+    if (ts.toDate) d = ts.toDate();
+    else if (ts.seconds) d = new Date(ts.seconds * 1000);
+    else d = new Date(ts);
+    return d.toLocaleDateString('en-KE', {day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  } catch(e) { return '—'; }
+}
+
+function esc(str) {
+  if (!str) return '';
+  return String(str).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+function setText(id, val) { const el = document.getElementById(id); if (el) el.textContent = val; }
+
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  if (!t) return;
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+console.log('%cCBC Best Admin Panel\nRonny Mwenda · Embu, Kenya', 'color:#C9A03D;font-weight:bold;');
+</script>
+</body>
+</html>

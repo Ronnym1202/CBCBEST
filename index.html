@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-KE">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-3509173858076202"
-     crossorigin="anonymous"></script>
+  <!-- CHARSET FIRST — always the very first tag -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
   <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json">
 
@@ -17,8 +19,6 @@
   <link rel="apple-touch-icon" href="images/icon-192.png">
   <meta name="msapplication-TileImage" content="images/icon-144.png">
   <meta name="msapplication-TileColor" content="#0B1F2E">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <!-- SEO -->
   <title>CBC Best | Kenya's Competency Based Curriculum Hub — Ronny Mwenda</title>
@@ -33,6 +33,10 @@
   <meta property="og:description" content="Kenya's most comprehensive CBC resource — KICD-aligned pathways, subjects, assessment tools, and teacher standards by Ronny Mwenda.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cbcbest.netlify.app/">
+  <meta property="og:image" content="https://cbcbest.netlify.app/images/screenshot-home.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:image:alt" content="CBC Best — Kenya's Competency Based Curriculum Hub by Ronny Mwenda">
   <meta property="og:locale" content="en_KE">
   <meta property="og:site_name" content="CBC Best">
 
@@ -41,14 +45,18 @@
   <meta name="twitter:creator" content="@ronnymwenda89">
   <meta name="twitter:title" content="CBC Best | Kenya's Competency Based Curriculum Hub">
   <meta name="twitter:description" content="KICD-aligned CBC resource for Kenyan teachers, students, and parents — by Ronny Mwenda.">
+  <meta name="twitter:image" content="https://cbcbest.netlify.app/images/screenshot-home.png">
+  <meta name="twitter:image:alt" content="CBC Best — Kenya's CBC Hub by Ronny Mwenda">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  </head>
-<style>
+  <!-- Google AdSense — after all meta tags and fonts -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-3509173858076202" crossorigin="anonymous"></script>
+
+  <style>
     :root {
       --navy:   #0B1F2E;
       --navy2:  #132c40;
@@ -71,7 +79,6 @@
     }
 
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -93,7 +100,7 @@
       padding: 0 28px;
     }
 
-    /* ── HEADER ─────────────────────────────────────────────── */
+    /* ── HEADER ── */
     .site-header {
       background: var(--navy);
       position: sticky;
@@ -141,7 +148,6 @@
       letter-spacing: 0.4px;
       font-weight: 500;
     }
-
     .nav-links {
       display: flex;
       align-items: center;
@@ -162,9 +168,7 @@
       color: var(--white);
       background: rgba(201,160,61,0.15);
     }
-    .nav-links a.active {
-      color: var(--gold);
-    }
+    .nav-links a.active { color: var(--gold); }
     .nav-cta {
       background: var(--gold) !important;
       color: var(--navy) !important;
@@ -176,7 +180,6 @@
       background: var(--gold2) !important;
       transform: translateY(-1px);
     }
-
     .menu-toggle {
       display: none;
       background: none;
@@ -191,7 +194,7 @@
     }
     .menu-toggle:hover { border-color: var(--gold); color: var(--gold); }
 
-    /* ── HERO ──────────────────────────────────────────────── */
+    /* ── HERO ── */
     .hero {
       background: var(--navy);
       padding: 5rem 0 4.5rem;
@@ -249,10 +252,7 @@
       margin-bottom: 1.2rem;
       max-width: 780px;
     }
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold);
-    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
     .hero-sub {
       font-size: 1.1rem;
       color: rgba(255,228,196,0.82);
@@ -297,7 +297,7 @@
     }
     .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
 
-    /* hero stats bar */
+    /* hero stats */
     .hero-stats {
       display: flex;
       flex-wrap: wrap;
@@ -306,11 +306,7 @@
       padding-top: 2rem;
       border-top: 1px solid rgba(255,255,255,0.08);
     }
-    .hero-stat {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
+    .hero-stat { display: flex; flex-direction: column; gap: 2px; }
     .hero-stat-number {
       font-size: 2rem;
       font-weight: 800;
@@ -331,10 +327,8 @@
       letter-spacing: 0.5px;
     }
 
-    /* ── SECTION WRAPPER ───────────────────────────────────── */
-    .section {
-      padding: 4rem 0;
-    }
+    /* ── SECTIONS ── */
+    .section { padding: 4rem 0; }
     .section-label {
       font-family: var(--mono);
       font-size: 0.72rem;
@@ -366,12 +360,8 @@
       margin-bottom: 1.2rem;
     }
 
-    /* ── WHAT IS CBC ─────────────────────────────────────── */
-    .cbc-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
+    /* ── WHAT IS CBC ── */
+    .cbc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
     .cbc-card {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
@@ -389,21 +379,9 @@
       font-size: 1.4rem;
       margin-bottom: 1.2rem;
     }
-    .cbc-card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.8rem;
-    }
-    .cbc-card p {
-      color: var(--muted);
-      font-size: 0.93rem;
-      line-height: 1.75;
-    }
-    .cbc-card ul {
-      list-style: none;
-      margin-top: 0.8rem;
-    }
+    .cbc-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 0.8rem; }
+    .cbc-card p { color: var(--muted); font-size: 0.93rem; line-height: 1.75; }
+    .cbc-card ul { list-style: none; margin-top: 0.8rem; }
     .cbc-card ul li {
       font-size: 0.9rem;
       color: var(--text);
@@ -423,12 +401,7 @@
     }
 
     /* comparison table */
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-      margin-top: 1rem;
-    }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 1rem; }
     .compare-table th {
       background: var(--navy);
       color: var(--peach);
@@ -448,18 +421,9 @@
     .compare-table tr:nth-child(even) td { background: rgba(201,160,61,0.04); }
     .compare-table td strong { color: var(--navy); }
 
-    /* ── STRUCTURE SECTION ───────────────────────────────── */
-    .structure-band {
-      background: var(--navy);
-      border-radius: var(--radius-lg);
-      padding: 3rem 2.5rem;
-    }
-    .structure-steps {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1rem;
-      margin-top: 2rem;
-    }
+    /* ── STRUCTURE ── */
+    .structure-band { background: var(--navy); border-radius: var(--radius-lg); padding: 3rem 2.5rem; }
+    .structure-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 2rem; }
     .step-block {
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(201,160,61,0.18);
@@ -473,40 +437,19 @@
     .step-block::after {
       content: '→';
       position: absolute;
-      right: -14px;
-      top: 50%;
+      right: -14px; top: 50%;
       transform: translateY(-50%);
       color: var(--gold);
       font-size: 1.1rem;
       font-weight: 700;
     }
     .step-block:last-child::after { display: none; }
-    .step-years {
-      font-family: var(--mono);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .step-name {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-    .step-grade {
-      font-size: 0.72rem;
-      color: rgba(255,228,196,0.55);
-      line-height: 1.4;
-    }
+    .step-years { font-family: var(--mono); font-size: 2rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 6px; }
+    .step-name { font-size: 0.82rem; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .step-grade { font-size: 0.72rem; color: rgba(255,228,196,0.55); line-height: 1.4; }
 
-    /* ── PATHWAYS ─────────────────────────────────────────── */
-    .pathway-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
+    /* ── PATHWAYS ── */
+    .pathway-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
     .path-card {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
@@ -520,28 +463,10 @@
     .path-card.stem { border-top-color: #1a7fc4; }
     .path-card.social { border-top-color: #2da882; }
     .path-card.arts { border-top-color: #c4501a; }
-    .path-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .path-card h3 {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 0.5rem;
-    }
-    .path-card p {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 0.6rem;
-    }
-    .path-subjects {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin: 0.8rem 0;
-    }
+    .path-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .path-card h3 { font-size: 1.2rem; font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; }
+    .path-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin-bottom: 0.6rem; }
+    .path-subjects { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.8rem 0; }
     .tag {
       background: rgba(11,31,46,0.07);
       color: var(--navy);
@@ -551,12 +476,7 @@
       border-radius: 40px;
       letter-spacing: 0.2px;
     }
-    .path-careers {
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.65;
-      margin-top: 0.5rem;
-    }
+    .path-careers { font-size: 0.82rem; color: var(--muted); line-height: 1.65; margin-top: 0.5rem; }
     .path-careers strong { color: var(--navy); }
     .btn-explore {
       display: inline-flex;
@@ -574,18 +494,13 @@
     }
     .btn-explore:hover { background: var(--navy3); transform: translateX(2px); }
 
-    /* ── COMPETENCIES ────────────────────────────────────── */
+    /* ── COMPETENCIES ── */
     .competencies-band {
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
       border-radius: var(--radius-lg);
       padding: 3rem 2.5rem;
     }
-    .comp-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.2rem;
-      margin-top: 2rem;
-    }
+    .comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin-top: 2rem; }
     .comp-item {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(201,160,61,0.15);
@@ -594,33 +509,12 @@
       transition: all 0.2s;
     }
     .comp-item:hover { background: rgba(201,160,61,0.09); border-color: rgba(201,160,61,0.35); }
-    .comp-num {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--gold);
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      margin-bottom: 8px;
-    }
-    .comp-name {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.35;
-      margin-bottom: 6px;
-    }
-    .comp-desc {
-      font-size: 0.8rem;
-      color: rgba(255,228,196,0.6);
-      line-height: 1.6;
-    }
+    .comp-num { font-family: var(--mono); font-size: 0.72rem; color: var(--gold); font-weight: 700; letter-spacing: 1.5px; margin-bottom: 8px; }
+    .comp-name { font-size: 0.95rem; font-weight: 700; color: var(--white); line-height: 1.35; margin-bottom: 6px; }
+    .comp-desc { font-size: 0.8rem; color: rgba(255,228,196,0.6); line-height: 1.6; }
 
-    /* ── ASSESSMENT TOOLS ────────────────────────────────── */
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
-    }
+    /* ── ASSESSMENT TOOLS ── */
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
     .tool-card {
       background: var(--card-bg);
       border-radius: var(--radius);
@@ -644,24 +538,11 @@
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
-    .tool-info h4 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 3px;
-    }
-    .tool-info p {
-      font-size: 0.78rem;
-      color: var(--muted);
-      line-height: 1.55;
-    }
+    .tool-info h4 { font-size: 0.9rem; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .tool-info p { font-size: 0.78rem; color: var(--muted); line-height: 1.55; }
 
-    /* ── LEARNING OUTCOMES ───────────────────────────────── */
-    .models-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
+    /* ── LEARNING OUTCOMES ── */
+    .models-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .model-card {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
@@ -684,18 +565,8 @@
       border-radius: 40px;
       margin-bottom: 1rem;
     }
-    .model-card h3 {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 0.6rem;
-    }
-    .model-breakdown {
-      display: flex;
-      gap: 8px;
-      margin: 1rem 0;
-      flex-wrap: wrap;
-    }
+    .model-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.6rem; }
+    .model-breakdown { display: flex; gap: 8px; margin: 1rem 0; flex-wrap: wrap; }
     .letter-block {
       background: var(--navy);
       color: var(--white);
@@ -713,13 +584,7 @@
       display: block;
       line-height: 1;
     }
-    .letter-block .word {
-      font-size: 0.65rem;
-      color: rgba(255,228,196,0.7);
-      font-weight: 600;
-      margin-top: 4px;
-      display: block;
-    }
+    .letter-block .word { font-size: 0.65rem; color: rgba(255,228,196,0.7); font-weight: 600; margin-top: 4px; display: block; }
     .model-example {
       background: rgba(201,160,61,0.07);
       border-left: 3px solid var(--gold);
@@ -732,7 +597,7 @@
     }
     .model-example strong { color: var(--navy); }
 
-    /* ── FEATURED SUBJECTS ───────────────────────────────── */
+    /* ── FEATURED BAND ── */
     .featured-band {
       background: var(--navy);
       border-radius: var(--radius-lg);
@@ -742,27 +607,11 @@
       gap: 2rem;
       align-items: center;
     }
-    .featured-band h2 {
-      font-size: 1.7rem;
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 0.7rem;
-    }
+    .featured-band h2 { font-size: 1.7rem; font-weight: 800; color: var(--white); margin-bottom: 0.7rem; }
     .featured-band h2 span { color: var(--gold); }
-    .featured-band p {
-      font-size: 0.95rem;
-      color: rgba(255,228,196,0.75);
-      line-height: 1.75;
-      max-width: 540px;
-    }
-    .featured-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-end;
-    }
+    .featured-band p { font-size: 0.95rem; color: rgba(255,228,196,0.75); line-height: 1.75; max-width: 540px; }
 
-    /* ── TEACHER SECTION ──────────────────────────────────── */
+    /* ── TEACHER ── */
     .teacher-card {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
@@ -781,17 +630,8 @@
       font-size: 2rem;
       flex-shrink: 0;
     }
-    .teacher-card h3 {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 0.4rem;
-    }
-    .teacher-card p {
-      font-size: 0.93rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
+    .teacher-card h3 { font-size: 1.25rem; font-weight: 800; color: var(--navy); margin-bottom: 0.4rem; }
+    .teacher-card p { font-size: 0.93rem; color: var(--muted); line-height: 1.7; }
     .teacher-card a {
       display: inline-flex;
       align-items: center;
@@ -804,39 +644,15 @@
     }
     .teacher-card a:hover { gap: 10px; }
 
-    /* ── FORUMS BAND ─────────────────────────────────────── */
-    .forum-band {
-      background: var(--navy);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      text-align: center;
-    }
-    .forum-band h2 {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 0.6rem;
-    }
-    .forum-band p {
-      color: rgba(255,228,196,0.75);
-      font-size: 0.95rem;
-      max-width: 560px;
-      margin: 0 auto 1.8rem;
-      line-height: 1.75;
-    }
-    .forum-btns {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    /* ── FORUMS ── */
+    .forum-band { background: var(--navy); border-radius: var(--radius-lg); padding: 2.5rem; text-align: center; }
+    .forum-band h2 { font-size: 1.6rem; font-weight: 800; color: var(--white); margin-bottom: 0.6rem; }
+    .forum-band p { color: rgba(255,228,196,0.75); font-size: 0.95rem; max-width: 560px; margin: 0 auto 1.8rem; line-height: 1.75; }
+    .forum-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn-forum-student {
-      background: var(--gold);
-      color: var(--navy);
-      padding: 11px 28px;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.9rem;
+      background: var(--gold); color: var(--navy);
+      padding: 11px 28px; border-radius: 40px;
+      font-weight: 700; font-size: 0.9rem;
       transition: all 0.2s;
       display: inline-flex; align-items: center; gap: 8px;
     }
@@ -845,16 +661,14 @@
       background: rgba(255,228,196,0.1);
       border: 1.5px solid rgba(255,228,196,0.3);
       color: var(--peach);
-      padding: 11px 28px;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.9rem;
+      padding: 11px 28px; border-radius: 40px;
+      font-weight: 700; font-size: 0.9rem;
       transition: all 0.2s;
       display: inline-flex; align-items: center; gap: 8px;
     }
     .btn-forum-teacher:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
 
-    /* ── QUOTE ─────────────────────────────────────────── */
+    /* ── QUOTE ── */
     .quote-section {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
@@ -866,45 +680,22 @@
     .quote-section::before {
       content: '"';
       position: absolute;
-      top: -20px;
-      left: 28px;
+      top: -20px; left: 28px;
       font-size: 6rem;
       color: rgba(201,160,61,0.15);
       font-family: Georgia, serif;
       line-height: 1;
     }
-    .quote-text {
-      font-size: 1.15rem;
-      font-style: italic;
-      color: var(--text);
-      line-height: 1.8;
-      margin-bottom: 1.2rem;
-    }
-    .quote-author {
-      font-weight: 700;
-      color: var(--navy);
-      font-size: 0.88rem;
-    }
-    .quote-author span {
-      color: var(--muted);
-      font-weight: 400;
-    }
+    .quote-text { font-size: 1.15rem; font-style: italic; color: var(--text); line-height: 1.8; margin-bottom: 1.2rem; }
+    .quote-author { font-weight: 700; color: var(--navy); font-size: 0.88rem; }
+    .quote-author span { color: var(--muted); font-weight: 400; }
 
-    /* ── RESOURCES BAR ─────────────────────────────────── */
-    .resources-bar {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
+    /* ── RESOURCES BAR ── */
+    .resources-bar { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; align-items: center; }
     .btn-resource {
-      background: var(--navy);
-      color: var(--peach);
-      padding: 11px 24px;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.88rem;
+      background: var(--navy); color: var(--peach);
+      padding: 11px 24px; border-radius: 40px;
+      font-weight: 700; font-size: 0.88rem;
       transition: all 0.2s;
       display: inline-flex; align-items: center; gap: 8px;
     }
@@ -916,7 +707,7 @@
     }
     .btn-resource.outline:hover { border-color: var(--navy); background: rgba(11,31,46,0.04); }
 
-    /* ── FOOTER ───────────────────────────────────────── */
+    /* ── FOOTER ── */
     footer {
       background: var(--navy);
       color: rgba(255,228,196,0.75);
@@ -924,50 +715,14 @@
       margin-top: 5rem;
       border-top: 2px solid rgba(201,160,61,0.25);
     }
-    .footer-top {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 3rem;
-    }
-    .footer-brand strong {
-      display: block;
-      font-size: 1.15rem;
-      color: var(--white);
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-    .footer-brand p {
-      font-size: 0.83rem;
-      line-height: 1.75;
-      margin-bottom: 1rem;
-      max-width: 280px;
-    }
-    .footer-brand .ecosystem {
-      font-size: 0.78rem;
-      color: rgba(255,228,196,0.5);
-    }
-    .footer-brand .ecosystem a {
-      color: var(--gold);
-      font-weight: 600;
-      transition: color 0.2s;
-    }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand strong { display: block; font-size: 1.15rem; color: var(--white); font-weight: 800; margin-bottom: 0.5rem; }
+    .footer-brand p { font-size: 0.83rem; line-height: 1.75; margin-bottom: 1rem; max-width: 280px; }
+    .footer-brand .ecosystem { font-size: 0.78rem; color: rgba(255,228,196,0.5); }
+    .footer-brand .ecosystem a { color: var(--gold); font-weight: 600; transition: color 0.2s; }
     .footer-brand .ecosystem a:hover { color: var(--gold2); }
-    .footer-col h4 {
-      color: var(--white);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-    .footer-col a {
-      display: block;
-      font-size: 0.83rem;
-      color: rgba(255,228,196,0.65);
-      padding: 4px 0;
-      transition: color 0.2s;
-    }
+    .footer-col h4 { color: var(--white); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: 0.83rem; color: rgba(255,228,196,0.65); padding: 4px 0; transition: color 0.2s; }
     .footer-col a:hover { color: var(--gold); }
     .footer-bottom {
       border-top: 1px solid rgba(201,160,61,0.1);
@@ -978,14 +733,11 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    .footer-bottom p {
-      font-size: 0.78rem;
-      color: rgba(255,228,196,0.45);
-    }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,228,196,0.45); }
     .footer-bottom a { color: rgba(201,160,61,0.8); }
     .footer-bottom a:hover { color: var(--gold); }
 
-    /* ── RESPONSIVE ───────────────────────────────────── */
+    /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .footer-top { grid-template-columns: 1fr 1fr; }
       .structure-steps { grid-template-columns: repeat(3, 1fr); }
@@ -995,8 +747,7 @@
       .nav-links {
         display: none;
         position: absolute;
-        top: 100%;
-        left: 0; right: 0;
+        top: 100%; left: 0; right: 0;
         background: var(--navy);
         flex-direction: column;
         align-items: flex-start;
@@ -1006,18 +757,12 @@
         box-shadow: 0 12px 40px rgba(0,0,0,0.2);
       }
       .nav-links.show { display: flex; }
-      .nav-links a {
-        width: 100%;
-        padding: 10px 8px;
-        font-size: 0.9rem;
-        border-radius: 8px;
-      }
+      .nav-links a { width: 100%; padding: 10px 8px; font-size: 0.9rem; border-radius: 8px; }
       .site-header { position: relative; }
       .cbc-grid, .models-grid, .pathway-grid { grid-template-columns: 1fr; }
       .structure-steps { grid-template-columns: repeat(2, 1fr); }
       .step-block::after { display: none; }
       .featured-band { grid-template-columns: 1fr; }
-      .featured-actions { align-items: flex-start; }
       .teacher-card { flex-direction: column; align-items: flex-start; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
       .footer-brand { grid-column: 1 / -1; }
@@ -1034,7 +779,7 @@
 </head>
 <body>
 
-<!-- ── HEADER ─────────────────────────────────────────────── -->
+<!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo">
@@ -1044,9 +789,7 @@
         <span>Ronny Mwenda · Kenya's CBC Hub</span>
       </div>
     </a>
-
     <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">☰ Menu</button>
-
     <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
       <a href="index.html" class="active">Home</a>
       <a href="pathways.html">Pathways</a>
@@ -1064,8 +807,9 @@
   </div>
 </header>
 
-<!-- ── HERO ───────────────────────────────────────────────── -->
 <main>
+
+<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-label"><span></span> Kenya's Competency Based Curriculum · KICD-Aligned</div>
@@ -1107,14 +851,13 @@
   </div>
 </section>
 
-<!-- ── WHAT IS CBC ────────────────────────────────────────── -->
+<!-- WHAT IS CBC -->
 <section class="section" style="background: var(--cream);">
   <div class="container">
     <div class="section-label">// 01 · What is CBC</div>
     <div class="divider"></div>
     <h2 class="section-title">Understanding Kenya's Competency Based Curriculum</h2>
     <p class="section-desc">CBC replaces the 8-4-4 system with a learner-centred, skills-focused approach. It emphasises what a learner can <strong>do</strong> — not just what they know.</p>
-
     <div class="cbc-grid">
       <div class="cbc-card">
         <div class="cbc-card-icon">🎯</div>
@@ -1151,19 +894,17 @@
   </div>
 </section>
 
-<!-- ── CURRICULUM STRUCTURE ───────────────────────────────── -->
+<!-- CURRICULUM STRUCTURE -->
 <section class="section" style="background: var(--cream);">
   <div class="container">
     <div class="section-label">// 02 · Curriculum Structure</div>
     <div class="divider"></div>
     <h2 class="section-title">The 2-6-3-3-3 Structure</h2>
     <p class="section-desc">Kenya's new education ladder spans from pre-primary through university, structured to match each learner's developmental stage.</p>
-
     <div class="structure-band">
       <p style="font-family:var(--mono); font-size:0.75rem; color:rgba(255,228,196,0.55); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:0.5rem;">2 — 6 — 3 — 3 — 3 model</p>
       <h3 style="font-size:1.35rem; font-weight:800; color:var(--white); margin-bottom:0.3rem;">Education ladder overview</h3>
       <p style="font-size:0.88rem; color:rgba(255,228,196,0.6); max-width:520px;">Each stage builds foundational competencies that prepare learners for the next. Assessment at key transition points guides pathway placement.</p>
-
       <div class="structure-steps">
         <div class="step-block">
           <div class="step-years">2</div>
@@ -1191,7 +932,6 @@
           <div class="step-grade">Degree / Diploma<br>Minimum 3 years</div>
         </div>
       </div>
-
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:2rem;">
         <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(201,160,61,0.15); border-radius:var(--radius); padding:1.5rem;">
           <h4 style="color:var(--gold); font-size:0.85rem; font-weight:700; margin-bottom:0.7rem;">🏫 Junior Secondary (Grades 7–9)</h4>
@@ -1206,14 +946,13 @@
   </div>
 </section>
 
-<!-- ── CORE COMPETENCIES ──────────────────────────────────── -->
+<!-- CORE COMPETENCIES -->
 <section class="section" style="background: var(--cream);">
   <div class="container">
     <div class="section-label">// 03 · Core Competencies</div>
     <div class="divider"></div>
     <h2 class="section-title">The 7 Core Competencies</h2>
     <p class="section-desc">CBC is built around seven competencies every Kenyan learner must develop across all learning areas and grade levels.</p>
-
     <div class="competencies-band">
       <div class="comp-grid">
         <div class="comp-item">
@@ -1256,14 +995,13 @@
   </div>
 </section>
 
-<!-- ── PATHWAYS ───────────────────────────────────────────── -->
+<!-- PATHWAYS -->
 <section class="section" style="background: var(--cream);">
   <div class="container">
     <div class="section-label">// 04 · Senior School Pathways</div>
     <div class="divider"></div>
     <h2 class="section-title">The 3 Core Senior School Pathways</h2>
     <p class="section-desc">From Grade 10, every learner selects a pathway aligned to their strengths and interests. Each leads to distinct careers and higher education routes.</p>
-
     <div class="pathway-grid">
       <div class="path-card stem">
         <div class="path-icon">🔬</div>
@@ -1280,7 +1018,6 @@
         <p class="path-careers"><strong>Careers:</strong> Engineering, Medicine, Data Science, Artificial Intelligence, Aviation, Biotechnology, Software Development.</p>
         <a href="pathways.html#stem" class="btn-explore">Explore STEM →</a>
       </div>
-
       <div class="path-card social">
         <div class="path-icon">⚖️</div>
         <h3>Social Sciences Pathway</h3>
@@ -1296,7 +1033,6 @@
         <p class="path-careers"><strong>Careers:</strong> Law, Psychology, Public Administration, Teaching, NGO Leadership, Journalism, Diplomacy.</p>
         <a href="pathways.html#social" class="btn-explore">Explore Social Sciences →</a>
       </div>
-
       <div class="path-card arts">
         <div class="path-icon">🎨</div>
         <h3>Arts & Sports Science Pathway</h3>
@@ -1316,67 +1052,27 @@
   </div>
 </section>
 
-<!-- ── 13 ASSESSMENT TOOLS ────────────────────────────────── -->
+<!-- 13 ASSESSMENT TOOLS -->
 <section class="section" style="background: var(--cream);">
   <div class="container">
     <div class="section-label">// 05 · KICD Assessment Tools</div>
     <div class="divider"></div>
     <h2 class="section-title">All 13 CBC Assessment Tools</h2>
     <p class="section-desc">KICD prescribes 13 assessment instruments for measuring learner competencies in formative and summative contexts. Teachers select tools based on learning area, strand, and grade level.</p>
-
     <div class="tools-grid">
-      <div class="tool-card">
-        <div class="tool-num">01</div>
-        <div class="tool-info"><h4>Observation Schedule</h4><p>Structured tool for recording specific learner behaviours and skills during activities in real time.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">02</div>
-        <div class="tool-info"><h4>Oral Questions & Answers</h4><p>Verbal assessment of learner understanding through direct questioning and responses during lessons.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">03</div>
-        <div class="tool-info"><h4>Written Tests</h4><p>Pen-and-paper assessments measuring cognitive recall, comprehension, and application of concepts.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">04</div>
-        <div class="tool-info"><h4>Checklist</h4><p>A list of criteria or skills used to record whether a learner has demonstrated expected competencies.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">05</div>
-        <div class="tool-info"><h4>Rating Scale</h4><p>A scale (e.g. 1–4 or Excellent/Good/Fair) used to rate the degree to which a learner meets a criterion.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">06</div>
-        <div class="tool-info"><h4>Rubric</h4><p>A detailed scoring guide describing performance levels for each criterion — both analytic and holistic types are used in CBC.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">07</div>
-        <div class="tool-info"><h4>Portfolio</h4><p>A collection of a learner's work over time, showing growth, effort, and achievement toward learning outcomes.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">08</div>
-        <div class="tool-info"><h4>Project</h4><p>Extended tasks requiring learners to apply knowledge and skills to produce a tangible product or investigation.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">09</div>
-        <div class="tool-info"><h4>Anecdotal Records</h4><p>Brief, factual notes written by teachers about significant observations of individual learner behaviour or performance.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">10</div>
-        <div class="tool-info"><h4>Peer Assessment</h4><p>Learners evaluate each other's work using agreed criteria, developing critical evaluation and communication skills.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">11</div>
-        <div class="tool-info"><h4>Self-Assessment</h4><p>Learners reflect on and evaluate their own performance, fostering metacognition and ownership of learning.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">12</div>
-        <div class="tool-info"><h4>Questionnaire</h4><p>A structured set of written questions used to gather learner attitudes, perceptions, or knowledge.</p></div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-num">13</div>
-        <div class="tool-info"><h4>Interview</h4><p>A one-on-one or group verbal exchange between teacher and learner(s) to assess depth of understanding.</p></div>
-      </div>
+      <div class="tool-card"><div class="tool-num">01</div><div class="tool-info"><h4>Observation Schedule</h4><p>Structured tool for recording specific learner behaviours and skills during activities in real time.</p></div></div>
+      <div class="tool-card"><div class="tool-num">02</div><div class="tool-info"><h4>Oral Questions & Answers</h4><p>Verbal assessment of learner understanding through direct questioning and responses during lessons.</p></div></div>
+      <div class="tool-card"><div class="tool-num">03</div><div class="tool-info"><h4>Written Tests</h4><p>Pen-and-paper assessments measuring cognitive recall, comprehension, and application of concepts.</p></div></div>
+      <div class="tool-card"><div class="tool-num">04</div><div class="tool-info"><h4>Checklist</h4><p>A list of criteria or skills used to record whether a learner has demonstrated expected competencies.</p></div></div>
+      <div class="tool-card"><div class="tool-num">05</div><div class="tool-info"><h4>Rating Scale</h4><p>A scale (e.g. 1–4 or Excellent/Good/Fair) used to rate the degree to which a learner meets a criterion.</p></div></div>
+      <div class="tool-card"><div class="tool-num">06</div><div class="tool-info"><h4>Rubric</h4><p>A detailed scoring guide describing performance levels for each criterion — both analytic and holistic types are used in CBC.</p></div></div>
+      <div class="tool-card"><div class="tool-num">07</div><div class="tool-info"><h4>Portfolio</h4><p>A collection of a learner's work over time, showing growth, effort, and achievement toward learning outcomes.</p></div></div>
+      <div class="tool-card"><div class="tool-num">08</div><div class="tool-info"><h4>Project</h4><p>Extended tasks requiring learners to apply knowledge and skills to produce a tangible product or investigation.</p></div></div>
+      <div class="tool-card"><div class="tool-num">09</div><div class="tool-info"><h4>Anecdotal Records</h4><p>Brief, factual notes written by teachers about significant observations of individual learner behaviour or performance.</p></div></div>
+      <div class="tool-card"><div class="tool-num">10</div><div class="tool-info"><h4>Peer Assessment</h4><p>Learners evaluate each other's work using agreed criteria, developing critical evaluation and communication skills.</p></div></div>
+      <div class="tool-card"><div class="tool-num">11</div><div class="tool-info"><h4>Self-Assessment</h4><p>Learners reflect on and evaluate their own performance, fostering metacognition and ownership of learning.</p></div></div>
+      <div class="tool-card"><div class="tool-num">12</div><div class="tool-info"><h4>Questionnaire</h4><p>A structured set of written questions used to gather learner attitudes, perceptions, or knowledge.</p></div></div>
+      <div class="tool-card"><div class="tool-num">13</div><div class="tool-info"><h4>Interview</h4><p>A one-on-one or group verbal exchange between teacher and learner(s) to assess depth of understanding.</p></div></div>
     </div>
     <div style="text-align:center; margin-top:2rem;">
       <a href="assessment-tools.html" class="btn-resource">View detailed assessment guides →</a>
@@ -1384,14 +1080,13 @@
   </div>
 </section>
 
-<!-- ── LEARNING OUTCOME MODELS ────────────────────────────── -->
+<!-- LEARNING OUTCOME MODELS -->
 <section class="section" style="background: var(--cream);">
   <div class="container">
     <div class="section-label">// 06 · Learning Outcome Models</div>
     <div class="divider"></div>
     <h2 class="section-title">Writing Expected Learning Outcomes</h2>
     <p class="section-desc">CBC requires teachers to write clear, measurable learning outcomes. Four KICD-recognised models guide this process — each ensuring outcomes are learner-focused, observable, and achievable.</p>
-
     <div class="models-grid">
       <div class="model-card">
         <div class="model-tag">Model 1</div>
@@ -1404,7 +1099,6 @@
         </div>
         <div class="model-example"><strong>Verb:</strong> Action word from Bloom's Taxonomy (e.g. Identify, Explain, Design)<br><strong>Object:</strong> The content or concept being learned<br><strong>Context:</strong> The condition or situation in which learning occurs<br><br>📌 <em>"<strong>Identify</strong> types of soil <strong>in the local environment</strong>"</em></div>
       </div>
-
       <div class="model-card">
         <div class="model-tag">Model 2</div>
         <h3>ABCD Model</h3>
@@ -1417,7 +1111,6 @@
         </div>
         <div class="model-example"><strong>A:</strong> Who (the learner)<br><strong>B:</strong> What they will do (observable action)<br><strong>C:</strong> Under what circumstances<br><strong>D:</strong> How well / to what standard<br><br>📌 <em>"The learner will <strong>solve quadratic equations</strong> using the formula <strong>with 80% accuracy</strong>"</em></div>
       </div>
-
       <div class="model-card">
         <div class="model-tag">Model 3</div>
         <h3>SMART Model</h3>
@@ -1431,7 +1124,6 @@
         </div>
         <div class="model-example">Each outcome must be clearly stated, measurable by assessment, realistic for the learner's level, relevant to the CBC strand, and achievable within the lesson or unit period.<br><br>📌 <em>"By end of lesson, learners will correctly <strong>label 5 parts of a plant cell</strong> on a diagram"</em></div>
       </div>
-
       <div class="model-card">
         <div class="model-tag">Model 4</div>
         <h3>Mager's Performance Model</h3>
@@ -1450,7 +1142,7 @@
   </div>
 </section>
 
-<!-- ── MATHS & CS FEATURED ────────────────────────────────── -->
+<!-- MATHS & CS FEATURED -->
 <section class="section" style="background:var(--cream);">
   <div class="container">
     <div class="featured-band">
@@ -1477,14 +1169,13 @@
   </div>
 </section>
 
-<!-- ── TEACHER SECTION ─────────────────────────────────────── -->
+<!-- TEACHER SECTION -->
 <section class="section" style="background:var(--cream);">
   <div class="container">
     <div class="section-label">// 07 · Teacher Standards</div>
     <div class="divider"></div>
     <h2 class="section-title">Professional Teacher Requirements</h2>
     <p class="section-desc">CBC demands a new kind of teacher — one who facilitates, assesses continuously, integrates ICT, and supports each learner's individual pathway.</p>
-
     <div class="teacher-card">
       <div class="teacher-icon">👩‍🏫</div>
       <div>
@@ -1497,7 +1188,7 @@
   </div>
 </section>
 
-<!-- ── FORUMS ──────────────────────────────────────────────── -->
+<!-- FORUMS -->
 <section class="section" style="background:var(--cream);">
   <div class="container">
     <div class="forum-band">
@@ -1511,7 +1202,7 @@
   </div>
 </section>
 
-<!-- ── QUOTE ───────────────────────────────────────────────── -->
+<!-- QUOTE -->
 <section class="section" style="background:var(--cream);">
   <div class="container">
     <div class="quote-section">
@@ -1521,7 +1212,7 @@
   </div>
 </section>
 
-<!-- ── RESOURCES BAR ───────────────────────────────────────── -->
+<!-- RESOURCES BAR -->
 <section class="section" style="background:var(--cream); padding-top:0;">
   <div class="container">
     <div style="text-align:center; margin-bottom:1.5rem;">
@@ -1536,9 +1227,10 @@
     </div>
   </div>
 </section>
+
 </main>
 
-<!-- ── FOOTER ──────────────────────────────────────────────── -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-top">
@@ -1556,7 +1248,6 @@
           📱 <a href="tel:+254799188900" style="color:rgba(201,160,61,0.8);">+254 799 188 900</a>
         </div>
       </div>
-
       <div class="footer-col">
         <h4>CBC Best</h4>
         <a href="index.html">Home</a>
@@ -1567,7 +1258,6 @@
         <a href="teacher-requirements.html">Teacher Hub</a>
         <a href="mathematics-computer-science.html">Maths & CS</a>
       </div>
-
       <div class="footer-col">
         <h4>Resources</h4>
         <a href="resources.html">Downloads</a>
@@ -1576,7 +1266,6 @@
         <a href="forums.html">Discussion Forums</a>
         <a href="about-contact.html">About Ronny</a>
       </div>
-
       <div class="footer-col">
         <h4>Legal</h4>
         <a href="privacy-policy.html">Privacy Policy</a>
@@ -1584,7 +1273,6 @@
         <a href="/sitemap.xml">Sitemap</a>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>© 2026 CBC Best — Competency Based Curriculum Hub. Original KICD-aligned content for Kenyan educators and learners. Google AdSense & Search Console compliant.</p>
       <p><a href="/sitemap.xml">Sitemap</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-use.html">Terms</a></p>
@@ -1593,7 +1281,7 @@
 </footer>
 
 <script>
-  /* ── Counter animation ── */
+  /* Counter animation */
   function animateCounter(id, end, duration) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -1605,8 +1293,6 @@
       if (current >= end) clearInterval(timer);
     }, 16);
   }
-
-  /* Only animate when hero stats scroll into view */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1617,11 +1303,10 @@
       }
     });
   }, { threshold: 0.3 });
-
   const statsEl = document.getElementById('schoolsCount');
   if (statsEl) observer.observe(statsEl.parentElement);
 
-  /* ── Mobile nav toggle ── */
+  /* Mobile nav toggle */
   const menuBtn = document.getElementById('mobileMenuBtn');
   const navLinks = document.getElementById('navLinks');
   if (menuBtn) {
@@ -1632,7 +1317,7 @@
     });
   }
 
-  /* ── Active nav highlight ── */
+  /* Active nav highlight */
   const currentFile = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(link => {
     const href = link.getAttribute('href');
@@ -1654,6 +1339,6 @@
     });
   }
 </script>
-
+<script src="cookie-consent.js"></script>
 </body>
 </html>

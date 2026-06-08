@@ -22,11 +22,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-    # HSTS - tell browsers to always use HTTPS (6 months)
     Strict-Transport-Security = "max-age=15768000; includeSubDomains"
-
-    # CSP - allows your Google Fonts, inline styles/scripts (needed for your site)
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.anthropic.com"
 
 # HTML - no caching (always serve fresh content)
@@ -103,6 +99,20 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# XSL stylesheet - required for styled sitemap to render in browser
+[[headers]]
+  for = "/*.xsl"
+  [headers.values]
+    Content-Type = "text/xsl; charset=UTF-8"
+    Cache-Control = "public, max-age=86400"
+
+# XML files - sitemap always fresh for search engines
+[[headers]]
+  for = "/*.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=UTF-8"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
 # ============================================
 # REDIRECTS
 # ============================================
@@ -175,7 +185,7 @@
   to = "/about-contact.html"
   status = 200
 
-# Catch-all 404
+# Catch-all 404 (must always be last)
 [[redirects]]
   from = "/*"
   to = "/404.html"
