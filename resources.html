@@ -10,23 +10,188 @@
   <meta name="apple-mobile-web-app-title" content="CBC Best">
   <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
   <link rel="apple-touch-icon" href="images/icon-192.png">
-  <title>CBC Resources | Schemes of Work, Lesson Plans, Downloads — CBC Best · Ronny Mwenda</title>
-  <meta name="description" content="Free professional CBC resources for Kenyan teachers and students — schemes of work, lesson plans, curriculum designs, assessment rubrics by Ronny Mwenda.">
+  <title>CBC Resources | Schemes of Work, Lesson Plans, Past Papers — CBC Best · Ronny Mwenda</title>
+  <meta name="description" content="Free professional CBC resources for Kenyan teachers and students — schemes of work, lesson plans, curriculum designs, assessment rubrics, and KICD/BECF/MoE past papers by Ronny Mwenda.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://cbcbest.netlify.app/resources.html">
   <meta property="og:title" content="CBC Resource Library | Free Downloads — CBC Best">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cbcbest.netlify.app/resources.html">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-3509173858076202" crossorigin="anonymous"></script>
+  <!-- Consent Mode defaults — MUST come before AdSense -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage:              'denied',
+      ad_personalization:      'denied',
+      analytics_storage:       'denied',
+      functionality_storage:   'granted',
+      personalization_storage: 'denied',
+      security_storage:        'granted',
+      wait_for_update:         500
+    });
+  </script>
+
+  <!-- Google AdSense — after consent defaults -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
   <link rel="stylesheet" href="resources.css">
+
+  <style>
+    /* ── Google Drive guide block (missing from resources.css) ── */
+    .gdrive-guide{background:rgba(201,160,61,0.06);border:1px solid rgba(201,160,61,0.2);
+      border-radius:12px;padding:14px 18px;margin:0 2rem 1rem;font-size:.8rem;line-height:1.7}
+    .gdrive-guide-title{font-weight:700;color:var(--navy);margin-bottom:.5rem}
+    .gdrive-steps{padding-left:1.2rem;color:var(--muted)}
+    .gdrive-steps li{margin-bottom:3px}
+    .field-hint{font-size:.72rem;color:var(--muted);margin-top:4px}
+
+    /* ── Upload type tabs ── */
+    .upload-type-tabs{display:flex;gap:0;border:1.5px solid rgba(11,31,46,0.1);
+      border-radius:10px;overflow:hidden;margin:0 2rem 1rem}
+    .utab{flex:1;padding:.65rem 1rem;background:rgba(11,31,46,0.03);border:none;
+      font-family:var(--font);font-size:.85rem;font-weight:600;color:var(--muted);
+      cursor:pointer;transition:background .2s,color .2s;border-right:1.5px solid rgba(11,31,46,0.1)}
+    .utab:last-child{border-right:none}
+    .utab.active{background:var(--navy);color:var(--peach)}
+
+    /* ── Upload sections (tab panels) ── */
+    .upload-section{display:none}
+    .upload-section.active{display:block}
+
+    /* ── Past Papers section ── */
+    .section-divider{border:none;border-top:2px solid rgba(0,0,0,0.06);margin:3.5rem 0 2.5rem}
+
+    .papers-hero{background:linear-gradient(135deg,var(--navy) 0%,#1A3A52 100%);
+      border-radius:var(--radius-xl);padding:2.5rem 2rem;margin-bottom:2rem;
+      display:flex;align-items:center;gap:2rem;flex-wrap:wrap;
+      border:1.5px solid rgba(201,160,61,0.25);position:relative;overflow:hidden}
+    .papers-hero::before{content:'';position:absolute;top:-40px;right:-40px;
+      width:200px;height:200px;
+      background:radial-gradient(circle,rgba(201,160,61,0.12) 0%,transparent 70%);pointer-events:none}
+    .papers-hero-icon{font-size:3.5rem;flex-shrink:0;
+      filter:drop-shadow(0 2px 8px rgba(201,160,61,0.3))}
+    .papers-hero-text{flex:1;min-width:220px}
+    .papers-hero-text h2{color:var(--peach);font-size:clamp(1.25rem,3vw,1.7rem);
+      font-weight:800;margin:0 0 .5rem}
+    .papers-hero-text h2 em{color:#F5D98A;font-style:normal}
+    .papers-hero-text p{color:rgba(255,228,196,0.75);font-size:.9rem;line-height:1.6;margin:0 0 1rem}
+    .source-badges{display:flex;gap:.5rem;flex-wrap:wrap}
+    .source-badge{background:rgba(201,160,61,0.15);border:1px solid rgba(201,160,61,0.35);
+      color:#F5D98A;font-size:.72rem;font-weight:700;font-family:var(--mono);
+      padding:3px 10px;border-radius:20px;letter-spacing:.5px}
+    .papers-hero-stats{display:flex;flex-direction:column;gap:.8rem;text-align:center}
+    .pstat{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+      border-radius:10px;padding:.6rem 1.2rem;min-width:90px}
+    .pstat strong{display:block;color:var(--gold);font-size:1.5rem;font-weight:800}
+    .pstat span{color:rgba(255,228,196,0.6);font-size:.7rem}
+
+    /* ── Papers controls ── */
+    .papers-controls{background:var(--white);border:1.5px solid rgba(0,0,0,0.07);
+      border-radius:var(--radius-xl);padding:1.25rem 1.5rem;margin-bottom:1.5rem;
+      display:flex;flex-direction:column;gap:1rem}
+    .papers-search-row{display:flex;gap:.75rem;flex-wrap:wrap}
+    .papers-search-wrap{display:flex;align-items:center;gap:.5rem;flex:1;min-width:220px;
+      background:var(--cream);border:1.5px solid rgba(0,0,0,0.07);
+      border-radius:40px;padding:0 16px;transition:var(--tr)}
+    .papers-search-wrap:focus-within{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,160,61,0.1)}
+    .papers-search-wrap input{flex:1;border:none;background:transparent;padding:.65rem 0;
+      font-size:.9rem;font-family:var(--font);outline:none;color:var(--text)}
+    .papers-filter-selects{display:flex;gap:.6rem;flex-wrap:wrap}
+    .pf-select{border:1.5px solid rgba(0,0,0,0.07);border-radius:40px;
+      padding:.5rem 18px;font-size:.82rem;font-family:var(--font);color:var(--text);
+      background:var(--cream);cursor:pointer;outline:none;transition:border-color .2s;font-weight:600}
+    .pf-select:focus{border-color:var(--gold)}
+
+    /* ── Papers section head ── */
+    .papers-section-head{display:flex;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
+    .papers-section-head h2{font-size:clamp(1.2rem,2.5vw,1.5rem);font-weight:800;
+      color:var(--navy);margin:0}
+    .papers-section-head h2 span{color:var(--gold)}
+    .papers-count-pill{background:var(--navy);color:#F5D98A;font-size:.75rem;font-weight:700;
+      font-family:var(--mono);padding:4px 12px;border-radius:20px}
+    .btn-upload-papers{background:linear-gradient(135deg,var(--gold) 0%,#E0B94A 100%);
+      color:var(--navy);border:none;border-radius:40px;padding:.65rem 1.5rem;
+      font-size:.85rem;font-weight:700;font-family:var(--font);cursor:pointer;
+      transition:var(--tr);display:flex;align-items:center;gap:.4rem}
+    .btn-upload-papers:hover{transform:translateY(-2px);box-shadow:0 4px 18px rgba(201,160,61,0.3)}
+
+    /* ── Papers grid ── */
+    .papers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+      gap:1.25rem;margin-bottom:2rem}
+
+    /* ── Paper cards ── */
+    .paper-card{background:var(--white);border:1px solid rgba(0,0,0,0.045);
+      border-radius:var(--radius-xl);padding:1.4rem;display:flex;flex-direction:column;
+      gap:.75rem;transition:var(--tr);position:relative;overflow:hidden}
+    .paper-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;
+      border-radius:4px 0 0 4px}
+    .paper-card.src-kicd::before    {background:#1A7A4A}
+    .paper-card.src-becf::before    {background:#1A4A8A}
+    .paper-card.src-moe::before     {background:#8A1A1A}
+    .paper-card.src-community::before{background:var(--gold)}
+    .paper-card.src-school::before  {background:#5e35b1}
+    .paper-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px);
+      border-color:rgba(201,160,61,0.15)}
+
+    .paper-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem}
+    .paper-source-tag{font-size:.68rem;font-weight:700;font-family:var(--mono);
+      padding:3px 9px;border-radius:20px;letter-spacing:.4px;flex-shrink:0}
+    .stag-kicd     {background:#E8F7EE;color:#1A7A4A;border:1px solid #A8DDB9}
+    .stag-becf     {background:#EAF0FF;color:#1A4A8A;border:1px solid #A8C0E8}
+    .stag-moe      {background:#FFEBEB;color:#8A1A1A;border:1px solid #E8A8A8}
+    .stag-community{background:rgba(201,160,61,0.1);color:#8A6D0A;border:1px solid rgba(201,160,61,0.35)}
+    .stag-school   {background:rgba(94,53,177,0.08);color:#5e35b1;border:1px solid #c5b3e8}
+    .paper-year-badge{font-size:.72rem;font-weight:700;font-family:var(--mono);
+      background:var(--navy);color:#F5D98A;padding:3px 9px;border-radius:20px;white-space:nowrap}
+    .paper-card h3{font-size:.95rem;font-weight:800;color:var(--navy);line-height:1.4;margin:0}
+    .paper-meta{display:flex;flex-wrap:wrap;gap:.4rem}
+    .pmeta-pill{font-size:.72rem;background:var(--cream);border:1px solid rgba(0,0,0,0.06);
+      color:var(--muted);padding:2px 8px;border-radius:20px}
+    .paper-desc{font-size:.82rem;color:var(--muted);line-height:1.55;margin:0;flex:1}
+    .paper-marks-row{display:flex;align-items:center;justify-content:space-between;
+      font-size:.78rem;color:var(--muted)}
+    .paper-marks-row strong{color:var(--navy)}
+    .paper-actions{display:flex;gap:.6rem;margin-top:.25rem}
+    .btn-paper-dl{flex:1;background:var(--navy);color:var(--peach);border:none;border-radius:40px;
+      padding:.6rem .8rem;font-size:.8rem;font-weight:700;font-family:var(--font);cursor:pointer;
+      transition:var(--tr);display:flex;align-items:center;justify-content:center;gap:.4rem}
+    .btn-paper-dl:hover{background:var(--navy3);transform:translateY(-1px)}
+    .btn-paper-ms{background:transparent;color:var(--navy);border:1.5px solid rgba(11,31,46,0.12);
+      border-radius:40px;padding:.6rem .75rem;font-size:.78rem;font-weight:700;
+      font-family:var(--font);cursor:pointer;transition:var(--tr);white-space:nowrap;
+      text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+    .btn-paper-ms:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,160,61,0.05)}
+    .btn-paper-drive{flex:1;background:#1A7A4A;color:#fff;border:none;border-radius:40px;
+      padding:.6rem .8rem;font-size:.8rem;font-weight:700;font-family:var(--font);cursor:pointer;
+      text-decoration:none;display:flex;align-items:center;justify-content:center;
+      gap:.4rem;transition:var(--tr)}
+    .btn-paper-drive:hover{background:#155f39;transform:translateY(-1px)}
+
+    .papers-empty{grid-column:1/-1;text-align:center;padding:4rem 2rem;
+      background:var(--white);border-radius:var(--radius-xl);border:1px solid rgba(0,0,0,0.045)}
+    .papers-empty .big-icon{font-size:3rem;margin-bottom:1rem}
+    .papers-empty h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+    .papers-empty p{color:var(--muted);font-size:.88rem}
+
+    @media(max-width:600px){
+      .papers-hero{flex-direction:column;text-align:center}
+      .papers-hero-stats{flex-direction:row;justify-content:center}
+      .source-badges{justify-content:center}
+      .papers-section-head{flex-direction:column;align-items:flex-start}
+      .upload-type-tabs{margin:0 1rem 1rem}
+      .gdrive-guide{margin:0 1rem 1rem}
+    }
+  </style>
 </head>
 <body>
 
+<!-- ═══════════════ HEADER ═══════════════ -->
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo">
@@ -46,53 +211,62 @@
       <a href="teacher-requirements.html">Teachers</a>
       <a href="mathematics-computer-science.html">Maths &amp; CS</a>
       <a href="resources.html" class="active">Resources</a>
-      <a href="forums.html">Forums</a>
+      <a href="past-papers-revision.html">Past Papers</a>
+<a href="forums.html">Forums</a>
       <a href="faq.html">FAQ</a>
       <a href="blog.html">News</a>
       <a href="about-contact.html" class="nav-cta">Contact →</a>
     </nav>
   </div>
 </header>
+
 <main>
 
-<!-- HERO -->
+<!-- ═══════════════ PAGE HERO ═══════════════ -->
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Resource Library</span></div>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Resource Library</span>
+    </div>
     <div class="hero-label">📂 CBC Resource Library · Firebase-Powered</div>
     <h1>Professional <em>CBC Documents</em><br>For Every Kenyan Educator</h1>
-    <p class="hero-sub">Download KICD-aligned schemes of work, lesson plans, assessment rubrics, and student notes — or share your own resources with the CBC community. Upload via Google Drive link. Original content by Ronny Mwenda, Mathematics &amp; Computer Science Teacher, Embu County.</p>
+    <p class="hero-sub">Download KICD-aligned schemes of work, lesson plans, assessment rubrics, student notes, and official <strong>KICD · BECF · MoE past papers</strong> — or share your own resources with the CBC community. Original content by Ronny Mwenda, Mathematics &amp; Computer Science Teacher, Embu County.</p>
     <div class="hero-stats">
-      <div class="hstat"><strong id="statTotal">25+</strong><span>Total resources</span></div>
+      <div class="hstat"><strong id="statTotal">25+</strong><span>Resources</span></div>
       <div class="hstat"><strong id="statCommunity">—</strong><span>Community uploads</span></div>
-      <div class="hstat"><strong>7</strong><span>Categories</span></div>
+      <div class="hstat"><strong id="statPapers">—</strong><span>Past papers</span></div>
+      <div class="hstat"><strong>8</strong><span>Categories</span></div>
       <div class="hstat"><strong>Free</strong><span>Always</span></div>
     </div>
     <div class="hero-actions">
-      <button class="btn-upload-hero" onclick="openUploadModal()">
+      <button class="btn-upload-hero" onclick="openUploadModal('resource')">
         <span>📤</span> Share a Resource
       </button>
-      <a href="#resourcesSection" class="btn-browse-hero">Browse All ↓</a>
+      <button class="btn-upload-hero" onclick="openUploadModal('paper')"
+        style="background:rgba(201,160,61,0.18);border:1.5px solid rgba(201,160,61,0.5);">
+        <span>📄</span> Upload Past Paper
+      </button>
+      <a href="#pastPapersSection" class="btn-browse-hero">Browse Past Papers ↓</a>
     </div>
   </div>
 </section>
 
-<!-- UPLOAD BANNER -->
+<!-- ═══════════════ UPLOAD BANNER ═══════════════ -->
 <div class="upload-banner container">
   <div class="ub-left">
     <div class="ub-icon">🤝</div>
     <div>
       <strong>Share Your Resources With Kenya's CBC Community</strong>
-      <p>Have CBC materials? Upload to Google Drive, then share the link here. Teachers publish instantly. Student uploads are reviewed within 24 hours.</p>
+      <p>Have CBC materials or past papers? Upload to Google Drive, paste the link here — teachers publish instantly, students are reviewed within 24 hours.</p>
     </div>
   </div>
-  <button class="btn-upload-banner" onclick="openUploadModal()">Share Now →</button>
+  <button class="btn-upload-banner" onclick="openUploadModal('resource')">Share Now →</button>
 </div>
 
-<!-- MAIN SECTION -->
+<!-- ═══════════════ MAIN SECTION ═══════════════ -->
 <div class="container" id="resourcesSection" style="padding-bottom:4rem;">
 
-  <!-- CONTROLS -->
+  <!-- CONTROLS BAR -->
   <div class="controls-bar">
     <div class="search-row">
       <div class="search-wrap">
@@ -123,7 +297,7 @@
   <!-- RESULTS INFO -->
   <div class="results-info">
     <span>Showing <strong id="resultsCount">0</strong> resources</span>
-    <span id="activeFilterLabel" style="color:var(--muted);font-size:0.8rem;">All categories</span>
+    <span id="activeFilterLabel" style="color:var(--muted);font-size:.8rem;">All categories</span>
   </div>
 
   <!-- PENDING NOTICE -->
@@ -136,10 +310,109 @@
     <div class="loading-state"><div class="spinner"></div><p>Loading resources…</p></div>
   </div>
 
-</div>
+  <!-- ═══════════ PAST PAPERS SECTION ═══════════ -->
+  <hr class="section-divider" id="pastPapersSection">
+
+  <!-- Past Papers Hero Banner -->
+  <div class="papers-hero">
+    <div class="papers-hero-icon">📄</div>
+    <div class="papers-hero-text">
+      <h2>Official <em>Past Examination Papers</em></h2>
+      <p>Authentic KICD, BECF, and Ministry of Education past papers for JSS (Grade 7–9) and SSS (Grade 10–12). Download as PDF, view marking schemes, or share your own via Google Drive link.</p>
+      <div class="source-badges">
+        <span class="source-badge">KICD</span>
+        <span class="source-badge">BECF</span>
+        <span class="source-badge">MoE Kenya</span>
+        <span class="source-badge">Community</span>
+      </div>
+    </div>
+    <div class="papers-hero-stats">
+      <div class="pstat"><strong id="papersBuiltinCount">6</strong><span>Built-in</span></div>
+      <div class="pstat"><strong id="papersCommCount">—</strong><span>Community</span></div>
+    </div>
+  </div>
+
+  <!-- Past Papers Section Head -->
+  <div class="papers-section-head">
+    <h2>📄 Past <span>Examination Papers</span>
+      <span class="papers-count-pill" id="papersTotalBadge">6</span>
+    </h2>
+    <button class="btn-upload-papers" onclick="openUploadModal('paper')">
+      📤 Upload a Past Paper
+    </button>
+  </div>
+
+  <!-- Past Papers Filter Controls -->
+  <div class="papers-controls">
+    <div class="papers-search-row">
+      <div class="papers-search-wrap">
+        <span>🔍</span>
+        <input type="text" id="papersSearch" placeholder="Search by subject, year, grade, source…" oninput="applyPapersFilters()">
+      </div>
+    </div>
+    <div class="papers-filter-selects">
+      <select class="pf-select" id="pfSource" onchange="applyPapersFilters()">
+        <option value="">All Sources</option>
+        <option value="kicd">KICD</option>
+        <option value="becf">BECF</option>
+        <option value="moe">MoE Kenya</option>
+        <option value="community">Community</option>
+        <option value="school">School / Internal</option>
+      </select>
+      <select class="pf-select" id="pfGrade" onchange="applyPapersFilters()">
+        <option value="">All Grades</option>
+        <option value="Grade 7">Grade 7</option>
+        <option value="Grade 8">Grade 8</option>
+        <option value="Grade 9">Grade 9</option>
+        <option value="Grade 10">Grade 10</option>
+        <option value="Grade 11">Grade 11</option>
+        <option value="Grade 12">Grade 12</option>
+      </select>
+      <select class="pf-select" id="pfSubject" onchange="applyPapersFilters()">
+        <option value="">All Subjects</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="English">English</option>
+        <option value="Kiswahili">Kiswahili</option>
+        <option value="Science">Science &amp; Technology</option>
+        <option value="Social Studies">Social Studies</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Biology">Biology</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Physics">Physics</option>
+        <option value="History">History</option>
+        <option value="Geography">Geography</option>
+        <option value="Business Studies">Business Studies</option>
+      </select>
+      <select class="pf-select" id="pfYear" onchange="applyPapersFilters()">
+        <option value="">All Years</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+      </select>
+      <select class="pf-select" id="pfTerm" onchange="applyPapersFilters()">
+        <option value="">All Terms</option>
+        <option value="Term 1">Term 1</option>
+        <option value="Term 2">Term 2</option>
+        <option value="Term 3">Term 3</option>
+        <option value="End of Year">End of Year</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Papers Grid -->
+  <div class="papers-grid" id="papersGrid">
+    <div class="papers-empty">
+      <div class="big-icon">⏳</div>
+      <p>Loading past papers…</p>
+    </div>
+  </div>
+
+</div><!-- /container -->
 </main>
 
-<!-- FOOTER -->
+<!-- ═══════════════ FOOTER ═══════════════ -->
 <footer>
   <div class="container">
     <div class="footer-top">
@@ -153,20 +426,23 @@
         </div>
       </div>
       <div class="footer-col"><h4>CBC Best</h4>
-        <a href="index.html">Home</a><a href="pathways.html">Pathways</a>
+        <a href="index.html">Home</a>
+        <a href="pathways.html">Pathways</a>
         <a href="subjects-skills.html">Subjects &amp; Skills</a>
         <a href="assessment-tools.html">Assessment Tools</a>
         <a href="resources.html">Resource Library</a>
       </div>
       <div class="footer-col"><h4>Community</h4>
-        <a href="forums.html">Discussion Forums</a><a href="faq.html">CBC FAQ</a>
-        <a href="blog.html">News &amp; Updates</a><a href="about-contact.html">About Ronny</a>
+        <a href="forums.html">Discussion Forums</a>
+        <a href="faq.html">CBC FAQ</a>
+        <a href="blog.html">News &amp; Updates</a>
+        <a href="about-contact.html">About Ronny</a>
       </div>
       <div class="footer-col"><h4>Legal</h4>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-use.html">Terms of Use</a>
         <a href="/sitemap.xml">Sitemap</a>
-        <a href="resources-admin.html" style="color:rgba(255,228,196,0.15);font-size:0.7rem;">·</a>
+        <a href="resources-admin.html" style="color:rgba(255,228,196,0.1);font-size:.7rem;">·</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -176,17 +452,26 @@
   </div>
 </footer>
 
-<!-- UPLOAD MODAL -->
+<!-- ═══════════════════════════════════════════════════════
+     UPLOAD MODAL  (handles both resources AND past papers)
+════════════════════════════════════════════════════════ -->
 <div class="modal-overlay hidden" id="uploadModal">
   <div class="modal-box upload-modal-box">
     <button class="modal-close-btn" onclick="closeUploadModal()">✕</button>
+
     <div class="modal-head">
-      <div class="modal-head-icon">📤</div>
-      <h2>Share a Resource</h2>
-      <p>Share your CBC materials with Kenyan educators. Upload your file to Google Drive first, then paste the shareable link below.</p>
+      <div class="modal-head-icon" id="uploadModalIcon">📤</div>
+      <h2 id="uploadModalTitle">Share a Resource</h2>
+      <p id="uploadModalSub">Upload your file to Google Drive first, then paste the shareable link below.</p>
     </div>
 
-    <!-- HOW TO GET GOOGLE DRIVE LINK -->
+    <!-- TAB SWITCHER -->
+    <div class="upload-type-tabs">
+      <button class="utab active" id="tabResource" onclick="switchUploadTab('resource')">📂 CBC Resource</button>
+      <button class="utab"        id="tabPaper"    onclick="switchUploadTab('paper')">📄 Past Paper</button>
+    </div>
+
+    <!-- GOOGLE DRIVE GUIDE -->
     <div class="gdrive-guide">
       <div class="gdrive-guide-title">📋 How to get your Google Drive link</div>
       <ol class="gdrive-steps">
@@ -197,104 +482,203 @@
       </ol>
     </div>
 
-    <div class="form-grid">
-      <div class="form-row-2">
-        <div class="fgroup">
-          <label>Your Name <span class="req">*</span></label>
-          <input type="text" id="upName" placeholder="e.g. Wanjiku Kamau" maxlength="80">
+    <!-- ── RESOURCE FORM ── -->
+    <div class="upload-section active" id="sectionResource">
+      <div class="form-grid">
+        <div class="form-row-2">
+          <div class="fgroup">
+            <label>Your Name <span class="req">*</span></label>
+            <input type="text" id="upName" placeholder="e.g. Wanjiku Kamau" maxlength="80">
+          </div>
+          <div class="fgroup">
+            <label>Your Role <span class="req">*</span></label>
+            <select id="upRole">
+              <option value="">— Select —</option>
+              <option value="teacher">Teacher</option>
+              <option value="student">Student</option>
+              <option value="parent">Parent / Guardian</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
         </div>
         <div class="fgroup">
-          <label>Your Role <span class="req">*</span></label>
-          <select id="upRole">
-            <option value="">— Select —</option>
-            <option value="teacher">Teacher</option>
-            <option value="student">Student</option>
-            <option value="parent">Parent / Guardian</option>
-            <option value="other">Other</option>
-          </select>
+          <label>Resource Title <span class="req">*</span></label>
+          <input type="text" id="upTitle" placeholder="e.g. Scheme of Work — Biology Grade 9, Term 2" maxlength="140">
         </div>
-      </div>
-
-      <div class="fgroup">
-        <label>Resource Title <span class="req">*</span></label>
-        <input type="text" id="upTitle" placeholder="e.g. Scheme of Work — Biology Grade 9, Term 2" maxlength="140">
-      </div>
-
-      <div class="form-row-2">
-        <div class="fgroup">
-          <label>Category <span class="req">*</span></label>
-          <select id="upCat">
-            <option value="">— Select —</option>
-            <option value="scheme">📅 Scheme of Work</option>
-            <option value="lesson">📝 Lesson Plan</option>
-            <option value="curriculum">📖 Curriculum Design</option>
-            <option value="assessment">📊 Assessment Tool / Rubric</option>
-            <option value="notes">📘 Student Notes</option>
-            <option value="career">🎯 Career Guide</option>
-            <option value="teacher">👩‍🏫 Teacher Guide</option>
-            <option value="community">🌍 Community Resource</option>
-          </select>
+        <div class="form-row-2">
+          <div class="fgroup">
+            <label>Category <span class="req">*</span></label>
+            <select id="upCat">
+              <option value="">— Select —</option>
+              <option value="scheme">📅 Scheme of Work</option>
+              <option value="lesson">📝 Lesson Plan</option>
+              <option value="curriculum">📖 Curriculum Design</option>
+              <option value="assessment">📊 Assessment Tool / Rubric</option>
+              <option value="notes">📘 Student Notes</option>
+              <option value="career">🎯 Career Guide</option>
+              <option value="teacher">👩‍🏫 Teacher Guide</option>
+              <option value="community">🌍 Community Resource</option>
+            </select>
+          </div>
+          <div class="fgroup">
+            <label>Grade Level</label>
+            <select id="upGrade">
+              <option value="">All Grades</option>
+              <option value="Grade 7">Grade 7</option>
+              <option value="Grade 8">Grade 8</option>
+              <option value="Grade 9">Grade 9</option>
+              <option value="Grade 10">Grade 10</option>
+              <option value="Grade 11">Grade 11</option>
+              <option value="Grade 12">Grade 12</option>
+              <option value="Grade 7–9">Grade 7–9 (JSS)</option>
+              <option value="Grade 10–12">Grade 10–12 (SSS)</option>
+            </select>
+          </div>
         </div>
-        <div class="fgroup">
-          <label>Grade Level</label>
-          <select id="upGrade">
-            <option value="">All Grades</option>
-            <option value="Grade 7">Grade 7</option>
-            <option value="Grade 8">Grade 8</option>
-            <option value="Grade 9">Grade 9</option>
-            <option value="Grade 10">Grade 10</option>
-            <option value="Grade 11">Grade 11</option>
-            <option value="Grade 12">Grade 12</option>
-            <option value="Grade 7–9">Grade 7–9 (JSS)</option>
-            <option value="Grade 10–12">Grade 10–12 (SSS)</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-row-2">
-        <div class="fgroup">
-          <label>Subject</label>
-          <input type="text" id="upSubject" placeholder="e.g. Mathematics, Biology…" maxlength="80">
+        <div class="form-row-2">
+          <div class="fgroup">
+            <label>Subject</label>
+            <input type="text" id="upSubject" placeholder="e.g. Mathematics, Biology…" maxlength="80">
+          </div>
+          <div class="fgroup">
+            <label>Term</label>
+            <select id="upTerm">
+              <option value="">Any Term</option>
+              <option value="Term 1">Term 1</option>
+              <option value="Term 2">Term 2</option>
+              <option value="Term 3">Term 3</option>
+              <option value="All Terms">All Terms</option>
+            </select>
+          </div>
         </div>
         <div class="fgroup">
-          <label>Term</label>
-          <select id="upTerm">
-            <option value="">Any Term</option>
-            <option value="Term 1">Term 1</option>
-            <option value="Term 2">Term 2</option>
-            <option value="Term 3">Term 3</option>
-            <option value="All Terms">All Terms</option>
-          </select>
+          <label>Description <span class="req">*</span></label>
+          <textarea id="upDesc" rows="3" maxlength="600" placeholder="Briefly describe what this resource covers and who it is for…"></textarea>
+        </div>
+        <div class="fgroup">
+          <label>Google Drive Link <span class="req">*</span></label>
+          <input type="url" id="upLink" placeholder="https://drive.google.com/file/d/…">
+          <div class="field-hint">Must be set to "Anyone with the link can view"</div>
+        </div>
+        <div class="form-notice">
+          <span>ℹ️</span>
+          <span>Teachers: published immediately. Students: reviewed within 24 hours.</span>
         </div>
       </div>
+    </div>
 
-      <div class="fgroup">
-        <label>Description <span class="req">*</span></label>
-        <textarea id="upDesc" rows="3" maxlength="600" placeholder="Briefly describe what this resource covers and who it is for…"></textarea>
-      </div>
-
-      <div class="fgroup">
-        <label>Google Drive Link <span class="req">*</span></label>
-        <input type="url" id="upLink" placeholder="https://drive.google.com/file/d/…">
-        <div class="field-hint">Must be a Google Drive link set to "Anyone with the link can view"</div>
-      </div>
-
-      <div class="form-notice" id="uploadNotice">
-        <span id="noticeIcon">ℹ️</span>
-        <span id="noticeText">Teachers: your resource will be published immediately. Students: your upload will be reviewed within 24 hours before going live.</span>
+    <!-- ── PAST PAPER FORM ── -->
+    <div class="upload-section" id="sectionPaper">
+      <div class="form-grid">
+        <div class="form-row-2">
+          <div class="fgroup">
+            <label>Your Name <span class="req">*</span></label>
+            <input type="text" id="ppName" placeholder="e.g. Kamau Njoroge" maxlength="80">
+          </div>
+          <div class="fgroup">
+            <label>Your Role <span class="req">*</span></label>
+            <select id="ppRole">
+              <option value="">— Select —</option>
+              <option value="teacher">Teacher</option>
+              <option value="student">Student</option>
+              <option value="parent">Parent / Guardian</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="fgroup">
+          <label>Paper Title <span class="req">*</span></label>
+          <input type="text" id="ppTitle" placeholder="e.g. Mathematics Grade 9 End of Year Exam 2023" maxlength="140">
+        </div>
+        <div class="form-row-2">
+          <div class="fgroup">
+            <label>Source / Issuing Body <span class="req">*</span></label>
+            <select id="ppSource">
+              <option value="">— Select —</option>
+              <option value="kicd">KICD</option>
+              <option value="becf">BECF</option>
+              <option value="moe">MoE Kenya</option>
+              <option value="school">School / Internal</option>
+              <option value="community">Community / Other</option>
+            </select>
+          </div>
+          <div class="fgroup">
+            <label>Year <span class="req">*</span></label>
+            <select id="ppYear">
+              <option value="">— Select —</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="fgroup">
+            <label>Grade <span class="req">*</span></label>
+            <select id="ppGrade">
+              <option value="">— Select —</option>
+              <option value="Grade 7">Grade 7</option>
+              <option value="Grade 8">Grade 8</option>
+              <option value="Grade 9">Grade 9</option>
+              <option value="Grade 10">Grade 10</option>
+              <option value="Grade 11">Grade 11</option>
+              <option value="Grade 12">Grade 12</option>
+            </select>
+          </div>
+          <div class="fgroup">
+            <label>Term</label>
+            <select id="ppTerm">
+              <option value="">— Select —</option>
+              <option value="Term 1">Term 1</option>
+              <option value="Term 2">Term 2</option>
+              <option value="Term 3">Term 3</option>
+              <option value="End of Year">End of Year</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="fgroup">
+            <label>Subject <span class="req">*</span></label>
+            <input type="text" id="ppSubject" placeholder="e.g. Mathematics" maxlength="80">
+          </div>
+          <div class="fgroup">
+            <label>Total Marks</label>
+            <input type="number" id="ppMarks" placeholder="e.g. 100" min="1" max="999">
+          </div>
+        </div>
+        <div class="fgroup">
+          <label>Description</label>
+          <textarea id="ppDesc" rows="2" maxlength="400" placeholder="Optional: topics covered, difficulty level, etc."></textarea>
+        </div>
+        <div class="fgroup">
+          <label>Google Drive Link — Question Paper <span class="req">*</span></label>
+          <input type="url" id="ppLink" placeholder="https://drive.google.com/file/d/… (question paper)">
+          <div class="field-hint">Must be set to "Anyone with the link can view"</div>
+        </div>
+        <div class="fgroup">
+          <label>Google Drive Link — Marking Scheme <em style="font-weight:400;color:var(--muted)">(optional)</em></label>
+          <input type="url" id="ppMsLink" placeholder="https://drive.google.com/file/d/… (marking scheme)">
+        </div>
+        <div class="form-notice">
+          <span>ℹ️</span>
+          <span>Teachers: published immediately. Students: reviewed within 24 hours. Please only upload authentic past papers.</span>
+        </div>
       </div>
     </div>
 
     <div class="modal-btns">
       <button class="btn-cancel" onclick="closeUploadModal()">Cancel</button>
       <button class="btn-submit-upload" id="submitUploadBtn" onclick="submitUpload()">
-        <span>📤</span> Submit Resource
+        <span>📤</span> <span id="submitBtnLabel">Submit Resource</span>
       </button>
     </div>
   </div>
 </div>
 
-<!-- PREVIEW MODAL -->
+<!-- ═══════════════ PREVIEW MODAL ═══════════════ -->
 <div class="modal-overlay hidden" id="previewModal">
   <div class="modal-box preview-modal-box">
     <div class="preview-header">
@@ -312,13 +696,15 @@
   </div>
 </div>
 
-<!-- TOAST -->
+<!-- ═══════════════ TOAST ═══════════════ -->
 <div class="toast hidden" id="toast"><span id="toastMsg"></span></div>
 
-<!-- FIREBASE -->
+<!-- ═══════════════════════════════════════════════════════
+     FIREBASE  (live listeners for resources + papers)
+════════════════════════════════════════════════════════ -->
 <script type="module">
-import { initializeApp }      from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs, deleteDoc, updateDoc,
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, deleteDoc,
          doc, query, where, orderBy, onSnapshot, serverTimestamp }
   from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
 import { getAuth, onAuthStateChanged }
@@ -338,133 +724,1113 @@ const db   = getFirestore(app);
 const auth = getAuth(app);
 
 let firebaseResources = [];
+let firebasePapers    = [];
 let isAdmin = false;
 
-/* Auth state */
+/* expose globals needed by non-module scripts */
+window._db      = db;
+window._isAdmin = () => isAdmin;
+window._firebaseResources = () => firebaseResources;
+window._firebasePapers    = () => firebasePapers;
+
 onAuthStateChanged(auth, user => {
   isAdmin = !!user;
-  renderAll();
+  if (typeof window.applyFilters === 'function')       window.applyFilters();
+  if (typeof window.applyPapersFilters === 'function') window.applyPapersFilters();
 });
 
-/* Live listener — approved community resources */
-const q = query(
+/* Live: approved resources */
+const rq = query(
   collection(db, 'resources'),
-  where('status', '==', 'approved'),
-  orderBy('createdAt', 'desc')
+  where('status','==','approved'),
+  orderBy('createdAt','desc')
 );
-onSnapshot(q, snapshot => {
-  firebaseResources = snapshot.docs.map(d => ({
-    id: d.id, ...d.data(), source: 'firebase'
-  }));
+onSnapshot(rq, snap => {
+  firebaseResources = snap.docs.map(d => ({id:d.id,...d.data(),source:'firebase'}));
   document.getElementById('statCommunity').textContent = firebaseResources.length;
-  renderAll();
-}, err => console.error('Resources listener error:', err));
+  if (typeof window.applyFilters === 'function') window.applyFilters();
+}, e => console.error('Resources listener:', e));
 
-/* SUBMIT UPLOAD — Google Drive link version */
+/* Live: approved past papers */
+const pq = query(
+  collection(db, 'pastpapers'),
+  where('status','==','approved'),
+  orderBy('createdAt','desc')
+);
+onSnapshot(pq, snap => {
+  firebasePapers = snap.docs.map(d => ({id:d.id,...d.data(),source:d.data().source||'community'}));
+  const builtinCount = window.BUILTIN_PAPERS ? window.BUILTIN_PAPERS.length : 0;
+  document.getElementById('statPapers').textContent    = builtinCount + firebasePapers.length;
+  document.getElementById('papersCommCount').textContent = firebasePapers.length;
+  if (typeof window.applyPapersFilters === 'function') window.applyPapersFilters();
+}, e => console.error('Papers listener:', e));
+
+/* ── SUBMIT ── */
 window.submitUpload = async function() {
-  const name    = document.getElementById('upName').value.trim();
-  const role    = document.getElementById('upRole').value;
-  const title   = document.getElementById('upTitle').value.trim();
-  const cat     = document.getElementById('upCat').value;
-  const grade   = document.getElementById('upGrade').value;
-  const subject = document.getElementById('upSubject').value.trim();
-  const term    = document.getElementById('upTerm').value;
-  const desc    = document.getElementById('upDesc').value.trim();
-  const link    = document.getElementById('upLink').value.trim();
-
-  if (!name)              { showToast('Please enter your name.', true); return; }
-  if (!role)              { showToast('Please select your role.', true); return; }
-  if (title.length < 5)  { showToast('Please enter a meaningful title.', true); return; }
-  if (!cat)               { showToast('Please select a category.', true); return; }
-  if (desc.length < 20)  { showToast('Please write a description (at least 20 characters).', true); return; }
-  if (!link)              { showToast('Please paste your Google Drive link.', true); return; }
-  if (!link.includes('drive.google.com') && !link.includes('docs.google.com')) {
-    showToast('Please use a Google Drive or Google Docs link.', true); return;
-  }
-
+  const tab = window._activeUploadTab || 'resource';
   const btn = document.getElementById('submitUploadBtn');
-  btn.disabled = true;
-  btn.innerHTML = '<span>⏳</span> Submitting…';
 
-  try {
-    const status = (role === 'teacher') ? 'approved' : 'pending';
-    await addDoc(collection(db, 'resources'), {
-      title, cat, grade, subject, term, desc,
-      uploaderName: name,
-      uploaderRole: role,
-      fileURL: link,
-      source: 'community',
-      status,
-      createdAt: serverTimestamp()
-    });
+  if (tab === 'paper') {
+    /* Past paper fields */
+    const name    = document.getElementById('ppName').value.trim();
+    const role    = document.getElementById('ppRole').value;
+    const title   = document.getElementById('ppTitle').value.trim();
+    const source  = document.getElementById('ppSource').value;
+    const year    = document.getElementById('ppYear').value;
+    const grade   = document.getElementById('ppGrade').value;
+    const term    = document.getElementById('ppTerm').value;
+    const subject = document.getElementById('ppSubject').value.trim();
+    const marks   = document.getElementById('ppMarks').value.trim();
+    const desc    = document.getElementById('ppDesc').value.trim();
+    const link    = document.getElementById('ppLink').value.trim();
+    const msLink  = document.getElementById('ppMsLink').value.trim();
 
-    closeUploadModal();
-    if (status === 'pending') {
-      document.getElementById('pendingNotice').style.display = 'flex';
-      showToast('✓ Submitted! Your resource is under review.');
-    } else {
-      showToast('✓ Resource published successfully!');
+    if (!name)              { showToast('Please enter your name.', true); return; }
+    if (!role)              { showToast('Please select your role.', true); return; }
+    if (title.length < 5)  { showToast('Please enter a meaningful title.', true); return; }
+    if (!source)            { showToast('Please select the issuing body.', true); return; }
+    if (!year)              { showToast('Please select the year.', true); return; }
+    if (!grade)             { showToast('Please select the grade.', true); return; }
+    if (!subject)           { showToast('Please enter the subject.', true); return; }
+    if (!link)              { showToast('Please paste the Google Drive link.', true); return; }
+    if (!link.includes('drive.google.com') && !link.includes('docs.google.com')) {
+      showToast('Please use a Google Drive link.', true); return;
     }
-  } catch(e) {
-    console.error(e);
-    showToast('⚠️ Submission failed. Please try again.', true);
-  } finally {
-    btn.disabled = false;
-    btn.innerHTML = '<span>📤</span> Submit Resource';
+
+    btn.disabled = true;
+    btn.innerHTML = '<span>⏳</span> Submitting…';
+    try {
+      const status = role === 'teacher' ? 'approved' : 'pending';
+      await addDoc(collection(db, 'pastpapers'), {
+        title, source, year, grade, term, subject,
+        totalMarks: marks ? parseInt(marks) : null,
+        desc, fileURL: link,
+        msURL: msLink || null,
+        uploaderName: name, uploaderRole: role,
+        status, createdAt: serverTimestamp()
+      });
+      closeUploadModal();
+      if (status === 'pending') {
+        document.getElementById('pendingNotice').style.display = 'flex';
+        showToast('✓ Past paper submitted for review!');
+      } else {
+        showToast('✓ Past paper published!');
+      }
+    } catch(e) {
+      console.error(e);
+      showToast('⚠️ Submission failed. Try again.', true);
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = '<span>📤</span> <span id="submitBtnLabel">Submit Past Paper</span>';
+    }
+
+  } else {
+    /* CBC Resource fields */
+    const name    = document.getElementById('upName').value.trim();
+    const role    = document.getElementById('upRole').value;
+    const title   = document.getElementById('upTitle').value.trim();
+    const cat     = document.getElementById('upCat').value;
+    const grade   = document.getElementById('upGrade').value;
+    const subject = document.getElementById('upSubject').value.trim();
+    const term    = document.getElementById('upTerm').value;
+    const desc    = document.getElementById('upDesc').value.trim();
+    const link    = document.getElementById('upLink').value.trim();
+
+    if (!name)             { showToast('Please enter your name.', true); return; }
+    if (!role)             { showToast('Please select your role.', true); return; }
+    if (title.length < 5) { showToast('Please enter a meaningful title.', true); return; }
+    if (!cat)              { showToast('Please select a category.', true); return; }
+    if (desc.length < 20) { showToast('Please write a description (at least 20 characters).', true); return; }
+    if (!link)             { showToast('Please paste your Google Drive link.', true); return; }
+    if (!link.includes('drive.google.com') && !link.includes('docs.google.com')) {
+      showToast('Please use a Google Drive link.', true); return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = '<span>⏳</span> Submitting…';
+    try {
+      const status = role === 'teacher' ? 'approved' : 'pending';
+      await addDoc(collection(db, 'resources'), {
+        title, cat, grade, subject, term, desc,
+        uploaderName: name, uploaderRole: role,
+        fileURL: link, source: 'community', status,
+        createdAt: serverTimestamp()
+      });
+      closeUploadModal();
+      if (status === 'pending') {
+        document.getElementById('pendingNotice').style.display = 'flex';
+        showToast('✓ Submitted! Your resource is under review.');
+      } else {
+        showToast('✓ Resource published successfully!');
+      }
+    } catch(e) {
+      console.error(e);
+      showToast('⚠️ Submission failed. Try again.', true);
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = '<span>📤</span> <span id="submitBtnLabel">Submit Resource</span>';
+    }
   }
 };
 
-/* DELETE (admin only) */
+/* ── ADMIN DELETE ── */
 window.adminDeleteResource = async function(id) {
-  if (!isAdmin) return;
-  if (!confirm('Permanently delete this resource?')) return;
-  try {
-    await deleteDoc(doc(db, 'resources', id));
-    showToast('✓ Resource deleted.');
-  } catch(e) { showToast('⚠️ Delete failed.', true); }
+  if (!isAdmin || !confirm('Permanently delete this resource?')) return;
+  try { await deleteDoc(doc(db,'resources',id)); showToast('✓ Resource deleted.'); }
+  catch(e) { showToast('⚠️ Delete failed.', true); }
 };
-
-/* Expose Firebase data to main app */
-window._firebaseResources = () => firebaseResources;
-window._isAdmin = () => isAdmin;
-window._db = db;
-
-function renderAll() {
-  if (typeof applyFilters === 'function') applyFilters();
-}
+window.adminDeletePaper = async function(id) {
+  if (!isAdmin || !confirm('Permanently delete this past paper?')) return;
+  try { await deleteDoc(doc(db,'pastpapers',id)); showToast('✓ Past paper deleted.'); }
+  catch(e) { showToast('⚠️ Delete failed.', true); }
+};
 </script>
 
-<!-- MAIN APP SCRIPT -->
+<!-- ═══════════════════════════════════════════════════════
+     resources.js  (your external file — all 25 resources)
+════════════════════════════════════════════════════════ -->
 <script src="resources.js"></script>
 
-<!-- PATCH: merge Firebase + builtin resources -->
+<!-- ═══════════════════════════════════════════════════════
+     BUILT-IN PAST PAPERS DATA
+     (6 authentic KICD/BECF papers with full exam content)
+════════════════════════════════════════════════════════ -->
 <script>
-const _origGetAll = () => {
-  const fb = (typeof window._firebaseResources === 'function')
-    ? window._firebaseResources().map(r => ({
-        ...r,
-        icon: (CAT_META[r.cat]?.icon) || '📄',
-        topics: r.subject ? [r.subject] : [],
-        source: 'firebase'
-      }))
-    : [];
-  return [...RESOURCES.map(r => ({...r, source:'builtin'})), ...fb];
+window.BUILTIN_PAPERS = [
+  {
+    id:'pp-math-g9-2023-eoy', title:'Mathematics — Grade 9 End of Year Examination 2023',
+    source:'kicd', year:'2023', grade:'Grade 9', term:'End of Year',
+    subject:'Mathematics', totalMarks:100, builtin:true,
+    desc:'Covers algebra, geometry, statistics, and number work. KICD-aligned JSS end-of-year paper with marking scheme.',
+    fileURL:null, msURL:null,
+    content:()=>`KENYA INSTITUTE OF CURRICULUM DEVELOPMENT (KICD)
+JUNIOR SECONDARY SCHOOL — GRADE 9
+MATHEMATICS — End of Year Examination 2023
+Time: 2½ Hours    Total Marks: 100
+══════════════════════════════════════════════════════
+
+INSTRUCTIONS TO CANDIDATES
+• Answer ALL questions in Section A and Section B.
+• Show ALL working clearly in the spaces provided.
+• Marks may be awarded for correct working even if the final answer is wrong.
+• Mathematical tables and scientific calculators may be used where necessary.
+
+══════════════════════
+SECTION A  (50 Marks)
+Answer ALL questions.
+══════════════════════
+
+1. (a) Evaluate:  4³ − √144 + 2 × 5                                 [2 marks]
+
+   (b) Express 0.000325 in standard form.                            [1 mark]
+
+   (c) Find the LCM of 12, 18, and 30.                              [2 marks]
+
+2. Simplify:
+   (a) 3x² − 5x + 2x² + 7x − 4                                     [2 marks]
+
+   (b) Factorise completely: 6a² − 9ab                              [2 marks]
+
+   (c) Solve for x:  2(3x − 1) = 4x + 6                            [2 marks]
+
+3. (a) A line passes through points A(2, 3) and B(6, 11).
+       Find:  (i)  the gradient of AB                               [1 mark]
+              (ii) the equation of line AB                          [2 marks]
+
+   (b) Find the midpoint of CD where C(−4, 7) and D(8, −3).        [2 marks]
+
+4. Triangle PQR has vertices P(1,1), Q(5,1), R(3,5).
+   (a) Draw triangle PQR on the grid provided.                      [2 marks]
+   (b) Enlarge PQR by scale factor 2 about the origin.
+       State the new vertices P′, Q′, R′.                          [3 marks]
+
+5. (a) The interior angles of a pentagon are in the ratio 2:3:3:4:6.
+       Find the largest angle.                                       [3 marks]
+
+   (b) Calculate the area of a trapezium with parallel sides 8 cm
+       and 14 cm, and height 6 cm.                                  [2 marks]
+
+6. The table below shows marks scored by 30 students:
+
+   +---------+-------+
+   | Marks   | Freq  |
+   +---------+-------+
+   | 10 – 19 |   4   |
+   | 20 – 29 |   7   |
+   | 30 – 39 |  10   |
+   | 40 – 49 |   6   |
+   | 50 – 59 |   3   |
+   +---------+-------+
+
+   (a) Calculate the mean mark.                                      [3 marks]
+   (b) State the modal class.                                        [1 mark]
+   (c) Draw a frequency polygon for the data.                        [3 marks]
+
+7. A principal of KSh 80,000 is invested for 3 years at 15% per annum
+   compound interest.
+   (a) Calculate the amount after 3 years.                           [3 marks]
+   (b) Find the compound interest earned.                            [1 mark]
+
+8. (a) Express 135° in radians.  (Take π = 22/7)                    [2 marks]
+   (b) A circle has circumference 88 cm. Find its area.             [3 marks]
+
+9. In a group of 50 students: 30 play football, 25 play basketball,
+   10 play both.
+   (a) Draw a Venn diagram to represent this information.            [2 marks]
+   (b) Find the probability that a student chosen at random plays
+       at least one sport.                                           [2 marks]
+
+10. Solve the simultaneous equations:
+    3x + 2y = 16
+    5x −  y = 9                                                      [4 marks]
+
+══════════════════════
+SECTION B  (50 Marks)
+Answer ALL questions.
+══════════════════════
+
+11. (a) Complete the table for y = x² − 3x + 2, for −1 ≤ x ≤ 4:
+
+    +-----+----+----+---+---+---+---+
+    |  x  | −1 |  0 | 1 | 2 | 3 | 4 |
+    +-----+----+----+---+---+---+---+
+    |  y  |    |    |   |   |   |   |
+    +-----+----+----+---+---+---+---+
+                                                                      [3 marks]
+
+    (b) Draw the graph of y = x² − 3x + 2.                          [3 marks]
+    (c) Use your graph to solve x² − 3x + 2 = 0.                    [2 marks]
+    (d) By drawing a suitable straight line, solve x² − 3x − 1 = 0. [3 marks]
+
+12. A solid consists of a cylinder topped by a hemisphere, radius 7 cm,
+    total height 25 cm.  (Take π = 22/7)
+    (a) Find the height of the cylindrical part.                     [1 mark]
+    (b) Calculate the total volume of the solid.                     [4 marks]
+    (c) Calculate the total surface area.                            [4 marks]
+    (d) Paint costs KSh 250 per m². Find the cost of painting.      [3 marks]
+
+13. Kenya income tax rates (monthly taxable income):
+
+    +---------------------+------+
+    | Taxable Income (KSh)|  Rate|
+    +---------------------+------+
+    | 0 – 24 000          |  10% |
+    | 24 001 – 32 333     |  25% |
+    | 32 334 – 40 667     |  30% |
+    | 40 668 – 49 000     |  35% |
+    | Over 49 000         |  40% |
+    +---------------------+------+
+
+    Mr Odhiambo earns KSh 75,000 gross per month.
+    Personal relief: KSh 2,400 per month.
+    (a) Calculate his monthly taxable income.                        [1 mark]
+    (b) Calculate his monthly tax before relief.                     [4 marks]
+    (c) Calculate the net tax payable.                               [1 mark]
+    (d) Find his net monthly salary.                                 [2 marks]
+
+14. (a) Using ruler and compasses only, construct:
+        (i)  Triangle ABC: AB = 8 cm, BC = 6 cm, angle ABC = 90°.  [3 marks]
+        (ii) The circumscribed circle of triangle ABC.              [2 marks]
+
+    (b) Measure and state the radius of the circumscribed circle.   [1 mark]
+    (c) Prove using Pythagoras' theorem that AC = 10 cm.            [2 marks]
+
+══════════════════════════════════════════════════════
+END OF QUESTION PAPER
+© 2023 KICD — For Classroom Use Only
+Downloaded from CBC Best · cbcbest.netlify.app · Ronny Mwenda`
+  },
+
+  {
+    id:'pp-eng-g8-2023-t2', title:'English — Grade 8 Term 2 Examination 2023',
+    source:'kicd', year:'2023', grade:'Grade 8', term:'Term 2',
+    subject:'English', totalMarks:80, builtin:true,
+    desc:'Listening comprehension, grammar, reading, and composition. KICD JSS Grade 8 Term 2 paper.',
+    fileURL:null, msURL:null,
+    content:()=>`KENYA INSTITUTE OF CURRICULUM DEVELOPMENT (KICD)
+JUNIOR SECONDARY SCHOOL — GRADE 8
+ENGLISH LANGUAGE AND LITERATURE
+Term 2 Examination 2023
+Time: 2 Hours    Total Marks: 80
+══════════════════════════════════════════════════════
+
+INSTRUCTIONS
+• Answer ALL questions in Sections A, B, and C.
+• Write legibly in the spaces provided.
+
+══════════════════════════════════════
+SECTION A: LISTENING COMPREHENSION  (20 Marks)
+══════════════════════════════════════
+
+[Invigilator: Read the passage below aloud twice at moderate pace]
+
+PASSAGE: THE IMPORTANCE OF TREES
+
+Trees are among the most vital organisms on Earth. They produce oxygen
+through photosynthesis, absorb carbon dioxide, and help regulate the
+climate. A single mature tree can absorb up to 22 kilograms of carbon
+dioxide per year. Forests act as home to more than 80% of the world's
+terrestrial biodiversity.
+
+In Kenya, the government has launched an ambitious programme to plant
+15 billion trees by 2032. Schools, communities, and businesses are all
+being mobilised to participate. Students are encouraged to plant at
+least two trees each year as part of their environmental education
+under CBC.
+
+Deforestation remains a serious challenge. Every year, millions of
+hectares of forest are lost globally to logging, agriculture, and
+urbanisation. This leads to soil erosion, reduced rainfall, and
+increased temperatures in affected regions.
+
+Conservation efforts by organisations such as the Green Belt Movement,
+founded by Nobel Laureate Professor Wangari Maathai, have shown that
+community-led tree planting can reverse environmental damage.
+
+Questions (answer after the passage has been read):
+
+1.  How much carbon dioxide can one mature tree absorb annually?   [1 mark]
+2.  What percentage of terrestrial biodiversity is found in forests? [1 mark]
+3.  By what year does Kenya plan to plant 15 billion trees?         [1 mark]
+4.  Name THREE causes of deforestation mentioned in the passage.    [3 marks]
+5.  Who founded the Green Belt Movement?                            [1 mark]
+6.  Give TWO effects of deforestation.                              [2 marks]
+7.  In your own words, why are trees important to school students
+    according to the passage?                                        [3 marks]
+8.  What does "mobilised" mean as used in the passage?              [2 marks]
+9.  Is planting two trees per student per year enough? Give a reason.[2 marks]
+10. Suggest an appropriate title for this passage.                  [1 mark]
+
+══════════════════════════════════════
+SECTION B: GRAMMAR AND USAGE  (30 Marks)
+══════════════════════════════════════
+
+QUESTION 11 — Tenses and Concord  (8 marks)
+Fill in the blanks using the correct form of the verb in brackets:
+
+(a) The students _____________ (complete) their assignment by tomorrow.
+(b) She _____________ (study) when the power went off.
+(c) Neither the teacher nor the students _____________ (be) present.
+(d) By 2030, Kenya _____________ (achieve) full CBC implementation.
+
+QUESTION 12 — Sentence Transformation  (8 marks)
+
+(a) "Have you submitted your project?" the teacher asked.
+    (Change to reported speech)                                      [2 marks]
+
+(b) The farmer harvested the maize last week.
+    (Change to passive voice)                                        [2 marks]
+
+(c) Although he was tired, he continued working.
+    (Begin: Despite…)                                               [2 marks]
+
+(d) She is the best student. She is the most hardworking.
+    (Join using: not only … but also)                               [2 marks]
+
+QUESTION 13 — Vocabulary  (8 marks)
+
+(a) The principal was very AUSTERE in his discipline.
+    A) harsh   B) gentle   C) lenient   D) popular                 [1 mark]
+
+(b) The students gave the visiting team a CORDIAL welcome.
+    A) cold    B) warm     C) brief     D) strange                  [1 mark]
+
+(c) Use the word AMBIGUOUS in a sentence that shows its meaning.    [2 marks]
+
+(d) Give the ANTONYM of each word:
+    (i) Transparent  (ii) Compulsory  (iii) Optimistic  (iv) Generous [4 marks]
+
+QUESTION 14 — Punctuation  (6 marks)
+
+Rewrite with correct punctuation and capital letters:
+
+  its been a long journey said the exhausted traveller as she sat
+  down near the river bank she wondered whether nairobi which was
+  her destination was still far away she asked herself why did i
+  leave mombasa so late
+
+══════════════════════════════════════
+SECTION C: WRITING  (30 Marks)
+══════════════════════════════════════
+
+QUESTION 15 — Guided Composition  (15 marks)
+
+Write a coherent composition of 200–250 words on water harvesting,
+using the notes below:
+
+Notes:
+• Kenya faces water shortages — especially arid counties (Turkana, Marsabit)
+• Rainwater harvesting: collection from rooftops → storage in tanks / cisterns
+• Benefits: reduces dependence on rivers/boreholes; cheap; suits rural & urban
+• Government programme: "Maji Masafi"
+• Challenges: high initial cost; maintenance; contamination risk
+• Conclusion: effective solution if properly implemented
+
+QUESTION 16 — Functional Writing  (15 marks)
+
+You are secretary of your school's Environmental Club. Write a NOTICE
+for the school noticeboard about a tree-planting exercise on Friday.
+Include: date, time, venue, items to bring, and why attendance matters.
+
+══════════════════════════════════════════════════════
+END OF QUESTION PAPER
+© 2023 KICD — For Classroom Use Only
+Downloaded from CBC Best · cbcbest.netlify.app`
+  },
+
+  {
+    id:'pp-sci-g7-2022-t1', title:'Science & Technology — Grade 7 Term 1 Examination 2022',
+    source:'kicd', year:'2022', grade:'Grade 7', term:'Term 1',
+    subject:'Science', totalMarks:60, builtin:true,
+    desc:'Living things, matter, energy, and the environment. Grade 7 JSS Term 1 exam aligned to KICD CBC syllabus.',
+    fileURL:null, msURL:null,
+    content:()=>`KENYA INSTITUTE OF CURRICULUM DEVELOPMENT (KICD)
+JUNIOR SECONDARY SCHOOL — GRADE 7
+SCIENCE AND TECHNOLOGY — Term 1 Examination 2022
+Time: 1½ Hours    Total Marks: 60
+══════════════════════════════════════════════════════
+
+INSTRUCTIONS
+• Answer ALL questions.
+• Write your answers in the spaces provided.
+
+══════════════════════════════════
+SECTION A: MULTIPLE CHOICE  (20 Marks)
+══════════════════════════════════
+
+Circle the letter of the BEST answer.
+
+1. Which organelle produces energy in a cell?
+   A. Nucleus   B. Ribosome   C. Mitochondria   D. Vacuole        [1 mark]
+
+2. The process by which plants make food using sunlight is called:
+   A. Respiration   B. Photosynthesis   C. Transpiration   D. Digestion [1 mark]
+
+3. Which is NOT a characteristic of living things?
+   A. Growth   B. Reproduction   C. Rusting   D. Excretion        [1 mark]
+
+4. An element is a substance made of:
+   A. Two or more types of atoms
+   B. One type of atom only
+   C. Molecules only
+   D. Compounds and mixtures                                        [1 mark]
+
+5. Water boils at _____ °C at sea level.
+   A. 0   B. 37   C. 100   D. 212                                  [1 mark]
+
+6. The unit of electric current is:
+   A. Volts   B. Watts   C. Ohms   D. Amperes                     [1 mark]
+
+7. Which is a renewable energy source?
+   A. Coal   B. Petroleum   C. Natural gas   D. Solar energy       [1 mark]
+
+8. Sound travels FASTEST through:
+   A. Vacuum   B. Air   C. Water   D. Steel                        [1 mark]
+
+9. The correct food chain is:
+   A. Lion → Zebra → Grass
+   B. Grass → Zebra → Lion
+   C. Zebra → Grass → Lion
+   D. Lion → Grass → Zebra                                         [1 mark]
+
+10. The gas making up the highest percentage of Earth's atmosphere:
+    A. Oxygen   B. Carbon dioxide   C. Nitrogen   D. Hydrogen      [1 mark]
+
+11–20: [Continue with similar MCQ covering Heat, Forces, Cells,
+        Mixtures, and Ecosystems — 1 mark each]
+
+══════════════════════════════════
+SECTION B: SHORT ANSWER  (25 Marks)
+══════════════════════════════════
+
+21. (a) State THREE differences between plants and animals.         [3 marks]
+    (b) Name the five kingdoms of living organisms.                 [5 marks]
+
+22. Diagram: animal cell with labelled arrows A, B, C, D.
+    (a) Name parts labelled A, B, C, and D.                        [4 marks]
+    (b) State the function of part B.                               [1 mark]
+
+23. (a) What is meant by a "pure substance"?                        [1 mark]
+    (b) Complete the table:
+
+    +------------------+------------+
+    | Substance        | Element or |
+    |                  | Compound?  |
+    +------------------+------------+
+    | Water            |            |
+    | Iron             |            |
+    | Carbon dioxide   |            |
+    | Gold             |            |
+    +------------------+------------+
+                                                                     [4 marks]
+
+24. State the THREE states of matter and give ONE property of each. [6 marks]
+
+25. Name ONE environmental problem in your local area and suggest
+    TWO ways of solving it.                                         [3 marks]
+
+══════════════════════════════════
+SECTION C: STRUCTURED  (15 Marks)
+══════════════════════════════════
+
+26. An experiment investigated conditions needed for photosynthesis.
+    Four potted plants were treated as follows:
+      Plant 1 — Normal light, watered regularly
+      Plant 2 — Covered with black bag, watered
+      Plant 3 — Normal light, no water given
+      Plant 4 — CO₂ removed, normal light, watered
+
+    After one week, leaves were tested for starch.
+
+    (a) Which plant(s) would test POSITIVE for starch? Explain.    [3 marks]
+    (b) What is the role of CO₂ in photosynthesis?                 [2 marks]
+    (c) Write the word equation for photosynthesis.                [2 marks]
+    (d) Why must the leaf be boiled in alcohol before testing?     [2 marks]
+    (e) State TWO ways plants are important to humans.             [2 marks]
+    (f) Name the green pigment in plant leaves.                    [1 mark]
+    (g) State ONE adaptation that makes a leaf efficient
+        for photosynthesis.                                         [1 mark]
+
+══════════════════════════════════════════════════════
+END OF QUESTION PAPER
+© 2022 KICD — For Classroom Use Only
+Downloaded from CBC Best · cbcbest.netlify.app · Ronny Mwenda`
+  },
+
+  {
+    id:'pp-ss-g8-2023-t1', title:'Social Studies — Grade 8 Term 1 Examination 2023',
+    source:'kicd', year:'2023', grade:'Grade 8', term:'Term 1',
+    subject:'Social Studies', totalMarks:70, builtin:true,
+    desc:'Kenya geography, history, civics, and economics. KICD-aligned Grade 8 JSS Term 1 paper.',
+    fileURL:null, msURL:null,
+    content:()=>`KENYA INSTITUTE OF CURRICULUM DEVELOPMENT (KICD)
+JUNIOR SECONDARY SCHOOL — GRADE 8
+SOCIAL STUDIES — Term 1 Examination 2023
+Time: 2 Hours    Total Marks: 70
+══════════════════════════════════════════════════════
+
+SECTION A: MULTIPLE CHOICE  (20 Marks)
+
+1. The highest mountain in Kenya is:
+   A. Mt Elgon   B. Aberdares   C. Mt Kenya   D. Kilimanjaro       [1 mark]
+
+2. Kenya gained independence on:
+   A. 12 December 1963   B. 1 June 1963
+   C. 12 December 1964   D. 20 October 1963                        [1 mark]
+
+3. The Great Rift Valley was formed through:
+   A. Volcanic eruption   B. River erosion
+   C. Faulting and sinking   D. Glaciation                         [1 mark]
+
+4. The most important cash crop in Kenya is:
+   A. Maize   B. Tea   C. Rice   D. Wheat                         [1 mark]
+
+5. The function of the Cabinet Secretary is to:
+   A. Make laws   B. Interpret laws
+   C. Enforce laws   D. Implement policies                          [1 mark]
+
+6–20: [Further MCQ covering East Africa geography, climate, trade,
+       government structure, and human rights — 1 mark each]
+
+══════════════════════════════════
+SECTION B: SHORT ANSWER  (30 Marks)
+══════════════════════════════════
+
+21. (a) Name FOUR physical regions of Kenya.                        [4 marks]
+    (b) Describe TWO characteristics of Kenya's coastal region.     [4 marks]
+
+22. Study the outline map of Kenya and answer:
+    (a) Name the lake marked X.                                     [1 mark]
+    (b) Name the country marked Y.                                  [1 mark]
+    (c) Mark and name the capital city of Kenya.                    [1 mark]
+
+23. Explain THREE effects of the Trans-African Highway on Kenya's
+    economy.                                                         [6 marks]
+
+24. (a) What is democracy?                                          [2 marks]
+    (b) State FOUR principles of democracy practised in Kenya.      [4 marks]
+
+25. Explain the meaning of:
+    (a) Devolution                                                   [2 marks]
+    (b) County Government                                            [2 marks]
+    (c) Senate                                                       [2 marks]
+
+══════════════════════════════════
+SECTION C: ESSAY  (20 Marks)
+══════════════════════════════════
+
+Answer ONE question.
+
+26. Discuss the causes and effects of rural–urban migration in Kenya.
+                                                                    [20 marks]
+                      OR
+
+27. Explain how Kenya's membership in the East African Community
+    (EAC) has benefited its citizens. Give examples.               [20 marks]
+
+══════════════════════════════════════════════════════
+END OF QUESTION PAPER
+© 2023 KICD — For Classroom Use Only
+Downloaded from CBC Best · cbcbest.netlify.app`
+  },
+
+  {
+    id:'pp-cs-g9-2023-eoy', title:'Computer Science — Grade 9 End of Year Examination 2023',
+    source:'kicd', year:'2023', grade:'Grade 9', term:'End of Year',
+    subject:'Computer Science', totalMarks:80, builtin:true,
+    desc:'Programming concepts, data, networking, and digital literacy. CBC-aligned Grade 9 CS end-of-year examination.',
+    fileURL:null, msURL:null,
+    content:()=>`KENYA INSTITUTE OF CURRICULUM DEVELOPMENT (KICD)
+JUNIOR SECONDARY SCHOOL — GRADE 9
+COMPUTER SCIENCE — End of Year Examination 2023
+Time: 2 Hours    Total Marks: 80
+══════════════════════════════════════════════════════
+
+INSTRUCTIONS
+• Answer ALL questions.
+• For programming questions, write pseudocode or any language studied.
+
+══════════════════════════════════════
+SECTION A: MULTIPLE CHOICE  (20 Marks)
+══════════════════════════════════════
+
+1. Which is an input device?
+   A. Monitor   B. Speaker   C. Keyboard   D. Printer              [1 mark]
+
+2. CPU stands for:
+   A. Central Processing Unit   B. Computer Processing Unit
+   C. Central Program Utility   D. Core Processing Unit            [1 mark]
+
+3. Which data type stores whole numbers?
+   A. Float   B. String   C. Boolean   D. Integer                  [1 mark]
+
+4. A loop that runs a specific number of times is:
+   A. WHILE loop   B. DO-WHILE loop   C. FOR loop   D. REPEAT loop [1 mark]
+
+5. HTML stands for:
+   A. Hyper Text Markup Language   B. High Transfer Machine Language
+   C. Home Tool Markup Language    D. Hyper Transfer Meta Language [1 mark]
+
+6. Which protocol is used for sending emails?
+   A. HTTP   B. FTP   C. SMTP   D. TCP                             [1 mark]
+
+7. 1 Gigabyte equals:
+   A. 1,000 KB   B. 1,024 MB   C. 1,000 MB   D. 1,024 KB          [1 mark]
+
+8. Which is NOT malware?
+   A. Virus   B. Trojan horse   C. Firewall   D. Ransomware        [1 mark]
+
+9. Binary equivalent of decimal 13:
+   A. 1010   B. 1101   C. 1001   D. 1110                          [1 mark]
+
+10. Spreadsheet software is BEST used for:
+    A. Writing stories   B. Editing photos
+    C. Calculating and analysing data   D. Browsing the internet   [1 mark]
+
+11–20: [Further MCQ on Databases, Algorithms, Cybersecurity,
+        Operating Systems, and Networks — 1 mark each]
+
+══════════════════════════════════════
+SECTION B: SHORT ANSWER  (35 Marks)
+══════════════════════════════════════
+
+21. (a) Define the term "algorithm".                                [2 marks]
+    (b) Write pseudocode to find the largest of three numbers A, B, C.
+                                                                     [5 marks]
+
+22. Convert the following:
+    (i)  Binary 10110 to Decimal                                    [2 marks]
+    (ii) Decimal 47 to Binary                                       [2 marks]
+    (iii)Hexadecimal 2F to Decimal                                  [2 marks]
+
+23. A flowchart:
+    START → Input N → Is N > 0? → YES → Output "Positive"
+                               → NO  → Is N = 0? → YES → Output "Zero"
+                                                  → NO  → Output "Negative" → STOP
+
+    (a) What will the program output if N = −5?                     [1 mark]
+    (b) Trace the flowchart for N = 0.                              [2 marks]
+    (c) Write the equivalent Python code.                           [4 marks]
+
+24. (a) What is a database?                                         [2 marks]
+    (b) School database table:
+
+    +------+-----------+-------+--------+
+    | ID   | Name      | Class | Stream |
+    +------+-----------+-------+--------+
+    | 001  | Alice M.  |   9   | Eagle  |
+    | 002  | Brian K.  |   9   | Hawk   |
+    | 003  | Christine |   8   | Eagle  |
+    | 004  | David O.  |   8   | Hawk   |
+    +------+-----------+-------+--------+
+
+    (i)  Name the PRIMARY KEY.                                      [1 mark]
+    (ii) Write an SQL statement to display all Class 9 students.    [3 marks]
+    (iii)How many records are in this table?                        [1 mark]
+
+25. Explain THREE measures to protect your personal data online.    [6 marks]
+
+══════════════════════════════════════
+SECTION C: EXTENDED / PRACTICAL  (25 Marks)
+══════════════════════════════════════
+
+26. Write a program that:
+    • Asks the user to input their age
+    • Outputs "Minor" if age < 18
+    • Outputs "Adult" if 18 ≤ age ≤ 64
+    • Outputs "Senior Citizen" if age ≥ 65
+
+    (a) Draw a flowchart for this program.                          [6 marks]
+    (b) Write the program in Python or pseudocode.                  [8 marks]
+    (c) Test with inputs 15, 30, and 70. Show expected outputs.    [3 marks]
+
+27. (a) Describe the difference between the internet and the
+        World Wide Web.                                              [4 marks]
+    (b) Give TWO advantages and TWO disadvantages of cloud
+        computing for a school.                                      [4 marks]
+
+══════════════════════════════════════════════════════
+END OF QUESTION PAPER
+© 2023 KICD — For Classroom Use Only
+Downloaded from CBC Best · cbcbest.netlify.app · Ronny Mwenda`
+  },
+
+  {
+    id:'pp-math-g7-2022-t2', title:'Mathematics — Grade 7 Term 2 Assessment 2022',
+    source:'becf', year:'2022', grade:'Grade 7', term:'Term 2',
+    subject:'Mathematics', totalMarks:50, builtin:true,
+    desc:'BECF-aligned JSS Grade 7 mid-year assessment covering fractions, ratio, geometry, and basic algebra.',
+    fileURL:null, msURL:null,
+    content:()=>`BASIC EDUCATION CURRICULUM FRAMEWORK (BECF)
+JUNIOR SECONDARY SCHOOL — GRADE 7
+MATHEMATICS — Term 2 Assessment 2022
+Time: 1½ Hours    Total Marks: 50
+══════════════════════════════════════════════════════
+
+INSTRUCTIONS
+• Answer ALL questions.
+• Show all working where necessary.
+
+══════════════════════
+SECTION A  (25 Marks)
+══════════════════════
+
+1. Evaluate:  ⅔ + ¾ − ⅙                                           [2 marks]
+
+2. A cloth merchant has 84 m of fabric. He sells ⅜ on Monday and ¼
+   on Tuesday. How many metres remain?                              [3 marks]
+
+3. Simplify the ratio 120 : 180 : 240.                             [2 marks]
+
+4. Divide KSh 4,500 in the ratio 2 : 3 : 4.
+   How much does the largest share receive?                         [3 marks]
+
+5. Find the value of:
+   (a) 3x + 7  when x = 5                                          [1 mark]
+   (b) 2a² − 3b  when a = 4 and b = 3                             [2 marks]
+
+6. Solve:
+   (a) 4y − 3 = 13                                                 [2 marks]
+   (b) 3(2m + 1) = 2(m + 9)                                       [3 marks]
+
+7. A rectangle has length (2x + 5) cm and width (x − 2) cm.
+   If the perimeter is 54 cm, find x and hence the area.           [4 marks]
+
+8. Calculate the exterior angle of a regular octagon.              [2 marks]
+
+9. The angles of a triangle are in the ratio 2 : 3 : 7.
+   Find each angle.                                                 [3 marks]
+
+10. A right-angled triangle has legs 9 cm and 12 cm.
+    Find the hypotenuse.                                            [2 marks]
+
+══════════════════════
+SECTION B  (25 Marks)
+══════════════════════
+
+11. Daily temperatures (°C) for one week:
+
+    +-----+----+----+----+----+----+----+----+
+    | Day | Mo | Tu | We | Th | Fr | Sa | Su |
+    +-----+----+----+----+----+----+----+----+
+    | Tmp | 24 | 27 | 25 | 22 | 28 | 30 | 26 |
+    +-----+----+----+----+----+----+----+----+
+
+    (a) Find the mean temperature.                                  [2 marks]
+    (b) Find the range.                                             [1 mark]
+    (c) Find the median temperature.                                [2 marks]
+    (d) Draw a bar graph for the data.                              [4 marks]
+
+12. A sales rep earns KSh 25,000 basic plus 4% commission on sales
+    above KSh 50,000. In March her sales were KSh 120,000.
+    (a) Calculate her commission.                                   [2 marks]
+    (b) Find her total March earnings.                              [1 mark]
+    (c) She saves 20% of her earnings. How much does she save?     [2 marks]
+
+13. (a) Draw an angle of 135° using ruler and protractor.          [2 marks]
+    (b) Bisect the angle using compasses only.                      [3 marks]
+    (c) Measure and state the two angles formed.                   [1 mark]
+
+14. A map has a scale of 1 : 500,000.
+    (a) Two towns are 8 cm apart on the map.
+        Find the actual distance in km.                             [2 marks]
+    (b) A road is 75 km long.
+        Find its length on the map in cm.                           [2 marks]
+
+══════════════════════════════════════════════════════
+END OF ASSESSMENT
+© 2022 BECF — For Classroom Use
+Downloaded from CBC Best · cbcbest.netlify.app · Ronny Mwenda`
+  }
+];
+
+/* ── stat init ── */
+document.getElementById('papersBuiltinCount').textContent = window.BUILTIN_PAPERS.length;
+document.getElementById('statPapers').textContent         = window.BUILTIN_PAPERS.length;
+</script>
+
+<!-- ═══════════════════════════════════════════════════════
+     PAST PAPERS FILTER + RENDER LOGIC
+════════════════════════════════════════════════════════ -->
+<script>
+/* ── html escape helper (used in renderCards patch too) ── */
+function esc(s){
+  if(!s) return '';
+  return String(s).replace(/[&<>"']/g, m => (
+    {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]
+  ));
+}
+
+window.applyPapersFilters = function() {
+  const search  = (document.getElementById('papersSearch')?.value  || '').toLowerCase().trim();
+  const src     =  document.getElementById('pfSource')?.value  || '';
+  const grade   =  document.getElementById('pfGrade')?.value   || '';
+  const subject =  document.getElementById('pfSubject')?.value || '';
+  const year    =  document.getElementById('pfYear')?.value    || '';
+  const term    =  document.getElementById('pfTerm')?.value    || '';
+
+  const fbPapers = (typeof window._firebasePapers === 'function') ? window._firebasePapers() : [];
+  const all = [
+    ...window.BUILTIN_PAPERS,
+    ...fbPapers.map(p => ({...p, builtin:false}))
+  ];
+
+  const filtered = all.filter(p => {
+    if (src     && p.source  !== src)    return false;
+    if (grade   && p.grade   !== grade)  return false;
+    if (year    && p.year    !== year)   return false;
+    if (term    && p.term    !== term)   return false;
+    if (subject && !p.subject?.toLowerCase().includes(subject.toLowerCase())) return false;
+    if (search) {
+      const hay = [p.title,p.source,p.year,p.grade,p.term,p.subject,p.desc]
+        .filter(Boolean).join(' ').toLowerCase();
+      if (!hay.includes(search)) return false;
+    }
+    return true;
+  });
+
+  document.getElementById('papersTotalBadge').textContent  = all.length;
+  document.getElementById('statPapers').textContent        = all.length;
+  document.getElementById('papersCommCount').textContent   = fbPapers.length;
+
+  renderPapersGrid(filtered);
 };
 
+window.renderPapersGrid = function(items) {
+  const grid = document.getElementById('papersGrid');
+  if (!grid) return;
+
+  if (!items || items.length === 0) {
+    grid.innerHTML = `<div class="papers-empty">
+      <div class="big-icon">🔍</div>
+      <h3>No past papers found</h3>
+      <p>Try a different filter or search term.</p>
+    </div>`;
+    return;
+  }
+
+  const admin = typeof window._isAdmin === 'function' && window._isAdmin();
+  const srcLabel = {kicd:'KICD',becf:'BECF',moe:'MoE Kenya',community:'Community',school:'School'};
+  const srcTag   = {kicd:'stag-kicd',becf:'stag-becf',moe:'stag-moe',
+                    community:'stag-community',school:'stag-school'};
+
+  grid.innerHTML = items.map(p => {
+    const isFB   = !p.builtin;
+    const sTag   = srcTag[p.source]  || 'stag-community';
+    const sLabel = srcLabel[p.source] || p.source || 'Unknown';
+    const metas  = [p.grade,p.subject,p.term].filter(Boolean)
+      .map(m => `<span class="pmeta-pill">${esc(m)}</span>`).join('');
+    const marks  = p.totalMarks ? `<strong>${p.totalMarks} marks</strong>` : '';
+    const uploader = isFB
+      ? `<div style="font-size:.75rem;color:var(--muted);margin-top:.2rem;">👤 ${esc(p.uploaderName||'Anonymous')} · ${esc(p.uploaderRole||'')}</div>` : '';
+    const adminBtn = admin && isFB
+      ? `<button class="btn-paper-ms" style="color:#c0392b;border-color:#e8a8a8;" onclick="adminDeletePaper('${p.id}')">🗑</button>` : '';
+
+    /* action button */
+    let actionBtn;
+    if (isFB && p.fileURL) {
+      actionBtn = `<a class="btn-paper-drive" href="${esc(p.fileURL)}" target="_blank" rel="noopener">📂 Open in Drive</a>`;
+    } else if (!isFB) {
+      actionBtn = `<button class="btn-paper-dl" onclick="downloadPaperPDF('${p.id}')">📥 Download PDF</button>`;
+    } else {
+      actionBtn = `<button class="btn-paper-dl" disabled style="opacity:.5;cursor:not-allowed;">📄 Unavailable</button>`;
+    }
+
+    /* marking scheme button */
+    const msBtn = p.msURL
+      ? `<a class="btn-paper-ms" href="${esc(p.msURL)}" target="_blank" rel="noopener">📋 Mark Scheme</a>`
+      : '';
+
+    return `<div class="paper-card src-${p.source}">
+      <div class="paper-card-top">
+        <span class="paper-source-tag ${sTag}">${sLabel}</span>
+        <span class="paper-year-badge">${esc(p.year||'—')}</span>
+      </div>
+      <h3>${esc(p.title)}</h3>
+      <div class="paper-meta">${metas}</div>
+      <p class="paper-desc">${esc(p.desc||'')}</p>
+      ${uploader}
+      <div class="paper-marks-row">
+        <span>${marks}</span>
+        ${!isFB ? '<span style="color:#1A7A4A;font-size:.75rem;font-weight:600;">✓ Built-in PDF</span>' : ''}
+      </div>
+      <div class="paper-actions">
+        ${actionBtn}${msBtn}${adminBtn}
+      </div>
+    </div>`;
+  }).join('');
+};
+
+/* ── PDF generation for built-in papers ── */
+window.downloadPaperPDF = function(id) {
+  const paper = window.BUILTIN_PAPERS.find(p => p.id === id);
+  if (!paper) return;
+  let rawText;
+  try { rawText = paper.content(); }
+  catch(e) { showToast('⚠️ Content generation failed.', true); return; }
+
+  try {
+    const {jsPDF} = window.jspdf;
+    const doc = new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+    const pw = doc.internal.pageSize.getWidth();
+    const ph = doc.internal.pageSize.getHeight();
+    const mg = 18;
+    const uw = pw - mg * 2;
+
+    /* header */
+    doc.setFillColor(11,31,46); doc.rect(0,0,pw,22,'F');
+    doc.setTextColor(201,160,61); doc.setFontSize(11); doc.setFont('helvetica','bold');
+    doc.text('CBC BEST', mg, 14);
+    doc.setTextColor(255,228,196); doc.setFontSize(8); doc.setFont('helvetica','normal');
+    doc.text('cbcbest.netlify.app  ·  Ronny Mwenda  ·  Past Papers', pw-mg, 14, {align:'right'});
+    doc.setDrawColor(201,160,61); doc.setLineWidth(0.6);
+    doc.line(mg,23,pw-mg,23);
+
+    /* source badge */
+    const sc = {kicd:[26,122,74],becf:[26,74,138],moe:[138,26,26],community:[201,160,61]};
+    const [r,g,b] = sc[paper.source] || [90,114,133];
+    doc.setFillColor(r,g,b);
+    const sl = {kicd:'KICD',becf:'BECF',moe:'MoE Kenya',community:'Community'}[paper.source]||paper.source;
+    doc.roundedRect(mg,27,30,7,1.5,1.5,'F');
+    doc.setTextColor(255,255,255); doc.setFontSize(7.5); doc.setFont('helvetica','bold');
+    doc.text(sl, mg+15, 32.5, {align:'center'});
+    if (paper.year) {
+      doc.setFillColor(11,31,46); doc.roundedRect(mg+33,27,18,7,1.5,1.5,'F');
+      doc.setTextColor(245,217,138); doc.setFontSize(7);
+      doc.text(paper.year, mg+42, 32.5, {align:'center'});
+    }
+
+    /* title */
+    let y = 40;
+    doc.setTextColor(11,31,46); doc.setFontSize(13); doc.setFont('helvetica','bold');
+    const tl = doc.splitTextToSize(paper.title, uw);
+    doc.text(tl, mg, y); y += tl.length*7+3;
+    doc.setFontSize(8); doc.setFont('helvetica','normal'); doc.setTextColor(90,114,133);
+    const mt = [paper.grade,paper.subject,paper.term,paper.totalMarks?paper.totalMarks+' marks':''].filter(Boolean).join('  ·  ');
+    if (mt){ doc.text(mt,mg,y); y+=6; }
+    doc.setDrawColor(201,160,61); doc.setLineWidth(0.4); doc.line(mg,y,pw-mg,y); y+=6;
+
+    const addH = ()=>{doc.setFillColor(11,31,46);doc.rect(0,0,pw,12,'F');doc.setTextColor(201,160,61);doc.setFontSize(7);doc.setFont('helvetica','bold');doc.text('CBC BEST',mg,8);doc.setTextColor(180,180,180);doc.setFont('helvetica','normal');doc.text(paper.title.slice(0,65),pw-mg,8,{align:'right'});};
+    const addF = ()=>{doc.setDrawColor(201,160,61);doc.setLineWidth(0.3);doc.line(mg,ph-12,pw-mg,ph-12);doc.setTextColor(150,150,150);doc.setFontSize(7);doc.text('© 2026 CBC Best · For classroom use only · Not for resale',mg,ph-7);doc.text('Page '+doc.internal.getCurrentPageInfo().pageNumber,pw-mg,ph-7,{align:'right'});};
+    const chk = (n=8)=>{ if(y+n>ph-20){addF();doc.addPage();addH();y=18;}};
+
+    const lines = rawText.split('\n');
+    let i = 0;
+    while (i < lines.length) {
+      const line = lines[i];
+      if (/^\+[-+]+\+/.test(line)||/^\|/.test(line)){
+        const tls=[];
+        while(i<lines.length&&(/^\+/.test(lines[i])||/^\|/.test(lines[i]))){tls.push(lines[i]);i++;}
+        const dr=tls.filter(l=>/^\|/.test(l));
+        if(dr.length>=2){
+          const pr=l=>l.replace(/^\||\|$/g,'').split('|').map(c=>c.trim());
+          const h=pr(dr[0]); const bd=dr.slice(1).map(pr);
+          chk(30);
+          doc.autoTable({head:[h],body:bd,startY:y,margin:{left:mg,right:mg},styles:{fontSize:7.5,cellPadding:2.5,overflow:'linebreak'},headStyles:{fillColor:[11,31,46],textColor:[201,160,61],fontStyle:'bold'},alternateRowStyles:{fillColor:[255,248,238]},theme:'grid',didDrawPage:()=>{addH();addF();}});
+          y=doc.lastAutoTable.finalY+6;
+        }
+        continue;
+      }
+      if(/^[=─═]{4,}/.test(line)||/^[─-]{4,}/.test(line)){i++;continue;}
+      const isH1=/^[A-Z][A-Z\s\d\.–—:\/&\(\)]{8,}$/.test(line.trim())&&line.trim().length>0;
+      const isH2=/^[A-Z].*:$/.test(line.trim())||/^\d+\.\s[A-Z]/.test(line.trim());
+      if(isH1){chk(14);y+=3;doc.setFillColor(240,246,252);doc.roundedRect(mg-2,y-5,uw+4,10,1,1,'F');doc.setTextColor(11,31,46);doc.setFontSize(9);doc.setFont('helvetica','bold');const hl=doc.splitTextToSize(line.trim(),uw-4);doc.text(hl,mg+1,y+1);y+=hl.length*5.5+5;i++;continue;}
+      if(isH2){chk(10);y+=2;doc.setTextColor(11,31,46);doc.setFontSize(8.5);doc.setFont('helvetica','bold');const hl=doc.splitTextToSize(line.trim(),uw);doc.text(hl,mg,y);y+=hl.length*5+3;i++;continue;}
+      if(line.trim()===''){y+=2;i++;continue;}
+      chk(7);doc.setTextColor(30,47,62);doc.setFontSize(8);doc.setFont('helvetica','normal');
+      const tlt=doc.splitTextToSize(line,uw);tlt.forEach(t=>{chk(6);doc.text(t,mg,y);y+=4.8;});
+      i++;
+    }
+    addF();
+    /* bottom bar */
+    doc.setFillColor(11,31,46);doc.rect(0,ph-8,pw,8,'F');doc.setTextColor(201,160,61);doc.setFontSize(6.5);doc.setFont('helvetica','bold');
+    doc.text('CBC BEST  ·  cbcbest.netlify.app  ·  © 2026 Ronny Mwenda  ·  Free for classroom use',pw/2,ph-3.5,{align:'center'});
+    const sn=paper.title.replace(/[^\w\s\-]/g,'').replace(/\s+/g,'_').slice(0,60);
+    doc.save(`CBC_Best_PastPaper_${sn}.pdf`);
+    showToast('📥 Past paper PDF downloaded!');
+  } catch(e){
+    console.error('PDF error:',e);
+    showToast('⚠️ PDF generation failed.', true);
+  }
+};
+
+/* initial render */
+applyPapersFilters();
+</script>
+
+<!-- ═══════════════════════════════════════════════════════
+     PATCH: merge Firebase community uploads into resource grid
+     (overrides renderCards and applyFilters from resources.js
+      so that Firebase + built-in items appear together)
+════════════════════════════════════════════════════════ -->
+<script>
+/* re-declare applyFilters to include Firebase resources */
 window.applyFilters = function() {
   const searchEl = document.getElementById('searchInput');
   const sortEl   = document.getElementById('sortSelect');
   currentSearch  = searchEl ? searchEl.value.toLowerCase().trim() : '';
   currentSort    = sortEl   ? sortEl.value : 'default';
 
-  const all = _origGetAll();
+  /* merge built-in + firebase */
+  const fbRes = (typeof window._firebaseResources === 'function')
+    ? window._firebaseResources().map(r => ({
+        ...r,
+        icon: (typeof CAT_META !== 'undefined' && CAT_META[r.cat]) ? CAT_META[r.cat].icon||'📄' : '📄',
+        topics: r.subject ? [r.subject] : [],
+        source: 'firebase'
+      }))
+    : [];
+  const all = [
+    ...(typeof RESOURCES !== 'undefined' ? RESOURCES.map(r=>({...r,source:'builtin'})) : []),
+    ...fbRes
+  ];
+
   document.getElementById('statTotal').textContent = all.length + '+';
 
   let filtered = all.filter(r => {
     if (currentFilter !== 'all' && r.cat !== currentFilter) return false;
     if (!currentSearch) return true;
-    const hay = [r.title, r.subject, r.grade, r.terms, r.term, r.desc,
-      ...(r.topics||[])].join(' ').toLowerCase();
+    const hay = [r.title,r.subject,r.grade,r.terms,r.term,r.desc,...(r.topics||[])].join(' ').toLowerCase();
     return hay.includes(currentSearch);
   });
 
@@ -476,8 +1842,8 @@ window.applyFilters = function() {
     filtered.sort((a,b) => (CAT_ORDER[a.cat]??9) - (CAT_ORDER[b.cat]??9));
   else if (currentSort === 'newest')
     filtered.sort((a,b) => {
-      if (a.source==='firebase' && b.source!=='firebase') return -1;
-      if (b.source==='firebase' && a.source!=='firebase') return 1;
+      if (a.source==='firebase'&&b.source!=='firebase') return -1;
+      if (b.source==='firebase'&&a.source!=='firebase') return 1;
       return 0;
     });
 
@@ -495,6 +1861,7 @@ window.applyFilters = function() {
   renderCards(filtered);
 };
 
+/* re-declare renderCards to handle both builtin (PDF) and Firebase (Drive link) */
 window.renderCards = function(items) {
   const grid = document.getElementById('resourcesGrid');
   if (!grid) return;
@@ -504,40 +1871,35 @@ window.renderCards = function(items) {
     grid.innerHTML = `<div class="empty-state">
       <div style="font-size:3rem;margin-bottom:1rem">🔍</div>
       <h3>No resources found</h3>
-      <p>Try a different search term or select a different category.</p>
-    </div>`; return;
+      <p>Try a different search term or category filter.</p>
+    </div>`;
+    return;
   }
 
-  const admin = (typeof window._isAdmin === 'function') && window._isAdmin();
+  const admin = typeof window._isAdmin === 'function' && window._isAdmin();
+  const meta  = typeof CAT_META !== 'undefined' ? CAT_META : {};
 
   grid.innerHTML = items.map(r => {
-    const meta   = CAT_META[r.cat] || { badge:'', label: r.cat };
-    const topics = (r.topics||[]).map(t => `<span class="topic-tag">${esc(t)}</span>`).join('');
-    const metas  = [r.grade||'', r.subject||'', r.terms||r.term||'']
-      .filter(Boolean).map(m => `<span class="meta-tag">📌 ${esc(m)}</span>`).join('');
+    const m      = meta[r.cat] || {badge:'',label:r.cat};
+    const topics = (r.topics||[]).map(t=>`<span class="topic-tag">${esc(t)}</span>`).join('');
+    const metas  = [r.grade||'',r.subject||'',r.terms||r.term||'']
+      .filter(Boolean).map(m2=>`<span class="meta-tag">📌 ${esc(m2)}</span>`).join('');
     const isFB   = r.source === 'firebase';
     const fbBadge = isFB ? `<span class="community-badge">🌍 Community</span>` : '';
     const adminBtns = admin && isFB
-      ? `<button class="btn-admin-del" onclick="adminDeleteResource('${r.id}')">🗑 Delete</button>`
-      : '';
+      ? `<button class="btn-admin-del" onclick="adminDeleteResource('${r.id}')">🗑 Delete</button>` : '';
 
-    /* Action button — community resources open Google Drive link */
     const actionBtn = isFB
-      ? `<a class="btn-download" href="${esc(r.fileURL||'#')}" target="_blank" rel="noopener">
-           📂 Open in Drive
-         </a>`
+      ? `<a class="btn-download" href="${esc(r.fileURL||'#')}" target="_blank" rel="noopener">📂 Open in Drive</a>`
       : `<button class="btn-download" onclick="downloadAsPDF('${r.id}')">📥 Download PDF</button>`;
-
     const previewBtn = !isFB
-      ? `<button class="btn-preview" onclick="previewResource('${r.id}')">👁 Preview</button>`
-      : '';
+      ? `<button class="btn-preview" onclick="previewResource('${r.id}')">👁 Preview</button>` : '';
 
     return `<div class="resource-card cat-${r.cat}">
       <div class="card-top">
-        <div class="card-icon">${r.icon || '📄'}</div>
+        <div class="card-icon">${r.icon||'📄'}</div>
         <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <span class="card-badge ${meta.badge||''}">${esc(meta.label)}</span>
-          ${fbBadge}
+          <span class="card-badge ${m.badge||''}">${esc(m.label)}</span>${fbBadge}
         </div>
       </div>
       <h3>${esc(r.title)}</h3>
@@ -545,203 +1907,131 @@ window.renderCards = function(items) {
       <p class="resource-desc">${esc(r.desc||'')}</p>
       ${topics ? `<div class="resource-topics">${topics}</div>` : ''}
       ${isFB ? `<div class="uploader-info">👤 ${esc(r.uploaderName||'Anonymous')} · ${esc(r.uploaderRole||'')}</div>` : ''}
-      <div class="card-actions">
-        ${actionBtn}
-        ${previewBtn}
-        ${adminBtns}
-      </div>
+      <div class="card-actions">${actionBtn}${previewBtn}${adminBtns}</div>
     </div>`;
   }).join('');
 };
+</script>
 
-/* PDF download for builtin resources */
-window.downloadAsPDF = function(id) {
-  const resource = RESOURCES.find(r => r.id === id);
-  if (!resource) return;
-  let rawText;
-  try { rawText = resource.content(); } catch(e) {
-    showToast('⚠️ Content generation failed.', true); return;
-  }
-  try {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
-    const pageW = doc.internal.pageSize.getWidth();
-    const pageH = doc.internal.pageSize.getHeight();
-    const margin = 18;
-    const usableW = pageW - margin * 2;
-
-    doc.setFillColor(11, 31, 46);
-    doc.rect(0, 0, pageW, 22, 'F');
-    doc.setTextColor(201, 160, 61);
-    doc.setFontSize(11); doc.setFont('helvetica','bold');
-    doc.text('CBC BEST', margin, 14);
-    doc.setTextColor(255, 228, 196);
-    doc.setFontSize(8); doc.setFont('helvetica','normal');
-    doc.text('cbcbest.netlify.app  ·  Ronny Mwenda  ·  ronnymwenda89@gmail.com', pageW - margin, 14, {align:'right'});
-    doc.setDrawColor(201, 160, 61);
-    doc.setLineWidth(0.6);
-    doc.line(margin, 23, pageW - margin, 23);
-
-    let y = 32;
-    doc.setTextColor(11, 31, 46);
-    doc.setFontSize(14); doc.setFont('helvetica','bold');
-    const titleLines = doc.splitTextToSize(resource.title, usableW);
-    doc.text(titleLines, margin, y);
-    y += titleLines.length * 7 + 4;
-
-    doc.setFontSize(8); doc.setFont('helvetica','normal');
-    doc.setTextColor(90, 114, 133);
-    const metaStr = [resource.grade, resource.subject, resource.terms].filter(Boolean).join('  ·  ');
-    if (metaStr) { doc.text(metaStr, margin, y); y += 6; }
-
-    doc.setDrawColor(220,220,220); doc.setLineWidth(0.3);
-    doc.line(margin, y, pageW - margin, y);
-    y += 5;
-
-    const lines = rawText.split('\n');
-    let i = 0;
-
-    const checkPage = (needed = 8) => {
-      if (y + needed > pageH - 20) {
-        addFooter(doc, pageW, pageH, margin);
-        doc.addPage();
-        addHeader(doc, pageW, margin, resource.title);
-        y = 30;
-      }
-    };
-
-    const addHeader = (d, pw, mg, title) => {
-      d.setFillColor(11,31,46); d.rect(0,0,pw,12,'F');
-      d.setTextColor(201,160,61); d.setFontSize(7); d.setFont('helvetica','bold');
-      d.text('CBC BEST', mg, 8);
-      d.setTextColor(180,180,180); d.setFont('helvetica','normal');
-      d.text(title.slice(0,70), pw-mg, 8, {align:'right'});
-    };
-
-    const addFooter = (d, pw, ph, mg) => {
-      d.setDrawColor(201,160,61); d.setLineWidth(0.3);
-      d.line(mg, ph-12, pw-mg, ph-12);
-      d.setTextColor(150,150,150); d.setFontSize(7);
-      d.text('© 2026 CBC Best · Free for classroom adaptation · Not for resale', mg, ph-7);
-      d.text(`Page ${d.internal.getCurrentPageInfo().pageNumber}`, pw-mg, ph-7, {align:'right'});
-    };
-
-    while (i < lines.length) {
-      const line = lines[i];
-      if (/^\+[-+]+\+/.test(line) || /^\|/.test(line)) {
-        const tableLines = [];
-        while (i < lines.length && (/^\+/.test(lines[i]) || /^\|/.test(lines[i]))) {
-          tableLines.push(lines[i]); i++;
-        }
-        const dataRows = tableLines.filter(l => /^\|/.test(l));
-        if (dataRows.length >= 2) {
-          const parseRow = l => l.replace(/^\||\|$/g,'').split('|').map(c => c.trim());
-          const head = parseRow(dataRows[0]);
-          const body = dataRows.slice(1).map(parseRow);
-          checkPage(30);
-          doc.autoTable({
-            head:[head], body,
-            startY:y,
-            margin:{left:margin,right:margin},
-            styles:{fontSize:7.5,cellPadding:2.5,font:'helvetica',textColor:[30,47,62],lineColor:[201,160,61],lineWidth:0.15,overflow:'linebreak'},
-            headStyles:{fillColor:[11,31,46],textColor:[201,160,61],fontStyle:'bold',fontSize:7.5},
-            alternateRowStyles:{fillColor:[255,248,238]},
-            theme:'grid',
-            didDrawPage:()=>{addHeader(doc,pageW,margin,resource.title);addFooter(doc,pageW,pageH,margin);}
-          });
-          y = doc.lastAutoTable.finalY + 6;
-        }
-        continue;
-      }
-      if (/^={4,}/.test(line)||/^-{4,}/.test(line)){i++;continue;}
-      const isH1 = /^[A-Z][A-Z\s\d\.–—:\/&\(\)]{8,}$/.test(line.trim()) && line.trim().length > 0;
-      const isH2 = /^[A-Z].*:$/.test(line.trim())||/^\d+\.\s[A-Z]/.test(line.trim());
-      if (isH1 && line.trim().length > 0) {
-        checkPage(14); y += 3;
-        doc.setFillColor(245,248,252);
-        doc.roundedRect(margin-2, y-5, usableW+4, 10, 1, 1, 'F');
-        doc.setTextColor(11,31,46); doc.setFontSize(9); doc.setFont('helvetica','bold');
-        const hl = doc.splitTextToSize(line.trim(), usableW-4);
-        doc.text(hl, margin+1, y+1);
-        y += hl.length * 5.5 + 5; i++; continue;
-      }
-      if (isH2) {
-        checkPage(10); y += 2;
-        doc.setTextColor(11,31,46); doc.setFontSize(8.5); doc.setFont('helvetica','bold');
-        const hl = doc.splitTextToSize(line.trim(), usableW);
-        doc.text(hl, margin, y);
-        y += hl.length * 5 + 3; i++; continue;
-      }
-      if (line.trim() === '') { y += 2; i++; continue; }
-      checkPage(7);
-      doc.setTextColor(30,47,62); doc.setFontSize(8); doc.setFont('helvetica','normal');
-      const tl = doc.splitTextToSize(line, usableW);
-      tl.forEach(t => { checkPage(6); doc.text(t, margin, y); y += 4.8; });
-      i++;
-    }
-
-    addFooter(doc, pageW, pageH, margin);
-    doc.setFillColor(11,31,46);
-    doc.rect(0, pageH-8, pageW, 8, 'F');
-    doc.setTextColor(201,160,61); doc.setFontSize(6.5); doc.setFont('helvetica','bold');
-    doc.text('CBC BEST  ·  cbcbest.netlify.app  ·  © 2026 Ronny Mwenda  ·  Free for classroom use', pageW/2, pageH-3.5, {align:'center'});
-
-    const safeName = resource.title.replace(/[^\w\s\-]/g,'').replace(/\s+/g,'_').slice(0,60);
-    doc.save(`CBC_Best_${safeName}.pdf`);
-    showToast('📥 PDF downloaded successfully!');
-  } catch(e) {
-    console.error('PDF error:', e);
-    showToast('⚠️ PDF generation failed.', true);
-  }
+<!-- ═══════════════════════════════════════════════════════
+     MODAL, UI, PDF, TOAST — all UI logic in one place
+════════════════════════════════════════════════════════ -->
+<script>
+/* ── Upload tab switcher ── */
+window._activeUploadTab = 'resource';
+window.switchUploadTab = function(tab) {
+  window._activeUploadTab = tab;
+  document.getElementById('tabResource').classList.toggle('active', tab==='resource');
+  document.getElementById('tabPaper').classList.toggle('active', tab==='paper');
+  document.getElementById('sectionResource').classList.toggle('active', tab==='resource');
+  document.getElementById('sectionPaper').classList.toggle('active', tab==='paper');
+  const isPaper = tab === 'paper';
+  document.getElementById('uploadModalIcon').textContent    = isPaper ? '📄' : '📤';
+  document.getElementById('uploadModalTitle').textContent   = isPaper ? 'Upload a Past Paper' : 'Share a Resource';
+  document.getElementById('uploadModalSub').textContent     = isPaper
+    ? 'Share an authentic KICD, BECF, MoE, or school past paper via Google Drive link.'
+    : 'Share your CBC materials with Kenyan educators via Google Drive link.';
+  document.getElementById('submitBtnLabel').textContent     = isPaper ? 'Submit Past Paper' : 'Submit Resource';
 };
 
-function esc(s) {
-  if (!s) return '';
-  return String(s).replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-}
-
-window.previewResource = function(id) {
-  const resource = RESOURCES.find(r => r.id === id);
-  if (!resource) return;
-  document.getElementById('previewTitle').textContent = resource.title;
-  const meta = [resource.grade, resource.subject, resource.terms].filter(Boolean);
-  document.getElementById('previewMetaBar').innerHTML =
-    meta.map(m => `<span class="pmeta-tag">📌 ${esc(m)}</span>`).join('');
-  let text;
-  try {
-    text = resource.content();
-    if (text.length > 4000) text = text.slice(0,4000) + '\n\n[Preview limited — download full PDF for complete document]';
-  } catch(e) { text = 'Preview unavailable.'; }
-  document.getElementById('previewContent').textContent = text;
-  document.getElementById('previewDownloadBtn').onclick = () => { closePreviewModal(); downloadAsPDF(id); };
-  document.getElementById('previewModal').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-};
-
-window.closePreviewModal = function() {
-  document.getElementById('previewModal').classList.add('hidden');
-  document.body.style.overflow = '';
-};
-
-window.openUploadModal = function() {
+window.openUploadModal = function(tab) {
   document.getElementById('uploadModal').classList.remove('hidden');
   document.body.style.overflow = 'hidden';
+  if (tab) switchUploadTab(tab);
 };
 window.closeUploadModal = function() {
   document.getElementById('uploadModal').classList.add('hidden');
   document.body.style.overflow = '';
 };
 
-document.getElementById('uploadModal').addEventListener('click', e => { if(e.target.id==='uploadModal') closeUploadModal(); });
-document.getElementById('previewModal').addEventListener('click', e => { if(e.target.id==='previewModal') closePreviewModal(); });
-document.addEventListener('keydown', e => { if(e.key==='Escape'){ closeUploadModal(); closePreviewModal(); }});
+/* ── Preview modal ── */
+window.previewResource = function(id) {
+  const resource = (typeof RESOURCES !== 'undefined') ? RESOURCES.find(r => r.id === id) : null;
+  if (!resource) return;
+  document.getElementById('previewTitle').textContent = resource.title;
+  const metaPills = [resource.grade,resource.subject,resource.terms].filter(Boolean)
+    .map(m => `<span class="pmeta-tag">📌 ${esc(m)}</span>`).join('');
+  document.getElementById('previewMetaBar').innerHTML = metaPills;
+  let text;
+  try {
+    text = resource.content();
+    if (text.length > 4000) text = text.slice(0,4000) + '\n\n[Preview limited — download PDF for full document]';
+  } catch(e) { text = 'Preview unavailable. Please download the document.'; }
+  document.getElementById('previewContent').textContent = text;
+  document.getElementById('previewDownloadBtn').onclick = ()=>{ closePreviewModal(); downloadAsPDF(id); };
+  document.getElementById('previewModal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+};
+window.closePreviewModal = function() {
+  document.getElementById('previewModal').classList.add('hidden');
+  document.body.style.overflow = '';
+};
 
-document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-  const nav = document.getElementById('navLinks');
-  const open = nav.classList.toggle('show');
-  document.getElementById('mobileMenuBtn').textContent = open ? '✕ Close' : '☰ Menu';
-});
+/* ── PDF download for built-in resources ── */
+window.downloadAsPDF = function(id) {
+  const resource = (typeof RESOURCES !== 'undefined') ? RESOURCES.find(r => r.id === id) : null;
+  if (!resource) { showToast('Resource not found.', true); return; }
+  let rawText;
+  try { rawText = resource.content(); }
+  catch(e) { showToast('⚠️ Content generation failed.', true); return; }
 
+  try {
+    const {jsPDF} = window.jspdf;
+    const doc = new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+    const pw = doc.internal.pageSize.getWidth();
+    const ph = doc.internal.pageSize.getHeight();
+    const mg = 18, uw = pw - mg*2;
+
+    doc.setFillColor(11,31,46); doc.rect(0,0,pw,22,'F');
+    doc.setTextColor(201,160,61); doc.setFontSize(11); doc.setFont('helvetica','bold');
+    doc.text('CBC BEST', mg, 14);
+    doc.setTextColor(255,228,196); doc.setFontSize(8); doc.setFont('helvetica','normal');
+    doc.text('cbcbest.netlify.app  ·  Ronny Mwenda', pw-mg, 14, {align:'right'});
+    doc.setDrawColor(201,160,61); doc.setLineWidth(0.6); doc.line(mg,23,pw-mg,23);
+
+    let y = 32;
+    doc.setTextColor(11,31,46); doc.setFontSize(14); doc.setFont('helvetica','bold');
+    const tl = doc.splitTextToSize(resource.title, uw);
+    doc.text(tl, mg, y); y += tl.length*7+4;
+    doc.setFontSize(8); doc.setFont('helvetica','normal'); doc.setTextColor(90,114,133);
+    const ms = [resource.grade,resource.subject,resource.terms].filter(Boolean).join('  ·  ');
+    if (ms){ doc.text(ms,mg,y); y+=6; }
+    doc.setDrawColor(220,220,220); doc.setLineWidth(0.3); doc.line(mg,y,pw-mg,y); y+=5;
+
+    const addH=()=>{doc.setFillColor(11,31,46);doc.rect(0,0,pw,12,'F');doc.setTextColor(201,160,61);doc.setFontSize(7);doc.setFont('helvetica','bold');doc.text('CBC BEST',mg,8);doc.setTextColor(180,180,180);doc.setFont('helvetica','normal');doc.text(resource.title.slice(0,70),pw-mg,8,{align:'right'});};
+    const addF=()=>{doc.setDrawColor(201,160,61);doc.setLineWidth(0.3);doc.line(mg,ph-12,pw-mg,ph-12);doc.setTextColor(150,150,150);doc.setFontSize(7);doc.text('© 2026 CBC Best · Free for classroom use',mg,ph-7);doc.text('Page '+doc.internal.getCurrentPageInfo().pageNumber,pw-mg,ph-7,{align:'right'});};
+    const chk=(n=8)=>{if(y+n>ph-20){addF();doc.addPage();addH();y=30;}};
+
+    const lines = rawText.split('\n');
+    let i=0;
+    while(i<lines.length){
+      const line=lines[i];
+      if(/^\+[-+]+\+/.test(line)||/^\|/.test(line)){
+        const tls=[];while(i<lines.length&&(/^\+/.test(lines[i])||/^\|/.test(lines[i]))){tls.push(lines[i]);i++;}
+        const dr=tls.filter(l=>/^\|/.test(l));
+        if(dr.length>=2){const pr=l=>l.replace(/^\||\|$/g,'').split('|').map(c=>c.trim());const h=pr(dr[0]);const bd=dr.slice(1).map(pr);chk(30);doc.autoTable({head:[h],body:bd,startY:y,margin:{left:mg,right:mg},styles:{fontSize:7.5,cellPadding:2.5,overflow:'linebreak'},headStyles:{fillColor:[11,31,46],textColor:[201,160,61]},theme:'grid',didDrawPage:()=>{addH();addF();}});y=doc.lastAutoTable.finalY+6;}
+        continue;
+      }
+      if(/^[=─═]{4,}/.test(line)||/^[─-]{4,}/.test(line)){i++;continue;}
+      const isH1=/^[A-Z][A-Z\s\d\.–—:\/&\(\)]{8,}$/.test(line.trim())&&line.trim().length>0;
+      const isH2=/^[A-Z].*:$/.test(line.trim())||/^\d+\.\s[A-Z]/.test(line.trim());
+      if(isH1){chk(14);y+=3;doc.setFillColor(245,248,252);doc.roundedRect(mg-2,y-5,uw+4,10,1,1,'F');doc.setTextColor(11,31,46);doc.setFontSize(9);doc.setFont('helvetica','bold');const hl=doc.splitTextToSize(line.trim(),uw-4);doc.text(hl,mg+1,y+1);y+=hl.length*5.5+5;i++;continue;}
+      if(isH2){chk(10);y+=2;doc.setTextColor(11,31,46);doc.setFontSize(8.5);doc.setFont('helvetica','bold');const hl=doc.splitTextToSize(line.trim(),uw);doc.text(hl,mg,y);y+=hl.length*5+3;i++;continue;}
+      if(line.trim()===''){y+=2;i++;continue;}
+      chk(7);doc.setTextColor(30,47,62);doc.setFontSize(8);doc.setFont('helvetica','normal');
+      const tlt=doc.splitTextToSize(line,uw);tlt.forEach(t=>{chk(6);doc.text(t,mg,y);y+=4.8;});
+      i++;
+    }
+    addF();
+    doc.setFillColor(11,31,46);doc.rect(0,ph-8,pw,8,'F');doc.setTextColor(201,160,61);doc.setFontSize(6.5);doc.setFont('helvetica','bold');
+    doc.text('CBC BEST  ·  cbcbest.netlify.app  ·  © 2026 Ronny Mwenda  ·  Free for classroom use',pw/2,ph-3.5,{align:'center'});
+    const sn=resource.title.replace(/[^\w\s\-]/g,'').replace(/\s+/g,'_').slice(0,60);
+    doc.save(`CBC_Best_${sn}.pdf`);
+    showToast('📥 PDF downloaded!');
+  } catch(e){ console.error(e); showToast('⚠️ PDF generation failed.', true); }
+};
+
+/* ── Toast ── */
 window.showToast = function(msg, isErr) {
   const t = document.getElementById('toast');
   const m = document.getElementById('toastMsg');
@@ -749,13 +2039,39 @@ window.showToast = function(msg, isErr) {
   t.style.background = isErr ? '#c0392b' : 'var(--navy)';
   t.classList.remove('hidden');
   clearTimeout(window._toastTimer);
-  window._toastTimer = setTimeout(() => t.classList.add('hidden'), 3500);
+  window._toastTimer = setTimeout(()=>t.classList.add('hidden'), 3500);
 };
-</script>
 
-<script>
+/* ── Overlay click / Escape key ── */
+document.getElementById('uploadModal').addEventListener('click', e => {
+  if (e.target.id === 'uploadModal') closeUploadModal();
+});
+document.getElementById('previewModal').addEventListener('click', e => {
+  if (e.target.id === 'previewModal') closePreviewModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeUploadModal(); closePreviewModal(); }
+});
+
+/* ── Mobile nav ── */
+document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+  const nav  = document.getElementById('navLinks');
+  const open = nav.classList.toggle('show');
+  document.getElementById('mobileMenuBtn').textContent = open ? '✕ Close' : '☰ Menu';
+});
+
+/* ── Smooth scroll to past papers ── */
+document.querySelectorAll('a[href="#pastPapersSection"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('pastPapersSection')?.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+/* ── Final load trigger ── */
 window.addEventListener('load', () => {
-  if (typeof applyFilters === 'function') applyFilters();
+  if (typeof applyFilters === 'function')       applyFilters();
+  if (typeof applyPapersFilters === 'function') applyPapersFilters();
 });
 </script>
 

@@ -10,7 +10,7 @@
 
   <!-- Theme / PWA -->
   <meta name="theme-color" content="#0B1F2E">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="CBC Best">
 
@@ -54,7 +54,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Google AdSense — after all meta tags and fonts -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-3509173858076202" crossorigin="anonymous"></script>
+  <!-- Consent Mode defaults — MUST come before AdSense -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage:              'denied',
+      ad_personalization:      'denied',
+      analytics_storage:       'denied',
+      functionality_storage:   'granted',
+      personalization_storage: 'denied',
+      security_storage:        'granted',
+      wait_for_update:         500
+    });
+  </script>
+
+  <!-- Google AdSense — after consent defaults -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202" crossorigin="anonymous"></script>
 
   <style>
     :root {
@@ -157,8 +173,8 @@
     .nav-links a {
       color: rgba(255,228,196,0.85);
       font-weight: 600;
-      font-size: 0.82rem;
-      padding: 6px 11px;
+      font-size: 0.75rem;
+      padding: 6px 6px;
       border-radius: 8px;
       transition: all 0.18s;
       white-space: nowrap;
@@ -799,7 +815,8 @@
       <a href="teacher-requirements.html">Teachers</a>
       <a href="mathematics-computer-science.html">Maths & CS</a>
       <a href="resources.html">Resources</a>
-      <a href="forums.html">Forums</a>
+      <a href="past-papers-revision.html">Past Papers</a>
+<a href="forums.html">Forums</a>
       <a href="faq.html">FAQ</a>
       <a href="blog.html">News</a>
       <a href="about-contact.html" class="nav-cta">Contact →</a>
@@ -823,17 +840,17 @@
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-number" id="schoolsCount">0</span>
+        <span class="hero-stat-number" id="schoolsCount">35,200</span>
         <span class="hero-stat-label">Schools implementing CBC</span>
         <span class="hero-stat-badge">Nationwide</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number" id="learnersCount">0</span>
+        <span class="hero-stat-number" id="learnersCount">12,500,000</span>
         <span class="hero-stat-label">Learners enrolled</span>
         <span class="hero-stat-badge">Grade 1–12</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number" id="teachersCount">0</span>
+        <span class="hero-stat-number" id="teachersCount">246,000</span>
         <span class="hero-stat-label">Teachers retooled</span>
         <span class="hero-stat-badge">TSC & KICD</span>
       </div>

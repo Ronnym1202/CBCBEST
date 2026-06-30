@@ -3,12 +3,6 @@
  * Author: Ronny Mwenda (Ronny Best)
  * Site: https://cbcbest.netlify.app
  * Compliant with: Kenya Data Protection Act 2019 · GDPR · Google AdSense Policies
- *
- * HOW TO USE:
- * Add ONE line to every HTML page, just before </body>:
- *   <script src="cookie-consent.js"></script>
- *
- * That's it. No other changes needed on any page.
  */
 
 (function () {
@@ -445,7 +439,7 @@
       </div>
     </div>
   `;
-
+  
   /* ═══════════════════════════════════════════════
      LOGIC
   ═══════════════════════════════════════════════ */
@@ -478,13 +472,21 @@
   }
 
   /* Enable/disable AdSense based on advertising consent */
+  function applyAnalyticsConsent(allowed) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        analytics_storage: allowed ? 'granted' : 'denied'
+      });
+    }
+  }
+
   function applyAdSenseConsent(allowed) {
     /* Google's consent mode — sets adPersonalization */
     if (typeof window.gtag === 'function') {
       window.gtag('consent', 'update', {
         ad_storage:              allowed ? 'granted' : 'denied',
         ad_personalization:      allowed ? 'granted' : 'denied',
-        analytics_storage:       'denied', /* analytics handled separately */
+        analytics_storage:       'denied',
         functionality_storage:   'granted',
         personalization_storage: allowed ? 'granted' : 'denied',
         security_storage:        'granted'
@@ -583,7 +585,6 @@
         btnManage.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       });
     }
-
     /* Save Preferences */
     var btnSave = document.getElementById('cbc-prefs-save');
     if (btnSave) {
@@ -596,11 +597,11 @@
         };
         saveConsent(prefs);
         applyAdSenseConsent(prefs.advertising);
+        applyAnalyticsConsent(prefs.analytics);
         hideBanner();
       });
     }
   }
-
   /* ── INIT ── */
   function init() {
     var existing = getConsent();
@@ -608,21 +609,19 @@
     if (existing) {
       /* User already consented — apply their saved preferences silently */
       applyAdSenseConsent(existing.advertising);
+      applyAnalyticsConsent(existing.analytics);
       return; /* No banner needed */
     }
-
     /* First visit or version changed — show the banner */
     injectStyles();
     injectHTML();
     bindEvents();
     showBanner();
   }
-
   /* Run after DOM is ready */
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
-
 })();

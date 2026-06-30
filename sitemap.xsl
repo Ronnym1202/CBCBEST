@@ -307,6 +307,7 @@
             <a href="/pathways.html">Pathways</a>
             <a href="/mathematics-computer-science.html">Maths &amp; CS</a>
             <a href="/resources.html">Resources</a>
+            <a href="/past-papers-revision.html">Past Papers</a>
             <a href="/about-contact.html" class="cta">Contact &#8594;</a>
           </nav>
         </div>

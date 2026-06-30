@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-KE">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-3509173858076202"
+  <!-- Consent Mode defaults — MUST come before AdSense -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage:              'denied',
+      ad_personalization:      'denied',
+      analytics_storage:       'denied',
+      functionality_storage:   'granted',
+      personalization_storage: 'denied',
+      security_storage:        'granted',
+      wait_for_update:         500
+    });
+  </script>
+
+  <!-- Google AdSense — after consent defaults -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509173858076202"
      crossorigin="anonymous"></script>
   <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json">
 
   <!-- Theme / PWA -->
   <meta name="theme-color" content="#0B1F2E">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="CBC Best">
 

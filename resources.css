@@ -40,7 +40,8 @@ button{cursor:pointer;font-family:var(--font)}
 .logo-text strong{display:block;font-size:1.1rem;font-weight:800;color:var(--white);letter-spacing:-.3px}
 .logo-text span{font-size:.7rem;color:rgba(255,228,196,0.6);letter-spacing:.4px;font-weight:500}
 .nav-links{display:flex;align-items:center;gap:.1rem;flex-wrap:nowrap}
-.nav-links a{color:rgba(255,228,196,0.8);font-weight:600;font-size:.8rem;padding:6px 10px;
+.nav-links a{color:rgba(255,228,196,0.8);font-weight:600;font-size: 0.75rem;
+padding: 6px 6px;
   border-radius:8px;transition:var(--tr);white-space:nowrap}
 .nav-links a:hover,.nav-links a.active{color:var(--white);background:rgba(201,160,61,0.12)}
 .nav-links a.active{color:var(--gold)}
