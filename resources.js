@@ -4657,22 +4657,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeModal();
   });
 
-  /* ── Mobile nav toggle ── */
-  const mobileBtn = document.getElementById('mobileMenuBtn');
-  const navLinks  = document.getElementById('navLinks');
-  if (mobileBtn && navLinks) {
-    mobileBtn.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('show');
-      mobileBtn.textContent = open ? '✕ Close' : '☰ Menu';
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('show');
-        mobileBtn.textContent = '☰ Menu';
-      });
-    });
-  }
-
   /* ── Search: trigger on Enter key ── */
   const searchInput = document.getElementById('searchInput');
   if (searchInput) {
