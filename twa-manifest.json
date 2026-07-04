@@ -17,11 +17,11 @@
   "maskableIconUrl": "https://cbcbest.netlify.app/images/icon-maskable-512.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
-    "path": "C:\\Users\\RONNY\\OneDrive\\Desktop\\CBC PROJECT\\android.keystore",
+    "path": "C:\\Users\\RONNY\\OneDrive\\Desktop\\CBC PROJECT\\android-new.keystore",
     "alias": "android"
   },
-  "appVersionName": "1",
-  "appVersionCode": 1,
+  "appVersionName": "2",
+  "appVersionCode": 2,
   "shortcuts": [
     {
       "name": "CBC Pathways",
@@ -84,5 +84,5 @@
     "window-controls-overlay",
     "standalone"
   ],
-  "appVersion": "1"
+  "appVersion": "2"
 }

@@ -1,0 +1,8 @@
+android.keystore
+*.keystore
+*.apk
+*.aab
+*.idsig
+.gradle/
+build/
+app/build/
