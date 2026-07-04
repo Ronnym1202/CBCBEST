@@ -3,6 +3,6 @@
   "target": {
     "namespace": "android_app",
     "package_name": "com.ronnymwenda.cbcbest",
-    "sha256_cert_fingerprints": ["4D:6C:09:E7:0D:B8:58:CB:B1:62:FB:00:75:4D:20:4E:0E:3C:62:63:4B:CE:7F:67:7A:1C:D5:C0:3F:A5:74:B2"]
+    "sha256_cert_fingerprints": ["25:F8:C5:5E:8D:89:45:0F:32:AB:5B:8D:06:39:E2:7D:7C:0D:D4:01:0F:28:A9:E1:9A:A1:67:85:36:9A:F1:8E"]
   }
 }]
