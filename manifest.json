@@ -86,19 +86,19 @@
 
   "screenshots": [
     {
-      "src": "images/screenshot-home.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "CBC Best Homepage"
-    },
-    {
-      "src": "images/screenshot-mobile.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "CBC Best on Mobile"
-    }
+  "src": "images/screenshot-home.png",
+  "sizes": "720x1600",
+  "type": "image/png",
+  "form_factor": "narrow",
+  "label": "CBC Best Homepage"
+},
+ {
+  "src": "images/screenshot-mobile.png",
+  "sizes": "720x1600",
+  "type": "image/png",
+  "form_factor": "narrow",
+  "label": "CBC Best on Mobile"
+}
   ],
 
   "shortcuts": [

@@ -1,0 +1,4 @@
+#Sat Jul 04 12:17:15 EAT 2026
+base.0=C\:\\Users\\RONNY\\OneDrive\\Desktop\\CBC PROJECT\\app\\build\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

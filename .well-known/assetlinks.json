@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.ronnymwenda.cbcbest",
+    "sha256_cert_fingerprints": ["4D:6C:09:E7:0D:B8:58:CB:B1:62:FB:00:75:4D:20:4E:0E:3C:62:63:4B:CE:7F:67:7A:1C:D5:C0:3F:A5:74:B2"]
+  }
+}]

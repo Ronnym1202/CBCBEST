@@ -1,0 +1,417 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3    Copyright 2019 Google Inc. All Rights Reserved.
+4
+5     Licensed under the Apache License, Version 2.0 (the "License");
+6     you may not use this file except in compliance with the License.
+7     You may obtain a copy of the License at
+8
+9         http://www.apache.org/licenses/LICENSE-2.0
+10
+11     Unless required by applicable law or agreed to in writing, software
+12     distributed under the License is distributed on an "AS IS" BASIS,
+13     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14     See the License for the specific language governing permissions and
+15     limitations under the License.
+16-->
+17<!--
+18 The "package" attribute is rewritten by the Gradle build with the value of applicationId.
+19     It is still required here, as it is used to derive paths, for instance when referring
+20     to an Activity by ".MyActivity" instead of the full name. If more Activities are added to the
+21     application, the package attribute will need to reflect the correct path in order to use
+22     the abbreviated format.
+23-->
+24<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+25    package="com.ronnymwenda.cbcbest"
+26    android:versionCode="1"
+27    android:versionName="1" >
+28
+29    <uses-sdk
+30        android:minSdkVersion="21"
+31        android:targetSdkVersion="35" />
+32
+33    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+33-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:26:9-80
+33-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:26:26-78
+34
+35    <queries>
+35-->[com.google.androidbrowserhelper:androidbrowserhelper:2.6.2] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\5053e02be90783e54992393be394bb70\transformed\androidbrowserhelper-2.6.2\AndroidManifest.xml:22:5-30:15
+36        <intent>
+36-->[com.google.androidbrowserhelper:androidbrowserhelper:2.6.2] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\5053e02be90783e54992393be394bb70\transformed\androidbrowserhelper-2.6.2\AndroidManifest.xml:23:9-29:18
+37            <action android:name="android.intent.action.VIEW" />
+37-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:170:17-68
+37-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:170:25-66
+38
+39            <category android:name="android.intent.category.BROWSABLE" />
+39-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:172:17-77
+39-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:172:27-75
+40
+41            <data android:scheme="https" />
+41-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:159:25-63
+41-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:173:23-45
+42        </intent>
+43    </queries>
+44
+45    <permission
+45-->[androidx.core:core:1.13.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\a5429f7b20c607b890f08b5283ad4ec0\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+46        android:name="com.ronnymwenda.cbcbest.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+46-->[androidx.core:core:1.13.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\a5429f7b20c607b890f08b5283ad4ec0\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+47        android:protectionLevel="signature" />
+47-->[androidx.core:core:1.13.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\a5429f7b20c607b890f08b5283ad4ec0\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+48
+49    <uses-permission android:name="com.ronnymwenda.cbcbest.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+49-->[androidx.core:core:1.13.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\a5429f7b20c607b890f08b5283ad4ec0\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+49-->[androidx.core:core:1.13.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\a5429f7b20c607b890f08b5283ad4ec0\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+50
+51    <application
+51-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:35:5-221:19
+52        android:name="com.ronnymwenda.cbcbest.Application"
+52-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:36:9-35
+53        android:allowBackup="true"
+53-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:37:9-35
+54        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+54-->[androidx.core:core:1.13.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\a5429f7b20c607b890f08b5283ad4ec0\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+55        android:extractNativeLibs="true"
+56        android:icon="@mipmap/ic_launcher"
+56-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:38:9-43
+57        android:label="@string/appName"
+57-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:39:9-40
+58        android:manageSpaceActivity="com.google.androidbrowserhelper.trusted.ManageDataLauncherActivity"
+58-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:41:9-105
+59        android:supportsRtl="true"
+59-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:43:9-35
+60        android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+60-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:44:9-68
+61        <meta-data
+61-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:46:9-48:58
+62            android:name="asset_statements"
+62-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:47:13-44
+63            android:resource="@string/assetStatements" />
+63-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:48:13-55
+64        <meta-data
+64-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:51:13-53:58
+65            android:name="web_manifest_url"
+65-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:52:17-48
+66            android:value="@string/webManifestUrl" />
+66-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:53:17-55
+67        <meta-data
+67-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:56:9-58:52
+68            android:name="twa_generator"
+68-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:57:13-41
+69            android:value="@string/generatorApp" />
+69-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:58:13-49
+70
+71        <activity
+71-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:65:13-76:24
+72            android:name="com.google.androidbrowserhelper.trusted.ManageDataLauncherActivity"
+72-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:65:23-104
+73            android:enabled="true"
+73-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:67:17-39
+74            android:excludeFromRecents="true"
+74-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:68:17-50
+75            android:exported="false" >
+75-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:66:17-41
+76            <meta-data
+76-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:69:17-71:57
+77                android:name="android.support.customtabs.trusted.MANAGE_SPACE_URL"
+77-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:70:21-87
+78                android:value="@string/launchUrl" />
+78-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:71:21-54
+79
+80            <intent-filter>
+80-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:72:17-75:33
+81                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+81-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:73:21-92
+81-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:73:29-89
+82
+83                <category android:name="android.intent.category.DEFAULT" />
+83-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:74:21-80
+83-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:74:31-77
+84            </intent-filter>
+85        </activity>
+86        <activity
+86-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:79:9-182:20
+87            android:name="com.ronnymwenda.cbcbest.LauncherActivity"
+87-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:79:19-50
+88            android:alwaysRetainTaskState="true"
+88-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:80:13-49
+89            android:exported="true"
+89-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:82:13-36
+90            android:label="@string/launcherName" >
+90-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:81:13-49
+91            <meta-data
+91-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:83:13-84:53
+92                android:name="android.support.customtabs.trusted.DEFAULT_URL"
+92-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:83:24-85
+93                android:value="@string/launchUrl" />
+93-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:84:17-50
+94            <meta-data
+94-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:86:13-88:58
+95                android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
+95-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:87:17-83
+96                android:resource="@color/colorPrimary" />
+96-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:88:17-55
+97            <meta-data
+97-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:91:17-93:71
+98                android:name="android.support.customtabs.trusted.LAUNCH_HANDLER_CLIENT_MODE"
+98-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:92:21-97
+99                android:value="@string/launchHandlerClientMode" />
+99-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:93:21-68
+100            <meta-data
+100-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:96:13-98:62
+101                android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR_DARK"
+101-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:97:17-88
+102                android:resource="@color/colorPrimaryDark" />
+102-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:98:17-59
+103            <meta-data
+103-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:100:13-102:61
+104                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR"
+104-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:101:17-87
+105                android:resource="@color/navigationColor" />
+105-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:102:17-58
+106            <meta-data
+106-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:104:13-106:65
+107                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR_DARK"
+107-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:105:17-92
+108                android:resource="@color/navigationColorDark" />
+108-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:106:17-62
+109            <meta-data
+109-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:108:13-110:68
+110                android:name="androix.browser.trusted.NAVIGATION_BAR_DIVIDER_COLOR"
+110-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:109:17-84
+111                android:resource="@color/navigationDividerColor" />
+111-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:110:17-65
+112            <meta-data
+112-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:112:13-114:72
+113                android:name="androix.browser.trusted.NAVIGATION_BAR_DIVIDER_COLOR_DARK"
+113-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:113:17-89
+114                android:resource="@color/navigationDividerColorDark" />
+114-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:114:17-69
+115            <meta-data
+115-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:116:13-117:54
+116                android:name="android.support.customtabs.trusted.SPLASH_IMAGE_DRAWABLE"
+116-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:116:24-95
+117                android:resource="@drawable/splash" />
+117-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:117:17-52
+118            <meta-data
+118-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:119:13-120:60
+119                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_BACKGROUND_COLOR"
+119-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:119:24-104
+120                android:resource="@color/backgroundColor" />
+120-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:120:17-58
+121            <meta-data
+121-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:122:13-123:71
+122                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_FADE_OUT_DURATION"
+122-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:122:24-105
+123                android:value="@integer/splashScreenFadeOutDuration" />
+123-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:123:17-69
+124            <meta-data
+124-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:125:13-126:60
+125                android:name="android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY"
+125-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:125:24-97
+126                android:value="@string/providerAuthority" />
+126-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:126:17-58
+127            <meta-data
+127-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:128:13-97
+128                android:name="android.app.shortcuts"
+128-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:128:24-60
+129                android:resource="@xml/shortcuts" />
+129-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:128:61-94
+130            <meta-data
+130-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:130:13-131:56
+131                android:name="android.support.customtabs.trusted.FALLBACK_STRATEGY"
+131-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:130:24-91
+132                android:value="@string/fallbackType" />
+132-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:131:17-53
+133            <meta-data
+133-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:134:17-136:61
+134                android:name="android.support.customtabs.trusted.METADATA_SHARE_TARGET"
+134-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:135:21-92
+135                android:resource="@string/shareTarget" />
+135-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:136:21-59
+136            <meta-data
+136-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:141:13-142:54
+137                android:name="android.support.customtabs.trusted.SCREEN_ORIENTATION"
+137-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:141:24-92
+138                android:value="@string/orientation" />
+138-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:142:17-52
+139            <meta-data
+139-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:147:17-149:66
+140                android:name="android.support.customtabs.trusted.DISPLAY_OVERRIDE"
+140-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:148:21-87
+141                android:resource="@array/display_override" />
+141-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:149:21-63
+142
+143            <intent-filter>
+143-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:153:17-161:33
+144                <action android:name="android.intent.action.SEND" />
+144-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:155:25-77
+144-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:155:33-74
+145
+146                <category android:name="android.intent.category.DEFAULT" />
+146-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:74:21-80
+146-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:74:31-77
+147
+148                <data android:mimeType="text/plain" />
+148-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:159:25-63
+148-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:159:31-60
+149            </intent-filter>
+150            <intent-filter>
+150-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:164:13-167:29
+151                <action android:name="android.intent.action.MAIN" />
+151-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:165:17-69
+151-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:165:25-66
+152
+153                <category android:name="android.intent.category.LAUNCHER" />
+153-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:166:17-77
+153-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:166:27-74
+154            </intent-filter>
+155            <intent-filter android:autoVerify="true" >
+155-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:169:13-177:29
+155-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:169:28-53
+156                <action android:name="android.intent.action.VIEW" />
+156-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:170:17-68
+156-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:170:25-66
+157
+158                <category android:name="android.intent.category.DEFAULT" />
+158-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:74:21-80
+158-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:74:31-77
+159                <category android:name="android.intent.category.BROWSABLE" />
+159-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:172:17-77
+159-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:172:27-75
+160
+161                <data
+161-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:159:25-63
+162                    android:host="@string/hostName"
+162-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:174:21-52
+163                    android:scheme="https" />
+163-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:173:23-45
+164            </intent-filter>
+165        </activity>
+166        <activity android:name="com.google.androidbrowserhelper.trusted.FocusActivity" />
+166-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:184:9-90
+166-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:184:19-87
+167        <activity
+167-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:186:9-187:62
+168            android:name="com.google.androidbrowserhelper.trusted.WebViewFallbackActivity"
+168-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:186:19-97
+169            android:configChanges="orientation|screenSize" />
+169-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:187:13-59
+170
+171        <provider
+171-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:189:9-197:20
+172            android:name="androidx.core.content.FileProvider"
+172-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:190:13-62
+173            android:authorities="@string/providerAuthority"
+173-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:191:13-60
+174            android:exported="false"
+174-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:193:13-37
+175            android:grantUriPermissions="true" >
+175-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:192:13-47
+176            <meta-data
+176-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:194:13-196:53
+177                android:name="android.support.FILE_PROVIDER_PATHS"
+177-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:195:17-67
+178                android:resource="@xml/filepaths" />
+178-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:196:17-50
+179        </provider>
+180
+181        <service
+181-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:199:9-214:19
+182            android:name="com.ronnymwenda.cbcbest.DelegationService"
+182-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:200:13-46
+183            android:enabled="@bool/enableNotification"
+183-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:201:13-55
+184            android:exported="@bool/enableNotification" >
+184-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:202:13-56
+185            <meta-data
+185-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:205:17-207:73
+186                android:name="android.support.customtabs.trusted.SMALL_ICON"
+186-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:206:21-81
+187                android:resource="@drawable/ic_notification_icon" />
+187-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:207:21-70
+188
+189            <intent-filter>
+189-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:210:13-213:29
+190                <action android:name="android.support.customtabs.trusted.TRUSTED_WEB_ACTIVITY_SERVICE" />
+190-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:211:17-105
+190-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:211:25-103
+191
+192                <category android:name="android.intent.category.DEFAULT" />
+192-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:74:21-80
+192-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:74:31-77
+193            </intent-filter>
+194        </service>
+195
+196        <activity android:name="com.google.androidbrowserhelper.trusted.NotificationPermissionRequestActivity" />
+196-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:217:13-118
+196-->C:\Users\RONNY\OneDrive\Desktop\CBC PROJECT\app\src\main\AndroidManifest.xml:217:23-115
+197
+198        <provider
+198-->[androidx.emoji2:emoji2:1.3.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\5cb7738f5242d8c4e38c8ffa2b265b31\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+199            android:name="androidx.startup.InitializationProvider"
+199-->[androidx.emoji2:emoji2:1.3.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\5cb7738f5242d8c4e38c8ffa2b265b31\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+200            android:authorities="com.ronnymwenda.cbcbest.androidx-startup"
+200-->[androidx.emoji2:emoji2:1.3.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\5cb7738f5242d8c4e38c8ffa2b265b31\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+201            android:exported="false" >
+201-->[androidx.emoji2:emoji2:1.3.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\5cb7738f5242d8c4e38c8ffa2b265b31\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+202            <meta-data
+202-->[androidx.emoji2:emoji2:1.3.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\5cb7738f5242d8c4e38c8ffa2b265b31\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+203                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+203-->[androidx.emoji2:emoji2:1.3.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\5cb7738f5242d8c4e38c8ffa2b265b31\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+204                android:value="androidx.startup" />
+204-->[androidx.emoji2:emoji2:1.3.0] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\5cb7738f5242d8c4e38c8ffa2b265b31\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+205            <meta-data
+205-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\4bc52031417e9743197e36b704fe409f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+206                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+206-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\4bc52031417e9743197e36b704fe409f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+207                android:value="androidx.startup" />
+207-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\4bc52031417e9743197e36b704fe409f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+208            <meta-data
+208-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+209                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+209-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+210                android:value="androidx.startup" />
+210-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+211        </provider>
+212
+213        <receiver
+213-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+214            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+214-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+215            android:directBootAware="false"
+215-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+216            android:enabled="true"
+216-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+217            android:exported="true"
+217-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+218            android:permission="android.permission.DUMP" >
+218-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+219            <intent-filter>
+219-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+220                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+220-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+220-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+221            </intent-filter>
+222            <intent-filter>
+222-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+223                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+223-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+223-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+224            </intent-filter>
+225            <intent-filter>
+225-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+226                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+226-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+226-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+227            </intent-filter>
+228            <intent-filter>
+228-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+229                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+229-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+229-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\RONNY\.gradle\caches\8.11.1\transforms\bb4a0d32d1b17a1dcea0cf71d2bde5e0\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+230            </intent-filter>
+231        </receiver>
+232    </application>
+233
+234</manifest>

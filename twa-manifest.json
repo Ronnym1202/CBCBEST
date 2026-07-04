@@ -1,0 +1,88 @@
+{
+  "packageId": "com.ronnymwenda.cbcbest",
+  "host": "cbcbest.netlify.app",
+  "name": "CBC Best - Kenya CBC Curriculum",
+  "launcherName": "CBC Best",
+  "display": "standalone",
+  "themeColor": "#0B1F2E",
+  "themeColorDark": "#000000",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#FFF8EE",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://cbcbest.netlify.app/images/icon-512.png",
+  "maskableIconUrl": "https://cbcbest.netlify.app/images/icon-maskable-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "C:\\Users\\RONNY\\OneDrive\\Desktop\\CBC PROJECT\\android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1",
+  "appVersionCode": 1,
+  "shortcuts": [
+    {
+      "name": "CBC Pathways",
+      "shortName": "Pathways",
+      "url": "https://cbcbest.netlify.app/pathways.html",
+      "chosenIconUrl": "https://cbcbest.netlify.app/images/icon-192.png"
+    },
+    {
+      "name": "Mathematics & CS",
+      "shortName": "Maths & CS",
+      "url": "https://cbcbest.netlify.app/mathematics-computer-science.html",
+      "chosenIconUrl": "https://cbcbest.netlify.app/images/icon-192.png"
+    },
+    {
+      "name": "Discussion Forums",
+      "shortName": "Forums",
+      "url": "https://cbcbest.netlify.app/forums.html",
+      "chosenIconUrl": "https://cbcbest.netlify.app/images/icon-192.png"
+    },
+    {
+      "name": "Free Resources",
+      "shortName": "Resources",
+      "url": "https://cbcbest.netlify.app/resources.html",
+      "chosenIconUrl": "https://cbcbest.netlify.app/images/icon-192.png"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://cbcbest.netlify.app/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://cbcbest.netlify.app/",
+  "minSdkVersion": 21,
+  "shareTarget": {
+    "action": "https://cbcbest.netlify.app/share-target.html",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "orientation": "portrait",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "protocolHandlers": [],
+  "fileHandlers": [],
+  "launchHandlerClientMode": [
+    "focus-existing",
+    "auto"
+  ],
+  "displayOverride": [
+    "window-controls-overlay",
+    "standalone"
+  ],
+  "appVersion": "1"
+}
