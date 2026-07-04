@@ -201,7 +201,7 @@
         <span>Ronny Mwenda · Kenya's CBC Hub</span>
       </div>
     </a>
-    <button class="menu-toggle" id="mobileMenuBtn">☰ Menu</button>
+    <button class="menu-toggle" id="mobileMenuBtn" type="button">☰ Menu</button>
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="pathways.html">Pathways</a>
@@ -719,9 +719,14 @@ const firebaseConfig = {
   appId: "1:787584479208:web:30fd5db2b75164373a7e5d"
 };
 
-const app  = initializeApp(firebaseConfig);
-const db   = getFirestore(app);
-const auth = getAuth(app);
+let app, db, auth;
+try {
+  app  = initializeApp(firebaseConfig);
+  db   = getFirestore(app);
+  auth = getAuth(app);
+} catch (e) {
+  console.error('Firebase init failed:', e);
+}
 
 let firebaseResources = [];
 let firebasePapers    = [];
@@ -733,40 +738,54 @@ window._isAdmin = () => isAdmin;
 window._firebaseResources = () => firebaseResources;
 window._firebasePapers    = () => firebasePapers;
 
-onAuthStateChanged(auth, user => {
-  isAdmin = !!user;
-  if (typeof window.applyFilters === 'function')       window.applyFilters();
-  if (typeof window.applyPapersFilters === 'function') window.applyPapersFilters();
-});
+if (auth) {
+  try {
+    onAuthStateChanged(auth, user => {
+      isAdmin = !!user;
+      if (typeof window.applyFilters === 'function')       window.applyFilters();
+      if (typeof window.applyPapersFilters === 'function') window.applyPapersFilters();
+    });
+  } catch (e) { console.error('Auth listener failed:', e); }
+}
 
 /* Live: approved resources */
-const rq = query(
-  collection(db, 'resources'),
-  where('status','==','approved'),
-  orderBy('createdAt','desc')
-);
-onSnapshot(rq, snap => {
-  firebaseResources = snap.docs.map(d => ({id:d.id,...d.data(),source:'firebase'}));
-  document.getElementById('statCommunity').textContent = firebaseResources.length;
-  if (typeof window.applyFilters === 'function') window.applyFilters();
-}, e => console.error('Resources listener:', e));
+if (db) {
+  try {
+    const rq = query(
+      collection(db, 'resources'),
+      where('status','==','approved'),
+      orderBy('createdAt','desc')
+    );
+    onSnapshot(rq, snap => {
+      firebaseResources = snap.docs.map(d => ({id:d.id,...d.data(),source:'firebase'}));
+      const el = document.getElementById('statCommunity');
+      if (el) el.textContent = firebaseResources.length;
+      if (typeof window.applyFilters === 'function') window.applyFilters();
+    }, e => console.error('Resources listener:', e));
+  } catch (e) { console.error('Resources query failed:', e); }
 
-/* Live: approved past papers */
-const pq = query(
-  collection(db, 'pastpapers'),
-  where('status','==','approved'),
-  orderBy('createdAt','desc')
-);
-onSnapshot(pq, snap => {
-  firebasePapers = snap.docs.map(d => ({id:d.id,...d.data(),source:d.data().source||'community'}));
-  const builtinCount = window.BUILTIN_PAPERS ? window.BUILTIN_PAPERS.length : 0;
-  document.getElementById('statPapers').textContent    = builtinCount + firebasePapers.length;
-  document.getElementById('papersCommCount').textContent = firebasePapers.length;
-  if (typeof window.applyPapersFilters === 'function') window.applyPapersFilters();
-}, e => console.error('Papers listener:', e));
+  /* Live: approved past papers */
+  try {
+    const pq = query(
+      collection(db, 'pastpapers'),
+      where('status','==','approved'),
+      orderBy('createdAt','desc')
+    );
+    onSnapshot(pq, snap => {
+      firebasePapers = snap.docs.map(d => ({id:d.id,...d.data(),source:d.data().source||'community'}));
+      const builtinCount = window.BUILTIN_PAPERS ? window.BUILTIN_PAPERS.length : 0;
+      const statPapersEl = document.getElementById('statPapers');
+      if (statPapersEl) statPapersEl.textContent = builtinCount + firebasePapers.length;
+      const commEl = document.getElementById('papersCommCount');
+      if (commEl) commEl.textContent = firebasePapers.length;
+      if (typeof window.applyPapersFilters === 'function') window.applyPapersFilters();
+    }, e => console.error('Papers listener:', e));
+  } catch (e) { console.error('Papers query failed:', e); }
+}
 
 /* ── SUBMIT ── */
 window.submitUpload = async function() {
+  if (!db) { showToast('⚠️ Service unavailable. Try again later.', true); return; }
   const tab = window._activeUploadTab || 'resource';
   const btn = document.getElementById('submitUploadBtn');
 
@@ -811,7 +830,8 @@ window.submitUpload = async function() {
       });
       closeUploadModal();
       if (status === 'pending') {
-        document.getElementById('pendingNotice').style.display = 'flex';
+        const pn = document.getElementById('pendingNotice');
+        if (pn) pn.style.display = 'flex';
         showToast('✓ Past paper submitted for review!');
       } else {
         showToast('✓ Past paper published!');
@@ -858,7 +878,8 @@ window.submitUpload = async function() {
       });
       closeUploadModal();
       if (status === 'pending') {
-        document.getElementById('pendingNotice').style.display = 'flex';
+        const pn = document.getElementById('pendingNotice');
+        if (pn) pn.style.display = 'flex';
         showToast('✓ Submitted! Your resource is under review.');
       } else {
         showToast('✓ Resource published successfully!');
@@ -1585,8 +1606,12 @@ Downloaded from CBC Best · cbcbest.netlify.app · Ronny Mwenda`
 ];
 
 /* ── stat init ── */
-document.getElementById('papersBuiltinCount').textContent = window.BUILTIN_PAPERS.length;
-document.getElementById('statPapers').textContent         = window.BUILTIN_PAPERS.length;
+(function(){
+  const a = document.getElementById('papersBuiltinCount');
+  if (a) a.textContent = window.BUILTIN_PAPERS.length;
+  const b = document.getElementById('statPapers');
+  if (b) b.textContent = window.BUILTIN_PAPERS.length;
+})();
 </script>
 
 <!-- ═══════════════════════════════════════════════════════
@@ -1602,38 +1627,45 @@ function esc(s){
 }
 
 window.applyPapersFilters = function() {
-  const search  = (document.getElementById('papersSearch')?.value  || '').toLowerCase().trim();
-  const src     =  document.getElementById('pfSource')?.value  || '';
-  const grade   =  document.getElementById('pfGrade')?.value   || '';
-  const subject =  document.getElementById('pfSubject')?.value || '';
-  const year    =  document.getElementById('pfYear')?.value    || '';
-  const term    =  document.getElementById('pfTerm')?.value    || '';
+  try {
+    const search  = (document.getElementById('papersSearch')?.value  || '').toLowerCase().trim();
+    const src     =  document.getElementById('pfSource')?.value  || '';
+    const grade   =  document.getElementById('pfGrade')?.value   || '';
+    const subject =  document.getElementById('pfSubject')?.value || '';
+    const year    =  document.getElementById('pfYear')?.value    || '';
+    const term    =  document.getElementById('pfTerm')?.value    || '';
 
-  const fbPapers = (typeof window._firebasePapers === 'function') ? window._firebasePapers() : [];
-  const all = [
-    ...window.BUILTIN_PAPERS,
-    ...fbPapers.map(p => ({...p, builtin:false}))
-  ];
+    const fbPapers = (typeof window._firebasePapers === 'function') ? window._firebasePapers() : [];
+    const all = [
+      ...(window.BUILTIN_PAPERS || []),
+      ...fbPapers.map(p => ({...p, builtin:false}))
+    ];
 
-  const filtered = all.filter(p => {
-    if (src     && p.source  !== src)    return false;
-    if (grade   && p.grade   !== grade)  return false;
-    if (year    && p.year    !== year)   return false;
-    if (term    && p.term    !== term)   return false;
-    if (subject && !p.subject?.toLowerCase().includes(subject.toLowerCase())) return false;
-    if (search) {
-      const hay = [p.title,p.source,p.year,p.grade,p.term,p.subject,p.desc]
-        .filter(Boolean).join(' ').toLowerCase();
-      if (!hay.includes(search)) return false;
-    }
-    return true;
-  });
+    const filtered = all.filter(p => {
+      if (src     && p.source  !== src)    return false;
+      if (grade   && p.grade   !== grade)  return false;
+      if (year    && p.year    !== year)   return false;
+      if (term    && p.term    !== term)   return false;
+      if (subject && !p.subject?.toLowerCase().includes(subject.toLowerCase())) return false;
+      if (search) {
+        const hay = [p.title,p.source,p.year,p.grade,p.term,p.subject,p.desc]
+          .filter(Boolean).join(' ').toLowerCase();
+        if (!hay.includes(search)) return false;
+      }
+      return true;
+    });
 
-  document.getElementById('papersTotalBadge').textContent  = all.length;
-  document.getElementById('statPapers').textContent        = all.length;
-  document.getElementById('papersCommCount').textContent   = fbPapers.length;
+    const totalBadge = document.getElementById('papersTotalBadge');
+    if (totalBadge) totalBadge.textContent = all.length;
+    const statPapers = document.getElementById('statPapers');
+    if (statPapers) statPapers.textContent = all.length;
+    const commCount = document.getElementById('papersCommCount');
+    if (commCount) commCount.textContent = fbPapers.length;
 
-  renderPapersGrid(filtered);
+    renderPapersGrid(filtered);
+  } catch (e) {
+    console.error('applyPapersFilters error:', e);
+  }
 };
 
 window.renderPapersGrid = function(items) {
@@ -1703,7 +1735,7 @@ window.renderPapersGrid = function(items) {
 
 /* ── PDF generation for built-in papers ── */
 window.downloadPaperPDF = function(id) {
-  const paper = window.BUILTIN_PAPERS.find(p => p.id === id);
+  const paper = (window.BUILTIN_PAPERS || []).find(p => p.id === id);
   if (!paper) return;
   let rawText;
   try { rawText = paper.content(); }
@@ -1806,66 +1838,72 @@ applyPapersFilters();
 <script>
 /* re-declare applyFilters to include Firebase resources */
 window.applyFilters = function() {
-  const searchEl = document.getElementById('searchInput');
-  const sortEl   = document.getElementById('sortSelect');
-  currentSearch  = searchEl ? searchEl.value.toLowerCase().trim() : '';
-  currentSort    = sortEl   ? sortEl.value : 'default';
+  try {
+    const searchEl = document.getElementById('searchInput');
+    const sortEl   = document.getElementById('sortSelect');
+    currentSearch  = searchEl ? searchEl.value.toLowerCase().trim() : '';
+    currentSort    = sortEl   ? sortEl.value : 'default';
 
-  /* merge built-in + firebase */
-  const fbRes = (typeof window._firebaseResources === 'function')
-    ? window._firebaseResources().map(r => ({
-        ...r,
-        icon: (typeof CAT_META !== 'undefined' && CAT_META[r.cat]) ? CAT_META[r.cat].icon||'📄' : '📄',
-        topics: r.subject ? [r.subject] : [],
-        source: 'firebase'
-      }))
-    : [];
-  const all = [
-    ...(typeof RESOURCES !== 'undefined' ? RESOURCES.map(r=>({...r,source:'builtin'})) : []),
-    ...fbRes
-  ];
+    /* merge built-in + firebase */
+    const fbRes = (typeof window._firebaseResources === 'function')
+      ? window._firebaseResources().map(r => ({
+          ...r,
+          icon: (typeof CAT_META !== 'undefined' && CAT_META[r.cat]) ? CAT_META[r.cat].icon||'📄' : '📄',
+          topics: r.subject ? [r.subject] : [],
+          source: 'firebase'
+        }))
+      : [];
+    const all = [
+      ...(typeof RESOURCES !== 'undefined' ? RESOURCES.map(r=>({...r,source:'builtin'})) : []),
+      ...fbRes
+    ];
 
-  document.getElementById('statTotal').textContent = all.length + '+';
+    const statTotalEl = document.getElementById('statTotal');
+    if (statTotalEl) statTotalEl.textContent = all.length + '+';
 
-  let filtered = all.filter(r => {
-    if (currentFilter !== 'all' && r.cat !== currentFilter) return false;
-    if (!currentSearch) return true;
-    const hay = [r.title,r.subject,r.grade,r.terms,r.term,r.desc,...(r.topics||[])].join(' ').toLowerCase();
-    return hay.includes(currentSearch);
-  });
-
-  if (currentSort === 'az')
-    filtered.sort((a,b) => a.title.localeCompare(b.title));
-  else if (currentSort === 'grade')
-    filtered.sort((a,b) => gradeNum(a.grade||'') - gradeNum(b.grade||''));
-  else if (currentSort === 'category')
-    filtered.sort((a,b) => (CAT_ORDER[a.cat]??9) - (CAT_ORDER[b.cat]??9));
-  else if (currentSort === 'newest')
-    filtered.sort((a,b) => {
-      if (a.source==='firebase'&&b.source!=='firebase') return -1;
-      if (b.source==='firebase'&&a.source!=='firebase') return 1;
-      return 0;
+    let filtered = all.filter(r => {
+      if (currentFilter !== 'all' && r.cat !== currentFilter) return false;
+      if (!currentSearch) return true;
+      const hay = [r.title,r.subject,r.grade,r.terms,r.term,r.desc,...(r.topics||[])].join(' ').toLowerCase();
+      return hay.includes(currentSearch);
     });
 
-  const labelMap = {
-    all:'All categories', scheme:'Schemes of Work', lesson:'Lesson Plans',
-    curriculum:'Curriculum Designs', assessment:'Assessment Tools',
-    notes:'Student Notes', career:'Career Guides',
-    teacher:'Teacher Guides', community:'Community Uploads'
-  };
-  const labelEl = document.getElementById('activeFilterLabel');
-  if (labelEl) labelEl.textContent =
-    (currentSearch ? `Searching "${currentSearch}" in ` : '') +
-    (labelMap[currentFilter] || currentFilter);
+    if (currentSort === 'az')
+      filtered.sort((a,b) => a.title.localeCompare(b.title));
+    else if (currentSort === 'grade')
+      filtered.sort((a,b) => gradeNum(a.grade||'') - gradeNum(b.grade||''));
+    else if (currentSort === 'category')
+      filtered.sort((a,b) => (CAT_ORDER[a.cat]??9) - (CAT_ORDER[b.cat]??9));
+    else if (currentSort === 'newest')
+      filtered.sort((a,b) => {
+        if (a.source==='firebase'&&b.source!=='firebase') return -1;
+        if (b.source==='firebase'&&a.source!=='firebase') return 1;
+        return 0;
+      });
 
-  renderCards(filtered);
+    const labelMap = {
+      all:'All categories', scheme:'Schemes of Work', lesson:'Lesson Plans',
+      curriculum:'Curriculum Designs', assessment:'Assessment Tools',
+      notes:'Student Notes', career:'Career Guides',
+      teacher:'Teacher Guides', community:'Community Uploads'
+    };
+    const labelEl = document.getElementById('activeFilterLabel');
+    if (labelEl) labelEl.textContent =
+      (currentSearch ? `Searching "${currentSearch}" in ` : '') +
+      (labelMap[currentFilter] || currentFilter);
+
+    renderCards(filtered);
+  } catch (e) {
+    console.error('applyFilters error:', e);
+  }
 };
 
 /* re-declare renderCards to handle both builtin (PDF) and Firebase (Drive link) */
 window.renderCards = function(items) {
   const grid = document.getElementById('resourcesGrid');
   if (!grid) return;
-  document.getElementById('resultsCount').textContent = items.length;
+  const countEl = document.getElementById('resultsCount');
+  if (countEl) countEl.textContent = items.length;
 
   if (!items.length) {
     grid.innerHTML = `<div class="empty-state">
@@ -2035,6 +2073,7 @@ window.downloadAsPDF = function(id) {
 window.showToast = function(msg, isErr) {
   const t = document.getElementById('toast');
   const m = document.getElementById('toastMsg');
+  if (!t || !m) return;
   m.textContent = msg;
   t.style.background = isErr ? '#c0392b' : 'var(--navy)';
   t.classList.remove('hidden');
@@ -2043,22 +2082,26 @@ window.showToast = function(msg, isErr) {
 };
 
 /* ── Overlay click / Escape key ── */
-document.getElementById('uploadModal').addEventListener('click', e => {
-  if (e.target.id === 'uploadModal') closeUploadModal();
-});
-document.getElementById('previewModal').addEventListener('click', e => {
-  if (e.target.id === 'previewModal') closePreviewModal();
-});
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeUploadModal(); closePreviewModal(); }
-});
-
-/* ── Mobile nav ── */
-document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-  const nav  = document.getElementById('navLinks');
-  const open = nav.classList.toggle('show');
-  document.getElementById('mobileMenuBtn').textContent = open ? '✕ Close' : '☰ Menu';
-});
+(function(){
+  const uploadModal = document.getElementById('uploadModal');
+  if (uploadModal) {
+    uploadModal.addEventListener('click', e => {
+      if (e.target.id === 'uploadModal') closeUploadModal();
+    });
+  }
+  const previewModal = document.getElementById('previewModal');
+  if (previewModal) {
+    previewModal.addEventListener('click', e => {
+      if (e.target.id === 'previewModal') closePreviewModal();
+    });
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      if (typeof closeUploadModal === 'function') closeUploadModal();
+      if (typeof closePreviewModal === 'function') closePreviewModal();
+    }
+  });
+})();
 
 /* ── Smooth scroll to past papers ── */
 document.querySelectorAll('a[href="#pastPapersSection"]').forEach(a => {
@@ -2073,6 +2116,32 @@ window.addEventListener('load', () => {
   if (typeof applyFilters === 'function')       applyFilters();
   if (typeof applyPapersFilters === 'function') applyPapersFilters();
 });
+</script>
+
+<!-- ═══════════════════════════════════════════════════════
+     MOBILE NAV — isolated in its own script so a failure
+     anywhere else on the page can never block the menu
+════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  const navLinks  = document.getElementById('navLinks');
+  if (!mobileBtn || !navLinks) return;
+
+  mobileBtn.addEventListener('click', function () {
+    const open = navLinks.classList.toggle('show');
+    mobileBtn.textContent = open ? '✕ Close' : '☰ Menu';
+    mobileBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  /* close menu after a nav link is tapped (mobile UX) */
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('show');
+      mobileBtn.textContent = '☰ Menu';
+    });
+  });
+})();
 </script>
 
 <script src="cookie-consent.js"></script>
