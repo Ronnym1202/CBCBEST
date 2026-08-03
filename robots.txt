@@ -4,6 +4,10 @@
 User-agent: *
 Allow: /
 Allow: /images/
+Disallow: /admin.html
+Disallow: /resource-admin.html
+Disallow: /generate-icons.html
+Disallow: /generate-maskable-icons.html
 
 # Block common junk/scraper bots
 User-agent: AhrefsBot

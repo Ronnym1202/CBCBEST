@@ -138,7 +138,17 @@
     }
     .page-hero h1 { font-size:clamp(2rem,4.5vw,3rem); font-weight:800; color:var(--white); letter-spacing:-0.8px; line-height:1.15; margin-bottom:1rem; }
     .page-hero h1 em { font-style:italic; color:var(--gold); }
-    .page-hero-sub { font-size:1rem; color:rgba(255,228,196,0.8); max-width:680px; line-height:1.8; margin-bottom:2rem; }
+    .page-hero-sub { font-size:1rem; color:rgba(255,228,196,0.8); max-width:680px; line-height:1.8; margin-bottom:1.6rem; }
+
+    /* quiz callout in hero */
+    .quiz-callout {
+      display:inline-flex; align-items:center; gap:10px;
+      background:rgba(201,160,61,0.1); border:1px dashed rgba(201,160,61,0.4);
+      color:var(--peach); font-size:0.85rem; font-weight:600;
+      padding:10px 18px; border-radius:40px; margin-bottom:2rem;
+      transition:all 0.2s;
+    }
+    .quiz-callout:hover { background:rgba(201,160,61,0.18); border-color:var(--gold); color:var(--gold); }
 
     /* pathway mini cards in hero */
     .hero-pathway-pills {
@@ -398,8 +408,6 @@
     .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; margin-bottom:3rem; }
     .footer-brand strong { display:block; font-size:1.1rem; color:var(--white); font-weight:800; margin-bottom:0.5rem; }
     .footer-brand p { font-size:0.82rem; line-height:1.75; margin-bottom:1rem; max-width:280px; }
-    .footer-brand .eco { font-size:0.77rem; color:rgba(255,228,196,0.45); }
-    .footer-brand .eco a { color:var(--gold); font-weight:600; }
     .footer-col h4 { color:var(--white); font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.9rem; }
     .footer-col a  { display:block; font-size:0.82rem; color:rgba(255,228,196,0.6); padding:3px 0; transition:color 0.2s; }
     .footer-col a:hover { color:var(--gold); }
@@ -416,7 +424,6 @@
       .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:var(--navy); flex-direction:column; align-items:flex-start; gap:0; padding:1rem 20px 1.5rem; border-top:1px solid rgba(201,160,61,0.15); box-shadow:0 12px 40px rgba(0,0,0,0.2); }
       .nav-links.show { display:flex; }
       .nav-links a { width:100%; padding:10px 8px; font-size:0.9rem; border-radius:8px; }
-      .site-header { position:relative; }
       .placement-banner { grid-template-columns:1fr; }
       .footer-top { grid-template-columns:1fr 1fr; gap:2rem; }
       .footer-brand { grid-column:1 / -1; }
@@ -468,6 +475,7 @@
     <div class="page-hero-label">// CBC Senior School · Grades 10–12 · KICD-Aligned</div>
     <h1>Kenya's CBC Senior<br>School <em>Pathways</em></h1>
     <p class="page-hero-sub">After Junior Secondary School (Grade 9), every Kenyan learner selects one of three pathways aligned to their aptitude and interests. This guide covers the official KICD-approved subjects, core competencies, career trajectories, and readiness criteria for each pathway.</p>
+    <a href="subjects-skills.html#pathway-quiz" class="quiz-callout">🎯 Not sure which one fits? Take the 3-question pathway quiz →</a>
     <div class="hero-pathway-pills">
       <span class="hero-pill stem-pill" onclick="activatePathway('stem')">🔬 STEM</span>
       <span class="hero-pill social-pill" onclick="activatePathway('social')">⚖️ Social Sciences</span>
@@ -832,7 +840,7 @@
       <div class="section-label">// 02 · Pathways at a glance</div>
       <div class="divider"></div>
       <h2>Side-by-Side Pathway Comparison</h2>
-      <p>A quick reference to help learners, parents, and counsellors compare the three CBC senior school pathways.</p>
+      <p>A quick reference to help learners, parents, and counsellors compare the three CBC senior school pathways. Still torn? The <a href="subjects-skills.html#pathway-quiz" style="color:var(--gold);font-weight:700;text-decoration:underline;">3-question pathway quiz</a> takes less time than this table.</p>
       <table class="compare-table" role="table" aria-label="CBC pathway comparison">
         <thead>
           <tr>
@@ -899,14 +907,10 @@
     <div class="footer-top">
       <div class="footer-brand">
         <strong>📘 CBC Best</strong>
-        <p>Kenya's most comprehensive Competency Based Curriculum resource. KICD-aligned content for students, teachers, and parents. By Ronny Mwenda, Mathematics & Computer Science Teacher, Embu County.</p>
-        <div class="eco">
-          Ecosystem: <a href="https://bestronny.netlify.app" target="_blank" rel="noopener">Bestronny</a> ·
-          <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener">RonnyMwenda</a> ·
-          <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener">RonnyGame</a>
-        </div>
+        <p>Working KICD-aligned tools for CBC Kenya — built by Ronny Mwenda, Mathematics & Computer Science teacher, Embu County.</p>
+        <div style="font-size:0.77rem;color:rgba(255,228,196,0.45);">Also by the same author: <a href="https://bestronny.netlify.app" style="color:rgba(201,160,61,0.75);">Mathematics lessons at Bestronny</a></div>
         <div style="margin-top:1rem; font-size:0.77rem; color:rgba(255,228,196,0.4);">
-          📧 <a href="mailto:ronnymwenda89@gmail.com" style="color:rgba(201,160,61,0.75);">ronnymwenda89@gmail.com</a> · 📱 <a href="tel:+254799188900" style="color:rgba(201,160,61,0.75);">+254 799 188 900</a>
+          📧 <a href="mailto:ronnymwenda89@gmail.com" style="color:rgba(201,160,61,0.75);">ronnymwenda89@gmail.com</a>
         </div>
       </div>
       <div class="footer-col">
@@ -936,7 +940,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 CBC Best — Accurate, verified CBC pathway information for Kenyan students and teachers. Google AdSense & Search Console compliant.</p>
+      <p>© 2026 CBC Best — Verified CBC pathway information for Kenyan students and teachers, by Ronny Mwenda.</p>
       <p><a href="/sitemap.xml">Sitemap</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-use.html">Terms</a></p>
     </div>
   </div>

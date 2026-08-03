@@ -21,16 +21,16 @@
   <meta name="msapplication-TileColor" content="#0B1F2E">
 
   <!-- SEO -->
-  <title>CBC Discussion Forums | Students, Teachers & Parents — CBC Best · Ronny Mwenda</title>
-  <meta name="description" content="CBC Best discussion forums — open, moderated spaces for Kenyan students, teachers, and parents to discuss the Competency Based Curriculum. By Ronny Mwenda, Mathematics & Computer Science teacher, Embu.">
-  <meta name="keywords" content="CBC forums Kenya, CBC discussion, STEM forum Kenya, Social Sciences forum Kenya, Arts Sports forum CBC, CBC teacher community, CBC student help, KICD CBC community">
+  <title>CBC Discussion Forums &amp; Common Questions Answered — CBC Best · Ronny Mwenda</title>
+  <meta name="description" content="Real answers to the CBC questions Kenyan students, teachers, and parents actually ask — pathway choice, KJSEA, assessment — plus live discussion forums by pathway and role. By Ronny Mwenda, Mathematics & Computer Science teacher, Embu.">
+  <meta name="keywords" content="CBC forums Kenya, CBC discussion, STEM forum Kenya, Social Sciences forum Kenya, Arts Sports forum CBC, CBC teacher community, CBC student help, KICD CBC community, CBC questions answered">
   <meta name="author" content="Ronny Mwenda (Ronny Best)">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://cbcbest.netlify.app/forums.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="CBC Discussion Forums | CBC Best — Ronny Mwenda">
-  <meta property="og:description" content="Open discussion forums for Kenyan students, teachers, and parents on the Competency Based Curriculum.">
+  <meta property="og:title" content="CBC Discussion Forums &amp; Common Questions Answered — CBC Best">
+  <meta property="og:description" content="Real answers to the CBC questions Kenyan students, teachers, and parents actually ask, plus live discussion forums by pathway and role.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cbcbest.netlify.app/forums.html">
   <meta property="og:locale" content="en_KE">
@@ -118,13 +118,39 @@
     .page-hero h1 em { font-style: italic; color: var(--gold); }
     .page-hero p { font-size: 1rem; color: rgba(255,228,196,0.8); max-width: 620px; line-height: 1.75; }
 
+    /* SECTION SHARED */
+    .section { padding: 3.5rem 0; }
+    .section-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 0.6rem; }
+    .section-title { font-size: clamp(1.5rem, 2.8vw, 2rem); font-weight: 800; color: var(--navy); letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 0.75rem; }
+    .section-desc { font-size: 0.95rem; color: var(--muted); max-width: 700px; line-height: 1.78; margin-bottom: 2rem; }
+    .divider { width: 48px; height: 3px; background: var(--gold); border-radius: 4px; margin-bottom: 1.2rem; }
+
+    /* STATIC Q&A — real crawlable content, honestly framed */
+    .qa-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.6rem; }
+    .qa-tab { background: var(--white); border: 1.5px solid rgba(11,31,46,0.1); color: var(--muted); font-weight: 700; font-size: 0.82rem; padding: 8px 18px; border-radius: 40px; transition: all 0.18s; }
+    .qa-tab:hover, .qa-tab.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .qa-list { display: flex; flex-direction: column; gap: 1rem; }
+    .qa-item { display: none; background: var(--white); border-radius: var(--radius); padding: 1.5rem 1.7rem; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 16px rgba(11,31,46,0.06); }
+    .qa-item.show { display: block; }
+    .qa-q { display: flex; align-items: flex-start; gap: 10px; font-size: 0.98rem; font-weight: 800; color: var(--navy); margin-bottom: 0.7rem; line-height: 1.4; }
+    .qa-q .qmark { font-family: var(--mono); color: var(--gold); font-size: 1.1rem; flex-shrink: 0; }
+    .qa-a { font-size: 0.9rem; color: var(--text); line-height: 1.8; padding-left: 26px; }
+    .qa-a strong { color: var(--navy); }
+    .qa-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 2px 10px; border-radius: 40px; margin-left: 26px; display: inline-block; margin-top: 0.7rem; }
+    .qa-tag.stem { background: rgba(26,110,170,0.1); color: #1a6eaa; }
+    .qa-tag.social { background: rgba(30,127,99,0.1); color: #1e7f63; }
+    .qa-tag.arts { background: rgba(179,77,32,0.1); color: #b34d20; }
+    .qa-tag.parent { background: rgba(139,105,20,0.1); color: #8b6914; }
+    .qa-source { font-size: 0.78rem; color: var(--muted); margin-top: 1.5rem; line-height: 1.6; }
+    .qa-source a { color: var(--navy); font-weight: 700; text-decoration: underline; }
+
     /* LOADING STATE */
     .loading-state { text-align: center; padding: 3rem 2rem; }
     .spinner { width: 40px; height: 40px; border: 3px solid rgba(201,160,61,0.2); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
     /* NOTICE BAR */
-    .notice-bar { background: rgba(201,160,61,0.12); border: 1px solid rgba(201,160,61,0.25); border-radius: 14px; padding: 14px 20px; margin: 2rem 0 1.5rem; display: flex; align-items: flex-start; gap: 14px; font-size: 0.85rem; color: var(--text); line-height: 1.65; }
+    .notice-bar { background: rgba(201,160,61,0.12); border: 1px solid rgba(201,160,61,0.25); border-radius: 14px; padding: 14px 20px; margin: 0 0 1.5rem; display: flex; align-items: flex-start; gap: 14px; font-size: 0.85rem; color: var(--text); line-height: 1.65; }
     .notice-bar .notice-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
 
     /* FORUM TABS */
@@ -287,8 +313,6 @@
     .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
     .footer-brand strong { display: block; font-size: 1.15rem; color: var(--white); font-weight: 800; margin-bottom: 0.5rem; }
     .footer-brand p { font-size: 0.83rem; line-height: 1.75; margin-bottom: 1rem; max-width: 280px; }
-    .footer-brand .ecosystem { font-size: 0.78rem; color: rgba(255,228,196,0.5); }
-    .footer-brand .ecosystem a { color: var(--gold); font-weight: 600; transition: color 0.2s; }
     .footer-col h4 { color: var(--white); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1rem; }
     .footer-col a { display: block; font-size: 0.83rem; color: rgba(255,228,196,0.65); padding: 4px 0; transition: color 0.2s; }
     .footer-col a:hover { color: var(--gold); }
@@ -303,7 +327,6 @@
       .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); flex-direction: column; align-items: flex-start; gap: 0; padding: 1rem 20px 1.5rem; border-top: 1px solid rgba(201,160,61,0.15); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
       .nav-links.show { display: flex; }
       .nav-links a { width: 100%; padding: 10px 8px; font-size: 0.9rem; border-radius: 8px; }
-      .site-header { position: relative; }
       .panel-header { flex-direction: column; align-items: flex-start; }
       .form-row { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -347,8 +370,72 @@
 <section class="page-hero">
   <div class="container">
     <div class="hero-label"><span></span> Live Community · Powered by Firebase</div>
-    <h1>CBC <em>Discussion</em> Forums</h1>
-    <p>A real-time, moderated space for Kenyan students, teachers, parents, and education stakeholders to discuss CBC — pathway choices, classroom strategies, assessment, careers, and policy.</p>
+    <h1>CBC <em>Questions</em>, Answered — Plus Live Discussion</h1>
+    <p>Below: real answers to the questions Kenyan students, teachers, and parents ask most often about CBC. Further down, join a live, moderated forum by pathway and role to ask your own.</p>
+  </div>
+</section>
+
+<!-- STATIC Q&A — real content, crawlable without JS -->
+<section class="section" style="padding-bottom:2rem;">
+  <div class="container">
+    <div class="section-label">// Frequently Asked, Honestly Answered</div>
+    <div class="divider"></div>
+    <h2 class="section-title">Questions Ronny Gets Asked Most</h2>
+    <p class="section-desc">Not forum posts — these are questions that come up repeatedly from students, teachers, and parents, answered directly. Filter by who's asking.</p>
+
+    <div class="qa-tabs" id="qaTabs">
+      <button class="qa-tab active" data-filter="all">All</button>
+      <button class="qa-tab" data-filter="stem">STEM</button>
+      <button class="qa-tab" data-filter="social">Social Sciences</button>
+      <button class="qa-tab" data-filter="arts">Arts &amp; Sports</button>
+      <button class="qa-tab" data-filter="parent">Parents</button>
+    </div>
+
+    <div class="qa-list" id="qaList">
+
+      <div class="qa-item show" data-cat="parent">
+        <div class="qa-q"><span class="qmark">Q.</span> My child's KJSEA results were average — does that lock them out of STEM?</div>
+        <div class="qa-a">No. KJSEA informs placement, it doesn't dictate it. Aptitude, interest, teacher recommendation, and a career-guidance conversation all factor in. I've seen learners with modest KJSEA scores thrive in STEM once they're genuinely motivated — the bigger risk is placing a learner in STEM for prestige when their real strength is elsewhere. See the <a href="pathways.html">full placement process</a> for how the four inputs are actually weighed.</div>
+        <span class="qa-tag parent">Parents</span>
+      </div>
+
+      <div class="qa-item show" data-cat="stem">
+        <div class="qa-q"><span class="qmark">Q.</span> What's the actual difference between Core Mathematics and Essential Mathematics?</div>
+        <div class="qa-a">Core Mathematics goes into calculus, vectors, and discrete maths — the STEM-track depth. Essential Mathematics is the same core number sense and financial literacy but applied, without the calculus load, designed for Social Sciences and Arts &amp; Sports learners. Both are KCSE-examined; neither is "the easy one" — they're built for different pathway demands. Full breakdown on the <a href="subjects-skills.html">Subjects &amp; Skills page</a>.</div>
+        <span class="qa-tag stem">STEM</span>
+      </div>
+
+      <div class="qa-item show" data-cat="social">
+        <div class="qa-q"><span class="qmark">Q.</span> Does choosing Social Sciences close the door to university?</div>
+        <div class="qa-a">No — this is the most persistent myth I hear. All three pathways lead to KCSE and university entry; the difference is subject combination, not academic tier. Law, economics, journalism, and public administration degrees are built directly on Social Sciences subjects. See the <a href="pathways.html">pathway comparison table</a> for exactly which degrees each pathway feeds into.</div>
+        <span class="qa-tag social">Social Sciences</span>
+      </div>
+
+      <div class="qa-item show" data-cat="arts">
+        <div class="qa-q"><span class="qmark">Q.</span> Is Arts &amp; Sports Science a real academic pathway, or just for learners who "aren't good at school"?</div>
+        <div class="qa-a">It's a full KCSE-examined pathway with its own core subjects, competencies, and assessment — portfolios, performances, and practical exams rather than only written papers. Careers it feeds range from sports science and coaching to film production and fashion design. It demands as much discipline as the other two pathways; the assessment style is just different. Details on the <a href="subjects-skills.html">Subjects &amp; Skills page</a>.</div>
+        <span class="qa-tag arts">Arts &amp; Sports</span>
+      </div>
+
+      <div class="qa-item show" data-cat="stem">
+        <div class="qa-q"><span class="qmark">Q.</span> How is Computer Science actually assessed under CBC — is it all theory?</div>
+        <div class="qa-a">No — it's roughly split between written theory (KCSE Paper 1/2 style questions on algorithms, networks, databases) and practical coding/project work that feeds the 60% school-based component. A typical CAT might include a Python debugging task alongside a written question on TCP/IP. See the <a href="mathematics-computer-science.html">Maths &amp; CS Hub</a> for sample assessment items.</div>
+        <span class="qa-tag stem">STEM</span>
+      </div>
+
+      <div class="qa-item show" data-cat="parent">
+        <div class="qa-q"><span class="qmark">Q.</span> What exactly is Community Service Learning (CSL), and why does my child have to do it?</div>
+        <div class="qa-a">CSL is a compulsory, credit-bearing subject for every Senior School learner — not optional volunteering. Learners plan and run a real community project (a school water project, a financial literacy survey, a conservation drive), then document it in a portfolio that's marked against a rubric. It's assessed and contributes directly to the KCSE grade. Full CSL breakdown on <a href="subjects-skills.html">Subjects &amp; Skills</a>.</div>
+        <span class="qa-tag parent">Parents</span>
+      </div>
+
+      <div class="qa-item show" data-cat="social">
+        <div class="qa-q"><span class="qmark">Q.</span> My child is torn between History and Citizenship and Business Studies as an elective — how do we decide?</div>
+        <div class="qa-a">Ask which one they'd choose to read about for fun, not which sounds more "useful." History and Citizenship rewards learners who like building an argument from evidence; Business Studies rewards learners who like modelling real numbers and decisions. Both lead to strong degree options — the deciding factor should be which kind of thinking your child actually enjoys, since that's what sustains three years of study.</div>
+        <span class="qa-tag social">Social Sciences</span>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -361,7 +448,7 @@
 
   <!-- FORUM TABS -->
   <div class="forum-tabs-wrap">
-    <div class="forum-tabs-label">Select a forum</div>
+    <div class="forum-tabs-label">Ask your own — select a forum</div>
     <div class="forum-tabs" id="forumTabsContainer">
       <button class="ftab stem-s" data-forum="stem-student"><span class="role-dot student"></span>🔬 STEM · Students</button>
       <button class="ftab stem-t" data-forum="stem-teacher"><span class="role-dot teacher"></span>🔬 STEM · Teachers</button>
@@ -388,8 +475,6 @@
         <div class="author-name">Ronny Mwenda</div>
         <div class="author-title">Mathematics & Computer Science Teacher · Embu County, Kenya. Creator of CBC Best — Kenya's CBC learning hub.</div>
         <div class="author-links">
-          <a href="https://cbcbest.netlify.app" class="author-link" target="_blank"><span class="dot"></span>cbcbest.netlify.app</a>
-          <a href="https://bestronny.netlify.app" class="author-link" target="_blank"><span class="dot"></span>bestronny.netlify.app</a>
           <a href="mailto:ronnymwenda89@gmail.com" class="author-link"><span class="dot"></span>ronnymwenda89@gmail.com</a>
         </div>
       </div>
@@ -483,16 +568,10 @@
     <div class="footer-top">
       <div class="footer-brand">
         <strong>📘 CBC Best</strong>
-        <p>Kenya's most comprehensive Competency Based Curriculum resource — KICD-aligned content for students, teachers, and parents. By Ronny Mwenda (Ronny Best), Mathematics & Computer Science Teacher, Embu County.</p>
-        <div class="ecosystem">
-          Ronny Mwenda digital ecosystem:
-          <a href="https://bestronny.netlify.app" target="_blank" rel="noopener">Bestronny</a> ·
-          <a href="https://ronnymwenda.netlify.app" target="_blank" rel="noopener">Portfolio</a> ·
-          <a href="https://ronnygame.netlify.app" target="_blank" rel="noopener">RonnyGame</a>
-        </div>
+        <p>Working KICD-aligned tools for CBC Kenya — built by Ronny Mwenda, Mathematics & Computer Science teacher, Embu County.</p>
+        <div style="font-size:0.78rem;color:rgba(255,228,196,0.45);">Also by the same author: <a href="https://bestronny.netlify.app" style="color:rgba(201,160,61,0.75);">Mathematics lessons at Bestronny</a></div>
         <div style="margin-top:1rem;font-size:0.78rem;color:rgba(255,228,196,0.45);">
-          📧 <a href="mailto:ronnymwenda89@gmail.com" style="color:rgba(201,160,61,0.8);">ronnymwenda89@gmail.com</a> &nbsp;·&nbsp;
-          📱 <a href="tel:+254799188900" style="color:rgba(201,160,61,0.8);">+254 799 188 900</a>
+          📧 <a href="mailto:ronnymwenda89@gmail.com" style="color:rgba(201,160,61,0.8);">ronnymwenda89@gmail.com</a>
         </div>
       </div>
       <div class="footer-col">
@@ -574,7 +653,7 @@ const POSTS_PER_PAGE = 8;
 let activeForumId = 'stem-student';
 let currentModal  = null;
 let isAdmin       = false;
-let allPostsCache = {}; // { forumId: [posts] }
+let allPostsCache = {};
 let currentPage   = {};
 let filterQuery   = {};
 let sortMode      = {};
@@ -587,7 +666,6 @@ FORUM_IDS.forEach(id => {
   sortMode[id]      = 'newest';
 });
 
-/* ── EXPOSE GLOBALS for inline onclick handlers ── */
 window.openModal     = openModal;
 window.closeModal    = closeModal;
 window.submitPost    = submitPost;
@@ -601,9 +679,6 @@ window.goPage        = goPage;
 window.filterPosts   = filterPosts;
 window.sortPosts     = sortPosts;
 
-/* ══════════════════════════════
-   BUILD PANEL HTML
-══════════════════════════════ */
 function buildPanels() {
   const container = document.getElementById('forumPanelsContainer');
   container.innerHTML = FORUM_IDS.map(id => {
@@ -642,11 +717,8 @@ function buildPanels() {
   }).join('');
 }
 
-/* ══════════════════════════════
-   FIRESTORE LISTENERS
-══════════════════════════════ */
 function subscribeToForum(forumId) {
-  if (unsubscribers[forumId]) return; // already listening
+  if (unsubscribers[forumId]) return;
   const postsRef = collection(db, 'forums', forumId, 'posts');
   const q = query(postsRef, orderBy('createdAt', 'desc'));
   unsubscribers[forumId] = onSnapshot(q, snapshot => {
@@ -660,9 +732,6 @@ function subscribeToForum(forumId) {
   });
 }
 
-/* ══════════════════════════════
-   RENDER FORUM
-══════════════════════════════ */
 function getFilteredSorted(forumId) {
   let posts = [...(allPostsCache[forumId] || [])];
   const q = (filterQuery[forumId] || '').toLowerCase().trim();
@@ -787,9 +856,6 @@ function renderPagination(forumId, total) {
   container.innerHTML = html;
 }
 
-/* ══════════════════════════════
-   INTERACTIONS
-══════════════════════════════ */
 function toggleBody(postId) {
   const el = document.getElementById('body-' + postId);
   if (el) el.classList.toggle('collapsed');
@@ -804,7 +870,6 @@ function filterPosts(forumId, val) { filterQuery[forumId] = val; currentPage[for
 function sortPosts(forumId, val)   { sortMode[forumId] = val;   currentPage[forumId] = 1; renderForum(forumId); }
 function goPage(forumId, page)     { currentPage[forumId] = page; renderForum(forumId); document.getElementById('panel-'+forumId).scrollIntoView({behavior:'smooth',block:'start'}); }
 
-/* LIKES (stored locally so users can't multi-like) */
 function isLikedLocal(forumId, postId) {
   try { return JSON.parse(localStorage.getItem('liked_' + forumId + '_' + postId) || 'false'); }
   catch(e) { return false; }
@@ -819,7 +884,6 @@ async function toggleLike(forumId, postId) {
   } catch(e) { console.error('Like error:', e); }
 }
 
-/* SUBMIT POST */
 function openModal(forumId) {
   currentModal = forumId;
   document.getElementById('modalForumLabel').textContent = FORUM_META[forumId]?.label || forumId;
@@ -871,7 +935,6 @@ async function submitPost() {
   }
 }
 
-/* SUBMIT REPLY */
 async function submitReply(forumId, postId) {
   const input = document.getElementById(`replyInput-${forumId}-${postId}`);
   if (!input) return;
@@ -903,9 +966,6 @@ async function submitReply(forumId, postId) {
   }
 }
 
-/* ══════════════════════════════
-   ADMIN — DELETE
-══════════════════════════════ */
 async function deletePost(forumId, postId) {
   if (!isAdmin) return;
   if (!confirm('Delete this post and all its replies?')) return;
@@ -940,9 +1000,6 @@ async function deleteReply(forumId, postId, replyId) {
 
 window.deleteReply = deleteReply;
 
-/* ══════════════════════════════
-   SIDEBAR STATS & TRENDING
-══════════════════════════════ */
 function updateSidebarStats() {
   let totalPosts = 0, totalReplies = 0, activeForums = 0;
   FORUM_IDS.forEach(id => {
@@ -978,9 +1035,6 @@ function updateTrending() {
   </div>`).join('');
 }
 
-/* ══════════════════════════════
-   FORUM TAB SWITCHING
-══════════════════════════════ */
 function switchForum(forumId) {
   document.querySelectorAll('.forum-panel').forEach(p => p.classList.remove('active-panel'));
   document.querySelectorAll('.ftab').forEach(b => b.classList.remove('active'));
@@ -991,14 +1045,11 @@ function switchForum(forumId) {
   activeForumId = forumId;
   localStorage.setItem('cbcforum_active', forumId);
   history.replaceState(null, '', '#' + forumId);
-  subscribeToForum(forumId); // start listening if not already
+  subscribeToForum(forumId);
   renderForum(forumId);
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
-/* ══════════════════════════════
-   HELPERS
-══════════════════════════════ */
 function formatDate(ts) {
   try {
     let d;
@@ -1032,18 +1083,11 @@ function showToast(msg, isErr) {
   toastTimer = setTimeout(() => t.classList.remove('show'), 3000);
 }
 
-/* ══════════════════════════════
-   AUTH STATE — ADMIN DETECTION
-══════════════════════════════ */
 onAuthStateChanged(auth, user => {
   isAdmin = !!user;
-  // Re-render active forum to show/hide delete buttons
   renderForum(activeForumId);
 });
 
-/* ══════════════════════════════
-   CHAR COUNTERS
-══════════════════════════════ */
 document.getElementById('postTitleInput').addEventListener('input', function() {
   document.getElementById('titleCharCount').textContent = this.value.length + ' / 120';
 });
@@ -1051,23 +1095,14 @@ document.getElementById('postBodyInput').addEventListener('input', function() {
   document.getElementById('bodyCharCount').textContent = this.value.length + ' / 2000';
 });
 
-/* ══════════════════════════════
-   TAB CLICK EVENTS
-══════════════════════════════ */
 document.querySelectorAll('.ftab').forEach(btn => {
   btn.addEventListener('click', () => switchForum(btn.getAttribute('data-forum')));
 });
 
-/* ══════════════════════════════
-   MODAL OUTSIDE CLICK
-══════════════════════════════ */
 document.getElementById('postModal').addEventListener('click', function(e) {
   if (e.target === this) closeModal();
 });
 
-/* ══════════════════════════════
-   MOBILE NAV
-══════════════════════════════ */
 const menuBtn = document.getElementById('mobileMenuBtn');
 const navLinks = document.getElementById('navLinks');
 if (menuBtn) {
@@ -1078,12 +1113,8 @@ if (menuBtn) {
   });
 }
 
-/* ══════════════════════════════
-   INIT
-══════════════════════════════ */
 buildPanels();
 
-// Determine initial forum
 let initForum = 'stem-student';
 const urlHash = window.location.hash.replace('#','');
 if (FORUM_IDS.includes(urlHash)) initForum = urlHash;
@@ -1099,6 +1130,20 @@ else {
 switchForum(initForum);
 
 console.log('%cCBC Best Forums — Firebase Edition\nRonny Mwenda · Embu, Kenya\nhttps://cbcbest.netlify.app', 'color:#C9A03D;font-weight:bold;');
+</script>
+
+<!-- Static Q&A filter tabs -->
+<script>
+  document.querySelectorAll('#qaTabs .qa-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('#qaTabs .qa-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      document.querySelectorAll('#qaList .qa-item').forEach(item => {
+        item.classList.toggle('show', filter === 'all' || item.dataset.cat === filter);
+      });
+    });
+  });
 </script>
 
 <!-- PWA Service Worker -->
